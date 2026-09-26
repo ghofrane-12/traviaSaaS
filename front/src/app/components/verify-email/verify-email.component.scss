@@ -1,0 +1,135 @@
+:host {
+  --color-primary: #e8834a;
+  --color-bg:      #e8f4f8;
+  --color-card:    #ffffff;
+  --color-text:    #1a1a2e;
+  --color-soft:    #6b7280;
+}
+
+.verify-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: 24px 16px;
+}
+
+.verify-card {
+  background: var(--color-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 48px 40px 40px;
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.email-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(232,131,74,0.35);
+}
+
+.verify-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 12px;
+}
+
+.verify-body {
+  font-size: 0.95rem;
+  color: var(--color-soft);
+  line-height: 1.6;
+  margin: 0 0 12px;
+  strong { color: var(--color-text); }
+}
+
+.verify-hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--color-soft);
+  margin-bottom: 16px;
+
+  &.success {
+    color: #059669;
+    font-weight: 500;
+  }
+}
+
+.error-msg {
+  font-size: 0.85rem;
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn-resend {
+  padding: 12px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover:not(:disabled) { background: #d4722e; }
+  &:disabled { opacity: 0.55; cursor: not-allowed; }
+}
+
+.btn-logout {
+  padding: 11px;
+  background: transparent;
+  border: 1.5px solid #d1dce5;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: var(--color-soft);
+  cursor: pointer;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: #b0bec5; }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db;
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 480px) {
+  .verify-card { padding: 36px 20px 28px; }
+  .verify-title { font-size: 1.35rem; }
+}

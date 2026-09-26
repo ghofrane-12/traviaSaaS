@@ -1,0 +1,142 @@
+/* review-form/review-form.component.scss */
+
+/* ── Bouton déclencheur (mode modal) ─────────────────────────────────────── */
+.trigger-btn {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             6px;
+  padding:         8px 14px;
+  background:      var(--color-primary, #4f46e5);
+  color:           white;
+  border:          none;
+  border-radius:   8px;
+  font-size:       0.875rem;
+  cursor:          pointer;
+  transition:      opacity 0.15s;
+
+  &:hover { opacity: 0.88; }
+}
+
+/* ── Modal overlay ───────────────────────────────────────────────────────── */
+.modal-overlay {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(0, 0, 0, 0.5);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  z-index:         1000;
+}
+
+.modal-box {
+  background:    var(--color-surface, #fff);
+  border-radius: 12px;
+  padding:       24px;
+  width:         90%;
+  max-width:     400px;
+  display:       flex;
+  flex-direction: column;
+  gap:           14px;
+  box-shadow:    0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+
+  h3 {
+    margin:    0;
+    font-size: 1rem;
+    color:     var(--color-text, #111);
+  }
+}
+
+.close-btn {
+  background:  none;
+  border:      none;
+  cursor:      pointer;
+  font-size:   1.1rem;
+  color:       var(--color-text-secondary, #666);
+  line-height: 1;
+  padding:     2px 6px;
+  border-radius: 4px;
+
+  &:hover { background: var(--color-hover, #f3f4f6); }
+}
+
+/* ── Corps du formulaire ─────────────────────────────────────────────────── */
+.star-row {
+  display:     flex;
+  align-items: center;
+  gap:         6px;
+}
+
+.star {
+  font-size:  1.75rem;
+  cursor:     pointer;
+  color:      var(--color-border, #d1d5db);
+  transition: color 0.12s, transform 0.1s;
+  user-select: none;
+
+  &--active { color: #f59e0b; }
+  &:hover   { transform: scale(1.15); }
+}
+
+.star-label {
+  font-size:  0.8rem;
+  color:      var(--color-text-secondary, #666);
+  margin-left: 4px;
+}
+
+.form-textarea {
+  width:         100%;
+  padding:       10px 12px;
+  border:        1px solid var(--color-border, #d1d5db);
+  border-radius: 8px;
+  background:    var(--color-bg, #f9fafb);
+  color:         var(--color-text, #111);
+  font-size:     0.875rem;
+  resize:        vertical;
+  box-sizing:    border-box;
+  font-family:   inherit;
+  transition:    border-color 0.15s;
+
+  &:focus {
+    outline:      none;
+    border-color: var(--color-primary, #4f46e5);
+  }
+}
+
+.form-error {
+  color:     var(--color-text-error, #ef4444);
+  font-size: 0.8rem;
+  margin:    0;
+}
+
+.submit-btn {
+  width:         100%;
+  padding:       11px;
+  background:    var(--color-primary, #4f46e5);
+  color:         white;
+  border:        none;
+  border-radius: 8px;
+  font-size:     0.9rem;
+  cursor:        pointer;
+  transition:    opacity 0.15s;
+
+  &:hover    { opacity: 0.88; }
+  &:disabled { opacity: 0.55; cursor: not-allowed; }
+}
+
+/* ── Succès ──────────────────────────────────────────────────────────────── */
+.form-success {
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+  color:       var(--color-text-success, #16a34a);
+  font-size:   0.9rem;
+  padding:     8px 0;
+
+  .success-icon { font-size: 1.2rem; }
+}

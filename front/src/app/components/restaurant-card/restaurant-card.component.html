@@ -1,0 +1,128 @@
+<div class="toast-success" *ngIf="showToast" [class.toast-warning]="toastMessage.includes('⚠️')">
+  {{ toastMessage }}
+</div>
+<div class="rc-card" [style.--accent]="getCategoryAccentColor()">
+
+  <!-- ── IMAGE ── -->
+  <div class="rc-img-wrap">
+    <img [src]="getMainImage()"
+         [alt]="restaurant.name"
+         class="rc-img"
+         loading="lazy"
+         (error)="onImageError($event)">
+
+    <div class="rc-img-overlay"></div>
+
+    <!-- Badge catégorie -->
+    <div class="rc-cat-pill">
+      <img *ngIf="getCategoryIconUrl()"
+           [src]="getCategoryIconUrl()"
+           class="rc-cat-icon"
+           (error)="onIconError($event)"
+           alt="">
+      <span>{{ getMainCategory() }}</span>
+    </div>
+
+    <!-- Distance -->
+    <div class="rc-distance-badge" *ngIf="restaurant.distance">
+      📍 {{ getDistanceText(restaurant.distance) }}
+    </div>
+
+    <!-- Prix -->
+    <div class="rc-price-badge" *ngIf="hasPrice()">
+      {{ getPriceDisplay() }}
+    </div>
+
+    <!-- Note -->
+    <div class="rc-rating-badge" *ngIf="hasRating()">
+      ⭐ {{ getRating() | number:'1.1-1' }}
+    </div>
+  </div>
+
+  <!-- ── CORPS ── -->
+  <div class="rc-body">
+    <h3 class="rc-name">{{ restaurant.name }}</h3>
+
+    <!-- Description -->
+    <p class="rc-description" *ngIf="getDescription()">
+      {{ getDescription() }}
+    </p>
+
+    <!-- Adresse -->
+    <div class="rc-address" *ngIf="getLocationAddress()">
+      <span class="rc-addr-dot"></span>
+      {{ getLocationAddress() }}
+    </div>
+
+    <!-- Tags catégories -->
+    <div class="rc-tags" *ngIf="restaurant.categories && restaurant.categories.length > 1">
+      <span class="rc-tag"
+            *ngFor="let cat of restaurant.categories.slice(1, 3)">
+        {{ cat.name || cat }}
+      </span>
+    </div>
+
+    <!-- Services -->
+    <div class="rc-services" *ngIf="getServices().length > 0">
+      <span class="rc-service-tag"
+            *ngFor="let s of getServices().slice(0, 4)">
+        {{ s }}
+      </span>
+    </div>
+
+    <!-- Spécialités -->
+    <div class="rc-specialties" *ngIf="getSpecialties().length > 0">
+      <span class="rc-spec-label">🍽️</span>
+      <span class="rc-spec-text">
+        {{ getSpecialties().slice(0, 3).join(' · ') }}
+      </span>
+    </div>
+
+    <!-- Horaires + Jours fermeture -->
+    <div class="rc-hours" *ngIf="getHours() || getClosedDays()">
+      <span class="rc-hours-icon">🕒</span>
+      <div class="rc-hours-info">
+        <span *ngIf="getHours()">{{ getHours() }}</span>
+        <span class="rc-closed" *ngIf="getClosedDays()">{{ getClosedDays() }}</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="rc-footer">
+      <div class="rc-links">
+        <a *ngIf="hasWebsite()"
+           [href]="getWebsite()"
+           target="_blank"
+           rel="noopener"
+           class="rc-link-btn rc-link-web">
+          🔗 Site web
+        </a>
+        <a *ngIf="hasInstagram()"
+           [href]="getInstagramUrl()"
+           target="_blank"
+           rel="noopener"
+           class="rc-link-btn rc-link-insta">
+          📷 Instagram
+        </a>
+      </div>
+
+      <!-- Téléphones -->
+      <div class="rc-tels">
+        <div class="rc-tel" *ngIf="getTel()" (click)="onCall(); $event.stopPropagation()">
+          📞 {{ getTel() }}
+        </div>
+        <div class="rc-tel rc-tel2" *ngIf="getTel2()" (click)="onCall(); $event.stopPropagation()">
+          📞 {{ getTel2() }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Bouton réserver -->
+    <button class="rc-reserve-btn"
+        (click)="onReserve(); $event.stopPropagation()"
+        [disabled]="showConfirmation">
+  {{ showConfirmation ? '✅ Réservation enregistrée' : '🍽️ Réserver une table' }}
+</button>
+  </div>
+
+</div>

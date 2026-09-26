@@ -1,0 +1,82 @@
+<!-- tour-search.component.html -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+
+    <!-- Header -->
+    <div class="modal-header">
+      <div class="header-icon">
+        <i class="fas fa-map-marked-alt"></i>
+      </div>
+      <h2 class="modal-title">Recherche d'activités</h2>
+      <button class="close-btn" (click)="onCancel()" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <p class="modal-description">
+      {{ formData?.message || 'Découvrez les meilleures excursions et visites guidées' }}
+    </p>
+
+    <form (ngSubmit)="onSubmit()" class="modal-form">
+
+      <!-- Destination (obligatoire) -->
+      <div class="form-field">
+        <label class="field-label">
+          <i class="fas fa-map-marker-alt field-icon"></i>
+          Destination
+          <span class="required-badge">Requis</span>
+        </label>
+        <div class="input-wrapper">
+  <input
+    type="text"
+    [(ngModel)]="internalForm.city"
+    name="city"
+    class="field-input"
+    [class.error]="submitted_flag && !internalForm.city"
+    placeholder="Paris, Tunis, Rome..."
+    autocomplete="off"
+    (input)="onCityInput($event)"
+    (blur)="hideSuggestions()"
+  />
+  <i class="fas fa-search input-icon"></i>
+  <ul class="city-suggestions" *ngIf="showSuggestions">
+    <li *ngFor="let city of citySuggestions" (mousedown)="selectCity(city)">
+      📍 {{ city }}
+    </li>
+  </ul>
+</div>
+        <span class="error-message" *ngIf="submitted_flag && !internalForm.city">
+          La destination est obligatoire
+        </span>
+      </div>
+
+      <!-- Date souhaitée (optionnelle) -->
+      <div class="form-field">
+        <label class="field-label">
+          <i class="fas fa-calendar-alt field-icon"></i>
+          Date souhaitée
+          <span class="optional-badge">Optionnel</span>
+        </label>
+        <input
+          type="date"
+          [(ngModel)]="internalForm.departure_date"
+          name="departure_date"
+          class="field-input"
+          [min]="today"
+        />
+      </div>
+
+      <!-- Actions -->
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" (click)="onCancel()">
+          <i class="fas fa-times"></i> Annuler
+        </button>
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-search"></i>
+          Rechercher
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

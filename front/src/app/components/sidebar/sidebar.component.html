@@ -1,0 +1,213 @@
+<div class="sidebar-overlay" *ngIf="isMobile && mobileOpen" (click)="closeMobileSidebar()"></div>
+<div class="sidebar" 
+     [class.collapsed]="collapsed && !isMobile"
+     [class.mobile-open]="isMobile && mobileOpen">
+    <div class="sidebar-header">
+    <div class="logo-area" *ngIf="!collapsed || isMobile">
+      <div class="logo-icon">✈️</div>
+      <h1 class="app-title">VoyageBot</h1>
+    </div>
+    <!-- CHANGED: le bouton interne ferme sur mobile, collapse sur desktop -->
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      <i class="bi" 
+         [class.bi-x-lg]="isMobile && mobileOpen"
+         [class.bi-chevron-left]="!isMobile && !collapsed"
+         [class.bi-chevron-right]="!isMobile && collapsed"></i>
+    </button>
+  </div>
+
+  <!-- New chat -->
+  <div class="sidebar-actions">
+    <button class="new-chat-btn" (click)="newConversation()">
+      <i class="bi bi-plus-lg"></i>
+      <span *ngIf="!collapsed || isMobile">Nouvelle discussion</span>
+    </button>
+  </div>
+
+<!-- Conversations -->
+<div class="sidebar-content" *ngIf="!userService.isVisitor()">
+
+  <!-- Mode collapsed : afficher uniquement la dernière conversation -->
+  <ng-container *ngIf="collapsed && !isMobile">
+    <div class="conv-list">
+      <div
+        *ngIf="conversations[0]"
+        class="conv-item"
+        [class.active]="conversations[0].active"
+        (click)="selectConversation(conversations[0])">
+        <div class="conv-icon">
+          <i class="bi bi-chat-dots"></i>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Mode normal : afficher toutes les conversations -->
+  <ng-container *ngIf="!collapsed || isMobile">
+
+    <!-- Today -->
+    <div class="nav-section" *ngIf="todayConversations.length">
+      <div class="section-label">Aujourd'hui</div>
+      <div class="conv-list">
+        <div
+          *ngFor="let conv of todayConversations"
+          class="conv-item"
+          [class.active]="conv.active"
+          [class.has-menu-open]="activeMenuId === conv.id"
+          (click)="selectConversation(conv)">
+          <div class="conv-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <span class="conv-title">{{ conv.title }}</span>
+          <div class="conv-menu" (click)="$event.stopPropagation()">
+            <button class="menu-trigger" (click)="toggleMenu(conv.id, $event)">
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="menu-dropdown" [class.show]="activeMenuId === conv.id">
+              <button class="menu-item rename" (click)="renameConversation(conv)">
+                <i class="bi bi-pencil-square"></i>
+                <span>Renommer</span>
+              </button>
+              <button class="menu-item delete" (click)="deleteConversation(conv)">
+                <i class="bi bi-trash3"></i>
+                <span>Supprimer</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yesterday -->
+    <div class="nav-section" *ngIf="yesterdayConversations.length">
+      <div class="section-label">Hier</div>
+      <div class="conv-list">
+        <div
+          *ngFor="let conv of yesterdayConversations"
+          class="conv-item"
+          [class.active]="conv.active"
+          (click)="selectConversation(conv)">
+          <div class="conv-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <span class="conv-title">{{ conv.title }}</span>
+          <div class="conv-menu" (click)="$event.stopPropagation()">
+            <button class="menu-trigger" (click)="toggleMenu(conv.id, $event)">
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="menu-dropdown" [class.show]="activeMenuId === conv.id">
+              <button class="menu-item rename" (click)="renameConversation(conv)">
+                <i class="bi bi-pencil-square"></i>
+                <span>Renommer</span>
+              </button>
+              <button class="menu-item delete" (click)="deleteConversation(conv)">
+                <i class="bi bi-trash3"></i>
+                <span>Supprimer</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Last 7 days -->
+    <div class="nav-section" *ngIf="last7DaysConversations.length">
+      <div class="section-label">7 derniers jours</div>
+      <div class="conv-list">
+        <div
+          *ngFor="let conv of last7DaysConversations"
+          class="conv-item"
+          [class.active]="conv.active"
+          (click)="selectConversation(conv)">
+          <div class="conv-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <span class="conv-title">{{ conv.title }}</span>
+          <div class="conv-menu" (click)="$event.stopPropagation()">
+            <button class="menu-trigger" (click)="toggleMenu(conv.id, $event)">
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="menu-dropdown" [class.show]="activeMenuId === conv.id">
+              <button class="menu-item rename" (click)="renameConversation(conv)">
+                <i class="bi bi-pencil-square"></i>
+                <span>Renommer</span>
+              </button>
+              <button class="menu-item delete" (click)="deleteConversation(conv)">
+                <i class="bi bi-trash3"></i>
+                <span>Supprimer</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 8-30 jours (Plus anciennes) -->
+<div class="nav-section" *ngIf="olderConversations.length">
+  <div class="section-label">8-30 jours</div>
+  <div class="conv-list">
+    <div
+      *ngFor="let conv of olderConversations"
+      class="conv-item"
+      [class.active]="conv.active"
+      (click)="selectConversation(conv)">
+      <div class="conv-icon">
+        <i class="bi bi-chat-dots"></i>
+      </div>
+      <span class="conv-title">{{ conv.title }}</span>
+      <div class="conv-menu" (click)="$event.stopPropagation()">
+        <button class="menu-trigger" (click)="toggleMenu(conv.id, $event)">
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
+        <div class="menu-dropdown" [class.show]="activeMenuId === conv.id">
+          <button class="menu-item rename" (click)="renameConversation(conv)">
+            <i class="bi bi-pencil-square"></i>
+            <span>Renommer</span>
+          </button>
+          <button class="menu-item delete" (click)="deleteConversation(conv)">
+            <i class="bi bi-trash3"></i>
+            <span>Supprimer</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Message visiteur -->
+    <div class="visitor-message" *ngIf="userService.isVisitor()">
+      <i class="bi bi-info-circle-fill"></i>
+      <span>Connectez-vous pour sauvegarder vos conversations</span>
+    </div>
+    <!-- Bouton Voir tout l'historique -->
+  <div class="view-all-history" *ngIf="!collapsed || isMobile">
+  <button class="history-link" (click)="goToHistory()">
+    Voir tout l'historique
+  </button>
+  </div>
+  </ng-container>
+</div>
+  <!-- Footer -->
+<div class="sidebar-footer">
+
+  <!-- Nos Offres — seul lien de navigation dans le footer -->
+  <a class="search-nav-btn"
+     [routerLink]="['/search']"
+     [queryParams]="{ tenant: tenantId }"
+     routerLinkActive="active">
+    <i class="fa-solid fa-compass"></i>
+    <span *ngIf="!collapsed || isMobile">Nos Offres</span>
+  </a>
+
+  <!-- Profil utilisateur — cliquable → ouvre dropdown -->
+  <div class="user-profile"
+       *ngIf="!collapsed || isMobile"
+       (click)="$event.stopPropagation()">
+    <div class="avatar">{{ getInitials() }}</div>
+    <div class="user-info">
+      <span class="name">{{ fullName || 'Utilisateur' }}</span>
+      <span class="plan" [class]="role.toLowerCase()">{{ getRoleLabel() }}</span>
+    </div>
+  </div>
+
+</div>
+
+</div>

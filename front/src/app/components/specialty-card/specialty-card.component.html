@@ -1,0 +1,35 @@
+<div class="sc-card">
+  
+  <!-- Image -->
+  <div class="sc-image-wrapper">
+    <img [src]="getMainImage()" [alt]="specialty.name" class="sc-image"
+         (error)="onImageError($event)" loading="lazy">
+    <div class="sc-origin" *ngIf="specialty.origin">
+      🏺 {{ specialty.origin }}
+    </div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="sc-body">
+    <div class="sc-name">{{ specialty.name }}</div>
+
+    <div class="sc-description" *ngIf="specialty.description">
+      {{ specialty.description | slice:0:80 }}{{ specialty.description.length > 80 ? '...' : '' }}
+    </div>
+
+    <div class="sc-where" *ngIf="specialty.where_to_try">
+      <span class="sc-where-icon">🍽️</span>
+      <span class="sc-where-text">{{ specialty.where_to_try }}</span>
+    </div>
+
+    <div class="sc-footer">
+     <a class="sc-recipe-link" 
+         [href]="getRecipeUrl()" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         (click)="$event.stopPropagation()">
+        📖 Voir la recette
+      </a>    </div>
+  </div>
+
+</div>

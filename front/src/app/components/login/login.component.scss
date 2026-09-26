@@ -1,0 +1,321 @@
+.login-wrapper {
+  background: linear-gradient(135deg, #ddeeff 0%, #eef6fb 50%, #fdf3f0 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.signup-container {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 36px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.08);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.logo-box {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #ff6b4a 0%, #ff9a7c 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 24px rgba(255, 107, 74, 0.35);
+
+  i {
+    font-size: 32px;
+    color: white;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+// ─── Error Banner ─────────────────────────────────────────────────────────────
+
+.error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  i { font-size: 14px; flex-shrink: 0; }
+}
+
+// ─── Inputs ───────────────────────────────────────────────────────────────────
+
+.input-group-custom {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.94rem;
+  color: #111827;
+  background: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  outline: none;
+  box-sizing: border-box;
+
+  &::placeholder { color: #9ca3af; }
+
+  &:focus {
+    background: white;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+  }
+
+  &.is-invalid {
+    border-color: #f87171;
+    background: #fff5f5;
+  }
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #808794;
+  font-size: 15px;
+  pointer-events: none;
+  transition: color 0.2s;
+
+  .input-group-custom:focus-within & { color: #60a5fa; }
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  font-size: 15px;
+  transition: color 0.2s;
+
+  &:hover { color: #6b7280; }
+}
+
+.field-error {
+  display: block;
+  font-size: 0.78rem;
+  color: #ef4444;
+  margin-top: 5px;
+  padding-left: 4px;
+}
+
+// ─── Forgot Password ──────────────────────────────────────────────────────────
+
+.forgot-password {
+  text-align: center;
+  margin: -6px 0 18px;
+
+  a {
+    font-size: 0.85rem;
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// ─── Buttons ──────────────────────────────────────────────────────────────────
+
+.btn-primary-custom {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.97rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.spinner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 4px 0 18px;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 43%;
+    height: 1px;
+    background: #e5e7eb;
+  }
+  &::before { left: 0; }
+  &::after  { right: 0; }
+
+  span {
+    background: white;
+    padding: 0 14px;
+    color: #9ca3af;
+    font-size: 0.85rem;
+  }
+}
+
+.google-icon { width: 18px; height: 18px; }
+
+.signin-link {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #6b7280;
+
+  a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover { text-decoration: underline; }
+  }
+}
+// ✅ Ligne des boutons sociaux (Google + Facebook)
+.social-buttons-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  .btn-google, .btn-facebook {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .btn-google {
+    background: #e0e0e0;
+    color: rgb(0, 0, 0);
+
+    &:hover:not(:disabled) {
+      background: #eaecf0;
+      transform: translateY(-1px);
+    }
+
+    .google-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .btn-facebook {
+    background: #1877f2;
+    color: white;
+
+    i {
+      font-size: 18px;
+    }
+
+    &:hover:not(:disabled) {
+      background: #166fe5;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.btn-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: #f0f4ff;
+  border: 1px solid #e0e7f5;
+  border-radius: 8px;
+  color: #1565c0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 12px;
+
+  i {
+    font-size: 16px;
+  }
+
+  &:hover:not(:disabled) {
+    background: #e8f0fe;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

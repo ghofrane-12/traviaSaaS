@@ -1,0 +1,156 @@
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    
+    <div class="modal-header">
+      <div class="header-icon">
+        <i class="fas fa-plane"></i>
+      </div>
+      <h2 class="modal-title">{{ formTitle }}</h2>
+      <button class="close-btn" (click)="onCancel()" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <p class="modal-description">{{ formDescription }}</p>
+
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="modal-form">
+      
+      <!-- Origine et Destination -->
+      <div class="location-row">
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-map-marker-alt field-icon"></i>
+            Départ
+          </label>
+          <div class="input-wrapper" style="position: relative;">
+  <input
+    type="text"
+    formControlName="origin"
+    class="field-input"
+    placeholder="Ville de départ"
+    (input)="onOriginInput($event)"
+    (blur)="hideOriginSuggestions()"
+    [class.error]="searchForm.get('origin')?.invalid && searchForm.get('origin')?.touched">
+  <i class="fas fa-plane-departure input-icon"></i>
+  <ul class="city-suggestions" *ngIf="showOriginSuggestions">
+    <li *ngFor="let city of originSuggestions" (mousedown)="selectOrigin(city)">
+      📍 {{ city }}
+    </li>
+  </ul>
+</div>
+          <div class="error-message" *ngIf="searchForm.get('origin')?.invalid && searchForm.get('origin')?.touched">
+            La ville de départ est requise
+          </div>
+        </div>
+
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-map-marker-alt field-icon"></i>
+            Arrivée
+          </label>
+          <div class="input-wrapper" style="position: relative;">
+  <input
+    type="text"
+    formControlName="destination"
+    class="field-input"
+    placeholder="Ville d'arrivée"
+    (input)="onDestinationInput($event)"
+    (blur)="hideDestinationSuggestions()"
+    [class.error]="searchForm.get('destination')?.invalid && searchForm.get('destination')?.touched">
+  <i class="fas fa-plane-arrival input-icon"></i>
+  <ul class="city-suggestions" *ngIf="showDestinationSuggestions">
+    <li *ngFor="let city of destinationSuggestions" (mousedown)="selectDestination(city)">
+      📍 {{ city }}
+    </li>
+  </ul>
+</div>
+          <div class="error-message" *ngIf="searchForm.get('destination')?.invalid && searchForm.get('destination')?.touched">
+            La ville d'arrivée est requise
+          </div>
+        </div>
+      </div>
+
+      <!-- Dates -->
+      <div class="dates-row">
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-calendar-alt field-icon"></i>
+            Départ
+          </label>
+          <input type="date" formControlName="departure_date" class="field-input">
+        </div>
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-calendar-alt field-icon"></i>
+            Retour <span class="optional-badge">(optionnel)</span>
+          </label>
+          <input type="date" formControlName="return_date" class="field-input">
+        </div>
+      </div>
+
+      <!-- Voyageurs et Classe -->
+      <div class="travel-row">
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-user-friends field-icon"></i>
+            Voyageurs
+          </label>
+          <div class="input-wrapper">
+            <button type="button" class="quantity-btn" (click)="updateAdults(-1)" [disabled]="searchForm.get('adults')?.value <= 1">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" formControlName="adults" class="field-input quantity-input" readonly>
+            <button type="button" class="quantity-btn" (click)="updateAdults(1)" [disabled]="searchForm.get('adults')?.value >= 10">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-crown field-icon"></i>
+            Classe
+          </label>
+          <select formControlName="cabin_class" class="field-input">
+            <option *ngFor="let option of cabinClassOptions" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Champs optionnels (prix) -->
+      <div class="optional-fields">
+        <div class="optional-header" (click)="toggleOptional()">
+          <i class="fas" [ngClass]="showOptional ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+          <span>Filtres de prix (optionnel)</span>
+        </div>
+        
+        <div class="optional-content" *ngIf="showOptional">
+          <div class="price-row">
+            <div class="form-field half">
+              <label class="field-label">Prix minimum</label>
+              <input type="number" formControlName="price_min" class="field-input" placeholder="Min" min="0">
+            </div>
+            <div class="form-field half">
+              <label class="field-label">Prix maximum</label>
+              <input type="number" formControlName="price_max" class="field-input" placeholder="Max" min="0">
+            </div>
+          </div>
+          <div class="error-message" *ngIf="searchForm.hasError('priceRangeInvalid') && (searchForm.get('price_min')?.touched || searchForm.get('price_max')?.touched)">
+            Le prix minimum ne peut pas être supérieur au prix maximum
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" (click)="onCancel()">
+          <i class="fas fa-times"></i> Annuler
+        </button>
+        <button type="submit" class="btn-submit" [disabled]="searchForm.invalid || isLoading">
+          <i class="fas" [ngClass]="isLoading ? 'fa-spinner fa-pulse' : 'fa-search'"></i>
+          {{ isLoading ? 'Recherche en cours...' : 'Rechercher' }}
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

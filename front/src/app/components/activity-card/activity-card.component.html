@@ -1,0 +1,58 @@
+<div class="activity-card" (click)="onViewDetails()">
+  <div class="card-image">
+    <img 
+    [src]="getMainImage()" 
+    [alt]="activity.name"
+    loading="lazy"
+    (error)="handleImageError($event)">
+    <span class="category-badge" [style.background]="getCategoryColor(activity.category)">
+      {{ activity.category }}
+    </span>
+    <span class="status-badge" [class.onsale]="activity.on_sale" [class.soldout]="!activity.on_sale">
+      {{ getStatusText() }}
+    </span>
+    <!-- 🔥 Badge rating si disponible -->
+    <span class="rating-badge" *ngIf="getRating()">
+          ⭐ {{ getRating() }}
+        </span>
+  </div>
+  
+  <div class="card-content">
+    <h3 class="activity-title">{{ activity.name }}</h3>
+    
+    <div class="activity-info">
+      <div class="info-item">
+        <span class="info-icon">📅</span>
+        <span class="info-text">{{ formatDate(activity.date) }} à {{ formatTime(activity.time) }}</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <span class="info-text">{{ getVenueDisplay() }}</span>
+      </div>
+      <!-- 🔥 Ajout de la durée si disponible -->
+      <div class="info-item" *ngIf="getDuration()">
+        <span class="info-icon">⏱️</span>
+        <span class="info-text">{{ getDuration() }}</span>
+      </div>
+    </div>
+    
+    <!-- 🔥 Description avec plus de détails -->
+    <p class="activity-description">{{ getDisplayDescription() }}</p>
+    
+    <!-- 🔥 Tags/ caractéristiques -->
+    <div class="activity-tags" *ngIf="getTags().length > 0">
+      <span class="tag" *ngFor="let tag of getTags()">{{ tag }}</span>
+    </div>
+    
+    <div class="card-footer">
+      <!-- 🔥 Prix si disponible -->
+      <div class="price-info" *ngIf="hasPrice()">
+        <span class="price">{{ formatPrice() }}</span>
+        <span class="price-label">par personne</span>
+      </div>
+      <button class="details-btn" (click)="$event.stopPropagation(); onViewDetails()">
+        Voir détails
+      </button>
+    </div>
+  </div>
+</div>

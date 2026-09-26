@@ -1,0 +1,159 @@
+/* ================= INPUT CONTAINER ================= */
+.input-container {
+  position: fixed;
+  bottom: 0;
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  transition: all 0.3s ease;
+  padding: 10px 20px 14px;
+  z-index: 50;
+
+  /* ✅ Pas de fond du tout - transparent */
+  background: transparent;
+  border-top: none;
+  box-shadow: none;
+
+  &.collapsed {
+    left: var(--sidebar-collapsed);
+    width: calc(100% - var(--sidebar-collapsed));
+  }
+}
+
+/* ================= WRAPPER ================= */
+.input-wrapper {
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ================= INPUT BOX ================= */
+.input-group-custom {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background: white;
+  border-radius: 40px;
+  padding: 12px 60px 12px 18px;
+  border: 1px solid #e5e7eb;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  &:focus-within {
+    border-color: #4a9fd8;
+    box-shadow: 0 0 0 3px rgba(74,159,216,0.15);
+  }
+}
+
+/* ================= INPUT ================= */
+.message-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 0.95rem;
+  padding-right: 10px;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+/* ================= ATTACH ================= */
+.attach-icon {
+  position: absolute;
+  right: 18px;
+  font-size: 15px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    color: #4a9fd8;
+    transform: scale(1.1);
+  }
+}
+
+/* ================= MICRO BUTTON ================= */
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: white;
+  color: #6b7280;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+  &:hover {
+    background: #eef6ff;
+    color: #4a9fd8;
+    transform: scale(1.05);
+  }
+}
+
+/* ================= SEND BUTTON ================= */
+.send-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+
+  background: linear-gradient(135deg, #4a9fd8, #6eb8e8);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  box-shadow: 0 4px 14px rgba(74,159,216,0.35);
+
+  i {
+    font-size: 14px;
+  }
+
+  &:hover {
+    transform: scale(1.08) rotate(-6deg);
+    box-shadow: 0 6px 20px rgba(74,159,216,0.5);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .input-container {
+    left: 0 !important;
+    width: 100% !important;
+    padding: 8px 12px 12px;
+  }
+
+  .input-group-custom {
+    padding: 10px 50px 10px 14px;
+  }
+
+  .icon-btn,
+  .send-btn {
+    width: 38px;
+    height: 38px;
+  }
+}

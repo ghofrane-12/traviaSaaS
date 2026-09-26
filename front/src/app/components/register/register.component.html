@@ -1,0 +1,207 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+
+    <!-- Logo / icône -->
+    <div class="brand-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
+        <path d="M21 16v-2l-8-5V3.5A1.5 1.5 0 0 0 11.5 2 1.5 1.5 0 0 0 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/>
+      </svg>
+    </div>
+
+    <h1 class="auth-title">Créer un compte</h1>
+    <p class="auth-subtitle">Rejoignez-nous pour planifier vos prochains voyages</p>
+
+    <!-- Message d'erreur global -->
+    <div class="error-banner" *ngIf="errorMessage" role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+      <!-- Nom complet -->
+      <div class="field-group">
+        <label class="field-label" for="fullName">Nom complet</label>
+        <div class="input-wrapper" [class.has-error]="f['fullName'].invalid && f['fullName'].touched">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <input
+            id="fullName"
+            type="text"
+            class="field-input"
+            placeholder="Jean Dupont"
+            formControlName="fullName"
+            autocomplete="name"
+          />
+        </div>
+        <span class="field-error"
+              *ngIf="f['fullName'].hasError('required') && f['fullName'].touched">
+          Le nom est requis.
+        </span>
+        <span class="field-error"
+              *ngIf="f['fullName'].hasError('minlength') && f['fullName'].touched">
+          Au moins 2 caractères.
+        </span>
+      </div>
+
+      <!-- Email -->
+      <div class="field-group">
+        <label class="field-label" for="email">Email</label>
+        <div class="input-wrapper" [class.has-error]="f['email'].invalid && f['email'].touched">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <input
+            id="email"
+            type="email"
+            class="field-input"
+            placeholder="votre@email.com"
+            formControlName="email"
+            autocomplete="email"
+          />
+        </div>
+        <span class="field-error"
+              *ngIf="f['email'].hasError('required') && f['email'].touched">
+          L'email est requis.
+        </span>
+        <span class="field-error"
+              *ngIf="f['email'].hasError('email') && f['email'].touched">
+          Adresse email invalide.
+        </span>
+      </div>
+
+      <!-- Mot de passe -->
+      <div class="field-group">
+        <label class="field-label" for="password">Mot de passe</label>
+        <div class="input-wrapper" [class.has-error]="f['password'].invalid && f['password'].touched">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <input
+            id="password"
+            [type]="showPassword ? 'text' : 'password'"
+            class="field-input"
+            placeholder="••••••••"
+            formControlName="password"
+            autocomplete="new-password"
+          />
+          <button type="button" class="toggle-pw" (click)="showPassword = !showPassword" tabindex="-1">
+            <svg *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg *ngIf="showPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+              <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <span class="field-error"
+              *ngIf="f['password'].hasError('minlength') && f['password'].touched">
+          8 caractères minimum.
+        </span>
+      </div>
+
+      <!-- Confirmer mot de passe -->
+      <div class="field-group">
+        <label class="field-label" for="confirmPassword">Confirmer le mot de passe</label>
+        <div class="input-wrapper"
+             [class.has-error]="(f['confirmPassword'].touched && passwordMismatch)">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <input
+            id="confirmPassword"
+            [type]="showConfirmPassword ? 'text' : 'password'"
+            class="field-input"
+            placeholder="••••••••"
+            formControlName="confirmPassword"
+            autocomplete="new-password"
+          />
+          <button type="button" class="toggle-pw" (click)="showConfirmPassword = !showConfirmPassword" tabindex="-1">
+            <svg *ngIf="!showConfirmPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg *ngIf="showConfirmPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+              <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <span class="field-error" *ngIf="passwordMismatch">
+          Les mots de passe ne correspondent pas.
+        </span>
+      </div>
+
+      <!-- CGU -->
+      <div class="terms-row">
+        <label class="custom-checkbox">
+          <input type="checkbox" formControlName="acceptTerms" />
+          <span class="checkmark"></span>
+        </label>
+        <p class="terms-text">
+          J'accepte les
+          <a href="/terms" target="_blank" class="terms-link">conditions d'utilisation</a>
+          et la
+          <a href="/privacy" target="_blank" class="terms-link">politique de confidentialité</a>
+        </p>
+      </div>
+      <span class="field-error"
+            *ngIf="f['acceptTerms'].hasError('required') && f['acceptTerms'].touched">
+        Vous devez accepter les conditions.
+      </span>
+
+      <!-- Bouton submit -->
+      <button type="submit" class="btn-primary" [disabled]="loading">
+        <span *ngIf="!loading">Créer mon compte</span>
+        <span *ngIf="loading" class="spinner-wrap">
+          <span class="spinner"></span>
+          Création en cours…
+        </span>
+      </button>
+
+    </form>
+
+    <!-- Séparateur -->
+    <div class="divider"><span>ou</span></div>
+
+    <!-- Bouton Google -->
+    <button type="button" class="btn-google" (click)="onGoogleSignUp()" [disabled]="googleLoading">
+      <svg *ngIf="!googleLoading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+      </svg>
+      <span *ngIf="googleLoading" class="spinner small"></span>
+      {{ googleLoading ? 'Connexion…' : "S'inscrire avec Google" }}
+    </button>
+
+    <!-- Lien login -->
+    <p class="auth-footer">
+      Déjà un compte ?
+      <a routerLink="/login" class="auth-link">Se connecter</a>
+    </p>
+
+  </div>
+</div>

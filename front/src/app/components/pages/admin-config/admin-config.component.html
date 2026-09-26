@@ -1,0 +1,750 @@
+<div class="admin-shell">
+
+  <!-- ── Overlay mobile ── -->
+  <div class="sidebar-overlay" [class.visible]="sidebarOpen" (click)="sidebarOpen = false"></div>
+
+  <!-- ── Topbar mobile ── -->
+  <header class="topbar">
+    <button class="topbar-menu" (click)="sidebarOpen = !sidebarOpen" type="button">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="topbar-brand">
+      <img *ngIf="agencyLogo" [src]="agencyLogo" class="topbar-logo" alt="logo"
+           (error)="agencyLogo = ''" />
+      <span class="topbar-title">{{ agencyName || 'TravelConfig' }}</span>
+    </div>
+
+    <button class="btn-save topbar-save"
+            *ngIf="activeView === 'subcategories'"
+            (click)="saveAll()" [class.loading]="saving">
+      {{ saving ? '...' : 'Enregistrer' }}
+    </button>
+
+    <!-- ✅ Bouton save offers -->
+    <button class="btn-save topbar-save"
+            *ngIf="activeView === 'offers'"
+            (click)="saveMapping()" [class.loading]="mappingForm.saving">
+      {{ mappingForm.saving ? '...' : 'Sauvegarder' }}
+    </button>
+  </header>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" [class.open]="sidebarOpen" [attr.data-tone]="tone">
+    <div class="sidebar-brand">
+      <img *ngIf="agencyLogo" [src]="agencyLogo" class="brand-logo" alt="logo"
+           (error)="agencyLogo = ''" />
+      <div *ngIf="!agencyLogo" class="brand-mark"></div>
+      <span class="brand-name">{{ agencyName || 'TravelConfig' }}</span>
+    </div>
+      <a class="sidebar-back-btn" (click)="goToChat()">
+  <span class="back-arrow">←</span>
+  Chat
+</a>
+    <div class="sidebar-section">Navigation</div>
+    <nav class="sidebar-nav">
+      <a class="nav-item" [class.active]="activeView === 'subcategories'"
+         (click)="setView('subcategories'); sidebarOpen = false">
+        <span class="nav-dot"></span>
+        Sous-catégories
+      </a>
+      <a class="nav-item" [class.active]="activeView === 'files'"
+         (click)="setView('files'); sidebarOpen = false">
+        <span class="nav-dot"></span>
+        Fichiers
+      </a>
+      <!-- ✅ Nouveau lien -->
+      <a class="nav-item" [class.active]="activeView === 'offers'"
+         (click)="setView('offers'); sidebarOpen = false">
+        <span class="nav-dot"></span>
+        Offres Search
+      </a>
+      <a class="nav-item" [class.active]="activeView === 'messenger'"
+   (click)="setView('messenger'); sidebarOpen = false">
+  <span class="nav-dot"></span>
+  Messenger
+</a>
+      <a class="nav-item" [class.active]="activeView === 'reviews'"
+   (click)="setView('reviews'); sidebarOpen = false">
+  <span class="nav-dot"></span>
+  Avis clients
+</a>
+<a class="nav-item" [class.active]="activeView === 'tickets'"
+   (click)="setView('tickets'); sidebarOpen = false">
+  <span class="nav-dot"></span>
+  Tickets support
+</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-stats">
+        <div class="stat-card">
+          <div class="stat-value">{{ getTotalEnabled() }}</div>
+          <div class="stat-label">Actives</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">{{ files.length }}</div>
+          <div class="stat-label">Fichiers</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- VUE SOUS-CATÉGORIES                        -->
+    <!-- ══════════════════════════════════════════ -->
+    <ng-container *ngIf="activeView === 'subcategories'">
+      <header class="page-header">
+        <div class="header-text">
+          <h1>Sous-catégories</h1>
+          <p>Activez les sous-catégories et définissez le mode de réponse.</p>
+        </div>
+        <button class="btn-save desktop-save" (click)="saveAll()" [class.loading]="saving">
+          {{ saving ? 'Sauvegarde...' : 'Enregistrer' }}
+        </button>
+      </header>
+
+      <div class="save-banner success" *ngIf="savedMessage">
+        Configuration enregistrée avec succès.
+      </div>
+
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">{{ getTotalEnabled() }}</span>
+          <span class="stats-bar-label">sous-catégories actives</span>
+        </div>
+        <div class="stats-bar-sep"></div>
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">{{ categories.length }}</span>
+          <span class="stats-bar-label">catégories</span>
+        </div>
+        <div class="stats-bar-sep"></div>
+        <div class="stats-bar-item">
+          <span class="stats-bar-value">{{ getTotalSubcategories() }}</span>
+          <span class="stats-bar-label">total disponibles</span>
+        </div>
+      </div>
+
+      <div class="categories-list">
+        <div class="category-block" *ngFor="let cat of categories">
+
+          <div class="category-header" (click)="toggleCategory(cat)">
+            <div class="category-left">
+              <span class="chevron" [class.open]="cat.expanded">›</span>
+              <span class="category-name">{{ cat.name }}</span>
+              <span class="cat-count">{{ cat.subcategories.length }}</span>
+            </div>
+            <div class="category-right">
+              <div class="progress-wrap" *ngIf="getEnabledCount(cat) > 0">
+                <div class="progress-bar">
+                  <div class="progress-fill"
+                       [style.width.%]="(getEnabledCount(cat) / cat.subcategories.length) * 100">
+                  </div>
+                </div>
+                <span class="badge">{{ getEnabledCount(cat) }}/{{ cat.subcategories.length }}</span>
+              </div>
+              <span class="badge inactive" *ngIf="getEnabledCount(cat) === 0">
+                Inactif
+              </span>
+            </div>
+          </div>
+
+          <div class="subcategories-panel" *ngIf="cat.expanded">
+            <div class="subcat-row"
+                 *ngFor="let sub of cat.subcategories"
+                 [class.enabled]="sub.enabled"
+                 [class.error-row]="hasError(sub)">
+
+              <div class="subcat-main">
+                <div class="subcat-left">
+                  <button class="toggle" [class.on]="sub.enabled"
+                          (click)="toggleSubcategory(sub)" type="button">
+                    <span class="toggle-thumb"></span>
+                  </button>
+                  <div class="subcat-info">
+                    <span class="subcat-name">{{ sub.name }}</span>
+                    <span class="subcat-status" *ngIf="sub.enabled && sub.responseType">
+                      {{ responseTypeLabel(sub.responseType) }}
+                    </span>
+                  </div>
+                </div>
+                <div class="response-types" *ngIf="sub.enabled">
+                  <button *ngFor="let type of ['api','rag','llm','human']"
+                          class="type-btn"
+                          [class.selected]="sub.responseType === type"
+                          (click)="setResponseType(sub, $any(type))"
+                          type="button">
+                    {{ responseTypeLabel($any(type)) }}
+                  </button>
+                </div>
+              </div>
+
+              <div class="error-hint" *ngIf="hasError(sub)">
+                Sélectionnez un type de réponse pour continuer.
+              </div>
+
+              <!-- RAG -->
+              <div class="detail-panel" *ngIf="sub.enabled && sub.responseType === 'rag'">
+                <p class="detail-title">Fichiers associés (RAG)</p>
+                <div *ngIf="getFilesForSubcategory(sub).length === 0" class="no-files">
+                  Aucun fichier disponible pour ce type d'agent.
+                  Uploadez des fichiers dans l'onglet Fichiers.
+                </div>
+                <div class="file-grid" *ngIf="getFilesForSubcategory(sub).length > 0">
+                  <label class="file-card" *ngFor="let file of getFilesForSubcategory(sub)"
+                         [class.selected]="isFileSelected(sub, file.file_id)"
+                         [class.not-ready]="file.embedding_status === 'pending' ||
+                                            file.embedding_status === 'processing'">
+                    <input type="checkbox"
+                           [checked]="isFileSelected(sub, file.file_id)"
+                           [disabled]="file.embedding_status === 'pending' ||
+                                       file.embedding_status === 'processing'"
+                           (change)="toggleFileSelection(sub, file.file_id)" />
+                    <div class="file-card-icon">{{ file.file_type.toUpperCase() }}</div>
+                    <div class="file-card-info">
+                      <span class="file-card-name">{{ file.name }}</span>
+                      <span class="file-card-meta">{{ file.agent_type }}</span>
+                      <span class="status-badge"
+                            [class.pending]="file.embedding_status === 'pending'"
+                            [class.processing]="file.embedding_status === 'processing'"
+                            [class.ready]="file.embedding_status === 'chunks_ready'"
+                            [class.done]="file.embedding_status === 'completed'"
+                            [class.failed]="file.embedding_status === 'failed'">
+                        {{ file.embedding_status === 'chunks_ready'  ? 'Prêt'        :
+                           file.embedding_status === 'completed'     ? 'Indexé'      :
+                           file.embedding_status === 'pending'       ? 'En attente'  :
+                           file.embedding_status === 'processing'    ? 'Traitement...' :
+                           file.embedding_status === 'failed'        ? 'Erreur'      :
+                           file.embedding_status }}
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- LLM -->
+              <div class="detail-panel" *ngIf="sub.enabled && sub.responseType === 'llm'">
+                <p class="detail-title">Prompt personnalisé</p>
+                <textarea class="detail-textarea"
+                          [(ngModel)]="sub.llmPrompt"
+                          placeholder="Décrivez le comportement attendu du LLM..."
+                          rows="4"></textarea>
+              </div>
+
+              <!-- Human -->
+              <div class="detail-panel" *ngIf="sub.enabled && sub.responseType === 'human'">
+                <p class="detail-title">Contact humain</p>
+                <input class="detail-input" type="text"
+                       [(ngModel)]="sub.humanContact"
+                       placeholder="Email ou numéro de téléphone" />
+              </div>
+
+              <!-- API -->
+              <div class="detail-panel api-panel"
+                   *ngIf="sub.enabled && sub.responseType === 'api'">
+
+                <div class="api-panel-header">
+                  <p class="detail-title">Configuration API</p>
+                  <div class="api-key-badge" *ngIf="sub.existingApiKey">
+                    Clé active : {{ sub.existingApiKey.label }}
+                    <button class="btn-delete-inline" (click)="deleteApiKey(sub)">Supprimer</button>
+                  </div>
+                </div>
+
+                <div class="api-form-saved" *ngIf="sub.apiForm.saved">
+                  Clé API enregistrée avec succès.
+                </div>
+
+                <div class="api-form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Label *</label>
+                    <input class="form-input" type="text" [(ngModel)]="sub.apiForm.label"
+                           placeholder="Ex: Amadeus Flight Search" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Provider *</label>
+                    <select class="form-input" [(ngModel)]="sub.apiForm.provider_id">
+                      <option value="">Sélectionner...</option>
+                      <option *ngFor="let p of providers" [value]="p.provider_id">
+                        {{ p.name }} — {{ p.category }}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">URL API *</label>
+                    <input class="form-input" type="text" [(ngModel)]="sub.apiForm.api_url"
+                           placeholder="https://api.example.com/v1/endpoint" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Clé API *</label>
+                    <input class="form-input" type="password" [(ngModel)]="sub.apiForm.api_key"
+                           placeholder="••••••••••••••••" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Méthode HTTP</label>
+                    <select class="form-input" [(ngModel)]="sub.apiForm.http_method">
+                      <option *ngFor="let m of httpMethods" [value]="m">{{ m }}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Result Path</label>
+                    <input class="form-input" type="text" [(ngModel)]="sub.apiForm.result_path"
+                           placeholder="Ex: data.results" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Priorité</label>
+                    <input class="form-input" type="number" [(ngModel)]="sub.apiForm.priority" min="1" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Timeout (ms)</label>
+                    <input class="form-input" type="number" [(ngModel)]="sub.apiForm.timeout_ms" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Retry Count</label>
+                    <input class="form-input" type="number" [(ngModel)]="sub.apiForm.retry_count" min="0" />
+                  </div>
+                </div>
+
+                <div class="api-json-section">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Headers Template
+                      <span class="optional">JSON optionnel</span>
+                    </label>
+                    <textarea class="detail-textarea mono"
+                              [(ngModel)]="sub.apiForm.headers_template"
+                              placeholder='{"Authorization": "Bearer {api_key}"}' rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">
+                      Payload Template
+                      <span class="optional">JSON optionnel</span>
+                    </label>
+                    <textarea class="detail-textarea mono"
+                              [(ngModel)]="sub.apiForm.payload_template"
+                              placeholder='{"origin": "{origin}"}' rows="3"></textarea>
+                  </div>
+
+                  <!-- Param Mapping -->
+                  <div class="form-group">
+                    <label class="form-label">
+                      Param Mapping
+                      <span class="optional">mapping entités → paramètres API</span>
+                    </label>
+                    <div class="mapping-table" *ngIf="sub.apiForm.paramMappingRows.length > 0">
+                      <div class="mapping-header">
+                        <span>Entité</span>
+                        <span>Index</span>
+                        <span>Paramètre API</span>
+                        <span>Transform</span>
+                        <span>Défaut</span>
+                        <span>Opt.</span>
+                        <span></span>
+                      </div>
+                      <div class="mapping-row"
+                           *ngFor="let row of sub.apiForm.paramMappingRows; let i = index">
+                        <select class="form-input mapping-input mapping-select"
+                                [(ngModel)]="row.entityType">
+                          <option *ngFor="let t of entityTypes" [value]="t">{{ t }}</option>
+                        </select>
+                        <select class="form-input mapping-input mapping-select-sm"
+                                [(ngModel)]="row.entityIndex">
+                          <option *ngFor="let idx of entityIndexes" [value]="idx">{{ idx }}</option>
+                        </select>
+                        <input class="form-input mapping-input" [(ngModel)]="row.param"
+                               placeholder="dest_id" />
+                        <input class="form-input mapping-input" [(ngModel)]="row.transform"
+                               placeholder="map:paris=1234" />
+                        <input class="form-input mapping-input" [(ngModel)]="row.default"
+                               placeholder="EUR" />
+                        <label class="mapping-check">
+                          <input type="checkbox" [(ngModel)]="row.optional" />
+                        </label>
+                        <button class="mapping-remove" (click)="removeParamRow(sub, i)"
+                                type="button">×</button>
+                      </div>
+                    </div>
+                    <button class="btn-add-row" (click)="addParamRow(sub)" type="button">
+                      + Ajouter une ligne
+                    </button>
+                  </div>
+                </div>
+
+                <div class="api-form-error" *ngIf="sub.apiForm.error">
+                  {{ sub.apiForm.error }}
+                </div>
+
+                <button class="btn-save-api" (click)="saveApiKey(sub)"
+                        [class.loading]="sub.apiForm.saving">
+                  {{ sub.apiForm.saving ? 'Sauvegarde...' : 'Enregistrer la clé API' }}
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- VUE FICHIERS                               -->
+    <!-- ══════════════════════════════════════════ -->
+    <ng-container *ngIf="activeView === 'files'">
+      <header class="page-header">
+        <div class="header-text">
+          <h1>Fichiers</h1>
+          <p>Uploadez les documents utilisés par le système RAG.</p>
+        </div>
+      </header>
+
+      <!-- Upload card -->
+      <div class="upload-card">
+        <h2 class="card-title">Ajouter un fichier</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nom du fichier</label>
+            <input class="form-input" type="text" [(ngModel)]="uploadName"
+                   placeholder="Ex: Guide visa Schengen" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Type d'agent</label>
+            <select class="form-input" [(ngModel)]="uploadAgentType">
+              <option value="">Sélectionner...</option>
+              <option *ngFor="let t of agentTypes" [value]="t">{{ t }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Fichier</label>
+          <div class="file-drop" (click)="fileInput.click()">
+            <div class="file-drop-icon" *ngIf="!uploadFile">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span>Cliquez pour sélectionner un fichier</span>
+              <span class="file-drop-hint">PDF, DOCX, XLSX, TXT, JSON...</span>
+            </div>
+            <div class="file-drop-selected" *ngIf="uploadFile">
+              <span class="file-ext-badge">{{ uploadFile.name.split('.').pop()?.toUpperCase() }}</span>
+              <span class="file-selected">{{ uploadFile.name }}</span>
+            </div>
+            <input #fileInput type="file" hidden (change)="onFileSelected($event)" />
+          </div>
+        </div>
+        <div class="form-error" *ngIf="uploadError">{{ uploadError }}</div>
+        <div class="save-banner success" *ngIf="uploadSuccess">Fichier uploadé avec succès.</div>
+        <button class="btn-save" (click)="uploadFileSubmit()" [class.loading]="uploading">
+          {{ uploading ? 'Upload en cours...' : 'Uploader le fichier' }}
+        </button>
+      </div>
+
+      <!-- Files grid -->
+      <div *ngIf="files.length > 0">
+        <div class="section-header">
+          <h2 class="card-title" style="margin:0">Fichiers disponibles</h2>
+          <span class="section-count">{{ files.length }} fichier{{ files.length > 1 ? 's' : '' }}</span>
+        </div>
+
+        <div class="files-grid">
+          <div class="file-grid-card" *ngFor="let file of files">
+            <div class="file-grid-top">
+              <div class="file-ext">{{ file.file_type.toUpperCase() }}</div>
+              <button class="btn-delete-icon" (click)="deleteFile(file.file_id)" title="Supprimer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6l-1 14H6L5 6"/>
+                  <path d="M10 11v6M14 11v6"/>
+                  <path d="M9 6V4h6v2"/>
+                </svg>
+              </button>
+            </div>
+            <div class="file-grid-name">{{ file.name }}</div>
+            <div class="file-grid-meta">
+              <span class="file-tag agent">{{ file.agent_type }}</span>
+              <span class="status-badge" [class.pending]="file.embedding_status === 'pending'">
+                {{ file.embedding_status }}
+              </span>
+            </div>
+            <div class="file-grid-size">{{ formatSize(file.size_bytes) }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty-state" *ngIf="files.length === 0">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" opacity="0.3">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <p>Aucun fichier uploadé pour le moment.</p>
+      </div>
+
+    </ng-container>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- VUE OFFRES SEARCH                          -->
+    <!-- ══════════════════════════════════════════ -->
+    <ng-container *ngIf="activeView === 'offers'">
+      <header class="page-header">
+        <div class="header-text">
+          <h1>Offres Search</h1>
+          <p>Configurez le mapping des champs JSON pour la page de recherche.</p>
+        </div>
+      </header>
+
+      <div class="offers-mapping-view">
+
+        <!-- Status des mappings existants -->
+        <div class="mapping-status-grid">
+          <div
+            *ngFor="let type of offerTypes"
+            class="mapping-status-card"
+            [class.configured]="getMappingStatus(type)">
+            <i class="fa-solid"
+               [class.fa-circle-check]="getMappingStatus(type)"
+               [class.fa-circle-xmark]="!getMappingStatus(type)">
+            </i>
+            <span>{{ type }}</span>
+            <small>{{ getMappingStatus(type) ? 'Configuré' : 'Non configuré' }}</small>
+          </div>
+        </div>
+
+        <!-- Formulaire mapping -->
+        <div class="mapping-form-card">
+          <h3>
+            <i class="fa-solid fa-sliders"></i>
+            Configurer un mapping
+          </h3>
+
+          <!-- Type d'offre -->
+          <div class="form-group">
+            <label>Type d'offre</label>
+            <select
+              [(ngModel)]="mappingForm.offer_type"
+              (change)="onOfferTypeChange()"
+              class="form-select">
+              <option *ngFor="let t of offerTypes" [value]="t">{{ t }}</option>
+            </select>
+          </div>
+
+          <!-- Field map -->
+          <div class="fieldmap-section">
+            <div class="fieldmap-header">
+              <label>Correspondance des champs</label>
+              <button class="btn-add-row" (click)="addFieldMapRow()">
+                <i class="fa-solid fa-plus"></i> Ajouter un champ
+              </button>
+            </div>
+
+            <div class="fieldmap-legend">
+              <span>Champ standard</span>
+              <span>Champ dans votre JSON</span>
+            </div>
+
+            <div
+              *ngFor="let row of mappingForm.fieldMapRows; let i = index"
+              class="fieldmap-row">
+              <select [(ngModel)]="row.standardField" class="form-select">
+                <option *ngFor="let f of standardFields" [value]="f">{{ f }}</option>
+              </select>
+              <span class="arrow">→</span>
+              <input
+                type="text"
+                [(ngModel)]="row.sourceField"
+                placeholder="ex: prix_ttc ou photos.0"
+                class="form-input"/>
+              <button class="btn-remove-row" (click)="removeFieldMapRow(i)">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <p class="fieldmap-empty" *ngIf="mappingForm.fieldMapRows.length === 0">
+              Aucun champ configuré. Cliquez sur "Ajouter un champ".
+            </p>
+          </div>
+
+          <!-- Valeurs par défaut -->
+          <div class="defaults-section">
+            <label>Valeurs par défaut</label>
+            <div class="defaults-row">
+              <div class="form-group">
+                <label>Devise</label>
+                <select [(ngModel)]="mappingForm.defaultCurrency" class="form-select">
+                  <option value="TND">TND</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="CHF">CHF</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Disponible par défaut</label>
+                <select [(ngModel)]="mappingForm.defaultAvailable" class="form-select">
+                  <option [ngValue]="true">Oui</option>
+                  <option [ngValue]="false">Non</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+         
+          <!-- Erreur -->
+          <div class="error-banner" *ngIf="mappingForm.error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            {{ mappingForm.error }}
+          </div>
+
+          <!-- Bouton sauvegarder -->
+          <button
+            class="btn-save-mapping"
+            (click)="saveMapping()"
+            [disabled]="mappingForm.saving">
+            <span *ngIf="!mappingForm.saving && !mappingForm.saved">
+              <i class="fa-solid fa-floppy-disk"></i>
+              Sauvegarder le mapping
+            </span>
+            <span *ngIf="mappingForm.saving">
+              <i class="fa-solid fa-circle-notch fa-spin"></i>
+              Sauvegarde...
+            </span>
+            <span *ngIf="mappingForm.saved">
+              <i class="fa-solid fa-circle-check"></i>
+              Sauvegardé !
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </ng-container>
+    <ng-container *ngIf="activeView === 'messenger'">
+  <header class="page-header">
+    <div class="header-text">
+      <h1>Connexion Messenger</h1>
+      <p>Connectez votre Page Facebook pour activer le chatbot Messenger.</p>
+    </div>
+  </header>
+
+  <div class="facebook-section">
+    <div *ngIf="facebookConnected" class="status-connected">
+      <span class="badge-green">✅ Page Facebook connectée</span>
+      <p>Vos clients peuvent vous écrire sur Messenger et seront
+         redirigés automatiquement vers votre chatbot.</p>
+      <button (click)="connectFacebook()" class="btn-secondary">
+        🔄 Reconnecter une autre Page
+      </button>
+    </div>
+
+    <div *ngIf="!facebookConnected" class="status-disconnected">
+      <span class="badge-orange">⚠️ Messenger non configuré</span>
+      <p>Connectez votre Page Facebook pour activer le chatbot Messenger.</p>
+      <button (click)="connectFacebook()" class="btn-primary">
+        Connecter ma Page Facebook
+      </button>
+    </div>
+  </div>
+</ng-container>
+<!-- ══════════════════════════════════════════ -->
+<!-- VUE AVIS CLIENTS                           -->
+<!-- ══════════════════════════════════════════ -->
+<ng-container *ngIf="activeView === 'reviews'">
+  <header class="page-header">
+    <div class="header-text">
+      <h1>Avis clients</h1>
+      <p *ngIf="reviews.length > 0">
+        Moyenne : {{ reviewsAvg }}/5 — {{ reviews.length }} avis
+      </p>
+    </div>
+  </header>
+
+  <div *ngIf="reviewsLoading" class="empty-state">Chargement...</div>
+
+  <div *ngIf="!reviewsLoading && reviews.length === 0" class="empty-state">
+    Aucun avis pour le moment.
+  </div>
+
+  <div class="reviews-grid" *ngIf="!reviewsLoading && reviews.length > 0">
+      <div class="review-card" *ngFor="let r of reviews">
+    <div class="review-card-top">
+      <div class="review-stars">
+        <span *ngFor="let s of [1,2,3,4,5]" [class.filled]="s <= r.rating">★</span>
+      </div>
+      <span class="review-date">{{ r.created_at | date:'dd/MM/yyyy' }}</span>
+    </div>
+    <p class="review-comment" [class.empty]="!r.comment">
+      {{ r.comment || '(sans commentaire)' }}
+    </p>
+    <span class="review-rating-badge"
+          [class.rating-5]="r.rating===5"
+          [class.rating-4]="r.rating===4"
+          [class.rating-3]="r.rating===3"
+          [class.rating-low]="r.rating < 3">
+      {{ r.rating }}/5
+    </span>
+  </div>
+
+  </div>
+</ng-container>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- VUE TICKETS SUPPORT                        -->
+<!-- ══════════════════════════════════════════ -->
+<ng-container *ngIf="activeView === 'tickets'">
+  <header class="page-header">
+    <div class="header-text">
+      <h1>Tickets support</h1>
+      <p>{{ tickets.length }} ticket(s)</p>
+    </div>
+  </header>
+
+  <div *ngIf="ticketsLoading" class="empty-state">Chargement...</div>
+
+  <div class="table-wrap" *ngIf="!ticketsLoading && tickets.length > 0">
+    <table class="sa-table">
+      <thead>
+        <tr>
+          <th>Sujet</th>
+          <th>Message</th>
+          <th>Téléphone</th>
+          <th>Statut</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of tickets">
+          <td class="ticket-subject">{{ t.subject }}</td>
+          <td class="ticket-message-preview">{{ t.message }}</td>
+
+          <td class="ticket-phone">{{ t.phone || '—' }}</td>
+
+          <span class="ticket-status" [class]="t.status">{{ t.status }}</span>
+
+          <td class="ticket-date">{{ t.created_at | date:'dd/MM/yyyy' }}</td>
+          <td>
+            <select class="ticket-action-select"
+                    [value]="t.status"
+                    (change)="updateTicketStatus(t.ticket_id, $any($event.target).value)">
+              <option value="open">open</option>
+              <option value="in_progress">in_progress</option>
+              <option value="closed">closed</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" *ngIf="!ticketsLoading && tickets.length === 0">
+    Aucun ticket pour le moment.
+  </div>
+</ng-container>
+  </main>
+</div>

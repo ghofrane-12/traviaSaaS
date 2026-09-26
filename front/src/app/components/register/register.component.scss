@@ -1,0 +1,387 @@
+/* ── Variables (cohérent avec le login existant) ───────────── */
+:host {
+  --color-primary:    #e8834a;
+  --color-primary-h:  #d4722e;
+  --color-bg:         #e8f4f8;
+  --color-card:       #ffffff;
+  --color-text:       #1a1a2e;
+  --color-text-soft:  #6b7280;
+  --color-border:     #d1dce5;
+  --color-input-bg:   #f7fafc;
+  --color-error:      #dc2626;
+  --color-error-bg:   #fef2f2;
+  --color-link:       #4a90d9;
+  --radius-card:      16px;
+  --radius-input:     10px;
+  --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Wrapper page ─────────────────────────────────────────── */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding: 24px 16px;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.auth-card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 40px 36px 32px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Icône brand ──────────────────────────────────────────── */
+.brand-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(232, 131, 74, 0.35);
+
+  svg { display: block; }
+}
+
+/* ── Titres ───────────────────────────────────────────────── */
+.auth-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 6px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.auth-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  text-align: center;
+  margin: 0 0 24px;
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+/* ── Bannière erreur ─────────────────────────────────────── */
+.error-banner {
+  width: 100%;
+  background: var(--color-error-bg);
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  animation: slideIn 0.2s ease;
+
+  svg { flex-shrink: 0; }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Formulaire ──────────────────────────────────────────── */
+form { width: 100%; }
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+/* ── Input wrapper ────────────────────────────────────────── */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--color-input-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(232, 131, 74, 0.12);
+    background: #fff;
+  }
+
+  &.has-error {
+    border-color: var(--color-error);
+    background: #fff8f8;
+
+    &:focus-within {
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+  }
+}
+
+.input-icon {
+  position: absolute;
+  left: 13px;
+  color: var(--color-text-soft);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.field-input {
+  width: 100%;
+  padding: 11px 44px 11px 42px;
+  border: none;
+  background: transparent;
+  font-size: 0.925rem;
+  color: var(--color-text);
+  outline: none;
+  border-radius: var(--radius-input);
+
+  &::placeholder { color: #b0bec5; }
+}
+
+.toggle-pw {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-soft);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: color 0.15s;
+
+  &:hover { color: var(--color-primary); }
+}
+
+/* ── Erreurs champ ────────────────────────────────────────── */
+.field-error {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-top: 5px;
+  padding-left: 2px;
+  animation: slideIn 0.15s ease;
+}
+
+/* ── Checkbox CGU ─────────────────────────────────────────── */
+.terms-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .checkmark {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+
+      &::after { display: block; }
+    }
+  }
+
+  .checkmark {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
+    background: var(--color-input-bg);
+    transition: all 0.15s;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: none;
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 9px;
+      border: 2px solid white;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.terms-text {
+  font-size: 0.84rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.terms-link {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* ── Bouton principal ─────────────────────────────────────── */
+.btn-primary {
+  width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-input);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover:not(:disabled) {
+    background: var(--color-primary-h);
+    box-shadow: 0 4px 14px rgba(232, 131, 74, 0.4);
+  }
+
+  &:active:not(:disabled) { transform: scale(0.99); }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}
+
+/* ── Séparateur ───────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--color-text-soft);
+  font-size: 0.85rem;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+}
+
+/* ── Bouton Google ────────────────────────────────────────── */
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+
+  &:hover:not(:disabled) {
+    background: #f8fafc;
+    border-color: #b0bec5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.auth-footer {
+  font-size: 0.875rem;
+  color: var(--color-text-soft);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-link {
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* ── Spinners ─────────────────────────────────────────────── */
+.spinner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+
+  &.small {
+    width: 16px;
+    height: 16px;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-top-color: var(--color-text-soft);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 32px 20px 28px;
+    border-radius: 12px;
+  }
+
+  .auth-title { font-size: 1.4rem; }
+}

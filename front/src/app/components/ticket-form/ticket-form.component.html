@@ -1,0 +1,76 @@
+<!-- ticket-form/ticket-form.component.html -->
+
+<!-- ═══ MODE MODAL — bouton déclencheur ═══ -->
+<ng-container *ngIf="mode === 'modal'">
+  <button class="trigger-btn" (click)="openModal()">
+    💬 Envoyer un message
+  </button>
+
+  <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>Contacter un conseiller</h3>
+        <button class="close-btn" (click)="closeModal()">✕</button>
+      </div>
+      <ng-container *ngTemplateOutlet="formBody"></ng-container>
+    </div>
+  </div>
+</ng-container>
+<!-- ═══ MODE INLINE — formulaire direct ═══ -->
+<ng-container *ngIf="mode === 'inline'">
+  <div class="form-wrapper">
+    <ng-container *ngTemplateOutlet="formBody"></ng-container>
+  </div>
+</ng-container>
+<!-- ═══ TEMPLATE PARTAGÉ ═══ -->
+<ng-template #formBody>
+
+  <div class="form-success" *ngIf="success">
+    <span class="success-icon">✅</span>
+    <span>Votre message a été transmis. Un conseiller vous contactera bientôt.</span>
+  </div>
+
+  <ng-container *ngIf="!success">
+
+    <div class="form-group">
+      <label class="form-label" for="subject">Sujet <span class="required">*</span></label>
+      <input
+        id="subject"
+        class="form-input"
+        type="text"
+        placeholder="Ex : Problème de réservation"
+        [(ngModel)]="subject" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">Votre message <span class="required">*</span></label>
+      <textarea
+        id="message"
+        class="form-textarea"
+        placeholder="Décrivez votre demande..."
+        [(ngModel)]="message"
+        rows="4">
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="phone">Téléphone <span class="optional">(optionnel)</span></label>
+      <input
+        id="phone"
+        class="form-input"
+        type="tel"
+        placeholder="+216 XX XXX XXX"
+        [(ngModel)]="phone" />
+    </div>
+
+    <p class="form-error" *ngIf="error">{{ error }}</p>
+
+    <button
+      class="submit-btn"
+      (click)="submit()"
+      [disabled]="submitting">
+      {{ submitting ? 'Envoi en cours...' : 'Envoyer le message' }}
+    </button>
+
+  </ng-container>
+</ng-template>

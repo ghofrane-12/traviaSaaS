@@ -1,0 +1,901 @@
+<!-- super-admin.component.html -->
+<div class="sa-wrap" [class.sidebar-open]="sidebarOpen()">
+
+  <!-- ══ MOBILE OVERLAY ═════════════════════════════════════════════════════ -->
+  <div class="sa-overlay" (click)="toggleSidebar()"></div>
+
+  <!-- ══ SIDEBAR ═══════════════════════════════════════════════════════════ -->
+  <nav class="sa-nav" [class.open]="sidebarOpen()">
+    <div class="sa-nav-brand">
+      <div class="brand-icon-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" fill="white" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Control Panel</span>
+        <span class="brand-tag">Super Admin</span>
+      </div>
+    </div>
+
+    <div class="sa-nav-section-label">Navigation</div>
+
+    <div class="sa-nav-links">
+      <button class="nav-btn" [class.active]="view() === 'dashboard'" (click)="goTo('dashboard')">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Dashboard
+      </button>
+      <button class="nav-btn"
+        [class.active]="view() === 'tenants' || view() === 'create-tenant' || view() === 'edit-tenant' || view() === 'admins' || view() === 'create-admin'"
+        (click)="goTo('tenants')">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Agences
+        @if (tenants().length > 0) {
+          <span class="nav-badge">{{ tenants().length }}</span>
+        }
+      </button>
+      <button class="nav-btn" [class.active]="view() === 'users'" (click)="goTo('users')">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+        </svg>
+        Utilisateurs
+      </button>
+    </div>
+
+    <!-- Breadcrumb contextuel -->
+    @if (view() === 'admins' && selectedTenant()) {
+      <div class="sa-breadcrumb">
+        <button class="bc-link" (click)="goTo('tenants')">Agences</button>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="bc-current">{{ selectedTenant()!.name }}</span>
+      </div>
+    }
+    @if (view() === 'create-tenant') {
+      <div class="sa-breadcrumb">
+        <button class="bc-link" (click)="goTo('tenants')">Agences</button>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="bc-current">Nouvelle agence</span>
+      </div>
+    }
+    @if (view() === 'edit-tenant') {
+      <div class="sa-breadcrumb">
+        <button class="bc-link" (click)="goTo('tenants')">Agences</button>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="bc-current">Modifier</span>
+      </div>
+    }
+    @if (view() === 'create-admin' && selectedTenant()) {
+      <div class="sa-breadcrumb">
+        <button class="bc-link" (click)="goTo('admins', selectedTenant()!)">Admins</button>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="bc-current">Nouveau</span>
+      </div>
+    }
+
+    <div class="sa-nav-footer">
+      <button class="nav-btn nav-btn-chat" (click)="goToChat()">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        </svg>
+        Aller au Chat
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN ══════════════════════════════════════════════════════════════ -->
+  <main class="sa-main">
+
+    <!-- Mobile topbar -->
+    <div class="sa-topbar">
+      <button class="topbar-menu-btn" (click)="toggleSidebar()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div class="topbar-brand">
+        <div class="brand-icon-box brand-icon-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" fill="white"/></svg>
+        </div>
+        <span>Control Panel</span>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+    @if (toast()) {
+      <div class="sa-toast" [class.toast-err]="toast()!.type === 'err'" [class.toast-ok]="toast()!.type === 'ok'">
+        <div class="toast-icon">
+          @if (toast()!.type === 'ok') {
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          } @else {
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          }
+        </div>
+        {{ toast()!.msg }}
+      </div>
+    }
+
+    <!-- Loading bar -->
+    @if (loading()) { <div class="sa-loadbar"></div> }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+         ║  DASHBOARD                                               ║
+         ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'dashboard') {
+      <div class="sa-page">
+        <header class="sa-page-hd">
+          <div>
+            <h1 class="sa-h1">Vue d'ensemble</h1>
+            <p class="sa-sub">Plateforme travel SaaS — toutes agences confondues</p>
+          </div>
+          <button class="btn-ghost btn-refresh" (click)="refreshDashboard()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Actualiser
+          </button>
+        </header>
+
+        @if (stats(); as s) {
+
+          <!-- KPI Cards ─────────────────────────────────────────── -->
+          <div class="kpi-grid">
+            <div class="kpi-card" data-accent="blue">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Agences</div>
+                <div class="kpi-val">{{ s.total_tenants }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="violet">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Admins</div>
+                <div class="kpi-val">{{ s.total_admins }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="amber">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Sub-admins</div>
+                <div class="kpi-val">{{ s.total_sub_admins }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="green">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Clients</div>
+                <div class="kpi-val">{{ s.total_clients }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="rose">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Nouveaux / 7j</div>
+                <div class="kpi-val">+{{ s.new_users_7d }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="sky">
+              <div class="kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="kpi-body">
+                <div class="kpi-label">Nouveaux / 30j</div>
+                <div class="kpi-val">+{{ s.new_users_30d }}</div>
+              </div>
+            </div>
+            <div class="kpi-card" data-accent="teal">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                <rect x="9" y="3" width="6" height="4" rx="1"/>
+              </svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-label">Réservations</div>
+              <div class="kpi-val">{{ s.total_bookings }}</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" data-accent="rose">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-label">Tickets support</div>
+              <div class="kpi-val">{{ s.total_tickets }}</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" data-accent="amber">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-label">Note moyenne</div>
+              <div class="kpi-val">{{ s.avg_rating }}<span style="font-size:14px">/5</span></div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Chatbot Stats ─────────────────────────────────────── -->
+          @if (chatbotStats(); as cs) {
+
+            <!-- Chatbot KPI row -->
+            <div class="section-title-row">
+              <h2 class="sa-h2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                Chatbot — Métriques globales
+              </h2>
+              @if (statsLoading()) {
+                <span class="loading-chip">
+                  <span class="spin"></span> Chargement Firebase…
+                </span>
+              }
+            </div>
+
+            <div class="chatbot-kpi-row">
+              <div class="ckpi-card">
+                <div class="ckpi-val">{{ cs.totalSessions | number }}</div>
+                <div class="ckpi-label">Conversations totales</div>
+              </div>
+              <div class="ckpi-card ckpi-rating">
+                <div class="ckpi-val">{{ cs.generalInfoStats.avgFeedbackScore }}<span class="ckpi-unit">/5</span></div>
+                <div class="star-row">
+                  @for (star of getStarArray(cs.generalInfoStats.avgFeedbackScore); track $index) {
+                    <svg width="12" height="12" viewBox="0 0 24 24" [class.star-full]="star.full" [class.star-half]="star.half && !star.full" [class.star-empty]="!star.full && !star.half" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  }
+                </div>
+                <div class="ckpi-label">Note moyenne</div>
+              </div>
+              <div class="ckpi-card ckpi-handoff">
+                <div class="ckpi-val">{{ cs.generalInfoStats.handoffRequests | number }}</div>
+                <div class="ckpi-label">Taux de transfert humain</div>
+              </div>
+              <div class="ckpi-card">
+                <div class="ckpi-val">{{ cs.generalInfoStats.feedbackReceived | number }}</div>
+                <div class="ckpi-label">Feedbacks reçus</div>
+              </div>
+            </div>
+
+            <!-- Charts row -->
+            <div class="charts-grid">
+
+              <!-- Weekly Conversations Bar Chart -->
+              <div class="chart-card chart-weekly">
+                <div class="chart-card-hd">
+                  <div class="chart-card-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="3 9 21 9"/></svg>
+                    Conversations — 7 derniers jours
+                  </div>
+                  <span class="chart-badge">Firebase Live</span>
+                </div>
+                <canvas id="weeklyChart" class="chart-canvas"></canvas>
+              </div>
+
+              <!-- Category Donut -->
+              <div class="chart-card chart-donut">
+                <div class="chart-card-hd">
+                  <div class="chart-card-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 010 20"/><path d="M2 12h20"/></svg>
+                    Répartition des catégories
+                  </div>
+                </div>
+                <div class="donut-wrap">
+                  <canvas id="donutChart" class="donut-canvas"></canvas>
+                  <div class="donut-legend">
+                    @for (cat of cs.topCategories.slice(0,5); track cat.name) {
+                      <div class="legend-item">
+                        <span class="legend-dot" [style.background]="getCategoryColor($index)"></span>
+                        <span class="legend-label">{{ cat.name }}</span>
+                        <span class="legend-pct">{{ cat.percentage }}%</span>
+                      </div>
+                    }
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Category horizontal bars -->
+            <div class="chart-card chart-categories">
+              <div class="chart-card-hd">
+                <div class="chart-card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                  Top catégories — Toutes agences
+                </div>
+              </div>
+              <canvas id="categoryChart" class="chart-canvas chart-canvas-tall"></canvas>
+            </div>
+
+            <!-- General Information section -->
+            <div class="section-title-row">
+              <h2 class="sa-h2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                General Information — Nouvelle catégorie
+                <span class="new-badge">NOUVEAU</span>
+              </h2>
+            </div>
+
+            <div class="geninfo-grid">
+              <div class="geninfo-card">
+                <div class="geninfo-icon gi-blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                </div>
+                <div class="geninfo-body">
+                  <div class="geninfo-val">{{ cs.generalInfoStats.agencyDetailsViews | number }}</div>
+                  <div class="geninfo-label">Agency Details & Contact</div>
+                  <div class="geninfo-sub">Consultations des infos agence</div>
+                </div>
+              </div>
+
+              <div class="geninfo-card">
+                <div class="geninfo-icon gi-violet">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+                </div>
+                <div class="geninfo-body">
+                  <div class="geninfo-val">{{ cs.generalInfoStats.capabilitiesViews | number }}</div>
+                  <div class="geninfo-label">Chatbot Capabilities</div>
+                  <div class="geninfo-sub">Questions sur les fonctionnalités</div>
+                </div>
+              </div>
+
+              <div class="geninfo-card">
+                <div class="geninfo-icon gi-amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div class="geninfo-body">
+                  <div class="geninfo-val">{{ cs.generalInfoStats.handoffRequests | number }}</div>
+                  <div class="geninfo-label">Human Handoff</div>
+                  <div class="geninfo-sub">Transferts vers un agent humain</div>
+                </div>
+              </div>
+
+              <div class="geninfo-card">
+                <div class="geninfo-icon gi-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="geninfo-body">
+                  <div class="geninfo-val">{{ cs.generalInfoStats.avgFeedbackScore }}<span class="geninfo-unit">/5</span></div>
+                  <div class="geninfo-label">Feedback & Reviews</div>
+                  <div class="geninfo-sub">Score moyen des avis clients</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback progress bar -->
+            <div class="feedback-card">
+              <div class="feedback-hd">
+                <span class="feedback-title">Satisfaction globale</span>
+                <span class="feedback-total">{{ cs.generalInfoStats.feedbackReceived | number }} avis</span>
+              </div>
+              <div class="feedback-bar-wrap">
+                <div class="feedback-bar">
+                  <div class="feedback-fill" [style.width.%]="cs.generalInfoStats.avgFeedbackScore / 5 * 100"></div>
+                </div>
+                <span class="feedback-pct">{{ (cs.generalInfoStats.avgFeedbackScore / 5 * 100) | number:'1.0-0' }}%</span>
+              </div>
+              <div class="feedback-stars">
+                @for (star of getStarArray(cs.generalInfoStats.avgFeedbackScore); track $index) {
+                  <svg width="16" height="16" viewBox="0 0 24 24" [class.star-full]="star.full" [class.star-half]="star.half && !star.full" [class.star-empty]="!star.full && !star.half" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                }
+                <span class="feedback-score-label">{{ cs.generalInfoStats.avgFeedbackScore }}/5</span>
+              </div>
+            </div>
+
+          } @else if (statsLoading()) {
+            <div class="stats-skeleton">
+              <div class="skeleton-row">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+              </div>
+              <div class="skeleton-chart"></div>
+            </div>
+          }
+
+          <!-- Répartition par agence -->
+          <section class="sa-section">
+            <div class="section-title-row">
+              <h2 class="sa-h2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                Agences enregistrées
+              </h2>
+              <button class="btn-sm" (click)="goTo('tenants')">Voir tout</button>
+            </div>
+            <div class="tenant-breakdown">
+              @for (t of s.tenants; track t.tenant_id) {
+              <div class="tb-row" (click)="goTo('admins', { 
+                  tenant_id: t.tenant_id, 
+                  name: t.name, 
+                  logo_url: t.logo_url, 
+                  currency: t.currency, 
+                  tone: t.tone, 
+                  margin_percentage: 0, 
+                  created_at: t.created_at ?? '', 
+                  updated_at: '',
+                  facebook_page_token: t.facebook_page_token ?? ''
+              })">                  <div class="tb-avatar">
+                    @if (t.logo_url) { <img [src]="t.logo_url" [alt]="t.name"> }
+                    @else { <span>{{ tenantInitials(t) }}</span> }
+                  </div>
+                  <div class="tb-info">
+                    <span class="tb-name">{{ t.name }}</span>
+                    <span class="tb-meta">{{ t.currency }} · {{ t.tone }}</span>
+                  </div>
+                  <div class="tb-stats">
+                    <span class="tb-stat"><b>{{ t.admin_count }}</b> admins</span>
+                    <span class="tb-stat"><b>{{ t.client_count }}</b> clients</span>
+                  </div>
+                  <svg class="tb-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              }
+            </div>
+          </section>
+
+        } @else if (!loading()) {
+          <div class="sa-empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Aucune donnée.
+          </div>
+        }
+      </div>
+    }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+        ║  LISTE DES AGENCES  — remplace l'ancien bloc @if tenants  ║
+        ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'tenants') {
+      <div class="sa-page">
+        <header class="sa-page-hd">
+          <div>
+            <h1 class="sa-h1">Agences</h1>
+            <p class="sa-sub">{{ tenants().length }} agence(s) enregistrée(s)</p>
+          </div>
+          <button class="btn-primary" (click)="goTo('create-tenant')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            Nouvelle agence
+          </button>
+        </header>
+
+        <div class="tenant-cards">
+          @for (t of tenants(); track t.tenant_id) {
+            <div class="tc-card" [style.--card-accent]="getTenantColor(t.tenant_id)">
+
+              <!-- Bande colorée en haut -->
+              <div class="tc-band"></div>
+
+              <div class="tc-body">
+
+                <!-- En-tête : avatar + nom + kebab -->
+                <div class="tc-top">
+                  <div class="tc-avatar-wrap">
+                    <div class="tc-avatar" [style.background]="getTenantColorLight(t.tenant_id)" [style.color]="getTenantColorDark(t.tenant_id)">
+                      @if (t.logo_url) { <img [src]="t.logo_url" [alt]="t.name"> }
+                      @else { <span>{{ tenantInitials(t) }}</span> }
+                    </div>
+                    <div class="tc-head">
+                      <h3 class="tc-name">{{ t.name }}</h3>
+                      <span class="tc-uuid">{{ t.tenant_id }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Menu kebab -->
+                  <div class="tc-kebab-wrap">
+                    <button class="tc-kebab-btn" (click)="toggleKebab(t.tenant_id)" type="button">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="5" r="1.4" fill="currentColor"/>
+                        <circle cx="12" cy="12" r="1.4" fill="currentColor"/>
+                        <circle cx="12" cy="19" r="1.4" fill="currentColor"/>
+                      </svg>
+                    </button>
+                    @if (openKebab() === t.tenant_id) {
+                      <div class="tc-kebab-menu">
+                        <button class="tc-km-item" (click)="goTo('edit-tenant', t); closeKebab()">
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                          </svg>
+                          Modifier
+                        </button>
+                        <div class="tc-km-sep"></div>
+                        <button class="tc-km-item tc-km-danger" (click)="confirmDeleteTenant(t); closeKebab()">
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"/>
+                            <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/>
+                          </svg>
+                          Supprimer
+                        </button>
+                      </div>
+                    }
+                  </div>
+                </div>
+
+                <!-- Stats row -->
+                <div class="tc-stats-row">
+                  <div class="tc-stat-box">
+                    <span class="tc-stat-num">{{ getAdminCount(t) }}</span>
+                    <span class="tc-stat-lbl">Admins</span>
+                  </div>
+                  <div class="tc-stat-box">
+                    <span class="tc-stat-num">{{ getClientCount(t) }}</span>
+                    <span class="tc-stat-lbl">Clients</span>
+                  </div>
+                  <div class="tc-stat-box">
+                    <span class="tc-stat-num">{{ t.margin_percentage }}%</span>
+                    <span class="tc-stat-lbl">Marge</span>
+                  </div>
+                </div>
+
+                <!-- URL chatbot -->
+                <div class="tc-url-row">
+                  <div class="tc-url-ico">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                      <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+                    </svg>
+                  </div>
+                  <span class="tc-url-val">/chat?tenant={{ t.tenant_id }}</span>
+                  <button class="tc-url-copy" (click)="copyUrl(t.tenant_id)" title="Copier l'URL">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2"/>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Footer : pills + bouton admins -->
+              <div class="tc-footer">
+                <div class="tc-pills">
+                  <span class="tc-pill tc-pill-currency">{{ t.currency }}</span>
+                  <span class="tc-pill tc-pill-tone">{{ t.tone }}</span>
+                </div>
+                <button class="tc-admins-btn" (click)="goTo('admins', t)">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                  Gérer les admins
+                </button>
+              </div>
+
+            </div>
+          }
+        </div>
+
+        @if (!loading() && tenants().length === 0) {
+          <div class="sa-empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            </svg>
+            Aucune agence. Créez la première.
+          </div>
+        }
+      </div>
+    }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+         ║  FORMULAIRE AGENCE                                       ║
+         ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'create-tenant' || view() === 'edit-tenant') {
+      <div class="sa-page sa-page-form">
+        <header class="sa-page-hd">
+          <div>
+            <h1 class="sa-h1">{{ view() === 'create-tenant' ? 'Nouvelle agence' : 'Modifier l\'agence' }}</h1>
+            <p class="sa-sub">Remplissez tous les champs de la table <code>tenants</code></p>
+          </div>
+        </header>
+
+        <div class="form-card">
+          <div class="fg">
+            <label class="flabel">Nom de l'agence <span class="req">*</span></label>
+            <input class="finput" type="text" [(ngModel)]="tenantForm.name" placeholder="Ex: Voyage Express Tunis" />
+          </div>
+
+          <div class="fg">
+            <label class="flabel">URL du logo</label>
+            <input class="finput" type="url" [(ngModel)]="tenantForm.logo_url" placeholder="https://example.com/logo.png" />
+            @if (tenantForm.logo_url) {
+              <div class="logo-preview">
+                <img [src]="tenantForm.logo_url" alt="preview" (error)="tenantForm.logo_url = ''" />
+              </div>
+            }
+          </div>
+          <div class="fg">
+          <label class="flabel">Facebook Page ID</label>
+          <input class="finput" type="text" 
+                [(ngModel)]="tenantForm.facebook_page_id" 
+                placeholder="Ex: 123456789012345" />
+          <p class="fhint">Trouvez l'ID dans : Page Facebook → À propos → ID de la page</p>
+        </div>
+            <div class="fg">
+            <label>Page Access Token Facebook</label>
+          <input class="finput" type="text" 
+                [(ngModel)]="tenantForm.facebook_page_token" type="password"
+                placeholder="Ex: EAAxxxxxxxxxxxxxxx" />
+          <p class="fhint">Généré depuis Facebook Developers → Messenger → Access Tokens</p>
+        </div>
+          <div class="fg-row">
+            <div class="fg">
+              <label class="flabel">Devise <span class="req">*</span></label>
+              <select class="fselect" [(ngModel)]="tenantForm.currency">
+                <option value="EUR">EUR — Euro</option>
+                <option value="USD">USD — Dollar</option>
+                <option value="GBP">GBP — Livre sterling</option>
+                <option value="TND">TND — Dinar tunisien</option>
+                <option value="MAD">MAD — Dirham marocain</option>
+                <option value="DZD">DZD — Dinar algérien</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="flabel">Marge (%)</label>
+              <input class="finput" type="number" [(ngModel)]="tenantForm.margin_percentage" min="0" max="100" step="0.5" />
+            </div>
+          </div>
+
+          <div class="fg">
+            <label class="flabel">Ton du chatbot</label>
+            <div class="ftone-grid">
+              @for (tone of ['formal', 'friendly', 'casual', 'professional']; track tone) {
+                <label class="ftone-opt" [class.selected]="tenantForm.tone === tone">
+                  <input type="radio" [value]="tone" [(ngModel)]="tenantForm.tone" />
+                  <span class="ftone-label">{{ tone | titlecase }}</span>
+                  <span class="ftone-desc">{{
+                    tone === 'formal'       ? 'Vouvoiement, style soutenu' :
+                    tone === 'friendly'     ? 'Chaleureux et bienveillant' :
+                    tone === 'casual'       ? 'Décontracté, tutoiement' :
+                                             'Neutre et efficace'
+                  }}</span>
+                </label>
+              }
+            </div>
+          </div>
+
+          @if (view() === 'create-tenant') {
+            <div class="fg url-preview-box">
+              <label class="flabel">URL générée (après création)</label>
+              <div class="url-preview">{{ tenantForm.name ? tenantUrl('uuid-généré') : '—' }}</div>
+              <p class="fhint">L'identifiant unique (UUID) sera généré automatiquement à la création.</p>
+            </div>
+          }
+          @if (view() === 'edit-tenant' && editingId()) {
+            <div class="fg url-preview-box">
+              <label class="flabel">URL de cette agence</label>
+              <div class="url-preview url-preview-active">
+                {{ tenantUrl(editingId()!) }}
+                <button class="copy-inline" (click)="copyUrl(editingId()!)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                  Copier
+                </button>
+              </div>
+            </div>
+          }
+
+          <div class="form-actions">
+            <button class="btn-ghost" (click)="goTo('tenants')" [disabled]="saving">Annuler</button>
+            <button class="btn-primary" (click)="submitTenant()" [disabled]="saving || !tenantForm.name.trim()">
+              {{ saving ? 'Enregistrement…' : (view() === 'create-tenant' ? 'Créer l\'agence' : 'Mettre à jour') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+         ║  ADMINS D'UNE AGENCE                                     ║
+         ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'admins') {
+      <div class="sa-page">
+        <header class="sa-page-hd">
+          <div>
+            <h1 class="sa-h1">Admins — {{ selectedTenant()?.name }}</h1>
+            <p class="sa-sub">{{ admins().length }} administrateur(s)</p>
+          </div>
+          <button class="btn-primary" (click)="goTo('create-admin')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Créer un admin
+          </button>
+        </header>
+
+        <div class="table-wrap">
+          <table class="sa-table">
+            <thead>
+              <tr>
+                <th>Utilisateur</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Peut créer admin</th>
+                <th>Statut</th>
+                <th>Depuis</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (u of admins(); track u.user_id) {
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <div class="u-avatar">{{ initials(u.first_name + ' ' + u.last_name) }}</div>
+                      <span>{{ u.first_name }} {{ u.last_name }}</span>
+                    </div>
+                  </td>
+                  <td class="td-mono">{{ u.email }}</td>
+                  <td><span class="role-badge" [class]="roleBadge(u.role)">{{ u.role }}</span></td>
+                  <td><span class="bool-chip" [class.bool-yes]="u.can_create_admin">{{ u.can_create_admin ? '✓ Oui' : '✗ Non' }}</span></td>
+                  <td><span class="bool-chip" [class.bool-yes]="u.is_active">{{ u.is_active ? 'Actif' : 'Inactif' }}</span></td>
+                  <td class="td-mono">{{ fmtDate(u.created_at) }}</td>
+                  <td><button class="btn-icon-del" (click)="confirmDeleteAdmin(u)" title="Supprimer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+                  </button></td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          @if (!loading() && admins().length === 0) {
+            <div class="sa-empty">Aucun admin pour cette agence.</div>
+          }
+        </div>
+      </div>
+    }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+         ║  FORMULAIRE ADMIN                                        ║
+         ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'create-admin') {
+      <div class="sa-page sa-page-form">
+        <header class="sa-page-hd">
+          <h1 class="sa-h1">Nouvel admin — {{ selectedTenant()?.name }}</h1>
+          <p class="sa-sub">Crée un compte Firebase Auth + entrée PostgreSQL</p>
+        </header>
+
+        <div class="form-card">
+          <div class="fg-row">
+            <div class="fg">
+              <label class="flabel">Prénom <span class="req">*</span></label>
+              <input class="finput" type="text" [(ngModel)]="adminForm.first_name" placeholder="Prénom" />
+            </div>
+            <div class="fg">
+              <label class="flabel">Nom <span class="req">*</span></label>
+              <input class="finput" type="text" [(ngModel)]="adminForm.last_name" placeholder="Nom de famille" />
+            </div>
+          </div>
+
+          <div class="fg">
+            <label class="flabel">Email <span class="req">*</span></label>
+            <input class="finput" type="email" [(ngModel)]="adminForm.email" placeholder="admin@agence.com" autocomplete="off" />
+          </div>
+
+          <div class="fg-row">
+            <div class="fg">
+              <label class="flabel">Mot de passe <span class="req">*</span></label>
+              <input class="finput" type="password" [(ngModel)]="adminForm.password" placeholder="Min. 8 caractères" autocomplete="new-password" />
+            </div>
+            <div class="fg">
+              <label class="flabel">Confirmer <span class="req">*</span></label>
+              <input class="finput" type="password" [(ngModel)]="adminForm.confirmPassword" placeholder="••••••••" autocomplete="new-password" />
+              @if (adminForm.confirmPassword && adminForm.password !== adminForm.confirmPassword) {
+                <span class="finput-err">Les mots de passe ne correspondent pas</span>
+              }
+            </div>
+          </div>
+
+          <div class="fg">
+            <label class="ftoggle">
+              <input type="checkbox" [(ngModel)]="adminForm.can_create_admin" />
+              <span class="ftoggle-track"></span>
+              <span class="ftoggle-label">
+                Peut créer d'autres admins
+                <span class="ftoggle-hint">(délégation de droits)</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="fg">
+            <label class="flabel">Agence assignée</label>
+            <div class="freadonly">
+              {{ selectedTenant()?.name }}
+              <span class="freadonly-id">{{ selectedTenant()?.tenant_id }}</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-ghost" (click)="goTo('admins', selectedTenant()!)" [disabled]="savingAdmin">Annuler</button>
+            <button class="btn-primary" (click)="submitAdmin()" [disabled]="savingAdmin || !adminForm.email || !adminForm.password || !adminForm.first_name">
+              {{ savingAdmin ? 'Création en cours…' : 'Créer l\'admin' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+
+
+    <!-- ╔═══════════════════════════════════════════════════════════╗
+         ║  TOUS LES UTILISATEURS                                   ║
+         ╚═══════════════════════════════════════════════════════════╝ -->
+    @if (view() === 'users') {
+      <div class="sa-page">
+        <header class="sa-page-hd">
+          <div>
+            <h1 class="sa-h1">Utilisateurs</h1>
+            <p class="sa-sub">{{ allUsers().length }} compte(s) au total</p>
+          </div>
+          <div class="search-wrap">
+            <svg class="search-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input class="search-input" type="text" placeholder="Rechercher par nom, email, rôle…"
+                   [ngModel]="userSearch()" (ngModelChange)="userSearch.set($event)" />
+          </div>
+        </header>
+
+        <div class="table-wrap">
+          <table class="sa-table">
+            <thead>
+              <tr>
+                <th>Utilisateur</th>
+                <th>Email</th>
+                <th>Rôle</th>
+                <th>Tenant</th>
+                <th>Statut</th>
+                <th>Inscrit le</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (u of filteredUsers(); track u.user_id) {
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <div class="u-avatar">{{ initials(u.first_name + ' ' + u.last_name) }}</div>
+                      <span>{{ u.first_name }} {{ u.last_name }}</span>
+                    </div>
+                  </td>
+                  <td class="td-mono">{{ u.email }}</td>
+                  <td><span class="role-badge" [class]="roleBadge(u.role)">{{ u.role }}</span></td>
+                  <td class="td-mono td-truncate" [title]="u.tenant_id">{{ u.tenant_id | slice:0:8 }}…</td>
+                  <td><span class="bool-chip" [class.bool-yes]="u.is_active">{{ u.is_active ? 'Actif' : 'Inactif' }}</span></td>
+                  <td class="td-mono">{{ fmtDate(u.created_at) }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          @if (!loading() && filteredUsers().length === 0) {
+            <div class="sa-empty">Aucun utilisateur trouvé.</div>
+          }
+        </div>
+      </div>
+    }
+
+  </main>
+</div>

@@ -1,0 +1,72 @@
+<!-- Toast -->
+<div class="toast-success" *ngIf="showToast">
+  ✅ Réservation hôtel enregistrée !
+</div>
+<div class="hc-card" [class.hc-recommended]="hotel.recommended && hotel.recommended > 0">
+  <div class="hc-badge-recommended" *ngIf="hotel.recommended && hotel.recommended > 0">
+    Recommandé
+  </div>
+
+  <!-- Image gauche -->
+  <div class="hc-image-wrapper">
+    <img [src]="getMainImage()" [alt]="hotel.name" class="hc-image"
+         (error)="onImageError($event)" loading="lazy">
+    <div class="hc-stars-overlay">
+      <span class="hc-star" *ngFor="let s of getStarsArray()">★</span>
+    </div>
+  </div>
+
+  <!-- Contenu droite -->
+  <div class="hc-body">
+
+    <div class="hc-top">
+      <div class="hc-name-row">
+        <h3 class="hc-name">{{ hotel.name }}</h3>
+        <div class="hc-cat-badge" *ngIf="hotel.category">{{ hotel.category }}</div>
+      </div>
+
+      <div class="hc-location">
+        <span class="hc-loc-dot">⊙</span>
+        {{ hotel.location.city || hotel.city }}, {{ hotel.location.country || 'Tunisie' }}
+      </div>
+
+      <div class="hc-amenities-row">
+        <span class="hc-amenity-pill" *ngFor="let am of getTopAmenities()">
+          {{ getAmenityIcon(am.icon) }} {{ am.name }}
+        </span>
+      </div>
+
+      <div class="hc-boards" *ngIf="getBoardTypes().length > 0">
+        <span class="hc-board-pill" *ngFor="let b of getBoardTypes()">{{ b }}</span>
+        <span class="hc-offers-count">{{ hotel.offers?.length }} option(s)</span>
+      </div>
+    </div>
+
+    <div class="hc-footer">
+      <div class="hc-pricing">
+        <div class="hc-price-row">
+          <span class="hc-price-amount">{{ priceDisplay.perNight.formatted }}</span>
+          <span class="hc-price-label">/ nuit</span>
+        </div>
+        <div class="hc-price-total" *ngIf="hotel.total_price && hotel.nights">
+          Total {{ hotel.nights }}N :
+          <strong>{{ priceDisplay.total.formatted }}</strong>
+        </div>
+        <div class="hc-price-range"
+             *ngIf="hotel.price_range && hotel.price_range.max > hotel.price_range.min">
+          {{ priceService.format(hotel.price_range.min, getDisplayCurrency()) }} – 
+          {{ priceService.format(hotel.price_range.max, getDisplayCurrency()) }}
+        </div>
+        <div class="hc-conversion-note" *ngIf="priceDisplay.perNight.hasConversion">
+          <small>Prix converti depuis {{ priceDisplay.perNight.originalCurrency }}</small>
+        </div>
+      </div>
+
+      <div class="hc-actions">
+        <button class="hc-btn hc-btn-outline" (click)="onViewDetails()">Détails</button>
+        <button class="hc-btn hc-btn-primary" [disabled]="showConfirmation" (click)="onBook(hotel)">{{showConfirmation ? 'Réservation confirmée' : 'Réserver'}}</button>
+      </div>
+    </div>
+
+  </div>
+</div>

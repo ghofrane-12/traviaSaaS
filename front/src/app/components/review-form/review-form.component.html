@@ -1,0 +1,69 @@
+<!-- review-form/review-form.component.html -->
+
+<!-- ═══ MODE MODAL ═══ -->
+<ng-container *ngIf="mode === 'modal'">
+  <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>Laisser un avis</h3>
+        <button class="close-btn" (click)="closeModal()">✕</button>
+      </div>
+      <ng-container *ngTemplateOutlet="formBody"></ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<!-- ═══ MODE INLINE ═══ -->
+<ng-container *ngIf="mode === 'inline'">
+  <ng-container *ngTemplateOutlet="formBody"></ng-container>
+</ng-container>
+
+<!-- ═══ TEMPLATE PARTAGÉ DU FORMULAIRE ═══ -->
+<ng-template #formBody>
+
+  <!-- Succès -->
+  <div class="form-success" *ngIf="success">
+    <span class="success-icon">✅</span>
+    <span>Merci pour votre avis !</span>
+  </div>
+
+  <!-- Formulaire -->
+  <ng-container *ngIf="!success">
+
+    <!-- Étoiles -->
+    <div class="star-row">
+      <span
+        *ngFor="let s of stars"
+        class="star"
+        [class.star--active]="isActive(s)"
+        (mouseenter)="setHovered(s)"
+        (mouseleave)="clearHovered()"
+        (click)="setRating(s)">
+        ★
+      </span>
+      <span class="star-label" *ngIf="rating > 0">
+        {{ ['', 'Très mauvais', 'Mauvais', 'Moyen', 'Bien', 'Excellent'][rating] }}
+      </span>
+    </div>
+
+    <!-- Commentaire -->
+    <textarea
+      class="form-textarea"
+      placeholder="Votre commentaire (optionnel)..."
+      [(ngModel)]="comment"
+      rows="3">
+    </textarea>
+
+    <!-- Erreur -->
+    <p class="form-error" *ngIf="error">{{ error }}</p>
+
+    <!-- Bouton -->
+    <button
+      class="submit-btn"
+      (click)="submit()"
+      [disabled]="submitting">
+      {{ submitting ? 'Envoi en cours...' : 'Envoyer mon avis' }}
+    </button>
+
+  </ng-container>
+</ng-template>

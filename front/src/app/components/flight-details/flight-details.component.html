@@ -1,0 +1,121 @@
+<!-- Toast -->
+<div class="toast-success" *ngIf="showToast" [class.toast-warning]="showConfirmation && toastMessage.includes('⚠️')">
+  {{ toastMessage }}
+</div>
+<div class="fd-page" *ngIf="flight; else loading">
+
+  <!-- ── HEADER BLEU ────────────────────────────── -->
+  <div class="fd-modal-header">
+
+    <div class="fd-header-left">
+      <div class="fd-airline-logo">
+        <img *ngIf="flight.airline_logo" [src]="flight.airline_logo" [alt]="flight.airline" class="logo-img">
+        <span *ngIf="!flight.airline_logo" class="logo-initial">{{ getAirlineInitial() }}</span>
+      </div>
+
+      <div class="fd-airline-text">
+        <h1 class="fd-airline-name">{{ flight.airline }}</h1>
+        <span class="fd-stop-tag" *ngIf="flight.stops > 0">
+          {{ getStopDetailsText(flight.stop_details) || (flight.stops + ' escale(s)') }}
+        </span>
+      </div>
+    </div>
+
+    <button class="fd-close-btn" (click)="goBack()">✕</button>
+  </div>
+
+  <!-- ── CORPS ──────────────────────────────────── -->
+  <div class="fd-body">
+
+    <!-- Timing -->
+    <div class="fd-section fd-timing">
+      <div class="fd-time-block">
+        <span class="fd-time">{{ flight.departure.time }}</span>
+        <span class="fd-airport">{{ flight.departure.airport }}</span>
+        <span class="fd-city">{{ flight.departure.city | titlecase }}</span>
+      </div>
+
+      <div class="fd-duration-block">
+        <div class="fd-dur-line">
+          <span class="fd-dot"></span>
+          <span class="fd-seg"></span>
+          <span class="fd-plane">✈</span>
+          <span class="fd-seg"></span>
+          <span class="fd-dot"></span>
+        </div>
+        <span class="fd-dur-text">⏱ {{ flight.duration }}</span>
+        <span class="fd-stop-tag" *ngIf="flight.stops > 0">
+          {{ flight.stop_details || (flight.stops + ' escale(s)') }}
+        </span>
+      </div>
+
+      <div class="fd-time-block right">
+        <span class="fd-time">{{ flight.arrival.time }}</span>
+        <span class="fd-airport">{{ flight.arrival.airport }}</span>
+        <span class="fd-city">{{ flight.arrival.city | titlecase }}</span>
+      </div>
+    </div>
+
+    <!-- Date -->
+    <div class="fd-date-row">
+      <span>📅 {{ formatDate(flight.departure.date) }}</span>
+      <span *ngIf="flight.arrival.date !== flight.departure.date">
+        → {{ formatDate(flight.arrival.date) }}
+      </span>
+      <span class="fd-fn">✈ {{ flight.flight_number }}</span>
+    </div>
+
+    <!-- Services -->
+    <div class="fd-section" *ngIf="flight.amenities.length">
+      <h2 class="fd-section-title">Services inclus</h2>
+      <div class="fd-amenities">
+        <div class="fd-amenity" *ngFor="let a of flight.amenities">
+          <span class="fd-am-icon">{{ getAmenityIcon(a.icon) }}</span>
+          <div>
+            <div class="fd-am-name">{{ a.name }}</div>
+            <div class="fd-am-val">{{ a.value }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarifs -->
+    <div class="fd-section" *ngIf="flight.fare_options.length">
+      <h2 class="fd-section-title">Options de tarif</h2>
+      <div class="fd-fares">
+        <div class="fd-fare"
+             *ngFor="let fare of flight.fare_options"
+             [class.fd-fare--rec]="fare.recommended"
+             [class.fd-fare--sel]="selectedFare?.name === fare.name">
+
+          <div class="fd-fare-badge" *ngIf="fare.recommended">Recommandé</div>
+
+          <div class="fd-fare-name">{{ fare.name }}</div>
+          <div class="fd-fare-price">
+            {{ fare.price | number:'1.0-0' }}{{ formatCurrency(fare.currency || defaultCurrency) }}
+          </div>
+
+          <ul class="fd-fare-feats">
+            <li *ngFor="let f of fare.features">› {{ f }}</li>
+          </ul>
+
+          <button class="fd-fare-btn"
+                  [class.fd-fare-btn--rec]="fare.recommended"
+                  (click)="onBook(flight)" [disabled]="showConfirmation">
+            {{ showConfirmation ? '✅ Vol réservé' : 'Réserver ce vol' }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── LOADING / NOT FOUND ────────────────────── -->
+<ng-template #loading>
+  <div class="fd-empty">
+    <div class="fd-empty-icon">✈️</div>
+    <p>Chargement du vol...</p>
+    <button (click)="goBack()">Retour aux résultats</button>
+  </div>
+</ng-template>

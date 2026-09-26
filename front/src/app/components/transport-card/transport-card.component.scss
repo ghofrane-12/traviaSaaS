@@ -1,0 +1,83 @@
+    .transport-card {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .transport-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon {
+      font-size: 32px;
+    }
+    .card-content {
+      flex: 1;
+    }
+    .transport-name {
+      margin: 0 0 4px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .transport-company {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .transport-info {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      color: #555;
+    }
+    .transport-stops {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+    .stop {
+      display: flex;
+      flex-direction: column;
+    }
+    .time {
+      font-weight: 600;
+    }
+    .location {
+      color: #666;
+      font-size: 12px;
+    }
+    .stop-arrow {
+      color: #999;
+    }
+    .details-btn {
+      background: #2196f3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .details-btn:hover {
+      background: #1976d2;
+    }

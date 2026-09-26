@@ -1,0 +1,612 @@
+<div class="results-page">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="results-header">
+    <button class="back-btn" (click)="goBack()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M10 12L6 8l4-4"/>
+      </svg>
+      Nouvelle recherche
+    </button>
+
+    <!-- Header mono-segment (mode one-shot) -->
+    <div class="results-summary" *ngIf="results && !isStreamingMode">
+      <span class="results-type-badge">{{ getSectionTitle($any(results)) }}</span>
+    </div>
+
+    <!-- Header multi-segment (streaming) -->
+    <div class="results-summary multi-segment" *ngIf="isStreamingMode && segments.length > 0">
+      <div class="multi-segment-pills">
+        <span
+          class="segment-pill"
+          *ngFor="let seg of segments"
+          [attr.data-type]="seg.result_type"
+          [class.segment-pill--error]="isSegmentError(seg)">
+          {{ getSegmentPillLabel(seg) }}
+        </span>
+        <span class="segment-pill loading" *ngIf="pendingSegments">
+          <span class="mini-pulse"></span> En cours...
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CLARIFICATION BANNER ═══ -->
+  @if (pendingClarification) {
+    <div class="clarification-banner">
+      <p>{{ pendingClarification.question }}</p>
+      <div class="clarification-buttons">
+        @for (subcat of pendingClarification.subcats; track subcat.id) {
+          <button
+            (click)="onClarificationChoice(subcat)"
+            [disabled]="isClarificationProcessing"
+            [class.loading]="isClarificationProcessing">
+            {{ subcat.display_phrase || subcat.label }}
+          </button>
+        }
+      </div>
+    </div>
+  }
+
+  <!-- ═══ STREAMING PENDING BAR ═══ -->
+  <div class="streaming-pending-bar"
+       *ngIf="isStreamingMode && activeStreamingSteps.length > 0">
+    <div class="pending-steps">
+      <div class="pending-step"
+           *ngFor="let step of activeStreamingSteps"
+           [class.pending-step--done]="step.state === 'done'"
+           [class.pending-step--error]="step.state === 'error'"
+           [class.pending-step--pending]="step.state === 'pending'">
+
+        <svg *ngIf="step.state === 'pending'"
+             class="pending-spinner" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"
+                  stroke-dasharray="35" stroke-dashoffset="10" stroke-linecap="round"/>
+        </svg>
+        <span *ngIf="step.state === 'done'"  class="pending-check">✓</span>
+        <span *ngIf="step.state === 'error'" class="pending-error">✗</span>
+
+        <span class="pending-icon">{{ step.icon }}</span>
+        <span class="pending-label">{{ step.message }}</span>
+
+        <span class="pending-count"
+              *ngIf="step.state === 'done' && step.count !== undefined && step.count > 0">
+          {{ step.count }} résultat{{ step.count > 1 ? 's' : '' }}
+        </span>
+        <span class="pending-count error-label" *ngIf="step.state === 'error'">
+          Indisponible
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MODE STREAMING — segments accumulés via segment_done
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div class="results-body"
+       *ngIf="!isLoading && isStreamingMode && segments.length > 0">
+
+    <!-- ─── BOUCLE SEGMENTS ──────────────────────────────────────────────── -->
+    <ng-container *ngFor="let segment of segments; let i = index">
+
+      <!-- Séparateur entre segments -->
+      <div class="section-divider" *ngIf="i > 0"></div>
+
+      <!-- Titre de section -->
+      <div class="section-label">{{ getSectionTitle(segment) }}</div>
+
+      <!-- Message narrateur (hors info, pour ne pas dupliquer) -->
+      <div class="ai-bar"
+           *ngIf="segment.message && !isSegmentInfo(segment) && !isSegmentError(segment) && !isSegmentHuman(segment)">
+        <div class="ai-icon">
+          <svg viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3a1 1 0 110 2 1 1 0 010-2zm1 8H7v-5h2v5z"/>
+          </svg>
+        </div>
+        <span class="ai-msg">{{ segment.message }}</span>
+      </div>
+
+      <!-- ── ✈️ Vols ─────────────────────────────────────────────────── -->
+      <div class="cards-list" *ngIf="isSegmentFlight(segment)">
+        <app-flight-card
+          *ngFor="let flight of getSegmentResults(segment); let j = index"
+          [flight]="flight"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated"
+          (selectFare)="onSelectFare($event)">
+        </app-flight-card>
+      </div>
+
+      <!-- ── 🏨 Hôtels ───────────────────────────────────────────────── -->
+      <div class="cards-list" *ngIf="isSegmentHotel(segment)">
+        <app-hotel-card
+          *ngFor="let hotel of getSegmentResults(segment); let j = index"
+          [hotel]="hotel"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated"
+          (viewDetails)="onViewHotelDetails($event)"
+          (bookNow)="onBookHotel($event)">
+        </app-hotel-card>
+      </div>
+
+      <!-- ── 🚆 Transports ───────────────────────────────────────────── -->
+      <div class="cards-list" *ngIf="isSegmentTransport(segment)">
+        <app-transport-card
+          *ngFor="let transport of getSegmentResults(segment); let j = index"
+          [transport]="transport"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated">
+        </app-transport-card>
+      </div>
+
+      <!-- ── 🍽️ Restaurants ──────────────────────────────────────────── -->
+      <div class="cards-grid-restaurants" *ngIf="isSegmentRestaurant(segment)">
+        <app-restaurant-card
+          *ngFor="let restaurant of getSegmentResults(segment); let j = index"
+          [restaurant]="restaurant"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated">
+        </app-restaurant-card>
+      </div>
+
+      <!-- ── 🎭 Activités ────────────────────────────────────────────── -->
+      <div class="cards-grid" *ngIf="isSegmentActivity(segment)">
+        <app-activity-card
+          *ngFor="let activity of getSegmentResults(segment); let j = index"
+          [activity]="activity"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated"
+          (viewDetails)="onViewActivityDetails($event)">
+        </app-activity-card>
+      </div>
+
+      <!-- ── 🍴 Spécialités ──────────────────────────────────────────── -->
+      <div class="cards-grid-specialties" *ngIf="isSegmentSpecialty(segment)">
+        <app-specialty-card
+          *ngFor="let specialty of getSegmentResults(segment); let j = index"
+          [specialty]="specialty"
+          [style.animation-delay]="j * 60 + 'ms'"
+          class="card-animated">
+        </app-specialty-card>
+      </div>
+
+      <!-- ── 💡 Info Results ────────────────────────────────────────── -->
+      <!-- CORRECTION : guard isSegmentInfo exclut show_ticket_form=true -->
+      <app-info-results
+        *ngIf="isSegmentInfo(segment)"
+        [data]="segment"
+        [tenantId]="agentService.getTenantId()"
+        [userId]="agentService.getUserId()"
+        [isVisitor]="userService.isVisitor()">
+      </app-info-results>
+
+      <!-- ── 👤 Human Required ──────────────────────────────────────── -->
+      <!-- CORRECTION : isSegmentHuman couvre human_required ET info+show_ticket_form -->
+      <div class="segment-human-card" *ngIf="isSegmentHuman(segment)">
+        <div class="segment-human-icon">👤</div>
+        <div class="segment-human-body">
+          <p class="segment-human-msg">{{ segment.message }}</p>
+
+          <div class="segment-human-actions" *ngIf="segment.actions?.length">
+            <ng-container *ngFor="let action of segment.actions">
+
+              <button
+                *ngIf="action.action === 'open_ticket_form' && !userService.isVisitor()"
+                class="segment-human-btn"
+                (click)="openTicketForm(segment)">
+                {{ action.label }}
+              </button>
+
+              <ng-container *ngIf="action.action === 'call' && action['contact']">
+  
+              <!-- Bouton téléphone -->
+              <button
+                *ngIf="parseContacts(action['contact']).phones.length"
+                class="segment-human-btn segment-human-btn--call"
+                (click)="callContact(action['contact'])">
+                📞 Appeler
+              </button>
+
+              <!-- Bouton email -->
+              <button
+                *ngIf="parseContacts(action['contact']).emails.length"
+                class="segment-human-btn segment-human-btn--email"
+                (click)="emailContact(action['contact'])">
+                📧 Envoyer un email
+              </button>
+
+            </ng-container>
+
+              <button
+                *ngIf="action.action !== 'open_ticket_form' && action.action !== 'call'"
+                class="segment-human-btn"
+                (click)="onSegmentAction(action)">
+                {{ action.label }}
+              </button>
+
+            </ng-container>
+          </div>
+
+          <app-ticket-form
+            *ngIf="isTicketFormOpen(segment)"
+            mode="inline"
+            [tenantId]="agentService.getTenantId()"
+            [userId]="agentService.getUserId()">
+          </app-ticket-form>
+
+        </div>
+      </div>
+
+      <!-- ── ⚠️ Erreur inline ────────────────────────────────────────── -->
+      <div class="segment-error-card" *ngIf="isSegmentError(segment)">
+        <span class="segment-error-icon">⚠️</span>
+        <div class="segment-error-body">
+          <span class="segment-error-label">{{ segment.label || 'Service' }}</span>
+          <span class="segment-error-msg">{{ segment.message }}</span>
+        </div>
+      </div>
+
+    </ng-container>
+    <!-- ─── FIN BOUCLE SEGMENTS ── CORRECTION PRINCIPALE : </ng-container> ici ── -->
+
+
+    <!-- ── 🏆 Statut Fidélité (UNE SEULE FOIS après tous les segments) ── -->
+    <!-- CORRECTION : ce bloc est maintenant EN DEHORS de la boucle *ngFor -->
+    <div class="loyalty-status-section"
+         *ngIf="isStreamingComplete && globalSuggestions.length > 0">
+      <div class="loyalty-status-header">
+        <span class="loyalty-status-icon">🏆</span>
+        <span class="loyalty-status-title">Votre statut fidélité</span>
+      </div>
+
+      <div class="loyalty-cards">
+        <ng-container *ngFor="let sugg of globalSuggestions">
+
+          <!-- Points gagnés -->
+          <div class="loyalty-card loyalty-card--points"
+               *ngIf="sugg.type === 'loyalty'">
+            <div class="lc-left">
+              <span class="lc-icon">⭐</span>
+              <div class="lc-text">
+                <span class="lc-label">{{ sugg.label }}</span>
+                <span class="lc-sub">Ajoutés à votre solde</span>
+              </div>
+            </div>
+            <span class="lc-badge lc-badge--points">+{{ sugg['points'] }} pts</span>
+          </div>
+
+          <!-- Upgrade de tier -->
+          <div class="loyalty-card loyalty-card--upgrade"
+               *ngIf="sugg.type === 'loyalty_upgrade'">
+            <div class="lc-left">
+              <span class="lc-icon">🎉</span>
+              <div class="lc-text">
+                <span class="lc-label">{{ sugg.label }}</span>
+                <span class="lc-sub">Nouveaux avantages débloqués</span>
+              </div>
+            </div>
+            <span class="lc-badge lc-badge--upgrade">NOUVEAU</span>
+          </div>
+
+          <!-- Prochain palier avec barre de progression -->
+          <div class="loyalty-card loyalty-card--next"
+               *ngIf="sugg.type === 'next_tier'">
+            <div class="lc-left">
+              <span class="lc-icon">🎯</span>
+              <div class="lc-text">
+                <span class="lc-label">{{ sugg.label }}</span>
+                <span class="lc-sub">Continuez vos réservations pour progresser</span>
+              </div>
+              <span class="lc-badge lc-badge--next">{{ sugg['next_tier'] | uppercase }}</span>
+            </div>
+            <div class="lc-progress">
+              <div class="lc-progress-bar">
+                <div class="lc-progress-fill"
+                     [style.width]="getProgressPercent(sugg) + '%'">
+                </div>
+              </div>
+              <span class="lc-progress-label">{{ sugg['points_needed'] }} EUR restants</span>
+            </div>
+          </div>
+
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- ── Cross-sell ──────────────────────────────────────────────────── -->
+    <!-- CORRECTION : ce bloc est aussi EN DEHORS de la boucle *ngFor -->
+    <div class="cross-sell-section"
+         *ngIf="isStreamingComplete && crossSellProposals.length > 0">
+      <div class="section-label suggestions-label">💡 Vous pourriez aussi aimer</div>
+      <div class="sugg-list">
+        <div class="sugg-card"
+             *ngFor="let proposal of crossSellProposals"
+             (click)="onCrossSellClick(proposal)">
+          <div class="sugg-header">
+            <span class="sugg-label">{{ proposal.label }}</span>
+          </div>
+          <p class="sugg-desc" *ngIf="proposal.description">{{ proposal.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spinner segment suivant en cours -->
+    <!-- CORRECTION : aussi EN DEHORS de la boucle -->
+    <div class="segment-loading-row" *ngIf="pendingSegments">
+      <span class="mini-pulse"></span>
+      <span>Recherche en cours...</span>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MODE ONE-SHOT — résultat unique (POST /)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div class="results-body"
+       *ngIf="!isLoading && !isStreamingMode && results">
+
+    <!-- ── multi_search_results ───────────────────────────────────────── -->
+    <ng-container *ngIf="isMultiSegmentResults(results)">
+
+      <div class="ai-bar" *ngIf="results.message">
+        <div class="ai-icon">
+          <svg viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3a1 1 0 110 2 1 1 0 010-2zm1 8H7v-5h2v5z"/>
+          </svg>
+        </div>
+        <span class="ai-msg">{{ results.message }}</span>
+      </div>
+
+      <ng-container *ngFor="let seg of $any(results).info?.segments; let i = index">
+        <div class="section-divider" *ngIf="i > 0"></div>
+        <div class="section-label">{{ getSectionTitle(seg) }}</div>
+
+        <app-info-results *ngIf="seg.type === 'info_results'" [data]="seg"></app-info-results>
+
+        <div class="cards-list" *ngIf="seg.type === 'flight_search_results'">
+          <app-flight-card
+            *ngFor="let flight of seg.results; let j = index"
+            [flight]="flight" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+            (selectFare)="onSelectFare($event)">
+          </app-flight-card>
+        </div>
+
+        <div class="cards-list" *ngIf="seg.type === 'hotel_search_results'">
+          <app-hotel-card
+            *ngFor="let hotel of seg.results; let j = index"
+            [hotel]="hotel" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+            (viewDetails)="onViewHotelDetails($event)"
+            (bookNow)="onBookHotel($event)">
+          </app-hotel-card>
+        </div>
+
+        <div class="cards-list" *ngIf="seg.type === 'transport_search_results'">
+          <app-transport-card
+            *ngFor="let t of seg.results; let j = index"
+            [transport]="t" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+          </app-transport-card>
+        </div>
+
+        <div class="cards-grid-restaurants" *ngIf="seg.type === 'restaurant_search_results'">
+          <app-restaurant-card
+            *ngFor="let r of seg.results; let j = index"
+            [restaurant]="r" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+          </app-restaurant-card>
+        </div>
+
+        <div class="cards-grid" *ngIf="seg.type === 'activity_search_results'">
+          <app-activity-card
+            *ngFor="let activity of seg.results; let j = index"
+            [activity]="activity" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+            (viewDetails)="onViewActivityDetails($event)">
+          </app-activity-card>
+        </div>
+
+        <div class="cards-grid-specialties" *ngIf="seg.type === 'specialty_search_results'">
+          <app-specialty-card
+            *ngFor="let s of seg.results; let j = index"
+            [specialty]="s" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+          </app-specialty-card>
+        </div>
+
+        <div class="segment-error-card" *ngIf="seg.type === 'error' || seg.error">
+          <span class="segment-error-icon">⚠️</span>
+          <div class="segment-error-body">
+            <span class="segment-error-label">{{ seg.label || 'Service' }}</span>
+            <span class="segment-error-msg">{{ seg.message }}</span>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Suggestions + loyalty + follow-up depuis info -->
+      <ng-container *ngIf="$any(results).info as info">
+        <ng-container *ngIf="info.suggestions?.length">
+          <div class="section-label suggestions-label">Offres suggérées</div>
+          <div class="sugg-list">
+            <div class="sugg-card"
+                 *ngFor="let sugg of info.suggestions; let si = index"
+                 [class.sugg-card--expanded]="expandedSuggestionIndex === si"
+                 (click)="toggleSuggestionDetails(si)">
+              <div class="sugg-header">
+                <span class="sugg-icon"  *ngIf="sugg.icon">{{ sugg.icon }}</span>
+                <span class="sugg-label">{{ sugg.label }}</span>
+                <span class="sugg-badge" *ngIf="sugg.badge">{{ sugg.badge }}</span>
+                <span class="sugg-price" *ngIf="sugg.price">{{ formatPrice(sugg.price, sugg.currency) }}</span>
+              </div>
+              <p class="sugg-desc" *ngIf="sugg.description">{{ sugg.description }}</p>
+              <div class="sugg-actions" (click)="$event.stopPropagation()">
+                <button class="sugg-btn" (click)="onSuggestionAction(sugg, sugg.action || 'default')">
+                  {{ sugg.cta || 'En savoir plus' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <div class="loyalty-row"
+             *ngIf="info.loyalty_summary && (info.loyalty_summary.points_earned > 0 || info.loyalty_summary.tier)">
+          <span class="loyalty-tier">{{ info.loyalty_summary.tier }}</span>
+          <span class="loyalty-points" *ngIf="info.loyalty_summary.points_earned > 0">
+            +{{ info.loyalty_summary.points_earned }} pts
+          </span>
+        </div>
+
+        <div class="followup-bar" *ngIf="info.follow_up">
+          <button class="followup-btn" (click)="onFollowUpClick(info.follow_up)">
+            {{ info.follow_up }} →
+          </button>
+        </div>
+      </ng-container>
+
+    </ng-container>
+
+    <!-- ── info_results simple ─────────────────────────────────────────── -->
+    <app-info-results
+      *ngIf="isInfoResults(results)"
+      [data]="results"
+      [tenantId]="agentService.getTenantId()"
+      [userId]="agentService.getUserId()"
+      [isVisitor]="userService.isVisitor()">
+    </app-info-results>
+
+    <!-- ── Message narrateur (search results) ─────────────────────────── -->
+    <div class="ai-bar"
+         *ngIf="results.message && !isInfoResults(results) && !isMultiSegmentResults(results)">
+      <div class="ai-icon">
+        <svg viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3a1 1 0 110 2 1 1 0 010-2zm1 8H7v-5h2v5z"/>
+        </svg>
+      </div>
+      <span class="ai-msg">{{ results.message }}</span>
+    </div>
+
+    <!-- ── ✈️ Vols ─────────────────────────────────────────────────────── -->
+    <div class="cards-list" *ngIf="isFlightResults(results)">
+      <app-flight-card
+        *ngFor="let flight of results.results; let j = index"
+        [flight]="flight" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+        (selectFare)="onSelectFare($event)">
+      </app-flight-card>
+    </div>
+
+    <!-- ── 🏨 Hôtels ───────────────────────────────────────────────────── -->
+    <div class="cards-list" *ngIf="isHotelResults(results)">
+      <app-hotel-card
+        *ngFor="let hotel of results.results; let j = index"
+        [hotel]="hotel" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+        (viewDetails)="onViewHotelDetails($event)"
+        (bookNow)="onBookHotel($event)">
+      </app-hotel-card>
+    </div>
+
+    <!-- ── 🚆 Transports ───────────────────────────────────────────────── -->
+    <div class="cards-list" *ngIf="isTransportResults(results)">
+      <app-transport-card
+        *ngFor="let transport of results.results; let j = index"
+        [transport]="transport" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+      </app-transport-card>
+    </div>
+
+    <!-- ── 🍽️ Restaurants ──────────────────────────────────────────────── -->
+    <div class="cards-grid-restaurants" *ngIf="isRestaurantResults(results)">
+      <app-restaurant-card
+        *ngFor="let restaurant of results.results; let j = index"
+        [restaurant]="restaurant" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+      </app-restaurant-card>
+    </div>
+
+    <!-- ── 🎭 Activités ────────────────────────────────────────────────── -->
+    <div class="cards-grid" *ngIf="isActivityResults(results)">
+      <app-activity-card
+        *ngFor="let activity of results.results; let j = index"
+        [activity]="activity" [style.animation-delay]="j * 60 + 'ms'" class="card-animated"
+        (viewDetails)="onViewActivityDetails($event)">
+      </app-activity-card>
+    </div>
+
+    <!-- ── 🍴 Spécialités ──────────────────────────────────────────────── -->
+    <div class="cards-grid-specialties" *ngIf="isSpecialtyResults(results)">
+      <app-specialty-card
+        *ngFor="let specialty of results.results; let j = index"
+        [specialty]="specialty" [style.animation-delay]="j * 60 + 'ms'" class="card-animated">
+      </app-specialty-card>
+    </div>
+
+    <!-- ── Loyalty + follow-up (mode one-shot) ───────────────────────── -->
+    <ng-container *ngIf="!isInfoResults(results) && !isMultiSegmentResults(results)">
+
+      <div class="loyalty-row"
+           *ngIf="results.loyalty_summary &&
+                  (results.loyalty_summary.points_earned > 0 || results.loyalty_summary.tier)">
+        <span class="loyalty-tier">{{ results.loyalty_summary.tier }}</span>
+        <span class="loyalty-points" *ngIf="results.loyalty_summary.points_earned > 0">
+          +{{ results.loyalty_summary.points_earned }} pts
+        </span>
+      </div>
+
+      <div class="followup-bar" *ngIf="results.follow_up">
+        <button class="followup-btn" (click)="onFollowUpClick(results.follow_up)">
+          {{ results.follow_up }} →
+        </button>
+      </div>
+
+    </ng-container>
+
+  </div>
+
+  <!-- ═══ EMPTY STATE ═══ -->
+  <div class="empty-state"
+       *ngIf="!isLoading && !results && segments.length === 0
+              && !showStayForm && !showFlightForm
+              && !isStreamingMode">
+    <div class="empty-icon">🔍</div>
+    <h3>Aucun résultat</h3>
+    <p>Lancez une recherche depuis le chat pour voir les résultats ici.</p>
+    <button class="back-btn-lg" (click)="goBack()">Retour au chat</button>
+  </div>
+
+  <!-- ═══ FORMULAIRES NON BLOQUANTS (overlay) ═══ -->
+  <app-stay-search
+    *ngIf="showStayForm"
+    [showModal]="true"
+    [formData]="stayFormData"
+    [entities]="formEntities"
+    [originalLanguage]="formLanguage"
+    (navigateToResults)="onStayFormNavigate($event)"
+    (submit)="onStayFormSubmit($event)"
+    (cancel)="showStayForm = false">
+  </app-stay-search>
+
+  <app-flight-search
+    *ngIf="showFlightForm"
+    [showModal]="true"
+    [formData]="flightFormData"
+    [entities]="formEntities"
+    [originalLanguage]="formLanguage"
+    (navigateToResults)="onFlightFormNavigate($event)"
+    (submit)="onFlightFormSubmit($event)"
+    (cancel)="showFlightForm = false">
+  </app-flight-search>
+
+  <app-mixed-search
+    *ngIf="showMixedForm && mixedFormData"
+    [segmentForm]="mixedFormData"
+    [entities]="formEntities"
+    [showModal]="true"
+    [originalLanguage]="formLanguage"
+    (navigateToResults)="onMixedFormSubmit($event)"
+    (cancel)="showMixedForm = false">
+  </app-mixed-search>
+
+  <app-tour-search
+    *ngIf="showTourForm"
+    [showModal]="true"
+    [formData]="tourFormData"
+    [entities]="formEntities"
+    [originalLanguage]="formLanguage"
+    (navigateToResults)="onTourFormNavigate($event)"
+    (cancel)="showTourForm = false">
+  </app-tour-search>
+
+</div>

@@ -1,0 +1,50 @@
+<p>streaming-status works!</p>
+<!-- streaming-status/streaming-status.component.html -->
+<div class="ss-panel" *ngIf="steps.length > 0">
+
+  <!-- En-tête fixe -->
+  <div class="ss-header">
+    <span class="ss-header-dot"></span>
+    <span class="ss-header-label">Recherche en cours</span>
+  </div>
+
+  <!-- Liste des steps -->
+  <ul class="ss-list">
+    <li
+      *ngFor="let step of steps; let i = index"
+      class="ss-item"
+      [class.ss-item--pending]="step.state === 'pending'"
+      [class.ss-item--done]="step.state === 'done'"
+      [class.ss-item--error]="step.state === 'error'"
+      [style.animation-delay]="(i * 60) + 'ms'">
+
+      <!-- Icône état -->
+      <span class="ss-icon">
+        <!-- Pending : spinner SVG léger -->
+        <svg *ngIf="step.state === 'pending'"
+             class="ss-spinner"
+             viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="8"
+                  stroke="currentColor" stroke-width="2"
+                  stroke-dasharray="40" stroke-dashoffset="15"
+                  stroke-linecap="round"/>
+        </svg>
+        <!-- Done / Error : texte -->
+        <span *ngIf="step.state !== 'pending'" class="ss-icon-char">
+          {{ getIcon(step) }}
+        </span>
+      </span>
+
+      <!-- Message -->
+      <span class="ss-message">{{ step.message }}</span>
+
+      <!-- Badge count (apparaît quand done avec résultats) -->
+      <span class="ss-badge"
+            *ngIf="step.state === 'done' && step.count !== undefined">
+        {{ getCountLabel(step) }}
+      </span>
+
+    </li>
+  </ul>
+
+</div>

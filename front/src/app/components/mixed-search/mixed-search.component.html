@@ -1,0 +1,214 @@
+<!-- mixed-search/mixed-search.component.html -->
+
+<!-- Overlay -->
+<div class="mixed-search-overlay" *ngIf="showModal" (click)="onCancel()"></div>
+
+<!-- Carte formulaire -->
+<div class="mixed-search" [class.mixed-search--modal]="showModal">
+
+  <!-- ── En-tête ─────────────────────────────────────────────────────── -->
+  <div class="mixed-search__header">
+    <div class="mixed-search__icons">
+      <span class="header-icon" *ngIf="hasFlight">✈️</span>
+      <span class="header-sep"  *ngIf="hasFlight && (hasHotel || hasTour)">+</span>
+      <span class="header-icon" *ngIf="hasHotel">🏨</span>
+      <span class="header-sep"  *ngIf="hasHotel && hasTour">+</span>
+      <span class="header-icon" *ngIf="hasTour">🗺️</span>
+    </div>
+    <h2 class="mixed-search__title">{{ formTitle }}</h2>
+    <p class="mixed-search__subtitle">
+      Renseignez les informations ci-dessous pour planifier votre voyage
+    </p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- ══════════════════════════════════════════ VOL ═══════════ -->
+    <section class="mixed-search__section section--flight" *ngIf="hasFlight">
+      <div class="mixed-search__section-header">
+        <div class="section-badge badge--flight">
+          <span>✈️</span>
+          <h3>Vol</h3>
+        </div>
+      </div>
+
+      <div class="mixed-search__grid">
+        <div class="mixed-search__field">
+          <label for="origin">Ville de départ <span class="req">*</span></label>
+          <div class="input-wrap" style="position:relative">
+  <input id="origin" formControlName="origin" type="text"
+    placeholder="Ex : Paris" [class.error]="hasError('origin')"
+    (input)="onCityFieldInput($event, 'origin')"
+    (blur)="hideCityField('origin')" autocomplete="off"/>
+  <ul class="city-suggestions" *ngIf="showOriginSug">
+    <li *ngFor="let c of originSuggestions" (mousedown)="selectCityField(c, 'origin')">📍 {{ c }}</li>
+  </ul>
+</div>
+          <span class="error-msg" *ngIf="hasError('origin')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="destination">Destination <span class="req">*</span></label>
+          <div class="input-wrap" style="position:relative">
+  <input id="destination" formControlName="destination" type="text"
+    placeholder="Ex : Rome" [class.error]="hasError('destination')"
+    (input)="onCityFieldInput($event, 'destination')"
+    (blur)="hideCityField('destination')" autocomplete="off"/>
+  <ul class="city-suggestions" *ngIf="showDestinationSug">
+    <li *ngFor="let c of destinationSuggestions" (mousedown)="selectCityField(c, 'destination')">📍 {{ c }}</li>
+  </ul>
+</div>
+          <span class="error-msg" *ngIf="hasError('destination')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="departure_date">Date de départ <span class="req">*</span></label>
+          <input id="departure_date" formControlName="departure_date" type="date"
+            class="field-input" [class.error]="hasError('departure_date')" />
+          <span class="error-msg" *ngIf="hasError('departure_date')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="return_date">Date de retour <span class="opt">Optionnel</span></label>
+          <input id="return_date" formControlName="return_date" type="date" class="field-input" />
+        </div>
+
+        <div class="mixed-search__field">
+          <label>Passagers</label>
+          <div class="mixed-search__counter">
+            <button type="button" class="counter-btn" (click)="adjustCount('adults', -1)">−</button>
+            <span class="counter-value">{{ adultsVal }}</span>
+            <button type="button" class="counter-btn" (click)="adjustCount('adults', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="cabin_class">Classe</label>
+          <select id="cabin_class" formControlName="cabin_class" class="field-input">
+            <option *ngFor="let c of cabinClasses" [value]="c">
+              {{ c === 'ECONOMY' ? 'Économique' :
+                 c === 'PREMIUM_ECONOMY' ? 'Premium éco' :
+                 c === 'BUSINESS' ? 'Affaires' : 'Première' }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SÉPARATEUR ════════════════ -->
+    <div class="mixed-search__divider" *ngIf="hasFlight && (hasHotel || hasTour)">
+      <span>+</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════ HÔTEL ═════════ -->
+    <section class="mixed-search__section section--hotel" *ngIf="hasHotel">
+      <div class="mixed-search__section-header">
+        <div class="section-badge badge--hotel">
+          <span>🏨</span>
+          <h3>Hôtel</h3>
+        </div>
+      </div>
+
+      <div class="mixed-search__grid">
+        <div class="mixed-search__field">
+          <label for="city">Ville <span class="req">*</span></label>
+          <div class="input-wrap" style="position:relative">
+  <input id="city" formControlName="city" type="text"
+    placeholder="Ex : Rome" [class.error]="hasError('city')"
+    (input)="onCityFieldInput($event, 'city')"
+    (blur)="hideCityField('city')" autocomplete="off"/>
+  <ul class="city-suggestions" *ngIf="showCitySug">
+    <li *ngFor="let c of citySuggestions" (mousedown)="selectCityField(c, 'city')">📍 {{ c }}</li>
+  </ul>
+</div>
+          <span class="error-msg" *ngIf="hasError('city')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="check_in">Check In <span class="req">*</span></label>
+          <input id="check_in" formControlName="check_in" type="date"
+            class="field-input" [class.error]="hasError('check_in')" />
+          <span class="error-msg" *ngIf="hasError('check_in')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="check_out">Check Out <span class="req">*</span></label>
+          <input id="check_out" formControlName="check_out" type="date"
+            class="field-input" [class.error]="hasError('check_out')" />
+          <span class="error-msg" *ngIf="hasError('check_out')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label>Voyageurs</label>
+          <div class="mixed-search__counter">
+            <button type="button" class="counter-btn" (click)="adjustCount('guests', -1)">−</button>
+            <span class="counter-value">{{ guestsVal }}</span>
+            <button type="button" class="counter-btn" (click)="adjustCount('guests', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="mixed-search__field">
+          <label>Chambres</label>
+          <div class="mixed-search__counter">
+            <button type="button" class="counter-btn" (click)="adjustCount('rooms', -1, 1, 5)">−</button>
+            <span class="counter-value">{{ roomsVal }}</span>
+            <button type="button" class="counter-btn" (click)="adjustCount('rooms', 1, 1, 5)">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SÉPARATEUR ════════════════ -->
+    <div class="mixed-search__divider" *ngIf="hasHotel && hasTour">
+      <span>+</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════ TOUR ══════════ -->
+    <section class="mixed-search__section section--tour" *ngIf="hasTour">
+      <div class="mixed-search__section-header">
+        <div class="section-badge badge--tour">
+          <span>🗺️</span>
+          <h3>Activités & Tours</h3>
+        </div>
+      </div>
+
+      <div class="mixed-search__grid">
+        <div class="mixed-search__field" *ngIf="hasTour">
+          <label for="tour_city">Destination <span class="req">*</span></label>
+          <div class="input-wrap" style="position:relative">
+  <input id="tour_city" formControlName="tour_city" type="text"
+    placeholder="Ex : Tunis, Hammamet..." [class.error]="hasError('tour_city')"
+    (input)="onCityFieldInput($event, 'tour_city')"
+    (blur)="hideCityField('tour_city')" autocomplete="off"/>
+  <ul class="city-suggestions" *ngIf="showTourCitySug">
+    <li *ngFor="let c of tourCitySuggestions" (mousedown)="selectCityField(c, 'tour_city')">📍 {{ c }}</li>
+  </ul>
+</div>
+          <span class="error-msg" *ngIf="hasError('tour_city')">Requis</span>
+        </div>
+
+        <div class="mixed-search__field">
+          <label for="tour_departure_date">Date souhaitée <span class="opt">Optionnel</span></label>
+          <input id="tour_departure_date" formControlName="tour_departure_date"
+            type="date" class="field-input" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ ACTIONS ═══════ -->
+    <div class="mixed-search__actions">
+      <button type="button" class="btn-cancel" (click)="onCancel()">
+        Annuler
+      </button>
+      <button type="submit" class="btn-submit" [disabled]="!isValid() || isLoading">
+        <span *ngIf="!isLoading">
+          <span class="btn-icon">🔍</span> Rechercher
+        </span>
+        <span *ngIf="isLoading" class="loading-dots">
+          Recherche en cours<span>.</span><span>.</span><span>.</span>
+        </span>
+      </button>
+    </div>
+
+  </form>
+</div>

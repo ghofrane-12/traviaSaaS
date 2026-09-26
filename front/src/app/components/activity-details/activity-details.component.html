@@ -1,0 +1,282 @@
+<div class="ad-page">
+<!-- Toast -->
+<div class="toast-success" *ngIf="showToast" [class.toast-warning]="showConfirmation">
+  {{ toastMessage }}
+</div>
+<!-- Header -->
+<div class="ad-header">
+  <div class="ad-header-top">
+    <button class="ad-back-btn" (click)="goBack()">
+  <span class="ad-back-arrow">←</span>
+</button>
+  </div>
+  <div class="ad-header-bottom">
+    <h1 class="ad-title">{{ activity?.name || 'Détails de l\'activité' }}</h1>
+    <div class="ad-header-badges">
+      <span class="ad-header-badge ad-badge-locale" *ngIf="activity?.locale">
+        🌍 {{ activity?.locale }}
+      </span>
+      <span class="ad-header-badge ad-badge-status" 
+            [class]="getStatusClass()" 
+            *ngIf="activity">
+        {{ getStatusText() }}
+      </span>
+    </div>
+  </div>
+</div>
+
+  <!-- Loading -->
+  <div class="ad-loading" *ngIf="loading">
+    <div class="ad-spinner"></div>
+    <p>Chargement des détails...</p>
+  </div>
+
+  <!-- Error -->
+  <div class="ad-error" *ngIf="error && !loading">
+    <p>{{ error }}</p>
+    <button class="ad-retry-btn" (click)="loadActivityDetails()">Réessayer</button>
+  </div>
+
+  <!-- Content -->
+  <div class="ad-container" *ngIf="activity && !loading">
+    
+    <!-- Carousel images -->
+    <div class="ad-carousel" *ngIf="getImages().length > 0">
+      <div class="ad-carousel-track">
+        <img [src]="getMainImage()" 
+             [alt]="activity.name"
+             class="ad-main-img"
+             (error)="onImageError($event)">
+      </div>
+      <button class="ad-nav ad-nav-prev" (click)="prevImage()"
+              *ngIf="getImages().length > 1">‹</button>
+      <button class="ad-nav ad-nav-next" (click)="nextImage()"
+              *ngIf="getImages().length > 1">›</button>
+      <div class="ad-carousel-counter" *ngIf="getImages().length > 1">
+        {{ selectedImageIndex + 1 }} / {{ getImages().length }}
+      </div>
+    </div>
+    
+    <!-- Fallback si pas d'images -->
+    <div class="ad-carousel ad-carousel-fallback" *ngIf="getImages().length === 0">
+      <div class="ad-carousel-track">
+        <img [src]="DEFAULT_IMAGE" 
+             [alt]="activity.name"
+             class="ad-main-img">
+      </div>
+    </div>
+    
+    <!-- Thumbnails -->
+    <div class="ad-thumbs" *ngIf="getImages().length > 1">
+      <button class="ad-thumb-btn" 
+              *ngFor="let img of getImages(); let i = index"
+              [class.ad-thumb-active]="selectedImageIndex === i"
+              (click)="selectImage(i)">
+        <img [src]="img" [alt]="'Photo ' + (i+1)" (error)="onImageError($event)">
+      </button>
+    </div>
+
+    <!-- Info principale -->
+    <div class="ad-info-section">
+      <div class="ad-header-row">
+        <div>
+          <h1 class="ad-event-name">{{ activity.name }}</h1>
+          <div class="ad-meta">
+            <span class="ad-category">{{ activity.type || 'Événement' }}</span>
+            <span class="ad-locale">{{ activity.locale }}</span>
+          </div>
+        </div>
+        <div class="ad-status-badge" [class]="getStatusClass()">
+          {{ getStatusText() }}
+        </div>
+      </div>
+
+      <!-- 🔥 Date et heure - UNIQUEMENT pour les événements (avec dates) -->
+  <div class="ad-date-box" *ngIf="activity.dates?.start">
+  <div class="ad-date-icon">📅</div>
+  <div class="ad-date-info">
+    <div class="ad-date-full">{{ formatDate(activity.dates?.start?.localDate) }}</div>
+    <div class="ad-time" *ngIf="activity.dates?.start?.localTime && !activity.dates?.start?.timeTBA">
+      🕒 {{ formatTime(activity.dates?.start?.localTime) }}
+    </div>
+    <div class="ad-time-tba" *ngIf="!activity.dates?.start?.localTime || activity.dates?.start?.timeTBA">
+      ⏰ Horaire à confirmer
+    </div>
+    <div class="ad-timezone" *ngIf="activity.dates?.timezone">
+      Fuseau horaire : {{ activity.dates?.timezone }}
+    </div>
+  </div>
+</div>
+
+      <!-- ✅ Message pour les attractions (pas de date) -->
+      <div class="ad-date-box ad-attraction-message" *ngIf="!activity.dates?.start && activity.type === 'attraction'">
+        <div class="ad-date-icon">🏛️</div>
+        <div class="ad-date-info">
+          <div class="ad-date-full">Attraction touristique</div>
+          <div class="ad-time">Consultez les horaires d'ouverture</div>
+        </div>
+      </div>
+
+      <!-- Lieu -->
+      <div class="ad-location-box" *ngIf="activity.venue">
+        <div class="ad-location-icon">📍</div>
+        <div class="ad-location-info">
+          <div class="ad-venue-name">{{ activity.venue.name }}</div>
+          <div class="ad-venue-address">{{ activity.venue.address }} {{ activity.venue.city }}</div>
+          <a [href]="getGoogleMapsUrl()" target="_blank" class="ad-maps-link">
+            Voir sur Google Maps →
+          </a>
+        </div>
+      </div>
+
+      <!-- Prix -->
+      <div class="ad-price-box" *ngIf="activity.priceRanges && activity.priceRanges.length > 0">
+        <div class="ad-price-icon">💰</div>
+        <div class="ad-price-info">
+          <div class="ad-price-label">Prix</div>
+          <div class="ad-price-value">{{ getPriceRange() }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="ad-section" *ngIf="activity.description">
+      <h2 class="ad-section-title">📖 Description</h2>
+      <p class="ad-description">{{ activity.description }}</p>
+    </div>
+<!-- Durée -->
+<div class="ad-section" *ngIf="activity.duration">
+  <h2 class="ad-section-title">⏱️ Durée</h2>
+  <p class="ad-description">{{ activity.duration }}</p>
+</div>
+
+<!-- Points forts -->
+<div class="ad-section" *ngIf="activity.highlights?.length">
+  <h2 class="ad-section-title">⭐ Points forts</h2>
+  <div class="ad-tags-list">
+    <span class="ad-artist-tag" *ngFor="let h of activity.highlights">{{ h }}</span>
+  </div>
+</div>
+
+<!-- Ce qui est inclus -->
+<div class="ad-section" *ngIf="activity.whats_included?.length">
+  <h2 class="ad-section-title">✅ Inclus</h2>
+  <ul class="ad-checklist">
+    <li *ngFor="let item of activity.whats_included">{{ item }}</li>
+  </ul>
+</div>
+
+<!-- Ce qui n'est pas inclus -->
+<div class="ad-section" *ngIf="activity.whats_not_included?.length">
+  <h2 class="ad-section-title">❌ Non inclus</h2>
+  <ul class="ad-checklist ad-checklist-no">
+    <li *ngFor="let item of activity.whats_not_included">{{ item }}</li>
+  </ul>
+</div>
+
+<!-- Lieu de rendez-vous -->
+<div class="ad-section" *ngIf="getMeetingPoint()">
+  <h2 class="ad-section-title">📍 Point de rendez-vous</h2>
+  <p class="ad-description">{{ getMeetingPoint() }}</p>
+</div>
+
+<!-- Langues -->
+<div class="ad-section" *ngIf="activity.languages?.length">
+  <h2 class="ad-section-title">🌍 Langues disponibles</h2>
+  <div class="ad-tags-list">
+    <span class="ad-artist-tag" *ngFor="let lang of activity.languages">{{ lang }}</span>
+  </div>
+</div>
+    <!-- Informations supplémentaires -->
+    <div class="ad-section" *ngIf="activity.additionalInfo">
+      <h2 class="ad-section-title">ℹ️ Informations supplémentaires</h2>
+      <p class="ad-additional-info">{{ activity.additionalInfo }}</p>
+    </div>
+
+    <!-- Info importante -->
+    <div class="ad-section ad-important" *ngIf="activity.info">
+      <h2 class="ad-section-title">⚠️ Important</h2>
+      <p class="ad-info">{{ activity.info }}</p>
+    </div>
+
+    <!-- Note particulière -->
+    <div class="ad-section ad-note" *ngIf="activity.pleaseNote">
+      <h2 class="ad-section-title">📝 Note</h2>
+      <p class="ad-pleasenote">{{ activity.pleaseNote }}</p>
+    </div>
+
+    <!-- Artistes -->
+    <div class="ad-section" *ngIf="activity.artists && activity.artists.length > 0">
+      <div class="ad-artists-list">
+        <span class="ad-artist-tag" *ngFor="let artist of activity.artists">
+          {{ artist }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Plan de salle -->
+    <div class="ad-section" *ngIf="activity.seatmap?.staticUrl">
+      <h2 class="ad-section-title">🎟️ Plan de salle</h2>
+      <img [src]="activity.seatmap.staticUrl" 
+           alt="Plan de salle" 
+           class="ad-seatmap"
+           (error)="onImageError($event)">
+    </div>
+
+  <!-- Liens externes pour les attractions -->
+<div class="ad-section" *ngIf="activity.externalLinks">
+  <h2 class="ad-section-title">🔗 Liens utiles</h2>
+  <div class="ad-external-links">
+    <!-- Site officiel -->
+    <a *ngIf="activity.externalLinks.homepage && activity.externalLinks.homepage[0]?.url" 
+       [href]="activity.externalLinks.homepage[0].url" 
+       target="_blank" class="ad-external-link">
+      🌐 Site officiel
+    </a>
+    
+    <!-- Facebook -->
+    <a *ngIf="activity.externalLinks.facebook && activity.externalLinks.facebook[0]?.url" 
+       [href]="activity.externalLinks.facebook[0].url" 
+       target="_blank" class="ad-external-link">
+      📘 Facebook
+    </a>
+    
+    <!-- Instagram -->
+    <a *ngIf="activity.externalLinks.instagram && activity.externalLinks.instagram[0]?.url" 
+       [href]="activity.externalLinks.instagram[0].url" 
+       target="_blank" class="ad-external-link">
+      📷 Instagram
+    </a>
+    
+    <!-- Twitter -->
+    <a *ngIf="activity.externalLinks.twitter && activity.externalLinks.twitter[0]?.url" 
+       [href]="activity.externalLinks.twitter[0].url" 
+       target="_blank" class="ad-external-link">
+      🐦 Twitter
+    </a>
+    
+    <!-- Wikipedia -->
+    <a *ngIf="activity.externalLinks.wiki && activity.externalLinks.wiki[0]?.url" 
+       [href]="activity.externalLinks.wiki[0].url" 
+       target="_blank" class="ad-external-link">
+      📖 Wikipedia
+    </a>
+  </div>
+</div>
+
+    <!-- Événements à venir pour les attractions -->
+    <div class="ad-section" *ngIf="activity.upcomingEvents && activity.upcomingEvents.total > 0">
+      <h2 class="ad-section-title">🎫 Événements à venir</h2>
+      <p class="ad-upcoming-events">
+        {{ activity.upcomingEvents.total }} événement(s) programmé(s)
+      </p>
+    </div>
+
+    <!-- Actions -->
+    <div class="ad-actions">
+      <button class="ad-book-btn" (click)="onBook()" [disabled]="showConfirmation">
+        {{ showConfirmation ? '✅ Réservation enregistrée' : '🎟️ Réserver cette activité' }}
+      </button>
+    </div>
+  </div>
+</div>

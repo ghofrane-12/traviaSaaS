@@ -1,0 +1,258 @@
+<div class="chat-container" #scrollContainer (scroll)="onScroll()">
+  <div class="messages-wrapper">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-logo" [class.has-image]="heroData.agencyLogo">
+        <img *ngIf="heroData.agencyLogo" 
+             [src]="heroData.agencyLogo" 
+             [alt]="heroData.agencyName" />
+        <i *ngIf="!heroData.agencyLogo" class="fas fa-plane"></i>
+      </div>
+      <p class="hero-welcome">Bienvenue,</p>
+      <h1 class="hero-name">{{ heroData.fullName }}</h1>
+      <p class="hero-agency">chez <strong>{{ heroData.agencyName }}</strong></p>
+      <p class="hero-subtitle">Votre assistant voyage personnel propulsé par l'IA</p>
+    </div>
+
+    <!-- Messages -->
+    <div *ngFor="let msg of messages; let i = index; trackBy: trackByMessage"
+         class="message-wrapper"
+         [class.user]="msg.sender === 'user'"
+         [class.bot]="msg.sender === 'bot'"
+         [class.last]="i === messages.length - 1">
+
+      <!-- Avatar Bot (UNIQUEMENT pour les messages bot) -->
+      <div class="avatar bot-avatar" 
+           *ngIf="msg.sender === 'bot'">
+        🤖
+      </div>
+
+
+
+      <div class="message-content">
+<!-- BULLE BOT UNIFIÉE -->
+<div class="chat-message unified-bubble"
+     *ngIf="msg.sender === 'bot'"
+     [class.streaming]="msg.isStreaming"
+     [class.has-steps]="streamingSteps.length > 0"
+     [class.has-text]="msg.text"
+     [ngClass]="{
+       'bubble--rejected':      msg._meta?.status === 'rejected',
+       'bubble--blocked':       msg._meta?.status === 'blocked',
+       'bubble--error':         msg._meta?.status === 'error' || msg._meta?.status === 'api_error',
+       'bubble--clarification': msg.clarification
+     }">
+
+  <!-- BADGE statut -->
+  <div class="status-badge" *ngIf="msg._meta?.status || msg.clarification">
+    
+    <!-- Rejected -->
+    <ng-container *ngIf="msg._meta?.status === 'rejected'">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 4.5v4M8 10.5v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Hors domaine</span>
+    </ng-container>
+
+    <!-- Blocked -->
+    <ng-container *ngIf="msg._meta?.status === 'blocked'">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Contenu non autorisé</span>
+    </ng-container>
+
+    <!-- Error -->
+    <ng-container *ngIf="msg._meta?.status === 'error' || msg._meta?.status === 'api_error'">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1.5L14.5 13H1.5L8 1.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M8 6v3.5M8 11v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Erreur technique</span>
+    </ng-container>
+
+    <!-- Clarification -->
+    <ng-container *ngIf="msg.clarification">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M6.5 6C6.5 5.17 7.17 4.5 8 4.5s1.5.67 1.5 1.5c0 1-1.5 1.5-1.5 2.5M8 11v.5"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Précision requise</span>
+    </ng-container>
+
+  </div>
+          
+          <!-- CAS 1: Pas de steps et pas de texte → 3 points -->
+          <div class="loading-indicator" 
+     *ngIf="msg.isStreaming && !msg.text && (!streamingSteps || streamingSteps.length === 0)">
+  
+          <!-- Mini spinner -->
+          <div class="mini-spinner"></div>
+          
+          <!-- Texte -->
+          <span class="loading-text">Recherche en cours</span>
+          
+          <!-- 3 points animés -->
+          <div class="search-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
+        </div>
+          
+          <!-- CAS 2: Steps disponibles ET pas encore de texte -->
+          <div class="steps-container" 
+               *ngIf="msg.isStreaming && !msg.text && streamingSteps && streamingSteps.length > 0">
+            <div *ngFor="let step of streamingSteps; let i = index"
+                 class="step-row"
+                 [class.step-pending]="step.state === 'pending'"
+                 [class.step-done]="step.state === 'done'"
+                 [class.step-error]="step.state === 'error'"
+                 [style.animation-delay]="(i * 80) + 'ms'">
+              
+              <span class="step-icon">
+                <svg *ngIf="step.state === 'pending'"
+                     class="step-spinner" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="7"
+                          stroke="currentColor" stroke-width="2"
+                          stroke-dasharray="35" stroke-dashoffset="10"
+                          stroke-linecap="round"/>
+                </svg>
+                <span *ngIf="step.state === 'done'" class="step-check">✓</span>
+                <span *ngIf="step.state === 'error'" class="step-x">✕</span>
+              </span>
+              
+              <span class="step-label">{{ step.message }}</span>
+              
+              <span class="step-count"
+                    *ngIf="step.state === 'done' && step.count !== undefined">
+                {{ step.count }} résultat{{ step.count > 1 ? 's' : '' }}
+              </span>
+              
+            </div>
+          </div>
+          
+          <!-- CAS 3: Texte présent -->
+          <span class="message-text" *ngIf="msg.text">{{ msg.text }}</span>
+            <!-- Sections info (avis, agence, capacités...) -->
+  <div class="msg-sections" *ngIf="msg.sections?.length && !msg.isStreaming">
+    <div class="msg-section" *ngFor="let section of msg.sections">
+      <div class="msg-section-title" *ngIf="section.title">{{ section.title }}</div>
+      <p class="msg-section-content" *ngIf="section.content">{{ section.content }}</p>
+      <ul class="msg-section-items" *ngIf="section.items?.length">
+        <li *ngFor="let item of section.items">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Boutons d'action depuis le backend -->
+  <div class="msg-actions" *ngIf="msg.actions?.length && !msg.isStreaming && !msg.activeForm">
+  <ng-container *ngFor="let action of msg.actions">
+
+    <!-- ✅ Ticket → ouvre formulaire inline -->
+    <button
+      *ngIf="action.action === 'open_ticket_form'"
+      class="msg-action-btn"
+      (click)="onOpenTicketForm(msg)">
+      {{ action.label }}
+    </button>
+
+    <!-- ✅ Appel téléphonique -->
+    <button
+      *ngIf="action.action === 'call'"
+      class="msg-action-btn"
+      (click)="onCallContact(action)">
+      {{ action.label }}
+    </button>
+
+    <!-- ✅ Autres actions normales -->
+    <button
+      *ngIf="action.action !== 'open_ticket_form' && action.action !== 'call'"
+      class="msg-action-btn"
+      (click)="onAction(action, msg)">
+      {{ action.label }}
+    </button>
+
+  </ng-container>
+</div>
+ 
+  <!-- Formulaire inline Review -->
+  <app-review-form
+    *ngIf="msg.activeForm === 'review'"
+    mode="inline"
+    [tenantId]="tenantId"
+    [userId]="userId"
+    (submitted)="onFormSubmitted(msg)">
+  </app-review-form>
+ 
+  <!-- Formulaire inline Ticket -->
+  <app-ticket-form
+    *ngIf="msg.activeForm === 'ticket'"
+    mode="inline"
+    [tenantId]="tenantId"
+    [userId]="userId"
+    (submitted)="onFormSubmitted(msg)">
+  </app-ticket-form>
+ 
+  <!-- Succès inline -->
+  <div class="msg-form-success" *ngIf="msg.formSuccess">
+    ✅ Envoyé avec succès !
+  </div>
+          <!-- Curseur clignotant -->
+          <span class="cursor" *ngIf="msg.isStreaming && msg.text">▊</span>
+          
+          <!-- Heure -->
+          <span class="message-time" *ngIf="msg.timestamp && !msg.isStreaming">
+            {{ msg.timestamp | date:'HH:mm' }}
+          </span>
+          
+        </div>
+
+        <!-- MESSAGE USER (simple, sans steps) -->
+        <div class="chat-message" 
+             *ngIf="msg.sender === 'user'"
+             [class.blocked]="msg._meta?.status === 'blocked'">
+          <span class="message-text">{{ msg.text }}</span>
+          <span class="message-time" *ngIf="msg.timestamp">
+            {{ msg.timestamp | date:'HH:mm' }}
+          </span>
+        </div>
+
+        <!-- Boutons de clarification (uniquement bot) -->
+        <div class="clarification-buttons"
+             *ngIf="msg.sender === 'bot' && msg.clarification && !msg.isStreaming">
+          <p class="clarification-hint">Choisissez une option :</p>
+          <button
+            *ngFor="let sub of msg.clarification.subcats"
+            class="btn-clarification"
+            (click)="onClarificationChoice(sub)">
+            {{ sub.display_phrase || sub.label }}
+          </button>
+        </div>
+
+        <!-- Message bloqué -->
+     <span class="status-reason"
+      *ngIf="msg._meta?.reason && msg._meta?.status !== 'error'">
+      {{ msg._meta?.reason }}
+    </span>
+
+        <!-- Suggestions (uniquement bot) -->
+        <div *ngIf="msg.sender === 'bot' && msg.suggestions?.length" class="suggestions">
+          <h6>💡 Suggestions :</h6>
+          <div class="suggestions-list">
+            <div *ngFor="let sugg of msg.suggestions" class="suggestion-chip">
+              {{ sugg.label || sugg }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div #scrollAnchor></div>
+  </div>
+</div>

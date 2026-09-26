@@ -1,0 +1,105 @@
+<div class="offer-card" [class.unavailable]="!offer.is_available" [class.flight-card]="offer.type === 'flight'">
+
+  <!-- Image — sauf pour les vols -->
+  <div class="card-image" *ngIf="offer.type !== 'flight'">
+    <img 
+      [src]="imageUrl" 
+      [alt]="offer.title"
+      (error)="onImageError()"/>
+    <span class="badge-type badge-{{ offer.type }}">
+      <i class="fa-solid {{ offerService.getTypeIcon(offer.type) }}"></i>
+      {{ offerService.getTypeLabel(offer.type) }}
+    </span>
+    <span class="badge-unavailable" *ngIf="!offer.is_available">
+      Non disponible
+    </span>
+  </div>
+
+  <!-- Style billet d'avion — uniquement pour les vols -->
+  <div class="flight-header" *ngIf="offer.type === 'flight'">
+    <div class="flight-badge">
+      <i class="fa-solid fa-plane"></i>
+      Vol
+    </div>
+    <div class="flight-route">
+      <div class="flight-city">
+        <span class="city-name">{{ offer.origin || '—' }}</span>
+        <span class="city-label">Départ</span>
+      </div>
+      <div class="flight-arrow">
+        <div class="flight-line"></div>
+        <i class="fa-solid fa-plane flight-plane-icon"></i>
+        <div class="flight-line"></div>
+      </div>
+      <div class="flight-city">
+        <span class="city-name">{{ offer.destination || '—' }}</span>
+        <span class="city-label">Arrivée</span>
+      </div>
+    </div>
+    <span class="badge-unavailable" *ngIf="!offer.is_available">
+      Non disponible
+    </span>
+  </div>
+
+  <!-- Contenu -->
+  <div class="card-body">
+    <h3 class="offer-title">{{ offer.title }}</h3>
+
+    <div class="offer-meta" *ngIf="offer.type !== 'flight'">
+      <span *ngIf="offer.destination">
+        <i class="fa-solid fa-location-dot"></i>
+        {{ offer.destination }}
+      </span>
+      <span *ngIf="offer.origin">
+        <i class="fa-solid fa-plane-departure"></i>
+        {{ offer.origin }}
+      </span>
+    </div>
+
+    <div class="offer-details">
+      <span *ngIf="offer.departure_date">
+        <i class="fa-solid fa-calendar"></i>
+        {{ offerService.formatDate(offer.departure_date) }}
+      </span>
+      <span *ngIf="offer.duration_days">
+        <i class="fa-solid fa-clock"></i>
+        {{ offer.duration_days }} jours
+      </span>
+    </div>
+
+    <p class="offer-description" *ngIf="offer.description">
+      {{ offer.description | slice:0:100 }}{{ offer.description.length > 100 ? '...' : '' }}
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <div class="card-footer">
+    <div class="offer-price">
+      <span class="price-label">À partir de</span>
+      <span class="price-value">
+        {{ offerService.formatPrice(offer.price, offer.currency) }}
+      </span>
+    </div>
+    <div class="card-actions">
+      <button class="btn-detail" (click)="onViewDetail()">
+        Voir détails
+      </button>
+      <button (click)="onBook()" [disabled]="isBooking || isBooked" class="btn-book">
+  <ng-container *ngIf="isBooking">
+    <i class="fa fa-spinner fa-spin"></i> En cours…
+  </ng-container>
+  <ng-container *ngIf="isBooked">
+  <i class="fa fa-check"></i>
+  {{ alreadyExisted ? 'Déjà réservé' : 'Réservé' }}
+</ng-container>
+  <ng-container *ngIf="hasError && !isBooking">
+    <i class="fa fa-redo"></i> Réessayer
+  </ng-container>
+  <ng-container *ngIf="!isBooking && !isBooked && !hasError">
+    Réserver
+  </ng-container>
+</button>
+    </div>
+  </div>
+
+</div>

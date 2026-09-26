@@ -1,0 +1,284 @@
+<div class="search-page">
+
+  <!-- Header agence -->
+  <div class="search-header">
+    <div class="header-top">
+      <button class="btn-back-to-chat" (click)="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Retour</span>
+      </button>
+      <h1>
+        <i class="fa-solid fa-compass"></i>
+        {{ agencyName || 'Nos Voyages' }}
+      </h1>
+      <div class="header-placeholder"></div>
+    </div>
+    <p class="subtitle">Trouvez votre prochain voyage</p>
+  </div>
+
+  <!-- Filtres -->
+  <div class="search-filters">
+
+    <!-- Types d'offres -->
+    <div class="type-tabs">
+      <button
+        *ngFor="let t of offerTypes"
+        class="tab-btn"
+        [class.active]="selectedType === t.value"
+        (click)="onTypeSelect(t.value)">
+        <i class="fa-solid {{ t.icon }}"></i>
+        {{ t.label }}
+      </button>
+    </div>
+
+    <!-- Barre de recherche -->
+    <div class="filter-bar">
+      <div class="filter-input" style="position: relative;">
+  <i class="fa-solid fa-location-dot"></i>
+  <input
+    type="text"
+    placeholder="Destination..."
+    [(ngModel)]="destination"
+    (input)="onDestinationInput($event)"
+    (blur)="hideDestinationSug()"
+    autocomplete="off" />
+  <ul class="city-suggestions" *ngIf="showDestinationSug">
+    <li *ngFor="let city of destinationSuggestions"
+        (mousedown)="selectDestination(city)">
+      📍 {{ city }}
+    </li>
+  </ul>
+</div>
+
+      <div class="filter-input">
+        <i class="fa-solid fa-tag"></i>
+        <input
+          type="number"
+          placeholder="Prix min"
+          [(ngModel)]="priceMin"
+          (change)="onFilterChange()" />
+      </div>
+
+      <div class="filter-input">
+        <i class="fa-solid fa-tag"></i>
+        <input
+          type="number"
+          placeholder="Prix max"
+          [(ngModel)]="priceMax"
+          (change)="onFilterChange()" />
+      </div>
+
+      <button class="btn-search" (click)="loadOffers()">
+        <i class="fa-solid fa-search"></i>
+        Rechercher
+      </button>
+    </div>
+  </div>
+
+  <!-- Résultats -->
+  <div class="search-results">
+
+    <!-- Loading -->
+    <div class="loading-state" *ngIf="isLoading">
+      <i class="fa-solid fa-circle-notch fa-spin"></i>
+      Chargement des offres...
+    </div>
+
+    <!-- Erreur -->
+    <div class="error-state" *ngIf="error && !isLoading">
+      <i class="fa-solid fa-circle-exclamation"></i>
+      {{ error }}
+    </div>
+
+    <!-- Vide -->
+    <div class="empty-state" *ngIf="!isLoading && !error && filteredOffers.length === 0">
+      <i class="fa-solid fa-search"></i>
+      <p>Aucune offre trouvée.</p>
+      <button class="btn-reset" (click)="onTypeSelect('')">
+        Voir toutes les offres
+      </button>
+    </div>
+
+    <!-- Compteur -->
+    <div class="results-count" *ngIf="!isLoading && filteredOffers.length > 0">
+      {{ totalOffers }} offre(s) trouvée(s)
+    </div>
+
+    <!-- Grille de cards -->
+    <div class="offers-grid" *ngIf="!isLoading && filteredOffers.length > 0">
+
+      <app-offer-card
+        *ngFor="let offer of filteredOffers"
+        [offer]="offer"
+        [isBooking]="bookingStates.get(offer.id) === 'loading'"
+        [isBooked]="bookingStates.get(offer.id) === 'booked' || bookingStates.get(offer.id) === 'already_booked'"
+        [alreadyExisted]="bookingStates.get(offer.id) === 'already_booked'"
+        [hasError]="bookingStates.get(offer.id) === 'error'"
+        (viewDetail)="onViewDetail($event)"
+        (book)="onBook($event)">
+      </app-offer-card>
+
+      <!-- Toast -->
+      <ng-container *ngIf="lastOfferId && bookingStates.get(lastOfferId) as state">
+        <div *ngIf="state !== 'loading'"
+             [class]="state === 'error' ? 'toast-error' : 'toast-success'">
+          <ng-container [ngSwitch]="state">
+            <span *ngSwitchCase="'booked'">
+              <i class="fa fa-check"></i> Réservation confirmée.
+            </span>
+            <span *ngSwitchCase="'already_booked'">
+              <i class="fa fa-info-circle"></i> Vous avez déjà réservé cette offre.
+            </span>
+            <span *ngSwitchCase="'error'">
+              <i class="fa fa-times"></i> Erreur lors de la réservation, veuillez réessayer.
+            </span>
+          </ng-container>
+        </div>
+      </ng-container>
+
+    </div>
+
+  </div>
+
+  <!-- Modal détail -->
+  <div class="detail-modal" *ngIf="selectedOffer" (click)="closeDetail()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeDetail()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Image — sauf pour les vols -->
+      <img
+        *ngIf="selectedOffer.type !== 'flight'"
+        [src]="selectedOffer.image_url || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80'"
+        [alt]="selectedOffer.title" />
+
+      <!-- Header billet vol -->
+      <div class="modal-flight-header" *ngIf="selectedOffer.type === 'flight'">
+        <div class="modal-flight-badge">
+          <i class="fa-solid fa-plane"></i> Vol
+        </div>
+        <div class="modal-flight-route">
+          <div class="modal-flight-city">
+            <span class="modal-city-code">{{ selectedOffer.origin || '—' }}</span>
+            <span class="modal-city-label">Départ</span>
+          </div>
+          <div class="modal-flight-arrow">
+            <div class="modal-flight-line"></div>
+            <i class="fa-solid fa-plane modal-plane-icon"></i>
+            <div class="modal-flight-line"></div>
+          </div>
+          <div class="modal-flight-city">
+            <span class="modal-city-code">{{ selectedOffer.destination || '—' }}</span>
+            <span class="modal-city-label">Arrivée</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <span class="badge-type badge-{{ selectedOffer.type }}">
+          {{ offerService.getTypeLabel(selectedOffer.type) }}
+        </span>
+        <h2>{{ selectedOffer.title }}</h2>
+
+        <p class="modal-destination"
+           *ngIf="selectedOffer.type !== 'flight' && selectedOffer.destination">
+          <i class="fa-solid fa-location-dot"></i>
+          {{ selectedOffer.destination }}
+        </p>
+
+        <p class="modal-description" *ngIf="selectedOffer.description">
+          {{ selectedOffer.description }}
+        </p>
+
+        <div class="modal-details">
+          <span *ngIf="selectedOffer.departure_date">
+            <i class="fa-solid fa-calendar"></i>
+            {{ offerService.formatDate(selectedOffer.departure_date) }}
+          </span>
+          <span *ngIf="selectedOffer.duration_days">
+            <i class="fa-solid fa-clock"></i>
+            {{ selectedOffer.duration_days }} jours
+          </span>
+          <ng-container *ngIf="selectedOffer.type === 'flight' && selectedOffer.raw">
+            <span *ngIf="selectedOffer.raw.classe">
+              <i class="fa-solid fa-chair"></i>
+              {{ selectedOffer.raw.classe }}
+            </span>
+            <span *ngIf="selectedOffer.raw.passagers?.adultes">
+              <i class="fa-solid fa-user"></i>
+              {{ selectedOffer.raw.passagers.adultes }} adulte(s)
+            </span>
+          </ng-container>
+        </div>
+
+        <!-- Détails vol -->
+        <div class="modal-flight-details"
+             *ngIf="selectedOffer.type === 'flight' && selectedOffer.raw?.moreDetails?.[0]">
+          <h4>Détails du vol</h4>
+          <div class="flight-detail-grid">
+            <div class="flight-detail-item"
+                 *ngIf="selectedOffer.raw.moreDetails[0].flightNumber">
+              <i class="fa-solid fa-hashtag"></i>
+              <span>Vol {{ selectedOffer.raw.moreDetails[0].flightNumber }}</span>
+            </div>
+            <div class="flight-detail-item"
+                 *ngIf="selectedOffer.raw.moreDetails[0].departureTime">
+              <i class="fa-solid fa-plane-departure"></i>
+              <span>Départ {{ selectedOffer.raw.moreDetails[0].departureTime }}</span>
+            </div>
+            <div class="flight-detail-item"
+                 *ngIf="selectedOffer.raw.moreDetails[0].arrivalTime">
+              <i class="fa-solid fa-plane-arrival"></i>
+              <span>Arrivée {{ selectedOffer.raw.moreDetails[0].arrivalTime }}</span>
+            </div>
+            <div class="flight-detail-item"
+                 *ngIf="selectedOffer.raw.moreDetails[0].duration">
+              <i class="fa-solid fa-hourglass"></i>
+              <span>{{ selectedOffer.raw.moreDetails[0].duration }}</span>
+            </div>
+            <div class="flight-detail-item"
+                 *ngIf="selectedOffer.raw.moreDetails[0].airplaneModel">
+              <i class="fa-solid fa-jet-fighter"></i>
+              <span>{{ selectedOffer.raw.moreDetails[0].airplaneModel }}</span>
+            </div>
+          </div>
+
+          <div class="flight-services"
+               *ngIf="selectedOffer.raw.moreDetails[0].services?.length">
+            <h5>Services inclus</h5>
+            <div class="services-list">
+              <span class="service-tag"
+                    *ngFor="let s of selectedOffer.raw.moreDetails[0].services">
+                <i class="fa-solid fa-check"></i>
+                {{ s }}
+              </span>
+            </div>
+          </div>
+
+          <div class="flight-includes"
+               *ngIf="selectedOffer.raw.moreDetails[0].priceInfo?.includes?.length">
+            <h5>Inclus</h5>
+            <div class="services-list">
+              <span class="service-tag"
+                    *ngFor="let inc of selectedOffer.raw.moreDetails[0].priceInfo.includes">
+                <i class="fa-solid fa-check"></i>
+                {{ inc }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <span class="modal-price">
+            {{ offerService.formatPrice(selectedOffer.price, selectedOffer.currency) }}
+          </span>
+          <button class="btn-book" (click)="onBook(selectedOffer)">
+            Réserver maintenant
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

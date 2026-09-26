@@ -1,0 +1,103 @@
+<div class="info-results-container">
+
+  <div class="info-message">
+    <div class="msg-icon-wrap">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1.5C4.41 1.5 1.5 4.41 1.5 8c0 1.15.3 2.23.83 3.16L1.5 14.5l3.34-.83A6.5 6.5 0 108 1.5z"
+              stroke="var(--color-text-info)" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <p class="msg-label">Message</p>
+<p class="msg-text">{{ normalized.message }}</p>    </div>
+  </div>
+
+  <div class="info-sections"
+       *ngIf="normalized.sections && normalized.sections.length > 0">
+    <div class="info-section" *ngFor="let section of normalized.sections">
+
+      <div class="section-header">
+        <span class="section-dot"></span>
+        <h3 class="section-title">{{ section.title }}</h3>
+          <span class="section-badge" *ngIf="section.items && section.items.length > 0">
+          {{ section.items.length }} éléments
+        </span>
+      </div>
+
+      <div class="section-content">
+        <p *ngIf="section.content">{{ section.content }}</p>
+
+        <ul class="section-items"
+            *ngIf="section.items && section.items.length > 0">
+          <li *ngFor="let item of section.items">
+            <svg class="item-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="6.5" stroke="var(--color-text-success)" stroke-width="1"/>
+              <path d="M4 7l2 2 4-4" stroke="var(--color-text-success)" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="item-text">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="info-actions"
+       *ngIf="normalized.actions && normalized.actions.length > 0">
+ 
+    <ng-container *ngFor="let action of normalized.actions">
+ 
+      <!-- Bouton normal (navigate, contact...) -->
+      <button
+        *ngIf="action.action !== 'open_review_form' && action.action !== 'open_ticket_form'"
+        class="action-btn"
+        [class.primary]="action.action === 'modify_search'"
+        (click)="onAction(action)">
+        {{ action.label }}
+      </button>
+ 
+      <!-- Bouton review → formulaire inline -->
+      <button
+        *ngIf="action.action === 'open_review_form' && !activeForm && !formSuccess && !isVisitor"
+        class="action-btn action-btn--review"
+        (click)="onAction(action)">
+        {{ action.label }}
+      </button>
+ 
+      <!-- Bouton ticket → formulaire inline -->
+      <button
+      *ngIf="action.action === 'open_ticket_form' && !activeForm && !formSuccess && !isVisitor"
+      class="action-btn action-btn--ticket"
+      (click)="onAction(action)">
+        {{ action.label }}
+      </button>
+ 
+    </ng-container>
+ 
+    <!-- Formulaire Review inline -->
+    <app-review-form
+      *ngIf="activeForm === 'review'"
+      mode="inline"
+      [tenantId]="tenantId"
+      [userId]="userId"
+      (submitted)="onFormSubmitted()">
+    </app-review-form>
+ 
+    <!-- Formulaire Ticket inline -->
+    <app-ticket-form
+      *ngIf="activeForm === 'ticket'"
+      mode="inline"
+      [tenantId]="tenantId"
+      [userId]="userId"
+      (submitted)="onFormSubmitted()">
+    </app-ticket-form>
+ 
+    <!-- Succès -->
+    <div class="form-success-inline" *ngIf="formSuccess">
+      ✅ Envoyé avec succès !
+    </div>
+ 
+  </div>
+
+</div>

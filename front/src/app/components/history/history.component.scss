@@ -1,0 +1,426 @@
+// ===============================
+// Variables
+// ===============================
+$black: #111827;
+$white: #ffffff;
+
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+
+$primary: #2563eb;
+$danger: #dc2626;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: $gray-100;
+  color: $gray-800;
+}
+
+// ===============================
+// Container
+// ===============================
+.history-container {
+  min-height: 100vh;
+  background: $gray-100;
+}
+
+// ===============================
+// Header
+// ===============================
+.history-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid $gray-200;
+
+  .back-btn,
+  .refresh-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: $gray-100;
+    color: $gray-600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .history-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      color: $primary;
+      font-size: 22px;
+    }
+  }
+}
+
+// ===============================
+// States
+// ===============================
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+
+  i {
+    font-size: 56px;
+    color: $gray-300;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 15px;
+    color: $gray-500;
+    margin-bottom: 20px;
+  }
+}
+
+// ===============================
+// Spinner
+// ===============================
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  margin: 0 auto 18px;
+
+  border: 3px solid $gray-200;
+  border-top-color: $primary;
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+// ===============================
+// Buttons
+// ===============================
+.retry-btn,
+.new-chat-btn {
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 22px;
+
+  background: $primary;
+  color: $white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
+
+// ===============================
+// Content
+// ===============================
+.history-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 24px 18px;
+}
+
+// ===============================
+// Period Section
+// ===============================
+.period-section {
+  margin-bottom: 32px;
+
+  .period-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: $gray-700;
+    }
+
+    i {
+      color: $primary;
+    }
+
+    .count {
+      margin-left: auto;
+
+      background: $gray-200;
+      color: $gray-600;
+
+      padding: 4px 10px;
+      border-radius: 20px;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+// ===============================
+// Conversation List
+// ===============================
+.conversations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+// ===============================
+// Card
+// ===============================
+.conversation-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px;
+
+  background: $white;
+  border: 1px solid $gray-200;
+  border-radius: 18px;
+
+  transition: 0.2s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border-color: $primary;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: rgba(37, 99, 235, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 20px;
+      color: $primary;
+    }
+  }
+
+  .card-content {
+    flex: 1;
+    min-width: 0;
+
+    .conv-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: $black;
+
+      margin-bottom: 5px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .conv-preview {
+      font-size: 13px;
+      color: $gray-500;
+
+      margin-bottom: 6px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .conv-date {
+      font-size: 12px;
+      color: $gray-400;
+    }
+  }
+
+  // ===============================
+  // Actions
+  // ===============================
+  .card-actions {
+    position: relative;
+
+    .menu-btn {
+      width: 38px;
+      height: 38px;
+
+      border: none;
+      border-radius: 10px;
+
+      background: transparent;
+      color: $gray-500;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+
+      &:hover {
+        background: $gray-100;
+        color: $black;
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 48px;
+      right: 0;
+
+      width: 160px;
+
+      background: $white;
+      border: 1px solid $gray-200;
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(5px);
+
+      transition: 0.2s ease;
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      button {
+        width: 100%;
+
+        border: none;
+        background: transparent;
+
+        padding: 12px 14px;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 14px;
+        color: $gray-700;
+
+        cursor: pointer;
+
+        transition: 0.15s ease;
+
+        &:hover {
+          background: $gray-100;
+        }
+
+        &.delete {
+          color: $danger;
+        }
+      }
+    }
+  }
+}
+
+// ===============================
+// Animation
+// ===============================
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ===============================
+// Responsive
+// ===============================
+@media (max-width: 768px) {
+  .history-header {
+    padding: 14px 16px;
+
+    .history-title {
+      font-size: 17px;
+    }
+  }
+
+  .history-content {
+    padding: 16px;
+  }
+
+  .conversation-card {
+    padding: 14px;
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .conv-title {
+      font-size: 14px;
+    }
+
+    .conv-preview {
+      font-size: 12px;
+    }
+  }
+}

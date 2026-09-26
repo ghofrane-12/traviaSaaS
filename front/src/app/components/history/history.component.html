@@ -1,0 +1,181 @@
+<div class="history-container">
+<!-- Header avec icons -->
+<div class="history-header">
+
+  <!-- Back -->
+  <button class="back-btn" (click)="goBack()">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+  <!-- Title -->
+  <h1 class="history-title">
+    <i class="fas fa-history"></i>
+    Historique
+  </h1>
+
+  <!-- Refresh -->
+  <button
+    class="refresh-btn"
+    (click)="loadAllConversations()"
+    [disabled]="isLoading">
+
+    <i
+      class="fas"
+      [ngClass]="isLoading ? 'fa-spinner fa-spin' : 'fa-rotate-right'">
+    </i>
+
+  </button>
+
+</div>
+  <!-- Loading -->
+  <div class="loading-state" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Chargement...</p>
+  </div>
+
+  <!-- Error -->
+  <div class="error-state" *ngIf="error && !isLoading">
+    <p>{{ error }}</p>
+    <button (click)="loadAllConversations()">Réessayer</button>
+  </div>
+
+  <!-- Empty state -->
+  <div class="empty-state" *ngIf="!isLoading && allConversations.length === 0">
+    <p>Aucune conversation</p>
+    <button (click)="goToChat()">Nouvelle discussion</button>
+  </div>
+
+  <!-- Conversations -->
+  <div class="history-content" *ngIf="!isLoading && allConversations.length > 0">
+    
+    <!-- Aujourd'hui -->
+    <div class="period-section" *ngIf="groupedConversations.today.length">
+      <div class="period-header">
+        <h2>Aujourd'hui</h2>
+        <span class="count">{{ groupedConversations.today.length }}</span>
+      </div>
+      <div class="conversations-list">
+        <div *ngFor="let conv of groupedConversations.today" 
+             class="conversation-card" 
+             (click)="openConversation(conv)">
+          <div class="card-content">
+            <div class="conv-title">{{ conv.title }}</div>
+            <div class="conv-preview">{{ conv.first_message | slice:0:80 }}</div>
+            <div class="conv-date">{{ conv.created_at | date:"HH:mm" }}</div>
+          </div>
+          <div class="card-actions" (click)="$event.stopPropagation()">
+            <button class="menu-btn" (click)="toggleMenu(conv.id, $event)">•••</button>
+            <div class="dropdown-menu" [class.show]="activeMenuId === conv.id">
+              <button (click)="renameConversation(conv)">Renommer</button>
+              <button (click)="deleteConversation(conv)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hier -->
+    <div class="period-section" *ngIf="groupedConversations.yesterday.length">
+      <div class="period-header">
+        <h2>Hier</h2>
+        <span class="count">{{ groupedConversations.yesterday.length }}</span>
+      </div>
+      <div class="conversations-list">
+        <div *ngFor="let conv of groupedConversations.yesterday" 
+             class="conversation-card" 
+             (click)="openConversation(conv)">
+          <div class="card-content">
+            <div class="conv-title">{{ conv.title }}</div>
+            <div class="conv-preview">{{ conv.first_message | slice:0:80 }}</div>
+            <div class="conv-date">{{ conv.created_at | date:"HH:mm" }}</div>
+          </div>
+          <div class="card-actions" (click)="$event.stopPropagation()">
+            <button class="menu-btn" (click)="toggleMenu(conv.id, $event)">•••</button>
+            <div class="dropdown-menu" [class.show]="activeMenuId === conv.id">
+              <button (click)="renameConversation(conv)">Renommer</button>
+              <button (click)="deleteConversation(conv)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cette semaine -->
+    <div class="period-section" *ngIf="groupedConversations.thisWeek.length">
+      <div class="period-header">
+        <h2>Cette semaine</h2>
+        <span class="count">{{ groupedConversations.thisWeek.length }}</span>
+      </div>
+      <div class="conversations-list">
+        <div *ngFor="let conv of groupedConversations.thisWeek" 
+             class="conversation-card" 
+             (click)="openConversation(conv)">
+          <div class="card-content">
+            <div class="conv-title">{{ conv.title }}</div>
+            <div class="conv-preview">{{ conv.first_message | slice:0:80 }}</div>
+            <div class="conv-date">{{ conv.created_at | date:"dd/MM" }}</div>
+          </div>
+          <div class="card-actions" (click)="$event.stopPropagation()">
+            <button class="menu-btn" (click)="toggleMenu(conv.id, $event)">•••</button>
+            <div class="dropdown-menu" [class.show]="activeMenuId === conv.id">
+              <button (click)="renameConversation(conv)">Renommer</button>
+              <button (click)="deleteConversation(conv)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ce mois -->
+    <div class="period-section" *ngIf="groupedConversations.thisMonth.length">
+      <div class="period-header">
+        <h2>Ce mois</h2>
+        <span class="count">{{ groupedConversations.thisMonth.length }}</span>
+      </div>
+      <div class="conversations-list">
+        <div *ngFor="let conv of groupedConversations.thisMonth" 
+             class="conversation-card" 
+             (click)="openConversation(conv)">
+          <div class="card-content">
+            <div class="conv-title">{{ conv.title }}</div>
+            <div class="conv-preview">{{ conv.first_message | slice:0:80 }}</div>
+            <div class="conv-date">{{ conv.created_at | date:"dd/MM" }}</div>
+          </div>
+          <div class="card-actions" (click)="$event.stopPropagation()">
+            <button class="menu-btn" (click)="toggleMenu(conv.id, $event)">•••</button>
+            <div class="dropdown-menu" [class.show]="activeMenuId === conv.id">
+              <button (click)="renameConversation(conv)">Renommer</button>
+              <button (click)="deleteConversation(conv)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plus ancien -->
+    <div class="period-section" *ngIf="groupedConversations.older.length">
+      <div class="period-header">
+        <h2>Plus ancien</h2>
+        <span class="count">{{ groupedConversations.older.length }}</span>
+      </div>
+      <div class="conversations-list">
+        <div *ngFor="let conv of groupedConversations.older" 
+             class="conversation-card" 
+             (click)="openConversation(conv)">
+          <div class="card-content">
+            <div class="conv-title">{{ conv.title }}</div>
+            <div class="conv-preview">{{ conv.first_message | slice:0:80 }}</div>
+            <div class="conv-date">{{ conv.created_at | date:"dd/MM/yyyy" }}</div>
+          </div>
+          <div class="card-actions" (click)="$event.stopPropagation()">
+            <button class="menu-btn" (click)="toggleMenu(conv.id, $event)">•••</button>
+            <div class="dropdown-menu" [class.show]="activeMenuId === conv.id">
+              <button (click)="renameConversation(conv)">Renommer</button>
+              <button (click)="deleteConversation(conv)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

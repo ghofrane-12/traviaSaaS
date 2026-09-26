@@ -1,0 +1,63 @@
+<div class="flight-card" (click)="onSelectFlight()">
+  <div class="card-left">
+    <div class="airline-logo-wrapper">
+      <div class="airline-logo" [class.has-logo]="flight.airline_logo">
+        <img *ngIf="flight.airline_logo" [src]="flight.airline_logo" [alt]="flight.airline" class="airline-img">
+        <span *ngIf="!flight.airline_logo" class="airline-placeholder">{{ getAirlineFirstChar() }}</span>
+      </div>
+    </div>
+    
+    <div class="airline-info">
+      <span class="airline-name">{{ flight.airline }}</span>
+      <span class="flight-number">{{ flight.flight_number }}</span>
+      
+      <!-- Badge classe cabine intégré dans les infos compagnie -->
+      <div class="cabin-badge" [style.background-color]="getCabinClassColor()">
+        <span class="cabin-icon">
+          {{ getCabinClassDisplay() === 'Économique' ? '💺' : 
+             getCabinClassDisplay() === 'Premium Économique' ? '✨' :
+             getCabinClassDisplay() === 'Affaires' ? '💼' : '👑' }}
+        </span>
+        <span class="cabin-text">{{ getCabinClassDisplay() }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-center">
+    <div class="time-block">
+      <span class="time">{{ getDepartureTime() }}</span>
+      <span class="airport">{{ getDepartureAirport() }}</span>
+      <span class="city">{{ getDepartureCity() | titlecase }}</span>
+    </div>
+
+    <div class="duration-block">
+      <span class="duration-label">{{ flight.duration }}</span>
+      <div class="duration-line">
+        <span class="dot"></span>
+        <span class="line"></span>
+        <span class="plane-icon">✈</span>
+        <span class="line"></span>
+        <span class="dot"></span>
+      </div>
+      <span class="stops-label">
+        {{ flight.stops === 0 ? 'Vol direct' : flight.stops + ' escale(s)' }}
+      </span>
+    </div>
+
+    <div class="time-block right">
+      <span class="time">{{ getArrivalTime() }}</span>
+      <span class="airport">{{ getArrivalAirport() }}</span>
+      <span class="city">{{ getArrivalCity() | titlecase }}</span>
+    </div>
+  </div>
+
+  <div class="card-right">
+    <div class="price-container">
+      <span class="price">{{ getBestPrice() | number }}{{ getCurrency() }}</span>
+      <span class="price-label">par personne</span>
+    </div>
+    <button class="select-btn" (click)="$event.stopPropagation(); onSelectFlight()">
+      Sélectionner
+    </button>
+  </div>
+</div>

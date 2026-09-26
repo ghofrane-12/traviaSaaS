@@ -1,0 +1,155 @@
+<div class="layout">
+  <app-sidebar 
+    [collapsed]="collapsed && !isMobile"
+    [mobileOpen]="mobileSidebarOpen"
+    (toggle)="onSidebarToggle($event)"
+    (closeMobile)="closeMobileSidebar()" />
+
+  <div class="main-content" [class.collapsed]="collapsed">
+
+    <!-- Topbar -->
+    <div class="topbar">
+  <button class="topbar-hamburger" (click)="openMobileSidebar()" *ngIf="isMobile">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Zone utilisateur avec dropdown -->
+  <div class="topbar-user"
+       (click)="toggleUserMenu()"
+       [class.menu-open]="userMenuOpen">
+
+    <div class="user-avatar">
+      {{ fullName() | slice:0:1 }}{{ (fullName().split(' ')[1] || '') | slice:0:1 }}
+    </div>
+    <div class="user-info">
+      <span class="user-role" [ngClass]="'role-' + role()?.toLowerCase()">{{ getRoleLabel() }}</span>
+    </div>
+    <i class="bi bi-chevron-down dropdown-arrow"
+       [class.rotated]="userMenuOpen"></i>
+
+    <!-- Dropdown menu -->
+    <div class="user-dropdown" *ngIf="userMenuOpen"
+         (click)="$event.stopPropagation()">
+
+      <div class="dropdown-header">
+        <span class="dropdown-name">{{ fullName() }}</span>
+        <span class="dropdown-role">{{ role() }}</span>
+      </div>
+
+      <div class="dropdown-divider"></div>
+
+      <!-- Super Admin — visible seulement pour super_admin -->
+      <button class="dropdown-item"
+              *ngIf="userService.isSuperAdmin()"
+              (click)="navigateTo('/super-admin')">
+        <i class="bi bi-lightning-charge-fill"></i>
+        Super Admin
+      </button>
+
+      <!-- Config Agence — visible pour admin et super_admin -->
+      <button class="dropdown-item"
+              *ngIf="getAdmin()"
+              (click)="navigateTo('/config')">
+        <i class="bi bi-gear"></i>
+        Paramètres agence
+      </button>
+
+      <!-- Laisser un avis -->
+      <button class="dropdown-item"
+        *ngIf="!userService.isVisitor()"
+        (click)="openReviewForm()">
+        <i class="bi bi-star"></i>
+        Laisser un avis
+      </button>
+
+      <div class="dropdown-divider"></div>
+
+      <!-- Déconnexion -->
+      <button class="dropdown-item dropdown-item--danger"
+              (click)="userService.logout()">
+        <i class="bi bi-box-arrow-right"></i>
+        Déconnexion
+      </button>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Review Form Modal déclenché depuis le dropdown -->
+<app-review-form
+  *ngIf="showReviewForm"
+  mode="modal"
+  [tenantId]="currentTenantId"
+  [userId]="agentService.getUserId()"
+  (submitted)="showReviewForm = false">
+</app-review-form>
+<div class="chat-area">
+    <!-- Zone chat -->
+      <app-chat-window
+    #chatWindow
+    [isVisitor]="userService.isVisitor()"
+    [messages]="messages"
+    [streamingSteps]="streamingSteps()"
+    [heroData]="{ fullName: fullName(), agencyName: agencyName(), agencyLogo: agencyLogo() }"
+    [tenantId]="currentTenantId"
+    [userId]="agentService.getUserId()"
+    (clarificationChoice)="onClarificationChoice($event)">
+  </app-chat-window>
+      <!-- Input -->
+    <app-chat-input
+      *ngIf="showChatInput()"
+      [sidebarCollapsed]="collapsed"
+      (send)="handleSendMessage($event)" />
+
+  </div>
+
+
+
+    <!-- Formulaires overlay -->
+    <app-stay-search
+      *ngIf="showStayForm()"
+      [showModal]="true"
+      [formData]="stayFormData()"
+      [entities]="stayEntities()"
+      [originalLanguage]="stayOriginalLanguage()"
+      (navigateToResults)="goToResultsPage($event)"
+      (submit)="onStayFormSubmit($event)"
+      (cancel)="onStayFormCancel()">
+    </app-stay-search>
+
+    <app-flight-search
+      *ngIf="showTransportForm()"
+      [showModal]="true"
+      [formData]="transportFormData()"
+      [entities]="transportEntities()"
+      [originalLanguage]="transportOriginalLanguage()"
+      (navigateToResults)="goToResultsPage($event)"
+      (submit)="onTransportFormSubmit($event)"
+      (cancel)="onTransportFormCancel()">
+    </app-flight-search>
+    <app-mixed-search
+      *ngIf="showMixedForm()"
+      [segmentForm]="mixedFormData()"
+      [entities]="mixedFormEntities()"
+      [originalLanguage]="mixedFormLanguage()"
+      (navigateToResults)="onMixedFormNavigate($event)"
+      (cancel)="onMixedFormCancel()">
+    </app-mixed-search>
+<app-tour-search
+  *ngIf="showTourForm()"
+  [showModal]="true"
+  [formData]="tourFormData()"
+  [entities]="tourEntities()"
+  [originalLanguage]="tourOriginalLanguage()"
+  (navigateToResults)="onTourFormNavigate($event)"
+  (cancel)="onTourFormCancel()">
+</app-tour-search>
+<!-- FAB Résultats -->
+<button class="fab-results" *ngIf="hasResults()" (click)="goToResults()">
+  <i class="bi bi-grid-fill"></i>
+  <span>Voir les résultats</span>
+</button>
+  </div> 
+</div>
+

@@ -1,0 +1,363 @@
+.offer-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.06), 0 24px 64px rgba(0,0,0,0.12);
+  }
+
+  &.unavailable {
+    opacity: 0.7;
+    filter: grayscale(30%);
+  }
+}
+.btn-book {
+  &:disabled { opacity: 0.7; cursor: not-allowed; }
+
+  // état réservé
+  &.booked {
+    background: var(--color-background-success);
+    color:      var(--color-text-success);
+  }
+
+  // état erreur
+  &.error {
+    background: var(--color-background-danger);
+    color:      var(--color-text-danger);
+  }
+}
+// ─── Image ────────────────────────────────────────────────────────────────────
+.card-image {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .offer-card:hover & img {
+    transform: scale(1.04);
+  }
+}
+
+// Badges
+.badge-type {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+
+  i { font-size: 11px; }
+
+  &.badge-flight  { background: rgba(59,130,246,0.9);  color: white; }
+  &.badge-hotel   { background: rgba(16,185,129,0.9);  color: white; }
+  &.badge-omra    { background: rgba(245,158,11,0.9);  color: white; }
+  &.badge-circuit { background: rgba(139,92,246,0.9);  color: white; }
+}
+
+.badge-unavailable {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(239,68,68,0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+// ─── Contenu ──────────────────────────────────────────────────────────────────
+.card-body {
+  padding: 18px 18px 12px;
+  flex: 1;
+
+  .offer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 10px;
+    line-height: 1.3;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .offer-meta,
+  .offer-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+
+      i { font-size: 11px; color: var(--primary); }
+    }
+  }
+
+  .offer-description {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 8px 0 0;
+  }
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+.card-footer {
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #fafafa;
+
+  .offer-price {
+    display: flex;
+    flex-direction: column;
+
+    .price-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .price-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 8px;
+
+    .btn-detail {
+      padding: 8px 14px;
+      background: var(--primary-light);
+      border: 1.5px solid #bfdbfe;
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+
+      &:hover {
+        background: #dbeafe;
+        transform: translateY(-1px);
+      }
+    }
+
+    .btn-book {
+      padding: 8px 14px;
+      background: linear-gradient(135deg, #ff6b4a, #ff9a7c);
+      border: none;
+      border-radius: var(--radius-sm);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(255,107,74,0.3);
+
+      &:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(255,107,74,0.4);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+        background: #e5e7eb;
+        color: var(--text-muted);
+      }
+    }
+  }
+}
+// ─── Style billet avion ───────────────────────────────────────────────────────
+.flight-header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #1d4ed8 100%);
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // Cercles décoratifs
+  &::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  // Pointillés style billet
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    right: -8px;
+    height: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 6px,
+      rgba(255,255,255,0.2) 6px,
+      rgba(255,255,255,0.2) 12px
+    );
+  }
+}
+
+.flight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  width: fit-content;
+  margin-bottom: 16px;
+
+  i { font-size: 11px; }
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flight-city {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .city-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .city-label {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.flight-arrow {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 6px;
+
+  .flight-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  .flight-plane-icon {
+    color: white;
+    font-size: 1.1rem;
+    animation: fly 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fly {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-3px); }
+}
+
+// Card vol — pas d'arrondi sur le header
+.flight-card {
+  .flight-header {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  // Encoche style billet
+  .card-body {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg-page);
+    }
+
+    &::before { left: -10px; }
+    &::after  { right: -10px; }
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

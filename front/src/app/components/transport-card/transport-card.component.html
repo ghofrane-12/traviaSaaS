@@ -1,0 +1,30 @@
+    <div class="transport-card">
+      <div class="card-icon" [style.background]="transport.color">
+        <span class="icon">{{ transport.icon }}</span>
+      </div>
+      <div class="card-content">
+        <h3 class="transport-name">{{ transport.name }}</h3>
+        <div class="transport-company">{{ transport.company }}</div>
+        <div class="transport-info">
+          <div class="info-item">
+            <span class="info-icon">⏱️</span>
+            <span>{{ transport.duration }}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">💰</span>
+            <span>{{ transport.price }} {{ transport.currency }}</span>
+          </div>
+        </div>
+        <div class="transport-stops">
+          <div class="stop">
+            <span class="time">{{ transport.departure.time }}</span>
+            <span class="location">{{ transport.departure.location }}</span>
+          </div>
+          <div class="stop-arrow">→</div>
+          <div class="stop">
+            <span class="time">{{ transport.arrival.time }}</span>
+            <span class="location">{{ transport.arrival.location }}</span>
+          </div>
+        </div>
+      </div>
+    </div>

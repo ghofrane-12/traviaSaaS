@@ -1,0 +1,153 @@
+<!-- stay-search.component.html -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    
+    <div class="modal-header">
+      <div class="header-icon">
+        <i class="fas fa-hotel"></i>
+      </div>
+      <h2 class="modal-title">{{ formTitle }}</h2>
+      <button class="close-btn" (click)="onCancel()" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <p class="modal-description">{{ formDescription }}</p>
+
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="modal-form">
+      
+      <!-- Destination (obligatoire) -->
+      <div class="input-wrapper" style="position: relative;">
+  <input
+    type="text"
+    formControlName="city"
+    class="field-input"
+    (input)="onCityInput($event)"
+    (blur)="hideSuggestions()"
+    [class.error]="searchForm.get('city')?.invalid && searchForm.get('city')?.touched">
+  <i class="fas fa-search input-icon"></i>
+
+  <ul class="city-suggestions" *ngIf="showSuggestions">
+    <li *ngFor="let city of citySuggestions" (mousedown)="selectCity(city)">
+      📍 {{ city }}
+    </li>
+  </ul>
+</div>
+
+      <!-- Dates row (obligatoires) -->
+      <div class="dates-row">
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-calendar-alt field-icon"></i>
+            Check In
+          </label>
+          <input type="date" formControlName="check_in" class="field-input">
+        </div>
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-calendar-alt field-icon"></i>
+            Check Out
+          </label>
+          <input type="date" formControlName="check_out" class="field-input">
+        </div>
+      </div>
+
+      <!-- Voyageurs & Chambres (obligatoires) -->
+      <div class="guests-row">
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-user-friends field-icon"></i>
+            Voyageurs
+          </label>
+          <div class="input-wrapper">
+            <button type="button" class="quantity-btn" (click)="updateGuests(-1)" [disabled]="searchForm.get('guests')?.value <= 1">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" formControlName="guests" class="field-input quantity-input" readonly>
+            <button type="button" class="quantity-btn" (click)="updateGuests(1)" [disabled]="searchForm.get('guests')?.value >= 10">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-field half">
+          <label class="field-label">
+            <i class="fas fa-bed field-icon"></i>
+            Chambres
+          </label>
+          <div class="input-wrapper">
+            <button type="button" class="quantity-btn" (click)="updateRooms(-1)" [disabled]="searchForm.get('rooms')?.value <= 1">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" formControlName="rooms" class="field-input quantity-input" readonly>
+            <button type="button" class="quantity-btn" (click)="updateRooms(1)" [disabled]="searchForm.get('rooms')?.value >= 5">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Champs optionnels (section repliable) -->
+      <div class="optional-fields">
+        <div class="optional-header" (click)="toggleOptional()">
+          <i class="fas" [ngClass]="showOptional ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+          <span>Filtres optionnels</span>
+        </div>
+        
+        <div class="optional-content" *ngIf="showOptional">
+          <!-- Prix min/max -->
+          <div class="price-row">
+            <div class="form-field half">
+              <label class="field-label">Prix min (EUR)</label>
+              <input type="number" formControlName="price_min" class="field-input" placeholder="Min">
+            </div>
+            <div class="form-field half">
+              <label class="field-label">Prix max (EUR)</label>
+              <input type="number" formControlName="price_max" class="field-input" placeholder="Max">
+            </div>
+          </div>
+
+          <!-- Étoiles -->
+          <div class="form-field">
+            <label class="field-label">Étoiles</label>
+            <div class="stars-group">
+              <label *ngFor="let star of [1,2,3,4,5]" class="star-label">
+                <input type="checkbox" [value]="star" (change)="toggleStar(star)">
+                <i class="fas fa-star"></i> {{ star }}
+              </label>
+            </div>
+          </div>
+
+          <!-- Tri -->
+          <div class="form-field">
+            <label class="field-label">Trier par</label>
+            <select formControlName="sort_by" class="field-input">
+              <option value="">Par défaut</option>
+              <option value="price">Prix</option>
+              <option value="rating">Note</option>
+              <option value="distance">Distance</option>
+            </select>
+          </div>
+
+          <div class="form-field" *ngIf="searchForm.get('sort_by')?.value">
+            <label class="field-label">Ordre</label>
+            <select formControlName="order" class="field-input">
+              <option value="asc">Croissant</option>
+              <option value="desc">Décroissant</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" (click)="onCancel()">
+          <i class="fas fa-times"></i> Annuler
+        </button>
+        <button type="submit" class="btn-submit" [disabled]="searchForm.invalid || isLoading">
+          <i class="fas" [ngClass]="isLoading ? 'fa-spinner fa-pulse' : 'fa-search'"></i>
+          {{ isLoading ? 'Recherche en cours...' : 'Rechercher' }}
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

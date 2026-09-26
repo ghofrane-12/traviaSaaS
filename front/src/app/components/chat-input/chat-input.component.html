@@ -1,0 +1,22 @@
+<div class="input-container" [class.collapsed]="sidebarCollapsed">
+  <div class="input-wrapper">
+    <div class="input-group-custom">
+      <input
+        type="text"
+        class="message-input"
+        placeholder="Votre destination..."
+        [(ngModel)]="inputText"
+        (keypress)="onKeyPress($event)"
+      />
+      <i class="fas fa-paperclip attach-icon"></i>
+    </div>
+
+    <button class="icon-btn">
+      <i class="fas fa-microphone"></i>
+    </button>
+
+    <button class="send-btn" (click)="onSend()">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>

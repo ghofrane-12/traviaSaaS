@@ -1,0 +1,197 @@
+<!-- Toast -->
+<div class="toast-success" *ngIf="showToast" [class.toast-warning]="toastMessage.includes('⚠️')">
+  {{ toastMessage }}
+</div>
+
+<div class="hd-page">
+  <div class="hd-header">
+  <button class="hd-back-btn" (click)="goBack()">
+    <span class="hd-back-arrow">←</span>
+  </button>
+  <div class="hd-header-content">
+    <div class="hd-header-left">
+      <h1 class="hd-title">{{ hotel?.name || 'Détails de l\'hôtel' }}</h1>
+      <div class="hd-header-meta">
+        <span class="hd-badge-stars" *ngIf="getHotelStars() > 0">
+          {{ '★'.repeat(getHotelStars()) }}
+        </span>
+        <span class="hd-badge-category" *ngIf="hotel?.category">
+          {{ hotel?.category }}
+        </span>
+        <span class="hd-badge-location" *ngIf="hotel?.location?.city">
+          📍 {{ hotel?.location?.city }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ── CONTENU (hotel chargé) ─────────────────── -->
+  <ng-container *ngIf="hotel; else loading">
+  <div class="hd-container">
+
+    <!-- Carousel images -->
+    <div class="hd-carousel" *ngIf="getImages().length > 0">
+      <div class="hd-carousel-track">
+        <img [src]="getMainImage()" [alt]="getHotelName()" class="hd-main-img"
+             (error)="onImageError($event)">
+      </div>
+      <button class="hd-nav hd-nav-prev" (click)="prevImage()"
+              *ngIf="getImages().length > 1">&#8249;</button>
+      <button class="hd-nav hd-nav-next" (click)="nextImage()"
+              *ngIf="getImages().length > 1">&#8250;</button>
+      <div class="hd-carousel-counter" *ngIf="getImages().length > 1">
+        {{ selectedImageIndex + 1 }} / {{ getImages().length }}
+      </div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="hd-thumbs" *ngIf="getImages().length > 1">
+      <button class="hd-thumb-btn" *ngFor="let img of getImages(); let i = index"
+              [class.hd-thumb-active]="selectedImageIndex === i"
+              (click)="selectImage(i)">
+        <img [src]="img" [alt]="'Photo ' + (i+1)" (error)="onThumbError($event, i)">
+      </button>
+    </div>
+
+    <!-- Hotel header -->
+    <div class="hd-hotel-header">
+      <div class="hd-hotel-meta">
+        <div class="hd-name-row">
+          <h2 class="hd-hotel-name">{{ getHotelName() }}</h2>
+          <div class="hd-cat-badge" *ngIf="hotel.category">{{ hotel.category }}</div>
+        </div>
+        <div class="hd-stars-row">
+          <span class="hd-star" *ngFor="let s of getStarsArray(getHotelStars())">★</span>
+        </div>
+        <p class="hd-address">⊙ {{ getHotelAddress() }}, {{ hotel.location.city || hotel.city }}</p>
+        <div class="hd-tags" *ngIf="hotel.source">
+          <span class="hd-tag">Source : {{ hotel.source }}</span>
+          <span class="hd-tag hd-tag-green" *ngIf="hotel.nights">
+            {{ hotel.nights }} nuit(s)
+          </span>
+        </div>
+      </div>
+
+      <!-- Prix avec PriceService -->
+      <div class="hd-price-block">
+        <div class="hd-price-night">
+          <span class="hd-price-big">{{ priceDisplay.perNight.formatted }}</span>
+          <span class="hd-price-label">/ nuit</span>
+        </div>
+        <div class="hd-price-total-block" *ngIf="priceDisplay.total.amount > 0">
+          Total : <strong>{{ priceDisplay.total.formatted }}</strong>
+        </div>
+        <div class="hd-conversion-note" *ngIf="priceDisplay.perNight.hasConversion">
+          <small>Converti depuis {{ priceDisplay.perNight.originalCurrency }}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prix range -->
+    <div class="hd-range-bar" *ngIf="hotel.price_range && hotel.price_range.max > 0">
+      <span class="hd-range-label">Fourchette de prix</span>
+      <span class="hd-range-value">
+        {{ formatPrice(hotel.price_range.min) }} – {{ formatPrice(hotel.price_range.max) }} {{ getCurrency() }}
+      </span>
+    </div>
+
+    <!-- Amenities -->
+    <div class="hd-section" *ngIf="getAmenities().length > 0">
+      <h3 class="hd-section-title">Services & équipements</h3>
+      <div class="hd-amenities-grid">
+        <div class="hd-amenity" *ngFor="let am of getAmenities()">
+          <div class="hd-amenity-icon">{{ getAmenityIcon(am.icon) }}</div>
+          <div class="hd-amenity-text">
+            <div class="hd-amenity-name">{{ am.name }}</div>
+            <div class="hd-amenity-status" [class.hd-included]="am.included">
+              {{ am.included ? '✓ Inclus' : '+ Option' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offres groupées par board type -->
+    <div class="hd-section" *ngIf="hotel.offers && hotel.offers.length > 0">
+      <h3 class="hd-section-title">Offres disponibles</h3>
+
+      <div class="hd-board-group" *ngFor="let group of getGroupedOffers()">
+        <div class="hd-board-header">
+          <span class="hd-board-code">{{ group.code }}</span>
+          <span class="hd-board-name">{{ group.name }}</span>
+        </div>
+        <div class="hd-offers-grid">
+          <div class="hd-offer-card" *ngFor="let offer of group.offers"
+               [class.hd-best-offer]="isBestOffer(offer)">
+            <div class="hd-offer-best-badge" *ngIf="isBestOffer(offer)">Meilleur prix</div>
+            <div class="hd-offer-room">{{ offer.name }}</div>
+            <div class="hd-offer-details">
+              <span *ngIf="offer.adults">{{ offer.adults }} adulte(s)</span>
+              <span *ngIf="offer.children?.length"> · {{ offer.children.length }} enfant(s)</span>
+              <span *ngIf="offer.quantity"> · {{ offer.quantity }} dispo</span>
+            </div>
+            <div class="hd-offer-cancellation" *ngIf="offer.cancellation_deadline">
+              Annulation avant le {{ offer.cancellation_deadline }}
+            </div>
+            <div class="hd-offer-nocancellation"
+                 *ngIf="!offer.cancellation_deadline && !offer.stop_reservation">
+              Non remboursable
+            </div>
+            <div class="hd-offer-price-row">
+              <div class="hd-offer-pricebox">
+                <span class="hd-offer-pn">
+                  {{ getOfferPricePerNightDisplay(offer).formatted }}
+                </span>
+                <span class="hd-offer-pn-label">/nuit</span>
+                <div class="hd-offer-original"
+                     *ngIf="getOfferPricePerNightDisplay(offer).hasConversion">
+                  <small>
+                    ({{ getOfferPricePerNightDisplay(offer).originalAmount }}
+                    {{ getOfferPricePerNightDisplay(offer).originalCurrency }})
+                  </small>
+                </div>
+              </div>
+              <div class="hd-offer-total">
+                Total : {{ getOfferTotalDisplay(offer).formatted }}
+                <div class="hd-offer-original-total"
+                     *ngIf="getOfferTotalDisplay(offer).hasConversion">
+                  <small>
+                    ({{ getOfferTotalDisplay(offer).originalAmount }}
+                    {{ getOfferTotalDisplay(offer).originalCurrency }})
+                  </small>
+                </div>
+              </div>
+            </div>
+            <button class="hd-offer-btn" (click)="onSelectOffer(offer)">
+              Sélectionner
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA principal -->
+    <div class="hd-cta-section">
+      <div class="hd-cta-info" *ngIf="hotel.best_offer">
+        Meilleure offre : <strong>{{ getBestOfferName() }}</strong>
+        — {{ getBestOfferPriceFormatted() }}
+      </div>
+      <button class="hd-book-btn" (click)="onBook()" [disabled]="showConfirmation">
+        {{ showConfirmation ? '✅ Réservation enregistrée' : 'Réserver cet hôtel' }}
+      </button>
+    </div>
+
+  </div>
+  </ng-container>
+
+  <!-- ── LOADING / NOT FOUND ────────────────────── -->
+  <ng-template #loading>
+    <div class="hd-empty">
+      <div class="hd-empty-icon">🏨</div>
+      <p>Chargement des détails...</p>
+      <button class="hd-back-btn" (click)="goBack()">← Retour</button>
+    </div>
+  </ng-template>
+
+</div>

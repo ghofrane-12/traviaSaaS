@@ -1,0 +1,175 @@
+/* ticket-form/ticket-form.component.scss */
+:host {
+  display: block;
+  margin-top: 16px; 
+}
+/* ── Bouton déclencheur modal ── */
+.trigger-btn {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           6px;
+  padding:       8px 14px;
+  background:    var(--color-primary, #4f46e5);
+  color:         white;
+  border:        none;
+  border-radius: 8px;
+  font-size:     0.875rem;
+  cursor:        pointer;
+  transition:    opacity 0.15s;
+
+  &:hover { opacity: 0.88; }
+}
+
+/* ── Modal overlay ── */
+.modal-overlay {
+  position:        fixed;
+  inset:           0;
+  background:      rgba(0, 0, 0, 0.5);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  z-index:         1000;
+}
+
+.modal-box {
+  background:     var(--color-surface, #fff);
+  border-radius:  12px;
+  padding:        24px;
+  width:          90%;
+  max-width:      420px;
+  display:        flex;
+  flex-direction: column;
+  gap:            16px;
+  box-shadow:     0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+
+  h3 {
+    margin:      0;
+    font-size:   1rem;
+    font-weight: 600;
+    color:       var(--color-text, #111);
+  }
+}
+
+.close-btn {
+  background:    none;
+  border:        none;
+  cursor:        pointer;
+  font-size:     1.1rem;
+  color:         var(--color-text-secondary, #666);
+  padding:       2px 6px;
+  border-radius: 4px;
+
+  &:hover { background: var(--color-hover, #f3f4f6); }
+}
+
+/* ── Wrapper formulaire avec bordure simple ── */
+.form-wrapper {
+  border:        1px solid var(--color-border, #e5e7eb);
+  border-radius: 10px;
+  padding:       20px;
+  background:    var(--color-surface, #fff);
+  display:       flex;
+  flex-direction: column;
+  gap:           0;
+}
+
+/* ── Groupe label + champ ── */
+.form-group {
+  display:        flex;
+  flex-direction: column;
+  gap:            5px;
+  margin-bottom:  14px;
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+/* ── Labels ── */
+.form-label {
+  font-size:      0.8125rem;
+  font-weight:    600;
+  color:          var(--color-text, #374151);
+  letter-spacing: 0.01em;
+
+  .required { color: var(--color-primary, #4f46e5); margin-left: 2px; }
+  .optional  {
+    font-weight: 400;
+    color:       var(--color-text-secondary, #9ca3af);
+    font-size:   0.75rem;
+  }
+}
+
+/* ── Inputs & Textarea ── */
+.form-input,
+.form-textarea {
+  width:         100%;
+  padding:       10px 12px;
+  border:        1px solid var(--color-border, #d1d5db);
+  border-radius: 8px;
+  background:    var(--color-bg, #f9fafb);
+  color:         var(--color-text, #111);
+  font-size:     0.875rem;
+  box-sizing:    border-box;
+  font-family:   inherit;
+  transition:    border-color 0.15s, background 0.15s;
+
+  &:focus {
+    outline:      none;
+    border-color: var(--color-primary, #4f46e5);
+    background:   #fff;
+  }
+
+  &::placeholder { color: var(--color-text-secondary, #9ca3af); }
+}
+
+.form-textarea { resize: vertical; }
+
+/* ── Séparateur visuel avant le bouton submit ── */
+.form-divider {
+  height:        1px;
+  background:    var(--color-border, #e5e7eb);
+  margin:        16px 0;
+}
+
+/* ── Bouton submit ── */
+.submit-btn {
+  width:         100%;
+  padding:       11px;
+  margin-top:    8px;
+  background:    var(--color-primary, #4f46e5);
+  color:         white;
+  border:        none;
+  border-radius: 8px;
+  font-size:     0.9rem;
+  font-weight:   600;
+  cursor:        pointer;
+  transition:    opacity 0.15s;
+
+  &:hover    { opacity: 0.88; }
+  &:disabled { opacity: 0.55; cursor: not-allowed; }
+}
+
+/* ── Erreur ── */
+.form-error {
+  color:     var(--color-text-error, #ef4444);
+  font-size: 0.8rem;
+  margin:    4px 0 0;
+}
+
+/* ── Succès ── */
+.form-success {
+  display:     flex;
+  align-items: flex-start;
+  gap:         8px;
+  color:       var(--color-text-success, #16a34a);
+  font-size:   0.875rem;
+  padding:     8px 0;
+  line-height: 1.5;
+
+  .success-icon { font-size: 1.1rem; flex-shrink: 0; }
+}
