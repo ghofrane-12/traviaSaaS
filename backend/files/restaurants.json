@@ -1,0 +1,684 @@
+{
+  "restaurants": [
+    {
+      "id": "TUNR001",
+      "nom": "Dar El Jeld",
+      "ville": "Tunis",
+      "adresse": "5 Rue Dar El Jeld, Médina de Tunis, 1006",
+      "cuisine": "Traditionnelle tunisienne / Gastronomique",
+      "prix_moyen": 80,
+      "devise": "TND",
+      "note": 4.8,
+      "description": "Restaurant gastronomique dans un palais du XVIIIe siècle, le plus ancien et le plus réputé de Tunis.",
+      "specialites": ["Couscous aux légumes anciens", "Méchoui", "Brick à l'œuf", "Osbane"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "23:00"},
+      "jours_fermeture": ["Dimanche"],
+      "services": ["Terrasse", "Climatisé", "Réservation obligatoire", "Bar à cocktails", "Rooftop"],
+      "contact": {
+        "telephone": "+216 71 560 916",
+        "email": "dar.eljeld@gnet.tn",
+        "site": "www.dareljeld.com"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+        "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800"
+      ]
+    },
+    {
+      "id": "TUNR002",
+      "nom": "Le Roof Top Dar El Jeld",
+      "ville": "Tunis",
+      "adresse": "5 Rue Dar El Jeld, Médina de Tunis, 1006",
+      "cuisine": "Internationale / Tunisienne",
+      "prix_moyen": 45,
+      "devise": "TND",
+      "note": 4.5,
+      "description": "Bar et restaurant surplombant les toits de la médina, ouvert toute la journée et tard dans la nuit.",
+      "specialites": ["Tapas", "Vins tunisiens", "Cocktails", "Plats internationaux"],
+      "horaires": {"ouvert": "10:00", "fermeture": "01:00"},
+      "jours_fermeture": [],
+      "services": ["Vue panoramique", "Terrasse", "Bar", "Musique"],
+      "contact": {
+        "telephone": "+216 70 016 190",
+        "email": "contact@dareljeld.com"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800"
+      ]
+    },
+    {
+      "id": "TUNR003",
+      "nom": "Dar Zarrouk",
+      "ville": "Sidi Bou Saïd",
+      "adresse": "Rue Hédi Zarrouk, Sidi Bou Saïd",
+      "cuisine": "Traditionnelle tunisienne",
+      "prix_moyen": 60,
+      "devise": "TND",
+      "note": 4.7,
+      "description": "Niché sur les hauteurs du village emblématique de Sidi Bou Saïd, offrant une vue panoramique sur la Méditerranée.",
+      "specialites": ["Couscous", "Brick", "Poissons frais", "Méchoui"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": ["Lundi"],
+      "services": ["Vue mer", "Terrasse", "Cadre idyllique", "Réservation recommandée"],
+      "contact": {
+        "telephone": "+216 71 743 000",
+        "site": "www.darzarrouk.tn"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1564540586988-fac8a1a2b1e7?w=800",
+        "https://images.unsplash.com/photo-1575537959221-8f68803af5ad?w=800"
+      ]
+    },
+    {
+      "id": "TUNR004",
+      "nom": "Le Grand Bleu",
+      "ville": "La Marsa",
+      "adresse": "Zone touristique Gammarth, BP N°15, Avenue Taieb Mhirir, 2078 La Marsa",
+      "cuisine": "Méditerranéenne / Fruits de mer",
+      "prix_moyen": 70,
+      "devise": "TND",
+      "note": 4.6,
+      "description": "Le must de la fine gastronomie méditerranéenne à Gammarth.",
+      "specialites": ["Plateau de fruits de mer", "Loup de mer", "Crevettes", "Risotto"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:30"},
+      "jours_fermeture": [],
+      "services": ["Vue mer", "Parking", "Climatisé", "Terrasse", "Soirées à thème"],
+      "contact": {
+        "telephone": "+216 71 913 900",
+        "mobile": "+216 95 993 904",
+        "email": "commercial-gb@orange.tn"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+      ]
+    },
+    {
+      "id": "TUNR005",
+      "nom": "El M'rabet",
+      "ville": "Sidi Bou Saïd",
+      "adresse": "Rue Hedi Zarrouk, Sidi Bou Saïd",
+      "cuisine": "Tunisienne / Café",
+      "prix_moyen": 35,
+      "devise": "TND",
+      "note": 4.5,
+      "description": "Café et restaurant historique avec vue imprenable sur le golfe de Tunis.",
+      "specialites": ["Thé à la menthe", "Bambalouni", "Salade tunisienne", "Ojja"],
+      "horaires": {"ouvert": "09:00", "fermeture": "20:00"},
+      "jours_fermeture": [],
+      "services": ["Vue panoramique", "Terrasse", "Célèbre", "Touristique"],
+      "contact": {
+        "telephone": "+216 71 744 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+      ]
+    },
+    {
+      "id": "SUSR001",
+      "nom": "Restaurant du Peuple",
+      "ville": "Sousse",
+      "adresse": "15 Rue Des Remparts Nord, Médina, Sousse 4000",
+      "cuisine": "Tunisienne / Fruits de mer",
+      "prix_moyen": 25,
+      "devise": "TND",
+      "note": 4.4,
+      "description": "Restaurant familial authentique situé dans la médina de Sousse.",
+      "specialites": ["Couscous au poisson", "Riz djerbien", "Kaaber", "Checkchouka", "Salade méchouia"],
+      "horaires": {"ouvert": "12:00", "fermeture": "18:00"},
+      "jours_fermeture": ["Dimanche"],
+      "services": ["Cuisine maison", "Prix doux", "Authentique", "Ambiance familiale"],
+      "contact": {
+        "telephone": "+216 73 220 564"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800"
+      ]
+    },
+    {
+      "id": "SUSR002",
+      "nom": "La Villa Restaurant - Mövenpick Sousse",
+      "ville": "Sousse",
+      "adresse": "Boulevard du 14 Janvier, PO Box 114, 4039 Sousse",
+      "cuisine": "Fusion méditerranéenne / Fine Dining",
+      "prix_moyen": 75,
+      "devise": "TND",
+      "note": 4.7,
+      "description": "Restaurant gastronomique avec salle à manger raffinée, bar cheminée romantique et lounge.",
+      "specialites": ["Cuisine fusion", "Cocktails", "Plats gastronomiques", "Fruits de mer"],
+      "horaires": {"ouvert": "07:00", "fermeture": "01:00"},
+      "jours_fermeture": ["Lundi"],
+      "services": ["Vue mer", "Bar à cigares", "Chicha", "Musique live", "DJ", "Patio", "Terrasse", "Soirées privées"],
+      "contact": {
+        "telephone": "+216 73 202 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800"
+      ]
+    },
+    {
+      "id": "SUSR003",
+      "nom": "Hard Rock Cafe",
+      "ville": "Port El Kantaoui",
+      "adresse": "Port El Kantaoui, Sousse",
+      "cuisine": "Américaine / Internationale",
+      "prix_moyen": 50,
+      "devise": "TND",
+      "note": 4.4,
+      "description": "Restaurant à l'ambiance rock, situé près de la Méditerranée, avec décoration locale et collection d'objets de rock stars.",
+      "specialites": ["Burgers", "Salades", "Cocktails signatures", "Messi Burger", "Messi Chicken Sandwich"],
+      "horaires": {"ouvert": "12:00", "fermeture": "01:00"},
+      "jours_fermeture": [],
+      "services": ["Bar intérieur/extérieur", "Jardin", "Musique live", "DJ après minuit", "Boutique", "Événements privés"],
+      "contact": {
+        "telephone": "+216 73 247 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+      ]
+    },
+    {
+      "id": "SUSR004",
+      "nom": "Bristol Plazza",
+      "ville": "Sousse",
+      "adresse": "Baie des Anges, Sousse",
+      "cuisine": "Tunisienne / Contemporaine / Internationale",
+      "prix_moyen": 55,
+      "devise": "TND",
+      "note": 4.6,
+      "description": "Restaurant, salon de thé et lounge offrant une vue imprenable sur la baie des anges dans un cadre chic et raffiné.",
+      "specialites": ["Pizzas", "Salades", "Spécialités tunisiennes", "Cuisine contemporaine", "Pâtisseries"],
+      "horaires": {"ouvert": "12:00", "fermeture": "00:00"},
+      "jours_fermeture": [],
+      "services": ["Terrasse", "Salon de thé", "Lounge", "Soirées musicales", "Malouf tunisien", "Variétés internationales", "Privatisation événements", "Cheminée", "Karaoké"],
+      "contact": {
+        "telephone": "+216 54 606 606",
+        "telephone2": "+216 58 524 750"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800"
+      ]
+    },
+    {
+      "id": "HAMR001",
+      "nom": "Le Barberousse",
+      "ville": "Hammamet",
+      "adresse": "Kasbah, Hammamet City 8050",
+      "cuisine": "Méditerranéenne / Tunisienne / Fruits de mer",
+      "prix_moyen": 45,
+      "devise": "TND",
+      "note": 4.6,
+      "description": "Restaurant historique posé sur les remparts de la vieille médina, offrant une vue imprenable sur la baie.",
+      "specialites": ["Poisson frais", "Couscous au poisson", "Briques", "Bar à vin tunisien"],
+      "horaires": {"ouvert": "12:00", "fermeture": "00:00"},
+      "jours_fermeture": [],
+      "services": ["Vue mer", "Vue médina", "Climatisé", "Bar à vin", "Service continu", "Événements privés"],
+      "contact": {
+        "telephone": "+216 72 280 037"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+      ]
+    },
+    {
+      "id": "HAMR002",
+      "nom": "Le Phénicien - Laico Hammamet",
+      "ville": "Hammamet",
+      "adresse": "Laico Hôtel Hammamet",
+      "cuisine": "Buffet / Internationale / Tunisienne",
+      "prix_moyen": 40,
+      "devise": "TND",
+      "note": 4.2,
+      "description": "Restaurant central de l'hôtel Laico proposant des buffets à thème variés.",
+      "specialites": ["Petit déjeuner buffet", "Déjeuner buffet à thème", "Dîner buffet à thème"],
+      "horaires": {"ouvert": "06:30", "fermeture": "22:30"},
+      "jours_fermeture": [],
+      "services": ["Buffet", "Climatisé", "Familial", "Accessible"],
+      "contact": {
+        "telephone": "+216 72 226 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800"
+      ]
+    },
+    {
+      "id": "HAMR003",
+      "nom": "Restaurant Portofino - Laico Hammamet",
+      "ville": "Hammamet",
+      "adresse": "Laico Hôtel Hammamet",
+      "cuisine": "Spécialités tunisiennes",
+      "prix_moyen": 35,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Restaurant de spécialités tunisiennes sur réservation.",
+      "specialites": ["Couscous", "Tajines", "Brick", "Méchoui", "Pâtisseries orientales"],
+      "horaires": {"ouvert": "19:00", "fermeture": "22:00"},
+      "jours_fermeture": [],
+      "services": ["Spécialités tunisiennes", "Réservation 24h à l'avance", "Une fois par séjour"],
+      "contact": {
+        "telephone": "+216 72 226 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.unsplash.com/photo-1555407728-1731a947593a?w=800"
+      ]
+    },
+    {
+      "id": "HAMR004",
+      "nom": "El Mouradi Hammamet Restaurants",
+      "ville": "Yasmine Hammamet",
+      "adresse": "Zone touristique Yasmine Hammamet, 8050 Hammamet",
+      "cuisine": "Internationale / Tunisienne / Buffet",
+      "prix_moyen": 35,
+      "devise": "TND",
+      "note": 4.0,
+      "description": "Complexe hôtelier avec plusieurs restaurants proposant des formules All Inclusive et des buffets variés.",
+      "specialites": ["Buffets internationaux", "Spécialités tunisiennes", "Soirées à thème"],
+      "horaires": {"ouvert": "06:30", "fermeture": "22:00"},
+      "jours_fermeture": [],
+      "services": ["Buffets", "All inclusive", "Piscine", "Plage privée", "Bar", "Snack"],
+      "contact": {
+        "telephone": "+216 92 127 431",
+        "email": "res.hammamet@elmouradi.com"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
+      ]
+    },
+    {
+      "id": "KAI001",
+      "nom": "Dar Amor",
+      "ville": "Kairouan",
+      "adresse": "12 Rue Ali Belhouane, Kairouan",
+      "cuisine": "Traditionnelle tunisienne",
+      "prix_moyen": 30,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Restaurant familial proposant les spécialités culinaires de Kairouan.",
+      "specialites": ["Makarouna", "Marqa", "Couscous kairouanais", "Mhalbiya", "Zlabia"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "18:30", "fermeture_soir": "21:30"},
+      "jours_fermeture": ["Lundi"],
+      "services": ["Cuisine authentique", "Bon rapport qualité-prix", "Famillial"],
+      "contact": {
+        "telephone": "+216 77 230 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800"
+      ]
+    },
+    {
+      "id": "TOZ001",
+      "nom": "La Table de François - Dar Tozeur",
+      "ville": "Tozeur",
+      "adresse": "Dar Tozeur, Tozeur",
+      "cuisine": "Traditionnelle tunisienne / Contemporaine",
+      "prix_moyen": 45,
+      "devise": "TND",
+      "note": 4.5,
+      "description": "Restaurant offrant un voyage culinaire à travers les saveurs authentiques de la Tunisie, dirigé par un chef passionné.",
+      "specialites": ["Couscous bédouin", "Chakhchoukha", "Méchoui d'agneau", "Spécialités du sud tunisien"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "22:00"},
+      "jours_fermeture": [],
+      "services": ["Cadre élégant", "Terrasse", "Piscine", "Privatisation événements", "Réservation obligatoire", "Capacité 60 convives"],
+      "contact": {
+        "telephone": "+216 76 453 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+        "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800"
+      ]
+    },
+    {
+      "id": "TOZ002",
+      "nom": "Restaurant Zellige",
+      "ville": "Tozeur",
+      "adresse": "Zone Touristique, Tozeur",
+      "cuisine": "Tunisienne / Désert",
+      "prix_moyen": 40,
+      "devise": "TND",
+      "note": 4.2,
+      "description": "Restaurant typique avec spécialités du désert et cadre décoré de zellige.",
+      "specialites": ["Couscous", "Brick", "Tajines", "Méchoui", "Pâtisseries orientales"],
+      "horaires": {"ouvert": "12:00", "fermeture": "22:00"},
+      "jours_fermeture": [],
+      "services": ["Cadre typique", "Climatisé", "Cuisine locale"],
+      "contact": {},
+      "images": [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800",
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800"
+      ]
+    },
+    {
+      "id": "BIN001",
+      "nom": "La Villa Blanche",
+      "ville": "Bizerte",
+      "adresse": "Route de la Marina, Bizerte",
+      "cuisine": "Fruits de mer / Méditerranéenne",
+      "prix_moyen": 45,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Restaurant panoramique sur le lac de Bizerte, spécialisé dans les fruits de mer.",
+      "specialites": ["Poisson grillé", "Poulpe", "Calamars", "Plateau de fruits de mer", "Salade méchouia"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Vue lac", "Terrasse", "Climatisé", "Parking", "Poisson frais"],
+      "contact": {
+        "telephone": "+216 72 531 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+      ]
+    },
+    {
+      "id": "NAB001",
+      "nom": "Chez Slah",
+      "ville": "Nabeul",
+      "adresse": "Place de l'Indépendance, Nabeul",
+      "cuisine": "Tunisienne / Fruits de mer",
+      "prix_moyen": 25,
+      "devise": "TND",
+      "note": 4.1,
+      "description": "Restaurant populaire de Nabeul réputé pour sa cuisine authentique et ses prix abordables.",
+      "specialites": ["Poisson frais", "Couscous", "Brick", "Ojja", "Salade tunisienne"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "22:00"},
+      "jours_fermeture": ["Dimanche"],
+      "services": ["Cuisine maison", "Prix doux", "Authentique", "Populaire"],
+      "contact": {
+        "telephone": "+216 72 287 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.pexels.com/photos/8966022/pexels-photo-8966022.jpeg?w=800"
+      ]
+    },
+    {
+      "id": "DJE001",
+      "nom": "Le Petit Palais",
+      "ville": "Djerba",
+      "adresse": "Zone Touristique, Djerba",
+      "cuisine": "Tunisienne / Méditerranéenne",
+      "prix_moyen": 50,
+      "devise": "TND",
+      "note": 4.4,
+      "description": "Restaurant gastronomique dans un cadre de palais traditionnel à Djerba.",
+      "specialites": ["Couscous", "Poissons grillés", "Tajine djerbien", "Briques", "Pâtisseries orientales"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Cadre luxueux", "Climatisé", "Terrasse", "Bar", "Spa", "Piscine"],
+      "contact": {
+        "telephone": "+216 75 739 000",
+        "site": "www.petitpalais.beachhotelsresorts.tn"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+        "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800"
+      ]
+    },
+    {
+      "id": "DJE002",
+      "nom": "La Cour des Pêcheurs",
+      "ville": "Djerba",
+      "adresse": "Zone Touristique, Djerba",
+      "cuisine": "Fruits de mer / Tunisienne",
+      "prix_moyen": 35,
+      "devise": "TND",
+      "note": 4.2,
+      "description": "Restaurant de fruits de mer, réputé pour la fraîcheur de ses poissons.",
+      "specialites": ["Poissons grillés", "Crevettes", "Poulpe", "Langoustes", "Salade d'oursins"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Poissons frais", "Cadre authentique", "Terrasse", "Parking", "Spécialité fruits de mer"],
+      "contact": {
+        "telephone": "+216 98 343 434"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+      ]
+    },
+    {
+      "id": "MAH001",
+      "nom": "Restaurant Le Corsaire",
+      "ville": "Mahdia",
+      "adresse": "Bord de Mer, Mahdia",
+      "cuisine": "Fruits de mer / Tunisienne",
+      "prix_moyen": 30,
+      "devise": "TND",
+      "note": 4.2,
+      "description": "Restaurant typique au bord de la mer réputé pour ses fruits de mer frais.",
+      "specialites": ["Poisson frais du jour", "Crevettes", "Calamars", "Poulpe grillé", "Salade méchouia"],
+      "horaires": {"ouvert": "11:00", "fermeture": "22:00"},
+      "jours_fermeture": [],
+      "services": ["Vue mer", "Terrasse", "Poisson frais", "Cadre typique", "Famillial"],
+      "contact": {
+        "telephone": "+216 73 683 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800"
+      ]
+    },
+    {
+      "id": "MON001",
+      "nom": "Café Sidi Ali ben Aoun",
+      "ville": "Monastir",
+      "adresse": "Monastir",
+      "cuisine": "Café / Pâtisserie",
+      "prix_moyen": 15,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Salon de thé et café historique de Monastir, célèbre pour ses pâtisseries.",
+      "specialites": ["Pâtisseries orientales", "Thé à la menthe", "Café turc", "Bambalouni", "Briques sucrées"],
+      "horaires": {"ouvert": "08:00", "fermeture": "20:00"},
+      "jours_fermeture": [],
+      "services": ["Salon de thé", "Pâtisseries", "Cadre historique", "Vue mer", "Terrasse"],
+      "contact": {
+        "telephone": "+216 73 461 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800",
+        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800"
+      ]
+    },
+    {
+      "id": "SFA001",
+      "nom": "Restaurant El Hana",
+      "ville": "Sfax",
+      "adresse": "Avenue Habib Bourguiba, Sfax",
+      "cuisine": "Tunisienne",
+      "prix_moyen": 25,
+      "devise": "TND",
+      "note": 4.1,
+      "description": "Restaurant familial traditionnel de Sfax, spécialité de la cuisine locale.",
+      "specialites": ["Couscous sfaxien", "Poisson grillé", "Chermoula", "Brick", "Salade tunisienne"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "22:00"},
+      "jours_fermeture": ["Dimanche"],
+      "services": ["Cuisine traditionnelle", "Bon rapport qualité-prix", "Famillial", "Ambiance locale"],
+      "contact": {
+        "telephone": "+216 74 222 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800"
+      ]
+    },
+    {
+      "id": "GAB001",
+      "nom": "Restaurant El Mansour",
+      "ville": "Gabès",
+      "adresse": "Bord de Mer, Gabès",
+      "cuisine": "Fruits de mer / Tunisienne",
+      "prix_moyen": 30,
+      "devise": "TND",
+      "note": 4.0,
+      "description": "Restaurant réputé pour ses fruits de mer frais et sa vue sur la mer.",
+      "specialites": ["Poisson frais", "Crevettes de Gabès", "Poulpe grillé", "Couscous au poisson", "Salade d'oursins"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Vue mer", "Terrasse", "Poissons frais", "Parking"],
+      "contact": {
+        "telephone": "+216 75 271 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800"
+      ]
+    },
+    {
+      "id": "BEJ001",
+      "nom": "Café des Délices",
+      "ville": "Béja",
+      "adresse": "Béja",
+      "cuisine": "Café / Pâtisserie",
+      "prix_moyen": 12,
+      "devise": "TND",
+      "note": 4.0,
+      "description": "Salon de thé et café réputé pour ses pâtisseries dans la ville de Béja.",
+      "specialites": ["Pâtisseries orientales", "Thé à la menthe", "Café turc", "Gâteaux secs", "Bambalouni"],
+      "horaires": {"ouvert": "08:00", "fermeture": "20:00"},
+      "jours_fermeture": [],
+      "services": ["Salon de thé", "Pâtisseries", "Cadre agréable", "Central"],
+      "contact": {
+        "telephone": "+216 78 456 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800",
+        "https://images.unsplash.com/photo-1562504207-8453cf1a548d?w=800"
+      ]
+    },
+    {
+      "id": "ZAG001",
+      "nom": "Restaurant La Grotte",
+      "ville": "Zaghouan",
+      "adresse": "Zaghouan",
+      "cuisine": "Traditionnelle tunisienne",
+      "prix_moyen": 25,
+      "devise": "TND",
+      "note": 4.0,
+      "description": "Restaurant situé près du Temple des Eaux, offrant une cuisine traditionnelle.",
+      "specialites": ["Couscous", "Méchoui", "Brick", "Tajine", "Ojja"],
+      "horaires": {"ouvert": "12:00", "fermeture": "16:00", "ouvert_soir": "19:00", "fermeture_soir": "21:00"},
+      "jours_fermeture": ["Lundi"],
+      "services": ["Cuisine familiale", "Cadre rustique", "Proche site antique", "Parking"],
+      "contact": {
+        "telephone": "+216 25 556 789"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+      ]
+    },
+    {
+      "id": "TAB001",
+      "nom": "Restaurant du Port",
+      "ville": "Tabarka",
+      "adresse": "Port de Tabarka, Tabarka",
+      "cuisine": "Fruits de mer / Méditerranéenne",
+      "prix_moyen": 40,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Restaurant incontournable de Tabarka spécialisé dans les fruits de mer ultra-frais.",
+      "specialites": ["Poisson grillé", "Poulpe", "Langouste", "Crevettes", "Plateau de fruits de mer"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Vue port", "Terrasse", "Poisson frais", "Parking", "Soirées estivales"],
+      "contact": {
+        "telephone": "+216 78 672 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800"
+      ]
+    },
+    {
+      "id": "KEL001",
+      "nom": "Restaurant Le Méditerranée",
+      "ville": "Kelibia",
+      "adresse": "Bord de Mer, Kelibia",
+      "cuisine": "Fruits de mer / Tunisienne",
+      "prix_moyen": 35,
+      "devise": "TND",
+      "note": 4.2,
+      "description": "Restaurant réputé pour ses fruits de mer et sa vue sur la Méditerranée.",
+      "specialites": ["Poisson grillé", "Calamars", "Poulpe", "Langoustes", "Salade méchouia"],
+      "horaires": {"ouvert": "12:00", "fermeture": "23:00"},
+      "jours_fermeture": [],
+      "services": ["Vue mer", "Terrasse", "Poisson frais", "Parking", "Climatisé"],
+      "contact": {
+        "telephone": "+216 72 293 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800"
+      ]
+    },
+    {
+      "id": "BEN001",
+      "nom": "Restaurant Dar Zouhour",
+      "ville": "Ben Arous",
+      "adresse": "Ben Arous",
+      "cuisine": "Tunisienne / Couscous",
+      "prix_moyen": 28,
+      "devise": "TND",
+      "note": 4.1,
+      "description": "Restaurant familial réputé dans la région de Ben Arous pour sa cuisine traditionnelle.",
+      "specialites": ["Couscous", "Mloukhia", "Brick", "Tajine", "Salade tunisienne"],
+      "horaires": {"ouvert": "12:00", "fermeture": "15:00", "ouvert_soir": "19:00", "fermeture_soir": "22:00"},
+      "jours_fermeture": ["Mardi"],
+      "services": ["Cuisine familiale", "Traditionnel", "Famillial", "Bon rapport qualité-prix"],
+      "contact": {
+        "telephone": "+216 71 380 000"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+      ]
+    },
+    {
+      "id": "MED001",
+      "nom": "Restaurant La Daurade",
+      "ville": "Médina Tunis",
+      "adresse": "Médina de Tunis",
+      "cuisine": "Fruits de mer / Tunisienne",
+      "prix_moyen": 38,
+      "devise": "TND",
+      "note": 4.3,
+      "description": "Restaurant situé en plein cœur de la médina, spécialisé dans les fruits de mer.",
+      "specialites": ["Daurade grillée", "Crevettes", "Poulpe", "Couscous au poisson", "Briques aux fruits de mer"],
+      "horaires": {"ouvert": "12:00", "fermeture": "22:00"},
+      "jours_fermeture": ["Dimanche"],
+      "services": ["Cadre authentique", "Cuisine maison", "Terrasse", "Poisson frais", "Dans la médina"],
+      "contact": {
+        "telephone": "+216 71 580 580"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1582202733116-bce42d8bf7f4?w=800",
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+        "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800"
+      ]
+    }
+  ],
+  "total_restaurants": 30,
+  "villes_couvertes": [
+    "Tunis", "Sidi Bou Saïd", "La Marsa", "Sousse", "Port El Kantaoui", 
+    "Hammamet", "Yasmine Hammamet", "Kairouan", "Tozeur", "Bizerte", 
+    "Nabeul", "Djerba", "Mahdia", "Monastir", "Sfax", "Gabès", "Béja", 
+    "Zaghouan", "Tabarka", "Kelibia", "Ben Arous", "Médina Tunis"
+  ],
+  "pays": "Tunisie",
+  "devise_principale": "TND",
+  "date_generation": "2026-04-25T10:00:00Z"
+}

@@ -1,0 +1,707 @@
+{
+  "version": "HOTEL_SECURITY_RAG",
+  "documents": [
+    {
+      "id": "HOTEL_GLOBAL_001",
+      "region": "Global",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake hotel booking scams",
+          "search_text": [
+            "hotel booking scam fake website how to avoid",
+            "arnaque réservation hôtel faux site",
+            "احتيال حجز فندق موقع مزيف",
+            "how to know if hotel booking is real"
+          ],
+          "text": "Fake hotel booking websites mimic real platforms. Always verify the URL, use trusted platforms like Booking.com or the hotel's official site, and avoid direct bank transfers. Scammers often use names similar to well-known hotels (e.g., 'Marriott Inn' instead of 'Marriott International').",
+          "risk": "Financial loss, identity theft"
+        },
+        {
+          "title": "Credit card fraud hotel payment",
+          "search_text": [
+            "hotel payment credit card fraud risk",
+            "paiement hotel carte bancaire sécurité",
+            "احتيال بطاقة بنكية فندق الدفع",
+            "is it safe to pay hotel online"
+          ],
+          "text": "Use secure payment methods and avoid sharing card details via email or messaging apps. Prefer platforms with fraud protection. Never give your card to hotel staff for 'pre-authorization' without a receipt.",
+          "risk": "Card fraud, unauthorized charges"
+        },
+        {
+          "title": "Phishing and email scams",
+          "search_text": [
+            "hotel phishing emails fake confirmation",
+            "arnaque email réservation hôtel",
+            "احتيال بريد إلكتروني حجز فندق",
+            "fake hotel confirmation email"
+          ],
+          "text": "Phishing emails may ask for personal information or payment to 'confirm' a reservation. Always verify by calling the hotel directly using the number on their official website, not the one in the email.",
+          "risk": "Identity theft, financial loss"
+        },
+        {
+          "title": "AI-generated fake listings",
+          "search_text": [
+            "AI fake hotel photos scam",
+            "arnaque photos hôtel IA",
+            "احتيال صور فندق ذكاء اصطناعي",
+            "how to spot AI fake hotel listing"
+          ],
+          "text": "Scammers use AI to create fake or heavily edited hotel photos. Cross-check with official websites, recent guest reviews, and platforms like Google Maps for real images.",
+          "risk": "Financial loss, disappointment"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_UAE_DUBAI",
+      "region": "Middle East",
+      "country": "UAE",
+      "city": "Dubai",
+      "intent": ["hotel_safety", "law"],
+      "chunks": [
+        {
+          "title": "Hotel guest rules Dubai (e.g., Burj Al Arab, Atlantis The Palm)",
+          "search_text": [
+            "Dubai hotel guest rules visitors allowed",
+            "règles hôtel Dubai visiteurs chambre Burj Al Arab",
+            "قوانين فنادق دبي زوار برج العرب",
+            "can unmarried couples stay hotel Dubai Atlantis"
+          ],
+          "text": "Luxury hotels like Burj Al Arab and Atlantis The Palm require guests to present ID. Unmarried couples can stay together, but some budget hotels may ask for proof of marriage. Always check the hotel's policy before booking.",
+          "risk": "Fines or refusal by hotel"
+        },
+        {
+          "title": "Hotel deposit and hidden fees (e.g., Jumeirah Beach Hotel)",
+          "search_text": [
+            "Dubai hotel hidden charges fees Jumeirah",
+            "frais cachés hôtel Dubai Jumeirah Beach",
+            "رسوم فندق جميرا الشاطئ دبي مخفية",
+            "extra charges hotel Dubai Jumeirah"
+          ],
+          "text": "High-end hotels like Jumeirah Beach Hotel may require large deposits for incidentals. Always ask for a detailed breakdown of fees before paying, especially for resort or tourism taxes.",
+          "risk": "Unexpected charges"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_FR_PARIS",
+      "region": "Europe",
+      "country": "France",
+      "city": "Paris",
+      "intent": ["hotel_safety", "theft"],
+      "chunks": [
+        {
+          "title": "Hotel theft risks Paris (e.g., Hôtel de Crillon, Le Meurice)",
+          "search_text": [
+            "hotel theft Paris safety tips valuables Hôtel de Crillon",
+            "vol hotel Paris sécurité objets valeur Le Meurice",
+            "سرقة فندق باريس نصائح كرليون",
+            "is hotel safe in Paris valuables luxury"
+          ],
+          "text": "Luxury hotels like Hôtel de Crillon and Le Meurice are generally safe, but theft can occur in rooms or lobbies. Use the in-room safe and never leave valuables unattended.",
+          "risk": "Theft, loss of valuables"
+        },
+        {
+          "title": "Fake concierge scams (e.g., Hôtel Ritz Paris)",
+          "search_text": [
+            "hotel fake concierge scam Paris Ritz",
+            "arnaque concierge hôtel Paris Ritz",
+            "احتيال موظف الفندق باريس ريتز",
+            "hotel staff scam Paris luxury"
+          ],
+          "text": "Scammers may pose as concierges at luxury hotels like the Ritz, offering 'exclusive' tours or services. Always verify staff badges and never pay cash upfront for services.",
+          "risk": "Financial loss, personal risk"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_TH_BANGKOK",
+      "region": "Asia",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Extra charges hotel scam Bangkok (e.g., Mandarin Oriental, Lebua at State Tower)",
+          "search_text": [
+            "hotel scam Bangkok extra charges minibar Mandarin Oriental",
+            "arnaque hotel Bangkok frais cachés minibar Lebua",
+            "احتيال فندق بانكوك رسوم إضافية ماندارين",
+            "why hotel charged me extra Bangkok luxury"
+          ],
+          "text": "Even 5-star hotels like Mandarin Oriental or Lebua may add unexpected charges (e.g., minibar, Wi-Fi, or 'service fees'). Always review the bill line by line before checkout.",
+          "risk": "Financial loss"
+        },
+        {
+          "title": "Booking outside authorized platforms (e.g., Khao San Road hostels)",
+          "search_text": [
+            "Bangkok hotel unauthorized booking scam Khao San",
+            "réservation hôtel Bangkok site non autorisé Khao San",
+            "احتيال حجز فندق بانكوك خاو سان",
+            "fake booking Bangkok hostel"
+          ],
+          "text": "Avoid booking hostels or budget hotels on Khao San Road through Facebook or WhatsApp. Use platforms like Hostelworld or Agoda, and confirm the booking via email.",
+          "risk": "No reservation, financial loss"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_US_LASVEGAS",
+      "region": "North America",
+      "country": "USA",
+      "city": "Las Vegas",
+      "intent": ["hotel_safety", "charges"],
+      "chunks": [
+        {
+          "title": "Resort fees hidden charges (e.g., Bellagio, Caesars Palace)",
+          "search_text": [
+            "Las Vegas hotel resort fees hidden charges Bellagio",
+            "frais cachés hotel Las Vegas resort fee Caesars",
+            "رسوم فندق لاس فيغاس رسوم مخفية سيزرز",
+            "why hotel bill higher than expected Vegas luxury"
+          ],
+          "text": "Luxury resorts like Bellagio and Caesars Palace charge daily resort fees (often $40–$50) for amenities like pools or gyms. These are rarely included in the initial booking price. Always ask for the total cost upfront.",
+          "risk": "Unexpected costs"
+        },
+        {
+          "title": "Fake luxury listings (e.g., The Venetian, Wynn)",
+          "search_text": [
+            "Las Vegas fake luxury hotel scam Venetian",
+            "fausse hôtel luxe Las Vegas Wynn",
+            "احتيال فندق لاس فيغاس فينيشيان مزيف",
+            "scam booking Vegas luxury hotel"
+          ],
+          "text": "Scammers create fake listings for high-end hotels like The Venetian or Wynn, offering 'discounted suites'. Always book directly through the hotel's official website or reputable agencies.",
+          "risk": "Financial loss"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_ID_BALI",
+      "region": "Asia",
+      "country": "Indonesia",
+      "city": "Bali",
+      "intent": ["hotel_safety", "theft"],
+      "chunks": [
+        {
+          "title": "Hotel room theft Bali (e.g., The Mulia, St. Regis)",
+          "search_text": [
+            "Bali hotel theft room safety tips Mulia",
+            "vol hotel Bali chambre sécurité St. Regis",
+            "سرقة فندق بالي نصائح موليا",
+            "is Bali hotel safe valuables luxury"
+          ],
+          "text": "Even in luxury resorts like The Mulia or St. Regis, theft can occur. Use the in-room safe for passports, cash, and electronics. Avoid leaving items on balconies or near open windows.",
+          "risk": "Theft"
+        },
+        {
+          "title": "Scams on transport to hotel (e.g., Ngurah Rai Airport)",
+          "search_text": [
+            "Bali hotel taxi scam transport airport",
+            "arnaque taxi hôtel Bali aéroport Ngurah Rai",
+            "احتيال سيارة أجرة الفندق بالي مطار",
+            "transport scam Bali hotel airport"
+          ],
+          "text": "At Ngurah Rai Airport, only use official taxi counters or ride-hailing apps like Gojek. Avoid touts offering 'cheap' rides—they often overcharge or take you to the wrong hotel.",
+          "risk": "Overpayment, lost time"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_EG_SHARM",
+      "region": "North Africa",
+      "country": "Egypt",
+      "city": "Sharm El Sheikh",
+      "intent": ["hotel_safety"],
+      "chunks": [
+        {
+          "title": "All inclusive hotel wristband scams (e.g., Rixos, Steigenberger)",
+          "search_text": [
+            "Egypt hotel wristband scam all inclusive Rixos",
+            "arnaque bracelet hotel Egypte all inclusive Steigenberger",
+            "احتيال سوار الفندق مصر ريكسوس",
+            "hotel bracelet lost charge Egypt"
+          ],
+          "text": "All-inclusive resorts like Rixos or Steigenberger use wristbands for access to food/drinks. Losing it may result in extra charges. Some hotels now use digital bracelets, but scammers still sell fake ones.",
+          "risk": "Extra charges"
+        },
+        {
+          "title": "Beach safety and hotel liability (e.g., Four Seasons, Hilton)",
+          "search_text": [
+            "Egypt hotel beach safety Sharm Four Seasons",
+            "sécurité plage hôtel Sharm El Sheikh Hilton",
+            "أمان الشاطئ الفندق شرم سيزونز",
+            "hotel liability beach Egypt"
+          ],
+          "text": "Hotels like Four Seasons or Hilton Sharm El Sheikh have private beaches, but accidents can happen. Check for lifeguards, warning flags, and avoid swimming alone or at night.",
+          "risk": "Injury, lack of insurance coverage"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_US_NEWYORK",
+      "region": "North America",
+      "country": "USA",
+      "city": "New York",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake hotel rebranding scams (e.g., The Plaza, Waldorf Astoria)",
+          "search_text": [
+            "New York hotel fake rebranding scam Plaza",
+            "arnaque hôtel New York faux rebranding Waldorf",
+            "احتيال فندق نيويورك بلازا مزيف",
+            "scam booking New York fake hotel"
+          ],
+          "text": "Scammers impersonate rebranded or closed iconic hotels like The Plaza or Waldorf Astoria. Always verify the hotel's current name and status on their official website before booking.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Overbooking and room downgrades (e.g., Times Square hotels)",
+          "search_text": [
+            "New York hotel overbooking scam Times Square",
+            "arnaque surréservation hôtel New York",
+            "احتيال حجز زائد فندق نيويورك تايمز سكوير",
+            "why hotel downgraded my room New York"
+          ],
+          "text": "Hotels in Times Square often overbook. If they offer a 'free upgrade' or alternative hotel, confirm the new room's quality and location. Demand compensation if the new room is inferior.",
+          "risk": "Disappointment, extra charges"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_MX_CANCUN",
+      "region": "North America",
+      "country": "Mexico",
+      "city": "Cancun",
+      "intent": ["hotel_safety", "scams"],
+      "chunks": [
+        {
+          "title": "Fake booking confirmations (e.g., Hyatt Ziva, Moon Palace)",
+          "search_text": [
+            "Cancun hotel fake booking confirmation Hyatt Ziva",
+            "arnaque confirmation réservation hôtel Cancun Moon Palace",
+            "احتيال تأكيد حجز فندق كانكون",
+            "scam fake booking Cancun"
+          ],
+          "text": "Scammers send fake confirmations for resorts like Hyatt Ziva or Moon Palace. Always call the hotel's front desk (using the number on their official site) to verify your reservation.",
+          "risk": "No room, financial loss"
+        },
+        {
+          "title": "Timeshare and tour scams (e.g., Hotel Zone)",
+          "search_text": [
+            "Cancun hotel timeshare scam Hotel Zone",
+            "arnaque timeshare hôtel Cancun",
+            "احتيال تايم شير فندق كانكون",
+            "scam tour Cancun hotel"
+          ],
+          "text": "Avoid 'free' tours or timeshare presentations offered at the airport or in the Hotel Zone. These often lead to high-pressure sales. Politely decline and walk away.",
+          "risk": "Financial loss, wasted time"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_JP_TOKYO",
+      "region": "Asia",
+      "country": "Japan",
+      "city": "Tokyo",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake ryokan and capsule hotel listings (e.g., Park Hotel Tokyo, Nine Hours)",
+          "search_text": [
+            "Tokyo fake ryokan scam Park Hotel",
+            "arnaque ryokan hôtel Tokyo Nine Hours",
+            "احتيال فندق ريوكان طوكيو",
+            "scam capsule hotel Tokyo"
+          ],
+          "text": "Scammers create fake listings for traditional ryokan or capsule hotels like Nine Hours. Book through reputable platforms (e.g., Japanican, Rakuten Travel) and check reviews for recent photos.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Credit card skimming at hotel ATMs (e.g., Shinjuku, Shibuya)",
+          "search_text": [
+            "Tokyo hotel ATM skimming scam Shinjuku",
+            "arnaque skimming distributeur hôtel Tokyo Shibuya",
+            "احتيال سرقة بطاقة فندق طوكيو",
+            "scam ATM hotel Tokyo"
+          ],
+          "text": "Use ATMs inside banks or official hotel lobbies (e.g., at Shinjuku or Shibuya hotels). Avoid standalone ATMs in convenience stores, which are common targets for skimming devices.",
+          "risk": "Card fraud, identity theft"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_IT_ROME",
+      "region": "Europe",
+      "country": "Italy",
+      "city": "Rome",
+      "intent": ["hotel_safety", "theft"],
+      "chunks": [
+        {
+          "title": "Pickpocketing in hotel lobbies (e.g., Hotel Hassler, The Fifteen Keys)",
+          "search_text": [
+            "Rome hotel lobby pickpocketing Hassler",
+            "vol à la tire hôtel Rome Fifteen Keys",
+            "سرقة محفظة فندق روما",
+            "scam pickpocket hotel Rome"
+          ],
+          "text": "Pickpocketing is rife in crowded lobbies of hotels near the Spanish Steps, like Hotel Hassler. Keep your bag zipped and never leave phones or wallets on tables.",
+          "risk": "Theft, loss of valuables"
+        },
+        {
+          "title": "Fake taxi drivers at hotel exits (e.g., near Termini Station)",
+          "search_text": [
+            "Rome hotel fake taxi scam Termini",
+            "arnaque taxi faux hôtel Rome",
+            "احتيال سائق تاكسي مزيف فندق روما",
+            "scam taxi hotel Rome"
+          ],
+          "text": "At Termini Station, only use official white taxis with 'TAXI' signs and meters. Fake taxis often wait outside hotels, offering 'fixed prices' that are inflated.",
+          "risk": "Overpayment, safety risk"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_US_CHICAGO",
+      "region": "North America",
+      "country": "USA",
+      "city": "Chicago",
+      "intent": ["hotel_safety", "vandalism"],
+      "chunks": [
+        {
+          "title": "Vandalism and property damage (e.g., The Langham, Waldorf Astoria)",
+          "search_text": [
+            "Chicago hotel vandalism safety Langham",
+            "vandalisme hôtel Chicago sécurité Waldorf",
+            "تخريب فندق شيكاغو",
+            "scam property damage hotel Chicago"
+          ],
+          "text": "Downtown hotels like The Langham or Waldorf Astoria can be targets for vandalism, especially during large events. Report suspicious activity and use the hotel safe for valuables.",
+          "risk": "Property damage, theft"
+        },
+        {
+          "title": "Fake event-related bookings (e.g., McCormick Place conventions)",
+          "search_text": [
+            "Chicago hotel fake event booking scam McCormick",
+            "arnaque réservation événement hôtel Chicago",
+            "احتيال حجز حدث فندق شيكاغو",
+            "scam event booking hotel Chicago"
+          ],
+          "text": "Scammers create fake bookings for hotels near McCormick Place during major conventions. Verify the event and hotel partnership on the convention's official website.",
+          "risk": "Financial loss, no accommodation"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_ES_BARCELONA",
+      "region": "Europe",
+      "country": "Spain",
+      "city": "Barcelona",
+      "intent": ["hotel_safety", "theft"],
+      "chunks": [
+        {
+          "title": "Hotel room theft (e.g., W Barcelona, Hotel Arts)",
+          "search_text": [
+            "Barcelona hotel theft room safety tips W Hotel",
+            "vol hotel Barcelona sécurité objets valeur Arts",
+            "سرقة فندق برشلونة نصائح",
+            "is Barcelona hotel safe valuables"
+          ],
+          "text": "Theft is common in tourist-heavy areas like Las Ramblas. At hotels like W Barcelona or Hotel Arts, use the safe and avoid leaving valuables on balconies or near open windows.",
+          "risk": "Theft, loss of valuables"
+        },
+        {
+          "title": "Fake police scams (e.g., Gothic Quarter hotels)",
+          "search_text": [
+            "Barcelona hotel fake police scam Gothic",
+            "arnaque faux police hôtel Barcelona",
+            "احتيال شرطة مزيفة فندق برشلونة",
+            "scam police hotel Barcelona"
+          ],
+          "text": "Scammers pose as police, asking to 'check' your cash or passport. Real police will never ask for your wallet. If in doubt, insist on going to the nearest police station.",
+          "risk": "Theft, identity theft"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_GR_SANTORINI",
+      "region": "Europe",
+      "country": "Greece",
+      "city": "Santorini",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake villa and caldera view scams (e.g., Canaves Oia, Chromata)",
+          "search_text": [
+            "Santorini fake villa scam Canaves Oia",
+            "arnaque villa Santorini Chromata",
+            "احتيال فيلا سانتوريني",
+            "scam caldera view hotel Santorini"
+          ],
+          "text": "Scammers advertise fake villas with 'caldera views' at prices too good to be true. Always book through the hotel's official site or reputable agencies like Expedia.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "ATV and transport rental scams (e.g., Fira, Oia)",
+          "search_text": [
+            "Santorini ATV rental scam Fira",
+            "arnaque location ATV Santorini Oia",
+            "احتيال تأجير دراجة سانتوريني",
+            "scam transport rental Santorini"
+          ],
+          "text": "Rental shops near hotels in Fira or Oia may overcharge or claim 'damage' to ATVs. Take photos/videos before renting and use reputable companies like Santorini Rent A Car.",
+          "risk": "Overpayment, fraudulent charges"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_GB_LONDON",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "city": "London",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake hotel booking scams London (e.g., The Savoy, Claridge's)",
+          "search_text": [
+            "London hotel fake booking scam Savoy",
+            "arnaque réservation hôtel Londres Claridge",
+            "احتيال حجز فندق لندن سافوي",
+            "scam fake booking London luxury hotel"
+          ],
+          "text": "Scammers create fake listings for iconic hotels like The Savoy or Claridge's. Always book through the hotel's official website or verified platforms like Booking.com. Beware of third-party sites offering unusually low rates.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Unlicensed minicabs at hotel exits (e.g., Heathrow, central London hotels)",
+          "search_text": [
+            "London hotel unlicensed minicab scam Heathrow",
+            "arnaque taxi non agréé hôtel Londres",
+            "احتيال سيارة أجرة غير مرخصة فندق لندن",
+            "scam minicab hotel London"
+          ],
+          "text": "Unlicensed minicabs often solicit guests outside London hotels, especially near Heathrow. Only use licensed black cabs or pre-booked apps like Uber or Bolt. Unlicensed drivers may overcharge or pose a safety risk.",
+          "risk": "Overpayment, personal safety risk"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_AU_SYDNEY",
+      "region": "Oceania",
+      "country": "Australia",
+      "city": "Sydney",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake short-term rental scams (e.g., Darling Harbour, CBD hotels)",
+          "search_text": [
+            "Sydney hotel fake rental scam Darling Harbour",
+            "arnaque location courte durée hôtel Sydney",
+            "احتيال إيجار فندق سيدني مزيف",
+            "scam short-term rental Sydney hotel"
+          ],
+          "text": "Scammers advertise fake Airbnb-style apartments near hotels in the CBD or Darling Harbour. Always verify listings through Airbnb or Booking.com, and confirm the address exists using Google Maps before transferring any money.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Credit card surcharges and hidden fees (e.g., The Langham, Park Hyatt Sydney)",
+          "search_text": [
+            "Sydney hotel hidden fees credit card surcharge Langham",
+            "frais cachés hôtel Sydney Park Hyatt",
+            "رسوم بطاقة فندق سيدني مخفية",
+            "extra charges hotel Sydney surcharge"
+          ],
+          "text": "Australian hotels often apply credit card surcharges (1–3%). Hotels like The Langham or Park Hyatt Sydney may also charge resort or parking fees not shown upfront. Always request a full cost breakdown before checking in.",
+          "risk": "Unexpected charges"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_SG_SINGAPORE",
+      "region": "Asia",
+      "country": "Singapore",
+      "city": "Singapore",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake luxury hotel deals (e.g., Marina Bay Sands, Raffles Hotel)",
+          "search_text": [
+            "Singapore hotel fake deal Marina Bay Sands",
+            "arnaque fausse offre hôtel Singapour Raffles",
+            "احتيال عرض فندق سنغافورة رافلز",
+            "scam fake hotel deal Singapore luxury"
+          ],
+          "text": "Scammers advertise deeply discounted rates for premium hotels like Marina Bay Sands or Raffles. These deals are often distributed via SMS or social media. Only book through the hotel's official website or trusted OTAs.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "GST and service charge confusion (e.g., Orchard Road hotels)",
+          "search_text": [
+            "Singapore hotel GST service charge Orchard Road",
+            "frais service TVA hôtel Singapour",
+            "ضريبة خدمة فندق سنغافورة",
+            "hidden tax hotel Singapore"
+          ],
+          "text": "Singapore hotels apply a 9% GST and a 10% service charge, making the true price 19% higher than listed. Always look for the '+' signs after quoted prices and ask for the nett total before booking.",
+          "risk": "Unexpected costs"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_TR_ISTANBUL",
+      "region": "Europe/Asia",
+      "country": "Turkey",
+      "city": "Istanbul",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake historic hotel listings (e.g., Four Seasons Sultanahmet, Çırağan Palace)",
+          "search_text": [
+            "Istanbul fake hotel listing scam Sultanahmet",
+            "arnaque faux hôtel Istanbul Çırağan Palace",
+            "احتيال قائمة فندق إسطنبول مزيفة",
+            "scam historic hotel booking Istanbul"
+          ],
+          "text": "Scammers impersonate prestigious Istanbul hotels like Four Seasons Sultanahmet or Çırağan Palace Kempinski, creating lookalike websites. Always check the URL matches the official domain and book through verified platforms.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Currency exchange scams near hotels (e.g., Grand Bazaar, Taksim)",
+          "search_text": [
+            "Istanbul hotel currency exchange scam Grand Bazaar",
+            "arnaque change monnaie hôtel Istanbul Taksim",
+            "احتيال صرف العملة فندق إسطنبول",
+            "scam exchange rate hotel Istanbul"
+          ],
+          "text": "Unofficial money changers near hotels in Taksim or the Grand Bazaar area offer attractive rates but use rigged calculators or provide counterfeit bills. Use hotel exchange counters or licensed banks only.",
+          "risk": "Financial loss, counterfeit currency"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_NL_AMSTERDAM",
+      "region": "Europe",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake houseboat and canal hotel scams (e.g., Hotel V, Pulitzer Amsterdam)",
+          "search_text": [
+            "Amsterdam fake houseboat hotel scam canal",
+            "arnaque hôtel péniche Amsterdam Pulitzer",
+            "احتيال فندق قارب أمستردام مزيف",
+            "scam canal hotel Amsterdam fake listing"
+          ],
+          "text": "Fake listings for canal-side or houseboat accommodations are common in Amsterdam. Always verify with platforms like Booking.com or the hotel's official site. Unique properties like houseboats require extra scrutiny.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Bicycle theft at hotel entrances (e.g., Leidseplein, Jordaan)",
+          "search_text": [
+            "Amsterdam hotel bicycle theft Leidseplein",
+            "vol vélo hôtel Amsterdam Jordaan",
+            "سرقة دراجة فندق أمستردام",
+            "scam bike rental hotel Amsterdam"
+          ],
+          "text": "Bicycle theft near hotels in the Leidseplein or Jordaan areas is extremely common. If your hotel provides bike rental, ensure locks are provided. Never leave bikes unlocked or chained to light poles.",
+          "risk": "Theft, financial loss"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_BR_RIO",
+      "region": "South America",
+      "country": "Brazil",
+      "city": "Rio de Janeiro",
+      "intent": ["hotel_safety", "theft"],
+      "chunks": [
+        {
+          "title": "Hotel robbery and street crime (e.g., Copacabana Palace, Windsor Atlantica)",
+          "search_text": [
+            "Rio hotel robbery street crime Copacabana Palace",
+            "vol rue hôtel Rio de Janeiro Windsor",
+            "سرقة فندق ريو دي جانيرو كوباكابانا",
+            "scam robbery hotel Rio safety"
+          ],
+          "text": "Hotels near Copacabana and Ipanema beaches, like Copacabana Palace or Windsor Atlantica, are generally secure inside, but the surrounding streets carry elevated crime risks. Avoid carrying valuables on the beach and use hotel safes.",
+          "risk": "Robbery, personal safety risk"
+        },
+        {
+          "title": "Fake hotel transport and tour scams (e.g., Carnival season)",
+          "search_text": [
+            "Rio hotel fake transport scam Carnival",
+            "arnaque transport hôtel Rio Carnival",
+            "احتيال وسائل نقل فندق ريو كرنفال",
+            "scam taxi tour hotel Rio de Janeiro"
+          ],
+          "text": "During Carnival, scammers posing as tour operators offer fake hotel-to-venue transport. Only book through your hotel's concierge or verified apps like 99 or Uber. Unofficial drivers often inflate prices dramatically.",
+          "risk": "Overpayment, safety risk"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_HK_HONGKONG",
+      "region": "Asia",
+      "country": "China (SAR)",
+      "city": "Hong Kong",
+      "intent": ["hotel_safety", "fraud"],
+      "chunks": [
+        {
+          "title": "Fake booking platforms (e.g., The Peninsula, InterContinental Hong Kong)",
+          "search_text": [
+            "Hong Kong hotel fake booking scam Peninsula",
+            "arnaque réservation fausse hôtel Hong Kong InterContinental",
+            "احتيال حجز فندق هونغ كونغ مزيف",
+            "scam fake booking Hong Kong luxury hotel"
+          ],
+          "text": "Scam platforms mimic booking sites for iconic hotels like The Peninsula or InterContinental Hong Kong. Always double-check the domain name and look for secure HTTPS connections before entering payment details.",
+          "risk": "Financial loss, identity theft"
+        },
+        {
+          "title": "Shopping scams linked to hotel concierge (e.g., Tsim Sha Tsui hotels)",
+          "search_text": [
+            "Hong Kong hotel concierge shopping scam Tsim Sha Tsui",
+            "arnaque shopping concierge hôtel Hong Kong",
+            "احتيال تسوق فندق هونغ كونغ",
+            "scam shopping hotel Hong Kong concierge"
+          ],
+          "text": "Some hotel concierges near Tsim Sha Tsui may receive commissions for directing guests to overpriced electronics or jewelry shops. Research independently before purchasing electronics or gemstones and compare prices online.",
+          "risk": "Overpayment, counterfeit goods"
+        }
+      ]
+    },
+    {
+      "id": "HOTEL_MA_MARRAKECH",
+      "region": "North Africa",
+      "country": "Morocco",
+      "city": "Marrakech",
+      "intent": ["hotel_safety", "scams"],
+      "chunks": [
+        {
+          "title": "Fake riad listing scams (e.g., La Mamounia, Royal Mansour)",
+          "search_text": [
+            "Marrakech riad fake listing scam La Mamounia",
+            "arnaque riad Marrakech Royal Mansour",
+            "احتيال رياض مراكش لا مامونيا مزيف",
+            "scam fake riad booking Marrakech"
+          ],
+          "text": "Marrakech's traditional riads are frequently impersonated online. Scammers create fake listings for well-known properties like La Mamounia or budget riads in the Medina. Always verify through official sites or platforms like Booking.com, and call the riad directly to confirm your reservation.",
+          "risk": "Financial loss, no accommodation"
+        },
+        {
+          "title": "Guide and souk scams near hotels (e.g., Djemaa el-Fna area)",
+          "search_text": [
+            "Marrakech hotel guide scam souk Djemaa el-Fna",
+            "arnaque guide souk hôtel Marrakech",
+            "احتيال مرشد سياحي فندق مراكش جامع الفنا",
+            "scam unofficial guide hotel Marrakech"
+          ],
+          "text": "Unofficial guides near hotels in the Djemaa el-Fna area often offer to escort guests to souks, then demand high fees or lead them to overpriced shops. Only use licensed guides recommended by your hotel, and agree on a fee upfront.",
+          "risk": "Financial loss, harassment"
+        }
+      ]
+    }
+  ]
+}

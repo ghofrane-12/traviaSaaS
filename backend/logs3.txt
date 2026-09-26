@@ -1,0 +1,402 @@
+[
+  {
+    "insertId": "69fbcd9f000e837b3971373c",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-05-06T23:24:16.290830716Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "  value is not a valid email address: The part after the @-sign is a special-use or reserved name that cannot be used with email. [type=value_error, input_value='gIyhYxXyssQ29FlH14SmMCU3etG2@noemail.local', input_type=str]",
+    "timestamp": "2026-05-06T23:24:15.951163Z"
+  },
+  {
+    "insertId": "69fbcd9f000e83771143a24e",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-05-06T23:24:16.290830716Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "email",
+    "timestamp": "2026-05-06T23:24:15.951159Z"
+  },
+  {
+    "errorGroups": [
+      {
+        "id": "CNKe6Omlz7b_6wE"
+      }
+    ],
+    "insertId": "69fbcd9f000e83731ea0e4c3",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-05-06T23:24:16.290830716Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "ERROR",
+    "textPayload": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py\", line 409, in run_asgi\n    result = await app(  # type: ignore[func-returns-value]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py\", line 60, in __call__\n    return await self.app(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.11/site-packages/fastapi/applications.py\", line 1054, in __call__\n    await super().__call__(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/applications.py\", line 112, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/middleware/errors.py\", line 187, in __call__\n    raise exc\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/middleware/errors.py\", line 165, in __call__\n    await self.app(scope, receive, _send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/middleware/cors.py\", line 93, in __call__\n    await self.simple_response(scope, receive, send, request_headers=headers)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/middleware/cors.py\", line 144, in simple_response\n    await self.app(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py\", line 62, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/routing.py\", line 714, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/routing.py\", line 734, in app\n    await route.handle(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/routing.py\", line 288, in handle\n    await self.app(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/routing.py\", line 76, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/opt/venv/lib/python3.11/site-packages/starlette/routing.py\", line 73, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.11/site-packages/fastapi/routing.py\", line 301, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.11/site-packages/fastapi/routing.py\", line 212, in run_endpoint_function\n    return await dependant.call(**values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/routers/authn.py\", line 178, in create_session\n    return SessionResponse(\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.11/site-packages/pydantic/main.py\", line 253, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 1 validation error for SessionResponse",
+    "timestamp": "2026-05-06T23:24:15.951155Z"
+  },
+  {
+    "insertId": "69fbcd9f000e8331dbc71f16",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-05-06T23:24:15.957537675Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "ERROR:    Exception in ASGI application",
+    "timestamp": "2026-05-06T23:24:15.951089Z"
+  },
+  {
+    "insertId": "69fbcd9f000e4b27afbd1dba",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-05-06T23:24:16.095078792Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     169.254.169.126:54284 - \"POST /api/auth/session HTTP/1.1\" 500 Internal Server Error",
+    "timestamp": "2026-05-06T23:24:15.936743Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.124058747s",
+      "protocol": "HTTP/1.1",
+      "referer": "https://travel-ai-2026.web.app/",
+      "remoteIp": "165.51.63.61",
+      "requestMethod": "POST",
+      "requestSize": "1904",
+      "requestUrl": "https://backend-40232021927.europe-west1.run.app/api/auth/session",
+      "responseSize": "130",
+      "serverIp": "34.143.76.2",
+      "status": 500,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    },
+    "insertId": "69fbcd9f000e84692b920a92",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-05-06T23:24:16.095698551Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "ERROR",
+    "spanId": "975b69ca9f20c898",
+    "timestamp": "2026-05-06T23:24:15.824084Z",
+    "trace": "projects/travel-ai-2026/traces/2fa95a6bc7ad655f89ba71a0ec51d006"
+  },
+  {
+    "insertId": "69fbcd9f000b902d1fdf57f9",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-05-06T23:24:15.764630201Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     169.254.169.126:54270 - \"OPTIONS /api/auth/session HTTP/1.1\" 200 OK",
+    "timestamp": "2026-05-06T23:24:15.757805Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "0.001754451s",
+      "protocol": "HTTP/1.1",
+      "referer": "https://travel-ai-2026.web.app/",
+      "remoteIp": "165.51.63.61",
+      "requestMethod": "OPTIONS",
+      "requestSize": "774",
+      "requestUrl": "https://backend-40232021927.europe-west1.run.app/api/auth/session",
+      "responseSize": "376",
+      "serverIp": "34.143.76.2",
+      "status": 200,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+    },
+    "insertId": "69fbcd9f000b917d1c39890c",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-05-06T23:24:15.764872318Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "d6810f242baa9c7b",
+    "timestamp": "2026-05-06T23:24:15.746192Z",
+    "trace": "projects/travel-ai-2026/traces/a408d7dc0e6f307489ba71a0ec51d00f",
+    "traceSampled": true
+  },
+  {
+    "insertId": "1uvdq2ke199qz",
+    "logName": "projects/travel-ai-2026/logs/cloudaudit.googleapis.com%2Factivity",
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "oauthInfo": {
+          "oauthClientId": "32555940559.apps.googleusercontent.com"
+        },
+        "principalEmail": "hamza.rahmani@istic.ucar.tn",
+        "principalSubject": "user:hamza.rahmani@istic.ucar.tn"
+      },
+      "authorizationInfo": [
+        {
+          "granted": true,
+          "permission": "run.services.update",
+          "permissionType": "ADMIN_WRITE",
+          "resource": "namespaces/travel-ai-2026/services/backend",
+          "resourceAttributes": {}
+        },
+        {
+          "granted": true,
+          "permission": "run.services.update",
+          "permissionType": "ADMIN_WRITE",
+          "resource": "namespaces/travel-ai-2026/services/backend",
+          "resourceAttributes": {
+            "name": "namespaces/travel-ai-2026/services/backend",
+            "service": "run.googleapis.com/",
+            "type": "run.googleapis.com/Service"
+          }
+        }
+      ],
+      "methodName": "google.cloud.run.v1.Services.ReplaceService",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest",
+        "name": "namespaces/travel-ai-2026/services/backend",
+        "service": {
+          "apiVersion": "serving.knative.dev/v1",
+          "kind": "Service",
+          "metadata": {
+            "annotations": {
+              "run.googleapis.com/client-name": "gcloud",
+              "run.googleapis.com/client-version": "567.0.0",
+              "run.googleapis.com/ingress": "all",
+              "run.googleapis.com/ingress-status": "all",
+              "run.googleapis.com/maxScale": "3",
+              "run.googleapis.com/operation-id": "720abe1c-5866-4459-a2af-c7a0fe833f1d",
+              "run.googleapis.com/urls": "[\"https://backend-40232021927.europe-west1.run.app\",\"https://backend-2supi7ocwa-ew.a.run.app\"]",
+              "serving.knative.dev/creator": "hamza.rahmani@istic.ucar.tn",
+              "serving.knative.dev/lastModifier": "40232021927-compute@developer.gserviceaccount.com"
+            },
+            "creationTimestamp": "2026-04-27T19:58:40.196240Z",
+            "generation": 63,
+            "labels": {
+              "cloud.googleapis.com/location": "europe-west1"
+            },
+            "name": "backend",
+            "namespace": "40232021927",
+            "resourceVersion": "AAZRLl/1G0c",
+            "selfLink": "/apis/serving.knative.dev/v1/namespaces/40232021927/services/backend",
+            "uid": "09e9163a-9bf2-4ee8-8571-c0f5481086f3"
+          },
+          "spec": {
+            "template": {
+              "metadata": {
+                "annotations": {
+                  "autoscaling.knative.dev/maxScale": "3",
+                  "autoscaling.knative.dev/minScale": "1",
+                  "run.googleapis.com/client-name": "gcloud",
+                  "run.googleapis.com/client-version": "567.0.0",
+                  "run.googleapis.com/cloudsql-instances": "travel-ai-2026:europe-west1:travel-ai-db",
+                  "run.googleapis.com/cpu-throttling": "false",
+                  "run.googleapis.com/gpu-zonal-redundancy-disabled": "true",
+                  "run.googleapis.com/startup-cpu-boost": "true"
+                },
+                "labels": {
+                  "client.knative.dev/nonce": "etceyjxjkb",
+                  "run.googleapis.com/startupProbeType": "Default"
+                }
+              },
+              "spec": {
+                "containerConcurrency": 80,
+                "containers": [
+                  {
+                    "image": "europe-west1-docker.pkg.dev/travel-ai-2026/travel-ai-repo/backend:latest",
+                    "resources": {
+                      "limits": {
+                        "cpu": "8",
+                        "memory": "32Gi",
+                        "nvidia.com/gpu": "1"
+                      }
+                    }
+                  }
+                ],
+                "nodeSelector": {
+                  "run.googleapis.com/accelerator": "nvidia-l4"
+                },
+                "serviceAccountName": "travel-ai-sa@travel-ai-2026.iam.gserviceaccount.com",
+                "timeoutSeconds": 600,
+                "volumes": [
+                  {
+                    "csi": {
+                      "driver": "gcsfuse.run.googleapis.com",
+                      "volumeAttributes": {
+                        "bucketName": "travel-ai-2026-models"
+                      }
+                    },
+                    "name": "models-volume"
+                  }
+                ]
+              }
+            },
+            "traffic": [
+              {
+                "latestRevision": true,
+                "percent": 100
+              }
+            ]
+          },
+          "status": {
+            "conditions": [
+              {
+                "lastTransitionTime": "2026-05-06T23:18:00.508231Z",
+                "status": "True",
+                "type": "Ready"
+              },
+              {
+                "lastTransitionTime": "2026-05-06T23:17:59.251438Z",
+                "status": "True",
+                "type": "ConfigurationsReady"
+              },
+              {
+                "lastTransitionTime": "2026-05-06T23:18:00.474910Z",
+                "status": "True",
+                "type": "RoutesReady"
+              }
+            ],
+            "latestCreatedRevisionName": "backend-00060-sbm",
+            "latestReadyRevisionName": "backend-00060-sbm",
+            "observedGeneration": 63,
+            "traffic": [
+              {
+                "latestRevision": true,
+                "percent": 100,
+                "revisionName": "backend-00060-sbm"
+              }
+            ],
+            "url": "https://backend-2supi7ocwa-ew.a.run.app"
+          }
+        }
+      },
+      "requestMetadata": {
+        "callerIp": "196.176.191.139",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/565.0.0 command/gcloud.run.services.update-traffic invocation-id/59a216eb238944109c4d282351e58700 environment/None environment-version/None client-os/WINDOWS client-os-ver/10.0.26200 client-pltf-arch/x86_64 interactive/True from-script/False python/3.13.12 term/  (Windows NT 10.0.26200),gzip(gfe)",
+        "destinationAttributes": {},
+        "requestAttributes": {
+          "auth": {},
+          "time": "2026-05-06T23:22:01.742064Z"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "europe-west1"
+        ]
+      },
+      "resourceName": "namespaces/travel-ai-2026/services/backend",
+      "serviceName": "run.googleapis.com",
+      "status": {}
+    },
+    "receiveTimestamp": "2026-05-06T23:22:02.397222959Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "NOTICE",
+    "timestamp": "2026-05-06T23:22:01.528590Z"
+  },
+  {
+    "insertId": "69fbcc35000d6c0321324809",
+    "labels": {
+      "instanceId": "0007b734d9c8cad32cf34cbdfad1ee1f47c082c41ed522d8a8da3219e9744a750f7df168dcd35344adc1cfb0af598ef1ac266b15ffaf036174cac71f56f9bebeb16d038442db277c3e17b5fbacd3e41a6b1ccc8e3cffa52331"
+    },
+    "logName": "projects/travel-ai-2026/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-05-06T23:18:14.000561376Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "backend",
+        "location": "europe-west1",
+        "project_id": "travel-ai-2026",
+        "revision_name": "backend-00060-sbm",
+        "service_name": "backend"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "? Job cleanup_unverified_startup ex?cut?",
+    "timestamp": "2026-05-06T23:18:13.879619Z"
+  }
+]

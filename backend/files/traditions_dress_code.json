@@ -1,0 +1,1456 @@
+{
+  "destinations": [
+    {
+      "country": "France",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "traditions": [
+        "La bise (se faire la bise) - embrasser sur les joues pour saluer (2 bises à Paris, variable selon région)",
+        "L'apéritif avant le repas - moment convivial autour d'un verre",
+        "Le fromage après le plat principal et avant le dessert - tradition incontournable",
+        "La galette des rois en janvier - partagée avec la fève et la couronne",
+        "Les vendanges en septembre - célébration des vendanges à Montmartre"
+      ],
+      "dress_code": {
+        "general": "Élégance décontractée (chic décontracté), éviter les vêtements trop décontractés comme les shorts et tongs en centre-ville",
+        "restaurants": "Smart casual exigé, veston recommandé pour les restaurants gastronomiques et étoilés",
+        "religious_sites": "Notre-Dame, Sacré-Cœur : épaules et genoux couverts, retirer chapeaux",
+        "business": "Costume cravate ou tailleur, sobre et élégant, couleurs neutres privilégiées",
+        "beach": "Tenue de bain uniquement sur la plage, interdit dans les rues et commerces",
+        "nightlife": "Code vestimentaire chic, chaussures de ville exigées dans les clubs"
+      },
+      "taboos": [
+        "Manger en marchant dans la rue est mal vu",
+        "Parler fort dans les restaurants et lieux publics",
+        "Ne pas dire 'Bonjour' en entrant dans un magasin",
+        "Laisser un pourboire trop faible (moins de 5%) est mal perçu",
+        "Toucher la marchandise sans demander dans les marchés"
+      ],
+      "best_practices": [
+        "Apprenez quelques mots de français (Bonjour, Merci, S'il vous plaît)",
+        "Habillez-vous sobrement pour les visites culturelles",
+        "Réservez les restaurants à l'avance",
+        "Respectez les horaires des repas (déjeuner 12h-14h, dîner 19h30-21h30)"
+      ]
+    },
+    {
+      "country": "France",
+      "city": "Lyon",
+      "region": "Auvergne-Rhône-Alpes",
+      "traditions": [
+        "Les bouchons lyonnais - restaurants traditionnels",
+        "La Fête des Lumières (8 décembre) - célébration mondiale",
+        "Le vignoble des Coteaux du Lyonnais",
+        "La cuisine lyonnaise - capitale mondiale de la gastronomie"
+      ],
+      "dress_code": {
+        "general": "Décontracté chic, les Lyonnais sont élégants sans excès",
+        "restaurants": "Tenue correcte exigée dans les bouchons traditionnels",
+        "religious_sites": "Basilique de Fourvière : tenue modeste recommandée",
+        "business": "Costume sobre, professionnel"
+      },
+      "taboos": [
+        "Refuser un verre de Côte du Rhône",
+        "Critiquer la cuisine locale",
+        "Manquer la Fête des Lumières"
+      ]
+    },
+    {
+      "country": "France",
+      "city": "Marseille",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "traditions": [
+        "La pétanque - sport local emblématique",
+        "Le pastis - apéritif anisé typique",
+        "La bouillabaisse - plat traditionnel",
+        "Les calanques - randonnées côtières"
+      ],
+      "dress_code": {
+        "general": "Décontracté, tenues de plage acceptées en été",
+        "restaurants": "Décontracté, mais éviter les maillots de bain",
+        "beach": "Tenue de bain autorisée sur les plages seulement"
+      },
+      "taboos": [
+        "Mettre du fromage dans la bouillabaisse",
+        "Refuser un pastis",
+        "Critiquer l'OM (Olympique de Marseille)"
+      ]
+    },
+    {
+      "country": "Japan",
+      "city": "Tokyo",
+      "region": "Kantō",
+      "traditions": [
+        "S'incliner pour saluer (ojigi) - angle selon le statut social",
+        "Enlever ses chaussures avant d'entrer dans une maison, temple et certains restaurants",
+        "Les onsen (bains thermaux) - tradition de bain public, tatouages souvent interdits",
+        "Le théâtre Kabuki - art traditionnel",
+        "Les festivals matsuri - célébrations saisonnières",
+        "Le hanami - contemplation des cerisiers en fleurs au printemps"
+      ],
+      "dress_code": {
+        "general": "Soigné et discret, éviter les vêtements trop voyants, couleurs neutres",
+        "restaurants": "Élégant mais pas trop formel, retirer chaussures aux entrées",
+        "religious_sites": "Temples et sanctuaires : épaules et genoux couverts, retirer chapeaux et lunettes",
+        "business": "Costume sombre (noir, bleu marine), cravate pour les hommes, tailleur pour les femmes",
+        "onsen": "Nu intégral, tatouages interdits dans la plupart des établissements",
+        "ryokan": "Yukata (kimono léger) fourni, porté pour le dîner et dans l'établissement"
+      },
+      "taboos": [
+        "Ne pas s'incliner correctement est impoli",
+        "Manger en marchant dans la rue est mal vu",
+        "Planter ses baguettes verticalement dans le riz (associé à la mort)",
+        "Se moucher en public est impoli",
+        "Offrir un pourboire (considéré comme une insulte)",
+        "Toucher quelqu'un avec ses baguettes",
+        "Faire sonner ses clés en marchant"
+      ],
+      "best_practices": [
+        "Apprenez les formules de politesse (Arigatō, Sumimasen)",
+        "Emportez un sac pour vos déchets (peu de poubelles publiques)",
+        "Ayez toujours de la monnaie",
+        "Ne parlez pas au téléphone dans les transports"
+      ]
+    },
+    {
+      "country": "Japan",
+      "city": "Kyoto",
+      "region": "Kansai",
+      "traditions": [
+        "Les geishas et maiko - tradition millénaire du quartier de Gion",
+        "La cérémonie du thé (sadō)",
+        "Les temples bouddhistes et sanctuaires shinto",
+        "Les jardins zen"
+      ],
+      "dress_code": {
+        "general": "Très soigné, respect des traditions",
+        "religious_sites": "Location de kimono possible pour les visites",
+        "tea_ceremony": "Tenue formelle recommandée"
+      }
+    },
+    {
+      "country": "Italy",
+      "city": "Rome",
+      "region": "Lazio",
+      "traditions": [
+        "La passeggiata - promenade du soir en famille",
+        "L'aperitivo avant le dîner - buffet accompagné de boissons",
+        "La sieste (riposo) après le déjeuner (14h-16h)",
+        "Les fêtes patronales - célébrations religieuses",
+        "Le café debout au bar (caffè)",
+        "La dolce vita - art de vivre italien"
+      ],
+      "dress_code": {
+        "general": "Élégante et soignée, les Italiens sont très attachés à l'apparence",
+        "restaurants": "Smart casual, pas de shorts dans les restaurants chic, chemise exigée",
+        "religious_sites": "Vatican et églises : épaules et genoux couverts obligatoires (strict)",
+        "business": "Costume élégant, accessoires de qualité, chaussures cirées",
+        "beach": "Tenue de plage uniquement sur la plage (Ostie)",
+        "nightlife": "Code vestimentaire chic, chaussures fermées exigées"
+      },
+      "taboos": [
+        "Commander un cappuccino après 11h ou après un repas",
+        "Manger une pizza avec des couverts (sauf dans les restaurants chic)",
+        "Ne pas saluer en entrant",
+        "Critiquer la cuisine locale ou comparer avec d'autres régions",
+        "Toucher les fruits et légumes au marché",
+        "Manger en marchant dans les quartiers historiques"
+      ],
+      "best_practices": [
+        "Réservez le Vatican à l'avance",
+        "Portez des chaussures confortables (pavés)",
+        "Goûtez le 'caffè' au comptoir",
+        "Respectez les horaires (déjeuner 12h30-14h30, dîner 20h-22h30)"
+      ]
+    },
+    {
+      "country": "Italy",
+      "city": "Florence",
+      "region": "Tuscany",
+      "traditions": [
+        "L'artisanat du cuir",
+        "Le calcio storico - football historique",
+        "La cuisine toscane (bistecca alla fiorentina)"
+      ],
+      "dress_code": {
+        "general": "Chic décontracté, respectueux de l'art",
+        "museums": "Tenue correcte pour les musées (Uffizi, Accademia)"
+      }
+    },
+    {
+      "country": "Morocco",
+      "city": "Marrakech",
+      "region": "Marrakech-Safi",
+      "traditions": [
+        "Le thé à la menthe (atay) - symbole d'hospitalité, servi 3 fois",
+        "Le hammam traditionnel - rituel de purification hebdomadaire",
+        "Les souks et l'art du marchandage",
+        "La fête du mouton (Aïd al-Adha) - sacrifice traditionnel",
+        "La prière 5 fois par jour (adhan)",
+        "Le couscous du vendredi - repas familial"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts, surtout pour les femmes",
+        "religious_sites": "Mosquées : vêtements amples, couvrir cheveux pour les femmes, enlever chaussures",
+        "souks": "Décontracté mais modeste, éviter les vêtements trop moulants ou transparents",
+        "restaurants": "Décontracté élégant, acceptable pour les touristes",
+        "hammam": "Maillot de bain ou sous-vêtements, souvent séparé hommes/femmes",
+        "desert": "Vêtements amples et couvrants contre le soleil et le sable"
+      },
+      "taboos": [
+        "Montrer la plante des pieds (insulte grave)",
+        "Manger de la main gauche (considérée comme impure)",
+        "Photographier les gens sans permission",
+        "Refuser le thé à la menthe est mal vu",
+        "Montrer d'affection en public",
+        "Manger pendant le Ramadan en journée",
+        "Entrer dans une mosquée sans être invité (sauf grandes mosquées touristiques)"
+      ],
+      "best_practices": [
+        "Négociez toujours dans les souks",
+        "Apprenez quelques mots d'arabe (Salam, Shukran)",
+        "Emportez de la monnaie pour les pourboires",
+        "Habillez-vous modestement hors des zones touristiques",
+        "Évitez de montrer de l'affection en public"
+      ]
+    },
+    {
+      "country": "Morocco",
+      "city": "Fes",
+      "region": "Fès-Meknès",
+      "traditions": [
+        "La médina médiévale - plus grande zone piétonne du monde",
+        "Les tanneries traditionnelles (Chouara)",
+        "L'artisanat de la poterie et du zellige"
+      ],
+      "dress_code": {
+        "general": "Très modeste, ville traditionnelle"
+      }
+    },
+    {
+      "country": "Thailand",
+      "city": "Bangkok",
+      "region": "Central Thailand",
+      "traditions": [
+        "Le wai - salutation les mains jointes (paumes selon statut)",
+        "Le respect du roi et de la famille royale (obligatoire)",
+        "Les temples bouddhistes (wat) - plus de 400 à Bangkok",
+        "Le Songkran - Nouvel An thaï (avril), batailles d'eau",
+        "Le tuk-tuk - transport traditionnel",
+        "La cuisine de rue - culture gastronomique"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts, pas de vêtements transparents",
+        "religious_sites": "Temples : épaules et genoux couverts, enlever ses chaussures, pas de chapeaux",
+        "beach": "Tenue de plage acceptable, mais pas de nu",
+        "restaurants": "Décontracté, éviter les décolletés trop profonds",
+        "business": "Formel, costumes pour les hommes, tailleurs pour les femmes",
+        "palaces": "Grand Palais : tenue très stricte (manches longues, pantalons)"
+      },
+      "taboos": [
+        "Toucher la tête de quelqu'un (partie la plus sacrée du corps)",
+        "Montrer la plante des pieds (partie la plus impure)",
+        "Critiquer la famille royale (lèse-majesté, crime grave)",
+        "S'embrasser en public est mal vu",
+        "Toucher un moine (pour les femmes)",
+        "S'asseoir plus haut qu'un moine",
+        "Marcher devant quelqu'un en prière"
+      ],
+      "best_practices": [
+        "Enlevez vos chaussures avant d'entrer dans un temple ou une maison",
+        "Ne pointez personne du doigt",
+        "Évitez de montrer vos émotions en public",
+        "Apprenez à faire le wai",
+        "Emportez un foulard pour couvrir vos épaules"
+      ]
+    },
+    {
+      "country": "Thailand",
+      "city": "Chiang Mai",
+      "region": "Northern Thailand",
+      "traditions": [
+        "Le Yi Peng - festival des lanternes",
+        "Les temples Lanna",
+        "La cuisine du nord"
+      ],
+      "dress_code": {
+        "general": "Modeste, respect des traditions Lanna"
+      }
+    },
+    {
+      "country": "UAE",
+      "city": "Dubai",
+      "region": "Dubai Emirate",
+      "traditions": [
+        "La culture du café arabe (gahwa) - servi avec des dattes",
+        "Le ramadan - mois sacré, jeûne du lever au coucher du soleil",
+        "La fauconnerie - sport traditionnel",
+        "Les souks traditionnels (or, épices, textile)",
+        "L'hospitalité bédouine",
+        "Le majlis - réunion traditionnelle"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts dans les lieux publics",
+        "religious_sites": "Mosquées : vêtements amples, femmes couvrent leurs cheveux et tout le corps",
+        "malls": "Décontracté mais décent, éviter les vêtements trop moulants",
+        "beach": "Acceptable dans les complexes hôteliers, mais pas de topless",
+        "business": "Formel, costumes pour les hommes, tailleurs pour les femmes",
+        "restaurants": "Smart casual dans les établissements de luxe"
+      },
+      "taboos": [
+        "Montrer d'affection en public (amendes possibles)",
+        "Manger, boire ou fumer en public pendant le ramadan",
+        "Tenues trop légères dans les lieux publics",
+        "Critiquer le gouvernement, la religion ou la famille royale",
+        "Photographier les femmes locales sans permission",
+        "Poignée de main avec une femme non consentante"
+      ],
+      "best_practices": [
+        "Respectez le ramadan si vous visitez pendant cette période",
+        "Habillez-vous modestement dans les quartiers historiques",
+        "Négociez dans les souks",
+        "Évitez de boire de l'alcool en public",
+        "Utilisez la main droite pour manger et donner"
+      ]
+    },
+    {
+      "country": "UAE",
+      "city": "Abu Dhabi",
+      "region": "Abu Dhabi Emirate",
+      "traditions": [
+        "La Grande Mosquée Sheikh Zayed",
+        "Le patrimoine bédouin",
+        "La course de chameaux"
+      ],
+      "dress_code": {
+        "general": "Très modeste, encore plus stricte qu'à Dubaï",
+        "religious_sites": "Grande Mosquée : tenue très stricte, abaya fournie"
+      }
+    },
+    {
+      "country": "Spain",
+      "city": "Barcelona",
+      "region": "Catalonia",
+      "traditions": [
+        "La sieste - pause après le déjeuner",
+        "Les tapas - petites portions à partager",
+        "La Sagrada Familia - œuvre de Gaudí",
+        "Le flamenco (bien que plus andalou)"
+      ],
+      "dress_code": {
+        "general": "Décontracté élégant, influence méditerranéenne",
+        "religious_sites": "Églises et cathédrales : tenue correcte",
+        "beach": "Barceloneta : tenue de plage acceptable"
+      },
+      "taboos": [
+        "Ne pas respecter les horaires (repas tardifs)",
+        "Critiquer la culture catalane"
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Lisbon",
+      "region": "Lisbon Metropolitan Area",
+      "traditions": [
+        "Le fado - musique traditionnelle mélancolique",
+        "Les azulejos - carreaux de céramique",
+        "Les tramways historiques (tram 28)",
+        "La pasteis de nata - pâtisserie emblématique"
+      ],
+      "dress_code": {
+        "general": "Décontracté chic, conservateur",
+        "fado_houses": "Tenue correcte exigée"
+      }
+    },
+    {
+      "country": "Turkey",
+      "city": "Istanbul",
+      "region": "Marmara",
+      "traditions": [
+        "Le thé turc (çay) - servi dans des verres en forme de tulipe",
+        "Le café turc - avec marc, pour la divination",
+        "Les bains turcs (hammam)",
+        "Les bazars (Grand Bazar, Égyptien)",
+        "Le simit - pain traditionnel"
+      ],
+      "dress_code": {
+        "general": "Modeste, surtout pour les femmes",
+        "religious_sites": "Mosquées : épaules et genoux couverts, femmes couvrent leurs cheveux",
+        "hammam": "Maillot de bain ou pestemal (tissu traditionnel)"
+      },
+      "taboos": [
+        "Critiquer Atatürk",
+        "Montrer la plante des pieds",
+        "Manger de la main gauche"
+      ]
+    },
+    {
+      "country": "Germany",
+      "city": "Berlin",
+      "region": "Berlin",
+      "traditions": [
+        "La Berliner Weisse - bière avec sirop",
+        "Le Currywurst - saucisse emblématique",
+        "La Love Parade (historique) - culture techno",
+        "Les marchés de Noël (Weihnachtsmärkte)",
+        "La nuit des musées (Lange Nacht der Museen)",
+        "Le Mauerpark - karaoké dominical"
+      ],
+      "dress_code": {
+        "general": "Décontracté alternatif, style underground accepté",
+        "restaurants": "Décontracté, très peu formel",
+        "clubs": "Berghain : style alternatif, pas de cravate, tenue noire privilégiée",
+        "business": "Décontracté chic, moins formel que dans le sud de l'Allemagne",
+        "winter": "Manteau chaud, bonnet, écharpe"
+      },
+      "taboos": [
+        "Faire le salut nazi (illégal, prison possible)",
+        "Critiquer la réunification",
+        "Ne pas trier ses déchets",
+        "Traverser au rouge (amende possible)",
+        "Parler fort dans les lieux publics"
+      ],
+      "best_practices": [
+        "Arrivez à l'heure (ponctualité allemande)",
+        "Triez vos déchets (gelbe Tonne, papier, verre, bio)",
+        "Apportez de la monnaie pour les pourboires (arrondir à l'euro supérieur)",
+        "Réservez les musées à l'avance"
+      ]
+    },
+    {
+      "country": "Germany",
+      "city": "Munich",
+      "region": "Bavaria",
+      "traditions": [
+        "L'Oktoberfest - fête de la bière (septembre-octobre)",
+        "La Lederhose et Dirndl - tenues traditionnelles",
+        "Le Weißwurstfrühstück - petit-déjeuner avec saucisse blanche",
+        "Les brasseries (Biergärten)",
+        "Le Christkindlmarkt - marché de Noël"
+      ],
+      "dress_code": {
+        "general": "Traditionnel lors de l'Oktoberfest, sinon décontracté chic",
+        "oktoberfest": "Lederhose ou Dirndl très appréciés",
+        "biergartens": "Décontracté, tenues de brassière",
+        "business": "Formel, costume cravate"
+      },
+      "taboos": [
+        "Célébrer l'Oktoberfest sans Lederhose",
+        "Boire la Weißwurst sans le 'zwickel' (peau)",
+        "Faire du bruit après 22h"
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "traditions": [
+        "Le vélo - moyen de transport principal",
+        "Les canaux - promenades en bateau",
+        "Le Rijksmuseum et Van Gogh Museum",
+        "Le King's Day (Koningsdag) - 27 avril, tout en orange",
+        "Les coffee shops (tolérance cannabis)",
+        "Les fromages (Gouda, Edam)"
+      ],
+      "dress_code": {
+        "general": "Décontracté fonctionnel, pratique pour le vélo",
+        "restaurants": "Décontracté chic",
+        "clubs": "Tenue de soirée dans les clubs chic",
+        "business": "Décontracté, jeans accepté"
+      },
+      "taboos": [
+        "Marcher sur les pistes cyclables",
+        "Prendre des photos dans les coffee shops",
+        "Faire du bruit après 22h (amendes)",
+        "Critiquer la tolérance des drogues",
+        "Ne pas s'arrêter pour les piétons"
+      ],
+      "best_practices": [
+        "Louez un vélo",
+        "Réservez le Rijksmuseum à l'avance",
+        "Portez de l'orange pour le King's Day",
+        "Évitez les coffee shops touristiques"
+      ]
+    },
+    {
+      "country": "Belgium",
+      "city": "Brussels",
+      "region": "Brussels-Capital",
+      "traditions": [
+        "Le Manneken Pis - statue emblématique",
+        "Les gaufres de Bruxelles",
+        "Les frites (frietkot)",
+        "La bière belge (plus de 1000 variétés)",
+        "Le chocolat belge (Neuhaus, Godiva)",
+        "La Grand-Place - classée UNESCO"
+      ],
+      "dress_code": {
+        "general": "Décontracté élégant, conservateur",
+        "business": "Formel, surtout dans les institutions européennes",
+        "restaurants": "Smart casual"
+      },
+      "taboos": [
+        "Appeler les frites 'French fries'",
+        "Mettre du fromage sur les moules-frites",
+        "Refuser une bière belge"
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "city": "Zurich",
+      "region": "Zurich",
+      "traditions": [
+        "Le Sechseläuten - festival de printemps",
+        "Le chocolat suisse (Lindt, Sprüngli)",
+        "Les banques et la discrétion",
+        "Les fondues et raclette",
+        "Les montres de luxe"
+      ],
+      "dress_code": {
+        "general": "Élégant et soigné, conservateur",
+        "business": "Très formel, costume cravate",
+        "restaurants": "Smart casual exigé",
+        "banks": "Tenue très professionnelle"
+      },
+      "taboos": [
+        "Être en retard (ponctualité extrême)",
+        "Faire du bruit le dimanche",
+        "Discuter des salaires",
+        "Ne pas trier ses déchets"
+      ]
+    },
+    {
+      "country": "Austria",
+      "city": "Vienna",
+      "region": "Vienna",
+      "traditions": [
+        "L'opéra (Staatsoper)",
+        "Le café viennois (Kaffeehauskultur)",
+        "Le Sachertorte - gâteau au chocolat",
+        "Les bals (Opéra Ball)",
+        "Les marchés de Noël (Christkindlmarkt)",
+        "Le Danube et le Prater"
+      ],
+      "dress_code": {
+        "general": "Élégant, classique",
+        "opera": "Smoking ou robe de soirée exigé",
+        "cafes": "Tenue correcte",
+        "business": "Costume cravate"
+      },
+      "taboos": [
+        "Ne pas dire 'Grüß Gott' en entrant",
+        "Manger le Sachertorte sans chantilly",
+        "Critiquer l'opéra",
+        "Se comporter bruyamment dans les cafés"
+      ]
+    },
+    {
+      "country": "Czech Republic",
+      "city": "Prague",
+      "region": "Bohemia",
+      "traditions": [
+        "La bière tchèque (Pilsner Urquell)",
+        "Le château de Prague",
+        "Le pont Charles",
+        "Les marionnettes",
+        "Le Golem de Prague"
+      ],
+      "dress_code": {
+        "general": "Décontracté chic",
+        "beer_halls": "Décontracté",
+        "restaurants": "Smart casual"
+      },
+      "taboos": [
+        "Appeler la bière 'beer' (pivo)",
+        "Ne pas trinquer des yeux",
+        "Critiquer la cuisine locale"
+      ]
+    },
+    {
+      "country": "Hungary",
+      "city": "Budapest",
+      "region": "Central Hungary",
+      "traditions": [
+        "Les bains thermaux (Széchenyi, Gellért)",
+        "Le goulasch",
+        "Le Danube et le Parlement",
+        "La musique tsigane",
+        "Le ruines bars"
+      ],
+      "dress_code": {
+        "general": "Décontracté, influence balkanique",
+        "thermal_baths": "Maillot de bain",
+        "business": "Formel",
+        "ruin_bars": "Alternatif"
+      },
+      "taboos": [
+        "Ne pas trinquer avec de la bière",
+        "Critiquer la cuisine hongroise",
+        "Oublier de dire 'Köszönöm' (merci)"
+      ]
+    },
+    {
+      "country": "Poland",
+      "city": "Krakow",
+      "region": "Lesser Poland",
+      "traditions": [
+        "Le Wawel - château royal",
+        "La place du marché (Rynek Główny)",
+        "Le pierogi - raviolis polonais",
+        "Le vodkа polonaise",
+        "Les trompettes de la basilique Sainte-Marie"
+      ],
+      "dress_code": {
+        "general": "Conservateur, décontracté chic",
+        "religious_sites": "Tenue modeste exigée",
+        "restaurants": "Smart casual"
+      },
+      "taboos": [
+        "Critiquer le pape Jean-Paul II",
+        "Parler de la Seconde Guerre mondiale sans respect",
+        "Oublier de retirer ses chaussures dans les églises"
+      ]
+    },
+    {
+      "country": "Greece",
+      "city": "Athens",
+      "region": "Attica",
+      "traditions": [
+        "L'Acropole et le Parthénon",
+        "La danse sirtaki",
+        "Le souvlaki",
+        "L'ouzo - apéritif anisé",
+        "Les tavernes et la philoxenia (hospitalité)",
+        "Les bouzoukis"
+      ],
+      "dress_code": {
+        "general": "Décontracté, méditerranéen",
+        "tavernas": "Très décontracté",
+        "religious_sites": "Épaules et genoux couverts",
+        "business": "Décontracté chic"
+      },
+      "taboos": [
+        "Jeter du papier toilette dans les toilettes (canalisations fragiles)",
+        "Manger en marchant dans les quartiers anciens",
+        "Critiquer le gouvernement",
+        "Refuser l'hospitalité"
+      ]
+    },
+    {
+      "country": "Greece",
+      "city": "Santorini",
+      "region": "Cyclades",
+      "traditions": [
+        "Le coucher de soleil à Oia",
+        "Les maisons blanches et dômes bleus",
+        "Le vin local (Assyrtiko)",
+        "Les églises orthodoxes"
+      ],
+      "dress_code": {
+        "general": "Décontracté chic, tenues de soirée",
+        "beach": "Tenue de plage",
+        "sunset": "Tenue élégante pour le coucher de soleil"
+      }
+    },
+    {
+      "country": "Croatia",
+      "city": "Dubrovnik",
+      "region": "Dalmatia",
+      "traditions": [
+        "Les remparts de Dubrovnik",
+        "Game of Thrones tour",
+        "La cuisine dalmate",
+        "Les îles Elaphites"
+      ],
+      "dress_code": {
+        "general": "Méditerranéen décontracté",
+        "religious_sites": "Tenue modeste",
+        "beach": "Tenue de plage"
+      }
+    },
+    {
+      "country": "Egypt",
+      "city": "Cairo",
+      "region": "Cairo",
+      "traditions": [
+        "Les pyramides de Gizeh",
+        "Le musée égyptien",
+        "Le Khan el-Khalili - souk historique",
+        "Le Nil et les felouques",
+        "Le thé à la menthe (shai)",
+        "La cuisine égyptienne (koshari)"
+      ],
+      "dress_code": {
+        "general": "Très modeste, épaules et genoux couverts",
+        "religious_sites": "Mosquées : femmes couvrent leurs cheveux",
+        "pyramids": "Tenue confortable mais modeste",
+        "souks": "Décontracté modeste"
+      },
+      "taboos": [
+        "Montrer d'affection en public",
+        "Photographier les militaires",
+        "Manger de la main gauche",
+        "Refuser le thé",
+        "Critiquer la religion"
+      ]
+    },
+    {
+      "country": "South Africa",
+      "city": "Cape Town",
+      "region": "Western Cape",
+      "traditions": [
+        "La Montagne de la Table",
+        "Le Cap de Bonne-Espérance",
+        "Le vin de Stellenbosch",
+        "Les braais (barbecue sud-africain)",
+        "La cuisine du Cap (Cape Malay)"
+      ],
+      "dress_code": {
+        "general": "Décontracté, décontracté chic",
+        "vineyards": "Smart casual",
+        "beach": "Tenue de plage",
+        "business": "Formel"
+      },
+      "taboos": [
+        "Discuter ouvertement de l'apartheid",
+        "Négliger la sécurité",
+        "Ne pas pourboire",
+        "Critiquer les Springboks (rugby)"
+      ]
+    },
+    {
+      "country": "Kenya",
+      "city": "Nairobi",
+      "region": "Nairobi",
+      "traditions": [
+        "Les safaris (Masai Mara)",
+        "La culture Maasai",
+        "Le café kenyan",
+        "Le Parc National de Nairobi",
+        "Les marchés d'artisanat"
+      ],
+      "dress_code": {
+        "general": "Modeste, couleurs neutres pour les safaris",
+        "safari": "Kaki, beige, éviter le noir et blanc",
+        "religious_sites": "Tenue modeste",
+        "business": "Formel"
+      },
+      "taboos": [
+        "Photographier les Maasai sans permission",
+        "Porter du noir ou blanc en safari",
+        "Montrer d'affection en public",
+        "Critiquer la conservation"
+      ]
+    },
+    {
+      "country": "India",
+      "city": "Delhi",
+      "region": "National Capital Territory",
+      "traditions": [
+        "Le Taj Mahal (Agra)",
+        "Le Fort Rouge",
+        "Le Chandni Chowk - vieux Delhi",
+        "La cuisine moghole",
+        "Les festivals hindous (Diwali, Holi)"
+      ],
+      "dress_code": {
+        "general": "Très modeste, épaules et genoux couverts",
+        "religious_sites": "Temples : enlever chaussures, tenue modeste",
+        "street": "Éviter les tenues légères",
+        "business": "Formel"
+      },
+      "taboos": [
+        "Toucher les gens avec les pieds",
+        "Manger de la main gauche",
+        "Pointer du doigt",
+        "Photographier les sadhus sans permission",
+        "Ne pas enlever ses chaussures dans les lieux sacrés"
+      ]
+    },
+    {
+      "country": "Vietnam",
+      "city": "Hanoi",
+      "region": "Red River Delta",
+      "traditions": [
+        "Le lac Hoan Kiem",
+        "Le Vieux Quartier (36 rues)",
+        "Le pho (soupe de nouilles)",
+        "Le café vietnamien",
+        "Les chapeaux nón lá",
+        "Les marchés flottants"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts",
+        "temples": "Tenue modeste, enlever chaussures",
+        "street": "Décontracté confortable",
+        "business": "Formel"
+      },
+      "taboos": [
+        "Montrer la plante des pieds",
+        "Toucher la tête de quelqu'un",
+        "Critiquer le gouvernement",
+        "Perdre son sang-froid en public"
+      ]
+    },
+    {
+      "country": "Indonesia",
+      "city": "Bali",
+      "region": "Bali",
+      "traditions": [
+        "Les temples hindous (Tanah Lot, Uluwatu)",
+        "Les offrandes (canang sari)",
+        "La danse balinaise",
+        "Les rizières en terrasses (Tegalalang)",
+        "Le Nyepi - jour du silence",
+        "Les cérémonies hindoues"
+      ],
+      "dress_code": {
+        "general": "Modeste, sarong pour les temples",
+        "temples": "Sarong et écharpe obligatoires",
+        "beach": "Tenue de plage acceptable",
+        "nyepi": "Ne pas sortir, pas de lumière"
+      },
+      "taboos": [
+        "Marcher sur les offrandes (canang)",
+        "S'asseoir plus haut qu'un prêtre",
+        "Utiliser la main gauche pour donner",
+        "Faire du bruit le jour du Nyepi",
+        "Prendre des photos dans les temples sans autorisation"
+      ]
+    },
+    {
+      "country": "Brazil",
+      "city": "Rio de Janeiro",
+      "region": "Southeast",
+      "traditions": [
+        "Le Carnaval (février-mars)",
+        "La plage de Copacabana et Ipanema",
+        "La samba",
+        "Le Christ Rédempteur",
+        "Le pain de sucre",
+        "La caipirinha",
+        "Le football (Maracanã)"
+      ],
+      "dress_code": {
+        "general": "Décontracté, tenues de plage",
+        "carnival": "Costumes, maillots de bain",
+        "beach": "Maillot de bain (string accepté)",
+        "restaurants": "Smart casual",
+        "samba": "Tenue confortable"
+      },
+      "taboos": [
+        "Porter des bijoux ostentatoires (sécurité)",
+        "Ne pas saluer par un 'bom dia'",
+        "Critiquer la samba",
+        "Refuser une caipirinha"
+      ]
+    },
+    {
+      "country": "Argentina",
+      "city": "Buenos Aires",
+      "region": "Buenos Aires",
+      "traditions": [
+        "Le tango",
+        "Le steak argentin (asado)",
+        "Le mate - infusion traditionnelle",
+        "La Boca - quartier coloré",
+        "Le football (Boca Juniors, River Plate)"
+      ],
+      "dress_code": {
+        "general": "Élégant, européen",
+        "tango": "Tenue de soirée pour les milongas",
+        "business": "Formel",
+        "asado": "Décontracté"
+      },
+      "taboos": [
+        "Boire du mate sucré",
+        "Critiquer le tango",
+        "Confondre Argentine et Brésil",
+        "Ne pas finir son assiette d'asado"
+      ]
+    },
+    {
+      "country": "Mexico",
+      "city": "Mexico City",
+      "region": "Mexico City",
+      "traditions": [
+        "El Día de los Muertos (2 novembre)",
+        "La cuisine mexicaine (tacos, mole)",
+        "Les pyramides de Teotihuacan",
+        "Le Mariachi",
+        "La lucha libre"
+      ],
+      "dress_code": {
+        "general": "Décontracté, coloré",
+        "religious_sites": "Tenue modeste",
+        "business": "Formel",
+        "day_of_dead": "Maquillage de calavera"
+      },
+      "taboos": [
+        "Refuser une tequila",
+        "Critiquer la cuisine mexicaine",
+        "Manger des tacos avec des couverts",
+        "Oublier le 'buen provecho'"
+      ]
+    },{
+      "country": "Morocco",
+      "city": "Marrakech",
+      "region": "Marrakech-Safi",
+      "traditions": [
+        "Le thé à la menthe (atay) - symbole d'hospitalité, servi 3 fois",
+        "Le hammam traditionnel - rituel de purification hebdomadaire",
+        "Les souks et l'art du marchandage",
+        "La fête du mouton (Aïd al-Adha) - sacrifice traditionnel",
+        "La prière 5 fois par jour (adhan)",
+        "Le couscous du vendredi - repas familial",
+        "La place Jemaa el-Fna - spectacle vivant le soir"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts, surtout pour les femmes",
+        "religious_sites": "Mosquées : vêtements amples, couvrir cheveux pour les femmes, enlever chaussures",
+        "souks": "Décontracté mais modeste, éviter les vêtements trop moulants ou transparents",
+        "restaurants": "Décontracté élégant, acceptable pour les touristes",
+        "hammam": "Maillot de bain ou sous-vêtements, souvent séparé hommes/femmes",
+        "desert": "Vêtements amples et couvrants contre le soleil et le sable",
+        "evening": "Jemaa el-Fna : tenue décontractée mais modeste"
+      },
+      "taboos": [
+        "Montrer la plante des pieds (insulte grave)",
+        "Manger de la main gauche (considérée comme impure)",
+        "Photographier les gens sans permission",
+        "Refuser le thé à la menthe est mal vu",
+        "Montrer d'affection en public",
+        "Manger pendant le Ramadan en journée",
+        "Entrer dans une mosquée sans être invité (sauf grandes mosquées touristiques)"
+      ],
+      "best_practices": [
+        "Négociez toujours dans les souks (divisez par 2 ou 3)",
+        "Apprenez quelques mots d'arabe (Salam, Shukran)",
+        "Emportez de la monnaie pour les pourboires",
+        "Habillez-vous modestement hors des zones touristiques",
+        "Évitez de montrer de l'affection en public",
+        "Hydratez-vous, même en hiver"
+      ]
+    },
+    {
+      "country": "Morocco",
+      "city": "Fes",
+      "region": "Fès-Meknès",
+      "traditions": [
+        "La médina médiévale - plus grande zone piétonne du monde (9000 ruelles)",
+        "Les tanneries traditionnelles (Chouara)",
+        "L'artisanat de la poterie et du zellige",
+        "L'Université Al Quaraouiyine - plus vieille université du monde",
+        "Le souk des teinturiers",
+        "Les portes monumentales (Bab Boujloud)"
+      ],
+      "dress_code": {
+        "general": "Très modeste, ville traditionnelle et conservatrice",
+        "medina": "Vêtements confortables mais couvrants, chaussures adaptées",
+        "tanneries": "Prévoir de la menthe pour masquer les odeurs",
+        "religious_sites": "Mosquées interdites aux non-musulmans"
+      },
+      "taboos": [
+        "Pénétrer dans une mosquée en tant que non-musulman",
+        "Prendre des photos des tanneries sans permission",
+        "Se perdre délibérément dans la médina",
+        "Ignorer les guides non officiels"
+      ]
+    },
+    {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "region": "Casablanca-Settat",
+      "traditions": [
+        "La mosquée Hassan II - 2ème plus grande mosquée du monde",
+        "Le quartier des Habous - médina moderne",
+        "La corniche et les clubs de plage",
+        "Le marché central",
+        "L'architecture mauresque et Art déco"
+      ],
+      "dress_code": {
+        "general": "Moderne mais modeste, moins strict qu'à Fes",
+        "beach": "Tenue de plage acceptable sur la corniche",
+        "business": "Formel, costume pour les affaires",
+        "religious_sites": "Mosquée Hassan II : visites guidées, tenue modeste"
+      }
+    },
+    {
+      "country": "Morocco",
+      "city": "Chefchaouen",
+      "region": "Tanger-Tétouan-Al Hoceima",
+      "traditions": [
+        "La ville bleue - ruelles peintes en bleu",
+        "La culture rifaine",
+        "Le kif et ses traditions",
+        "L'artisanat en laine",
+        "Les sources d'eau de la montagne"
+      ],
+      "dress_code": {
+        "general": "Décontracté mais respectueux, couleurs vives contrastent avec le bleu",
+        "mountains": "Chaussures de randonnée, vêtements couvrants"
+      }
+    },
+    {
+      "country": "Tunisia",
+      "city": "Tunis",
+      "region": "Tunis",
+      "traditions": [
+        "La médina de Tunis - classée UNESCO",
+        "Le souk El Attarine - parfums et épices",
+        "Le Bardo - musée des mosaïques romaines",
+        "La Goulette - port historique",
+        "Le thé à la menthe et les makroudh (pâtisseries)",
+        "Le festival de Carthage"
+      ],
+      "dress_code": {
+        "general": "Moderne et décontracté, plus libéral que certains pays arabes",
+        "religious_sites": "Mosquée Zitouna : tenue modeste",
+        "beach": "Tenue de plage acceptable à La Marsa et Sidi Bou Saïd",
+        "medina": "Décontracté modeste"
+      },
+      "taboos": [
+        "Critiquer la révolution tunisienne",
+        "Ne pas saluer en arabe",
+        "Manger en public pendant le Ramadan"
+      ]
+    },
+    {
+      "country": "Tunisia",
+      "city": "Sidi Bou Saïd",
+      "region": "Tunis",
+      "traditions": [
+        "Le village bleu et blanc",
+        "Le café des Nattes",
+        "La maison de l'artiste Rodolphe d'Erlanger",
+        "Les portes sculptées et fer forgé"
+      ],
+      "dress_code": {
+        "general": "Élégant décontracté, tenue de photos"
+      }
+    },
+    {
+      "country": "Egypt",
+      "city": "Cairo",
+      "region": "Cairo",
+      "traditions": [
+        "Les pyramides de Gizeh - merveille du monde",
+        "Le musée égyptien - trésors de Toutânkhamon",
+        "Le Khan el-Khalili - souk historique (XIVe siècle)",
+        "Le Nil et les felouques",
+        "Le thé à la menthe (shai) et les narguilés (shisha)",
+        "La cuisine égyptienne (koshari, foul medames)",
+        "La cité des morts - quartier unique"
+      ],
+      "dress_code": {
+        "general": "Très modeste, épaules et genoux couverts",
+        "religious_sites": "Mosquées : femmes couvrent leurs cheveux, enlever chaussures",
+        "pyramids": "Tenue confortable mais modeste, chapeau",
+        "souks": "Décontracté modeste, éviter les tenues légères",
+        "nile": "Décontracté pour les promenades en felouque",
+        "business": "Costume cravate pour les hommes, tailleur pour les femmes"
+      },
+      "taboos": [
+        "Montrer d'affection en public",
+        "Photographier les militaires et lieux stratégiques",
+        "Manger de la main gauche",
+        "Refuser le thé",
+        "Critiquer la religion ou le gouvernement",
+        "Entrer dans une mosquée sans enlever ses chaussures"
+      ],
+      "best_practices": [
+        "Négociez fermement dans les souks",
+        "Hydratez-vous constamment",
+        "Prévoyez des billets pour les sites",
+        "Habillez-vous très modestement hors des complexes hôteliers",
+        "Évitez les déplacements seuls tard le soir"
+      ]
+    },
+    {
+      "country": "Egypt",
+      "city": "Luxor",
+      "region": "Upper Egypt",
+      "traditions": [
+        "La Vallée des Rois - tombes des pharaons",
+        "Le temple de Karnak - plus grand complexe religieux",
+        "Le temple de Louxor",
+        "Les Colosses de Memnon",
+        "Les croisières sur le Nil",
+        "Les ballons au-dessus des temples"
+      ],
+      "dress_code": {
+        "general": "Très modeste, surtout en dehors des sites touristiques",
+        "sites": "Tenue confortable, chaussures adaptées, chapeau",
+        "balloon": "Vêtements chauds pour le matin"
+      }
+    },
+    {
+      "country": "Egypt",
+      "city": "Alexandria",
+      "region": "Alexandria",
+      "traditions": [
+        "La bibliothèque d'Alexandrie (nouvelle)",
+        "Le fort Qaitbay",
+        "La corniche méditerranéenne",
+        "Les catacombes de Kom El Shoqafa",
+        "Le café et la culture méditerranéenne"
+      ],
+      "dress_code": {
+        "general": "Plus libéral, influence méditerranéenne",
+        "beach": "Tenue de plage acceptable",
+        "restaurants": "Décontracté chic"
+      }
+    },
+    {
+      "country": "Jordan",
+      "city": "Amman",
+      "region": "Amman",
+      "traditions": [
+        "La citadelle de Amman",
+        "Le théâtre romain",
+        "Les ruelles de Jabal Amman",
+        "Le mansaf - plat national",
+        "L'hospitalité jordanienne légendaire"
+      ],
+      "dress_code": {
+        "general": "Moderne et modeste, l'une des plus libérales de la région",
+        "business": "Formel, costume accepté",
+        "restaurants": "Smart casual",
+        "religious_sites": "Tenue modeste pour les mosquées"
+      },
+      "taboos": [
+        "Refuser l'hospitalité",
+        "Critiquer la famille royale",
+        "Porter des vêtements trop légers dans les quartiers traditionnels"
+      ]
+    },
+    {
+      "country": "Jordan",
+      "city": "Petra",
+      "region": "Ma'an",
+      "traditions": [
+        "La cité nabatéenne - merveille du monde",
+        "Le Trésor (Al-Khazneh)",
+        "Le monastère (Ad-Deir)",
+        "Les Bédouins de Petra",
+        "Les randonnées dans le Siq"
+      ],
+      "dress_code": {
+        "general": "Tenue confortable pour la marche, chaussures de randonnée",
+        "winter": "Vêtements chauds (températures fraîches)",
+        "summer": "Léger mais couvrant (protection solaire)"
+      }
+    },
+    {
+      "country": "Jordan",
+      "city": "Wadi Rum",
+      "region": "Aqaba",
+      "traditions": [
+        "Le désert de Lawrence d'Arabie",
+        "Les camps bédouins",
+        "Le thé bédouin (thé au désert)",
+        "Les randonnées en 4x4",
+        "Le camping sous les étoiles"
+      ],
+      "dress_code": {
+        "desert": "Keffieh (foulard) pour protection, vêtements couvrants",
+        "night": "Vêtements chauds pour la nuit",
+        "day": "Léger mais couvrant, lunettes de soleil"
+      }
+    },
+    {
+      "country": "Lebanon",
+      "city": "Beirut",
+      "region": "Beirut",
+      "traditions": [
+        "La vie nocturne légendaire",
+        "La cuisine libanaise (mezze, taboulé)",
+        "Les églises et mosquées côte à côte",
+        "Le souk de Beyrouth",
+        "Le Pigeon Rock à Raouché",
+        "Les festivals de Baalbeck"
+      ],
+      "dress_code": {
+        "general": "Très libéral, chic méditerranéen",
+        "nightlife": "Tenue de soirée branchée",
+        "restaurants": "Smart casual, souvent élégant",
+        "religious_sites": "Tenue modeste pour les lieux sacrés"
+      },
+      "taboos": [
+        "Parlers de la guerre civile",
+        "Critiquer les communautés religieuses",
+        "Ne pas goûter tous les mezze"
+      ]
+    },
+    {
+      "country": "Lebanon",
+      "city": "Byblos",
+      "region": "Mount Lebanon",
+      "traditions": [
+        "La plus ancienne ville habitée du monde",
+        "Le château des croisés",
+        "Le port phénicien",
+        "Les maisons en pierre",
+        "Le souk médiéval"
+      ],
+      "dress_code": {
+        "general": "Décontracté chic, tenue de photos"
+      }
+    },
+    {
+      "country": "UAE",
+      "city": "Dubai",
+      "region": "Dubai",
+      "traditions": [
+        "La culture du café arabe (gahwa) - servi avec des dattes",
+        "Le ramadan - mois sacré, jeûne du lever au coucher du soleil",
+        "La fauconnerie - sport traditionnel",
+        "Les souks traditionnels (or, épices, textile)",
+        "L'hospitalité bédouine",
+        "Le majlis - réunion traditionnelle",
+        "La course de chameaux"
+      ],
+      "dress_code": {
+        "general": "Modeste, épaules et genoux couverts dans les lieux publics",
+        "religious_sites": "Mosquées : vêtements amples, femmes couvrent leurs cheveux",
+        "malls": "Décontracté mais décent, éviter les vêtements trop moulants",
+        "beach": "Acceptable dans les complexes hôteliers, mais pas de topless",
+        "business": "Formel, costumes pour les hommes, tailleurs pour les femmes",
+        "restaurants": "Smart casual dans les établissements de luxe",
+        "nightlife": "Tenue chic dans les clubs"
+      },
+      "taboos": [
+        "Montrer d'affection en public (amendes possibles)",
+        "Manger, boire ou fumer en public pendant le ramadan",
+        "Tenues trop légères dans les lieux publics",
+        "Critiquer le gouvernement, la religion ou la famille royale",
+        "Photographier les femmes locales sans permission",
+        "Poignée de main avec une femme non consentante"
+      ],
+      "best_practices": [
+        "Respectez le ramadan si vous visitez pendant cette période",
+        "Habillez-vous modestement dans les quartiers historiques (Deira, Bur Dubai)",
+        "Négociez dans les souks (départ à 30-40% du prix affiché)",
+        "Évitez de boire de l'alcool en public",
+        "Utilisez la main droite pour manger et donner",
+        "Évitez de photographier les personnes sans permission"
+      ]
+    },
+    {
+      "country": "UAE",
+      "city": "Abu Dhabi",
+      "region": "Abu Dhabi",
+      "traditions": [
+        "La Grande Mosquée Sheikh Zayed - chef-d'œuvre architectural",
+        "Le patrimoine bédouin",
+        "La course de chameaux (robot jockeys)",
+        "Le Louvre Abu Dhabi",
+        "Le Qasr Al Watan - palais présidentiel"
+      ],
+      "dress_code": {
+        "general": "Très modeste, encore plus stricte qu'à Dubaï",
+        "religious_sites": "Grande Mosquée : tenue très stricte (abaya fournie)",
+        "business": "Très formel",
+        "malls": "Décent, pas de vêtements trop courts"
+      },
+      "taboos": [
+        "Pénétrer dans la Grande Mosquée sans tenue appropriée",
+        "Montrer d'affection en public",
+        "Critiquer la famille royale"
+      ]
+    },
+    {
+      "country": "UAE",
+      "city": "Sharjah",
+      "region": "Sharjah",
+      "traditions": [
+        "La capitale culturelle des Émirats",
+        "Le souk Al Arsah - plus ancien marché des Émirats",
+        "Le musée de la civilisation islamique",
+        "Les arts et la calligraphie"
+      ],
+      "dress_code": {
+        "general": "Très conservateur, plus strict que Dubaï",
+        "public": "Tenue très modeste obligatoire",
+        "alcohol": "Alcool interdit dans tout l'émirat"
+      }
+    },
+    {
+      "country": "Saudi Arabia",
+      "city": "Riyadh",
+      "region": "Riyadh",
+      "traditions": [
+        "Le fort Masmak - histoire de l'unification",
+        "La tour Kingdom Centre",
+        "Les souks traditionnels",
+        "La culture bédouine moderne",
+        "Le festival Janadriyah - patrimoine"
+      ],
+      "dress_code": {
+        "general": "Très strict, abaya obligatoire pour les femmes",
+        "men": "Vêtements couvrants, pas de shorts",
+        "women": "Abaya dans les espaces publics, cheveux couverts recommandé",
+        "business": "Costume cravate, tenue très formelle"
+      },
+      "taboos": [
+        "Critiquer le gouvernement ou la religion",
+        "Montrer d'affection en public (amendes)",
+        "Consommer de l'alcool (interdit)",
+        "Photographier sans permission",
+        "Manger en public pendant le Ramadan"
+      ]
+    },
+    {
+      "country": "Saudi Arabia",
+      "city": "Jeddah",
+      "region": "Makkah",
+      "traditions": [
+        "La porte historique",
+        "La corniche de la mer Rouge",
+        "Le quartier d'Al-Balad - classé UNESCO",
+        "Les maisons en corail",
+        "Porte d'entrée pour La Mecque"
+      ],
+      "dress_code": {
+        "general": "Un peu plus libéral que Riyadh, mais toujours strict",
+        "beach": "Plages privées : tenues occidentales acceptées"
+      }
+    },
+    {
+      "country": "Oman",
+      "city": "Muscat",
+      "region": "Muscat",
+      "traditions": [
+        "La Grande Mosquée du Sultan Qaboos",
+        "Le souk Muttrah - un des plus anciens",
+        "La corniche et le port",
+        "L'hospitalité omanaise légendaire",
+        "Le frankincense (encens)",
+        "Les forts historiques"
+      ],
+      "dress_code": {
+        "general": "Modeste, respectueux des traditions",
+        "men": "Dishdasha (robe traditionnelle) portée localement",
+        "women": "Tenues couvrantes, pas d'abaya obligatoire",
+        "religious_sites": "Tenue très modeste"
+      },
+      "taboos": [
+        "Critiquer le Sultan Qaboos (vénéré)",
+        "Ne pas respecter les codes vestimentaires",
+        "Refuser le café omanais"
+      ]
+    },
+    {
+      "country": "Oman",
+      "city": "Nizwa",
+      "region": "Ad Dakhiliyah",
+      "traditions": [
+        "Le fort de Nizwa",
+        "Le souk du bétail et des dattes",
+        "La poterie traditionnelle",
+        "La culture des oasis",
+        "Les forts de la route du sel"
+      ],
+      "dress_code": {
+        "general": "Très traditionnel, tenue très modeste"
+      }
+    },
+    {
+      "country": "Kuwait",
+      "city": "Kuwait City",
+      "region": "Al Asimah",
+      "traditions": [
+        "La tour des Libertés",
+        "Les souks (Souk Al-Mubarakiya)",
+        "La culture maritime perlière",
+        "Les diwaniyas - réunions traditionnelles",
+        "L'hospitalité koweïtienne"
+      ],
+      "dress_code": {
+        "general": "Modeste, influence moderne",
+        "women": "Tenues couvrantes recommandées",
+        "business": "Très formel"
+      }
+    },
+    {
+      "country": "Qatar",
+      "city": "Doha",
+      "region": "Doha",
+      "traditions": [
+        "Le souk Waqif - authentique rénové",
+        "Le musée d'art islamique",
+        "La corniche",
+        "Les courses de chameaux",
+        "La fauconnerie",
+        "L'hospitalité qatarie"
+      ],
+      "dress_code": {
+        "general": "Modeste, libéral mais respectueux",
+        "public": "Épaules et genoux couverts",
+        "beach": "Acceptable dans les complexes hôteliers",
+        "business": "Costume cravate"
+      },
+      "taboos": [
+        "Critiquer la famille royale",
+        "Manger en public pendant le Ramadan",
+        "Montrer d'affection en public"
+      ]
+    },
+    {
+      "country": "Bahrain",
+      "city": "Manama",
+      "region": "Capital",
+      "traditions": [
+        "La forteresse de Bahrain - Qal'at al-Bahrain",
+        "Le souk de Manama",
+        "L'industrie perlière traditionnelle",
+        "La culture cosmopolite",
+        "Les circuits de Formule 1"
+      ],
+      "dress_code": {
+        "general": "Libéral, plus détendu que certains voisins",
+        "nightlife": "Vie nocturne active, tenues occidentales acceptées",
+        "business": "Formel"
+      }
+    },
+    {
+      "country": "Palestine",
+      "city": "Jerusalem (Al-Quds)",
+      "region": "Jerusalem",
+      "traditions": [
+        "La Vieille Ville et ses quartiers",
+        "Le Dôme du Rocher et la Mosquée Al-Aqsa",
+        "Le Mur des Lamentations",
+        "L'Église du Saint-Sépulcre",
+        "Le marché (souk) de la Vieille Ville",
+        "La cohabitation des religions"
+      ],
+      "dress_code": {
+        "general": "Très modeste, respect des lieux saints",
+        "religious_sites": "Épaules et genoux couverts, cheveux couverts pour les femmes",
+        "old_city": "Tenue modeste, pas de shorts"
+      },
+      "taboos": [
+        "Manquer de respect aux lieux saints",
+        "Photographier les prières sans permission",
+        "Entrer dans les mosquées sans enlever ses chaussures",
+        "Discuter de sujets politiques sensibles"
+      ]
+    },
+    {
+      "country": "Palestine",
+      "city": "Bethlehem",
+      "region": "West Bank",
+      "traditions": [
+        "L'Église de la Nativité",
+        "Le Mur de Bethlehem",
+        "La place de la Crèche",
+        "L'artisanat en nacre",
+        "Les célébrations de Noël"
+      ],
+      "dress_code": {
+        "general": "Modeste, respectueux des traditions"
+      }
+    }
+  ]
+}

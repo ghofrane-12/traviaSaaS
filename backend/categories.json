@@ -1,0 +1,57 @@
+{
+  "Requirements": [
+    "Luggage & Safety",
+    "Special Accessibility Needs",
+    "Vaccination & Health Requirements",
+    "Visa & Passport"
+  ],
+  "Destination Info": [
+    "Weather & Best Seasons",
+    "Internet & Connectivity",
+    "Cultural Norms",
+    "Gastronomy"
+  ],
+  "Reservation": [
+    "Car Rental Booking",
+    "Restaurant Reservation",
+    "Event Ticket Booking",
+    "Flight Booking",
+    "Hotel Booking",
+    "Transportation Search",
+    "Tour/Excursion Booking"
+  ],
+  "Booking Changes": [
+    "Car Rental Management",
+    "Hotel Management",
+    "Flight Management",
+    "Tour/Excursion Management"
+  ],
+  "Security": [
+    "Emergency Contacts",
+    "Fraud Prevention",
+    "Lost Or Stolen Items",
+    "Insurance & Refund Policies"
+  ],
+  "Claims": [
+    "Flight Disruption",
+    "Overbooking",
+    "Baggage Damage",
+    "Complaint Submission"
+  ],
+  "Logistics": [
+    "Airport Logistics",
+    "Check-In",
+    "Late Check-Out"
+  ],
+  "Special Requests": [
+    "Child Services",
+    "Pet Policy"
+  ],
+    "General Information": [
+    "Agency Details & Contact",
+    "Chatbot Capabilities",
+    "Human Handoff",
+    "Feedback & Reviews"
+  ]
+
+}

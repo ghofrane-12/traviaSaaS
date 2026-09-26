@@ -1,0 +1,806 @@
+CLAIMS: FLIGHT DISRUPTIONS – GUIDE FOR TRANSPORT AGENTS 
+*(Procedures, Regulations, and Compensation Strategies for Flight Delays, Cancellations, and Overbookings)*
+
+TABLE OF CONTENTS
+-----------------
+1.  INTRODUCTION
+    1.1. Scope of This Guide
+    1.2. Key Definitions
+    1.3. Common Causes of Flight Disruptions
+
+2.  LEGAL FRAMEWORK BY REGION
+    2.1. European Union (EU Regulation 261/2004)
+    2.2. United States (DOT Rules)
+    2.3. Canada (APPR)
+    2.4. Australia (ACCC)
+    2.5. Middle East (GCC Regulations)
+    2.6. North Africa (Country-Specific Rules)
+
+3.  TYPES OF FLIGHT DISRUPTIONS
+    3.1. Delays
+    3.2. Cancellations
+    3.3. Denied Boarding (Overbooking)
+    3.4. Missed Connections
+    3.5. Diversions
+    3.6. Technical Issues
+
+4.  STEP-BY-STEP CLAIM PROCESS
+    4.1. Immediate Actions at the Airport
+    4.2. Documenting the Disruption
+    4.3. Filing a Claim with the Airline
+    4.4. Escalating to Regulatory Bodies
+    4.5. Legal Recourse (Small Claims Court)
+
+5.  COMPENSATION AMOUNTS BY REGION
+    5.1. EU Compensation (€250–€600)
+    5.2. US Compensation (Up to $1,350)
+    5.3. Canada Compensation (CAD$900–$2,400)
+    5.4. Australia Compensation (AUD$250–$1,000)
+    5.5. Middle East Compensation (Varies by Airline)
+
+6.  REAL-LIFE SCENARIOS & SOLUTIONS
+    6.1. Delayed Flight Due to Strike (EU)
+    6.2. Cancellation Due to Weather (US)
+    6.3. Denied Boarding (Overbooking in Canada)
+    6.4. Missed Connection Due to Delay (Middle East)
+    6.5. Technical Issue Leading to 12-Hour Delay (Australia)
+
+7.  AIRLINE-SPECIFIC POLICIES
+    7.1. Emirates
+    7.2. Singapore Airlines
+    7.3. Delta/American/United (US Carriers)
+    7.4. Lufthansa/Air France/KLM (EU Carriers)
+    7.5. Royal Air Maroc/EgyptAir (North Africa)
+    7.6. Budget Airlines (Ryanair, EasyJet, AirAsia)
+
+8.  DOCUMENTATION CHECKLIST
+    8.1. Essential Documents to Collect
+    8.2. How to Prove the Disruption
+    8.3. Sample Claim Letters (English/French/Arabic)
+
+9.  HOW TO MAXIMIZE COMPENSATION
+    9.1. Negotiation Tactics with Airlines
+    9.2. When to Involve a Claims Company
+    9.3. Using Credit Card Travel Insurance
+
+10. COUNTRY-SPECIFIC PROCEDURES
+    10.1. France (DGAC)
+    10.2. Morocco (ANAC)
+    10.3. UAE (GCAA)
+    10.4. USA (DOT)
+    10.5. EU (National Enforcement Bodies)
+
+11. TOOLS & RESOURCES
+    11.1. Flight Disruption Tracking Apps
+    11.2. Regulatory Body Contacts
+    11.3. Legal Assistance Resources
+
+12. FAQ FOR TRANSPORT AGENTS
+    12.1. What Constitutes an "Extraordinary Circumstance"?
+    12.2. How Long Do Airlines Have to Respond to Claims?
+    12.3. Can Passengers Claim for Both EU and US Compensation?
+    12.4. What If the Airline Refuses to Pay?
+
+13. TEMPLATES FOR PROFESSIONAL USE
+    13.1. Claim Letter to Airline (Formal)
+    13.2. Follow-Up Email Template
+    13.3. Complaint to Regulatory Body
+    13.4. Client Communication Template (Delay/Cancellation)
+
+===============================================================================
+1. INTRODUCTION
+===============================================================================
+---
+1.1. SCOPE OF THIS GUIDE
+---
+This guide is designed for **transport agents, travel professionals, and claims handlers** to:
+✅ Understand **legal rights** of passengers during flight disruptions.
+✅ Navigate **airline-specific policies** for delays, cancellations, and denied boarding.
+✅ **Maximize compensation** for clients using regulatory frameworks (EU 261, US DOT, etc.).
+✅ Handle **real-life scenarios** (strikes, weather, technical issues) with step-by-step solutions.
+✅ Use **templates and checklists** to streamline the claims process.
+
+> **Key Statistic (2025):**
+> - **68% of flight disruptions** are due to airline operational issues (not "extraordinary circumstances").
+> - **Only 37% of eligible passengers** claim compensation (IATA 2025).
+> - **Average payout for EU claims:** €400 (AirHelp 2025).
+
+---
+1.2. KEY DEFINITIONS
+---
+| Term                     | Definition                                                                 |
+|--------------------------|----------------------------------------------------------------------------|
+| **Extraordinary Circumstance** | Events beyond the airline’s control (e.g., weather, strikes, political unrest). **Not eligible for compensation** in most regions. |
+| **Operational Issue**    | Airline’s fault (e.g., crew shortage, technical problems, overbooking). **Eligible for compensation**. |
+| **Denied Boarding**     | Passenger not allowed to board due to overbooking (even with a valid ticket). |
+| **Missed Connection**    | Passenger misses a connecting flight due to a delay on the first leg.     |
+| **Diversion**           | Flight lands at an unplanned airport due to emergency.                     |
+| **Force Majeure**       | Unforeseeable events (e.g., natural disasters, wars). Exempts airlines from compensation. |
+
+---
+1.3. COMMON CAUSES OF FLIGHT DISRUPTIONS
+---
+| Cause                  | Compensation Eligible? | Notes                                  |
+|------------------------|------------------------|----------------------------------------|
+| **Crew Shortage**      | Yes                    | Airline’s operational issue.         |
+| **Technical Problems** | Yes                    | Unless it’s a safety-related defect.  |
+| **Strikes (Airline)**  | Yes (EU) / No (US)     | EU 261 covers airline staff strikes.  |
+| **Weather**            | No                     | Considered "extraordinary circumstance." |
+| **Air Traffic Control**| No                     | Usually out of airline’s control.      |
+| **Overbooking**        | Yes                    | Always compensable under EU/US laws.   |
+| **Medical Emergency**  | No                     | Onboard medical issues.               |
+| **Political Unrest**   | No                     | Force majeure.                         |
+| **Bird Strike**        | Sometimes             | Depends on airline’s prevention measures. |
+
+===============================================================================
+2. LEGAL FRAMEWORK BY REGION
+===============================================================================
+---
+2.1. EUROPEAN UNION (REGULATION 261/2004)
+---
+**Applies to:**
+- All flights **departing from an EU airport** (regardless of airline).
+- Flights **arriving in the EU** on an **EU-based airline**.
+
+**Compensation Eligibility:**
+| Disruption Type       | Delay Duration | Compensation (€) | Notes                                  |
+|-----------------------|-----------------|-------------------|----------------------------------------|
+| **Delay**             | 3+ hours        | 250–600           | Based on distance.                    |
+| **Cancellation**      | <14 days notice | 250–600           | Unless "extraordinary circumstances." |
+| **Denied Boarding**   | Any             | 250–600           | Always compensable.                   |
+
+**Distance-Based Compensation:**
+| Flight Distance       | Compensation (€) |
+|-----------------------|-------------------|
+| <1,500 km             | 250               |
+| 1,500–3,500 km        | 400               |
+| >3,500 km (EU flight) | 600               |
+
+**Additional Rights:**
+- **Meals/Refreshments:** Vouchers for delays >2 hours.
+- **Accommodation:** Hotel + transport if overnight delay.
+- **Re-routing:** Alternative flight or full refund.
+
+> **Pro Tip for Agents:**
+> - **Always check if the disruption was due to an "extraordinary circumstance."** Airlines often misclassify issues.
+> - **Use [EU Claim Form](https://ec.europa.eu/transport/passenger-rights/en)** to file complaints.
+
+---
+2.2. UNITED STATES (DOT RULES)
+---
+**Applies to:**
+- All flights **operating to/from/within the USA**.
+
+**Compensation Eligibility:**
+| Disruption Type       | Compensation? | Notes                                  |
+|-----------------------|---------------|----------------------------------------|
+| **Overbooking**       | Yes           | Up to $1,350 (based on delay length). |
+| **Delays**            | No            | Only if passenger is bumped.          |
+| **Cancellations**     | No            | Refund required if >14 days notice.  |
+
+**Denied Boarding Compensation (2026):**
+| Delay Length          | Compensation ($) |
+|-----------------------|------------------|
+| 1–2 hours             | 200–400          |
+| >2 hours (domestic)   | 400–675          |
+| >2 hours (int’l)      | 675–1,350        |
+
+**Additional Rights:**
+- **Refunds:** Mandatory if flight is canceled >14 days before departure.
+- **Re-routing:** Airline must offer alternative transport.
+
+> **Real-Life Scenario: US Overbooking Compensation**
+> **Situation:** A passenger was denied boarding on a **Delta flight from JFK to LAX** due to overbooking. The next flight was **3 hours later**.
+> **Compensation:** **$675** (since the delay was >2 hours on a domestic flight).
+> **Lesson:** **Always ask for the maximum compensation**—airlines often start with lower offers.
+
+---
+2.3. CANADA (APPR)
+---
+**Applies to:**
+- All flights **to/from/within Canada** on airlines with **>1M passengers/year**.
+
+**Compensation Eligibility:**
+| Disruption Type       | Delay Duration | Compensation (CAD) | Notes                                  |
+|-----------------------|-----------------|--------------------|----------------------------------------|
+| **Delay**             | 3–6 hours       | 125–400            | Based on delay length.                |
+| **Cancellation**      | <14 days notice | 125–1,000          | Unless safety-related.                 |
+| **Denied Boarding**   | Any             | 900–2,400          | Based on delay length.                |
+
+**Distance-Based Compensation for Cancellations:**
+| Flight Distance       | Compensation (CAD) |
+|-----------------------|--------------------|
+| <1,500 km             | 125–400             |
+| 1,500–3,500 km        | 250–700             |
+| >3,500 km             | 500–1,000           |
+
+> **Pro Tip:**
+> - **Canada’s rules are stricter than the US**—passengers can claim for **delays as short as 3 hours**.
+> - **File claims via the [Canadian Transportation Agency](https://otc-cta.gc.ca/)**.
+
+---
+2.4. AUSTRALIA (ACCC)
+---
+**Applies to:**
+- All flights **departing from Australia**.
+
+**Compensation Eligibility:**
+| Disruption Type       | Compensation? | Notes                                  |
+|-----------------------|---------------|----------------------------------------|
+| **Delays**            | No            | Only assistance (meals/hotel).         |
+| **Cancellations**     | Sometimes     | If airline’s fault (e.g., overbooking).|
+| **Denied Boarding**   | Yes           | AUD$250–$1,000.                        |
+
+**Assistance Rights:**
+- **Meals/Refreshments:** For delays >2 hours.
+- **Accommodation:** If overnight delay.
+- **Re-routing:** Alternative flight or refund.
+
+> **Real-Life Scenario: Qantas Cancellation**
+> **Situation:** A Qantas flight from **Sydney to Melbourne** was canceled due to "operational issues." The passenger was rebooked **8 hours later**.
+> **Compensation:** **AUD$400** (as the delay was >3 hours and Qantas’s fault).
+> **Lesson:** **Always ask for written confirmation of the reason**—if it’s "operational," compensation is due.
+
+---
+2.5. MIDDLE EAST (GCC REGULATIONS)
+---
+**Applies to:**
+- Flights on **GCC-based airlines** (Emirates, Qatar, Etihad, Saudia).
+
+**Compensation Eligibility:**
+| Airline              | Policy                                                                 |
+|-----------------------|-----------------------------------------------------------------------|
+| **Emirates**          | No fixed compensation. Offers **vouchers/hotel** for delays >4 hours. |
+| **Qatar Airways**     | **$200–$500 vouchers** for delays >6 hours (discretionary).          |
+| **Etihad**            | **Hotel + meals** for overnight delays. No cash compensation.      |
+| **Saudia**            | Follows **IATA guidelines** (no fixed compensation).               |
+
+> **Pro Tip:**
+> - **GCC airlines rarely pay cash compensation**—focus on **vouchers, upgrades, or hotel stays**.
+> - **Etihad/Emirates** often offer **free hotel stays** for long delays (even if not legally required).
+
+---
+2.6. NORTH AFRICA (COUNTRY-SPECIFIC RULES)
+---
+| Country       | Compensation Policy                                                                 |
+|----------------|--------------------------------------------------------------------------------------|
+| **Morocco**   | No legal compensation. **Royal Air Maroc** offers **meals/hotel** for delays >4 hours. |
+| **Egypt**     | No compensation. **EgyptAir** provides **vouchers** for long delays (case-by-case). |
+| **Tunisia**    | No fixed rules. **Tunisair** may offer **discounts** for future flights.             |
+| **Algeria**   | No compensation. **Air Algérie** rarely offers assistance.                         |
+
+> **Real-Life Scenario: Royal Air Maroc Delay**
+> **Situation:** A **Royal Air Maroc flight from Casablanca to Paris** was delayed **6 hours** due to "crew shortage."
+> **Outcome:** The airline provided **a free hotel + meals**, but **no cash compensation** (as Moroccan law doesn’t require it).
+> **Lesson:** **In North Africa, focus on immediate assistance** (hotel/meals) rather than cash claims.
+
+===============================================================================
+3. TYPES OF FLIGHT DISRUPTIONS
+===============================================================================
+---
+3.1. DELAYS
+---
+**Definition:** Flight departs **later than scheduled**.
+**Compensation Eligibility:**
+- **EU:** 3+ hours delay = €250–€600.
+- **US:** No compensation (unless denied boarding).
+- **Canada:** 3+ hours = CAD$125–$400.
+
+**Common Causes:**
+| Cause               | Compensation? | Notes                                  |
+|---------------------|---------------|----------------------------------------|
+| Crew Shortage       | Yes           | Airline’s operational issue.          |
+| Technical Problems  | Sometimes     | If due to poor maintenance = Yes.    |
+| Weather             | No            | "Extraordinary circumstance."         |
+| Air Traffic Control | No            | Out of airline’s control.             |
+| Strike (Airline)    | Yes (EU)      | No (US/Canada).                       |
+
+**Agent Action Plan:**
+1. **Verify the reason** for the delay (ask airline staff for written confirmation).
+2. **Check eligibility** based on departure country and airline.
+3. **Document everything** (photos of departure boards, emails from airline).
+4. **Demand assistance** (meals, hotel, transport) if delay >2 hours (EU) or overnight.
+
+---
+3.2. CANCELLATIONS
+---
+**Definition:** Flight is **completely canceled** (not just delayed).
+**Compensation Eligibility:**
+- **EU:** €250–€600 if <14 days notice (unless "extraordinary circumstances").
+- **US:** Refund only (no compensation unless overbooking).
+- **Canada:** CAD$125–$1,000.
+
+**Common Causes:**
+| Cause               | Compensation? | Notes                                  |
+|---------------------|---------------|----------------------------------------|
+| Low Demand          | Yes           | Airline’s commercial decision.        |
+| Operational Issues  | Yes           | Crew shortage, technical problems.    |
+| Weather             | No            | "Extraordinary circumstance."         |
+| Strike (Airline)    | Yes (EU)      | No (US/Canada).                       |
+| Government Restrictions | No         | E.g., COVID-19 travel bans.          |
+
+**Agent Action Plan:**
+1. **Demand a refund** if passenger no longer wishes to travel.
+2. **Request re-routing** on the next available flight (even with another airline).
+3. **File for compensation** if cancellation was <14 days notice and not due to "extraordinary circumstances."
+
+---
+3.3. DENIED BOARDING (OVERBOOKING)
+---
+**Definition:** Passenger with a **valid ticket** is **not allowed to board** due to overbooking.
+**Compensation Eligibility:**
+- **Always compensable** in EU/US/Canada.
+- **Volunteers** (who give up seats for vouchers) are **not eligible** for legal compensation.
+
+**Compensation Amounts:**
+| Region       | Compensation Range       | Notes                                  |
+|--------------|--------------------------|----------------------------------------|
+| **EU**       | €250–€600                | Based on distance.                    |
+| **US**       | $200–$1,350              | Based on delay length.                |
+| **Canada**   | CAD$900–$2,400           | Based on delay length.                |
+
+**Agent Action Plan:**
+1. **Ask for written confirmation** of denied boarding.
+2. **Negotiate cash compensation** (not just vouchers).
+3. **File a claim** if the airline offers less than the legal minimum.
+
+> **Real-Life Scenario: United Overbooking**
+> **Situation:** A passenger was denied boarding on **United Airlines** due to overbooking. The next flight was **4 hours later**.
+> **Compensation:** **$675** (as the delay was >2 hours on a domestic flight).
+> **Lesson:** **Always ask for cash**—airlines prefer vouchers, but passengers have the right to cash.
+
+---
+3.4. MISSED CONNECTIONS
+---
+**Definition:** Passenger **misses a connecting flight** due to a delay on the first leg.
+**Compensation Eligibility:**
+- **EU:** If both flights are on the **same ticket**, the airline must provide **alternative transport + compensation** if the delay is their fault.
+- **US/Canada:** No compensation, but airline must **rebook or refund**.
+
+**Common Causes:**
+| Cause               | Airline Responsibility? | Notes                                  |
+|---------------------|--------------------------|----------------------------------------|
+| Delay on First Leg  | Yes                      | If due to airline’s fault.             |
+| Short Layover       | Sometimes                | If layover was unreasonably short.     |
+| Airport Chaos      | No                       | E.g., security lines, weather.        |
+
+**Agent Action Plan:**
+1. **Demand re-routing** on the next available flight (even with a partner airline).
+2. **Request meals/hotel** if the wait is >4 hours.
+3. **File for compensation** if the missed connection was due to an airline-caused delay on the first leg.
+
+---
+3.5. DIVERSIONS
+---
+**Definition:** Flight lands at an **unplanned airport** due to emergency (e.g., medical, weather, technical).
+**Compensation Eligibility:**
+- **No compensation** if due to safety/emergency.
+- **Assistance required** (meals, hotel, transport to original destination).
+
+**Agent Action Plan:**
+1. **Confirm the reason** for diversion (safety vs. operational).
+2. **Demand assistance** (hotel, meals, transport).
+3. **If operational issue**, file for compensation (rare, but possible in EU).
+
+---
+3.6. TECHNICAL ISSUES
+---
+**Definition:** Flight delayed/canceled due to **mechanical or technical problems**.
+**Compensation Eligibility:**
+- **Yes**, unless it’s a **safety-related defect** (e.g., engine failure mid-flight).
+- **Airlines often claim "safety" to avoid compensation**—**challenge this** if the issue was preventable.
+
+**Agent Action Plan:**
+1. **Ask for the exact technical issue** (written confirmation).
+2. **If it’s a routine maintenance issue**, demand compensation.
+3. **If it’s a safety defect**, focus on assistance (hotel/meals).
+
+===============================================================================
+4. STEP-BY-STEP CLAIM PROCESS
+===============================================================================
+---
+4.1. IMMEDIATE ACTIONS AT THE AIRPORT
+---
+1. **Get Written Confirmation:**
+   - Ask airline staff for a **letter/email** stating:
+     - Flight number, date, and **reason for disruption**.
+     - Expected delay duration or cancellation notice.
+   - **Example:** *"This flight was canceled due to crew shortage"* = **eligible for compensation**.
+
+2. **Collect Evidence:**
+   - **Photos:** Departure boards showing delay/cancellation.
+   - **Tickets/Boarding Passes:** Proof of booking.
+   - **Receipts:** Meals, hotel, transport (if paid out-of-pocket).
+
+3. **Demand Assistance:**
+   - **EU/Canada:** Meals, hotel, transport **must be provided** for delays >2–4 hours.
+   - **US:** Only if denied boarding (overbooking).
+
+4. **Request Re-routing or Refund:**
+   - **Alternative flight** (even with another airline).
+   - **Full refund** if no longer wishing to travel.
+
+---
+4.2. DOCUMENTING THE DISRUPTION
+---
+**Checklist for Agents:**
+✅ **Flight details** (number, date, route).
+✅ **Reason for disruption** (written confirmation from airline).
+✅ **Duration of delay** (departure vs. actual time).
+✅ **Assistance provided** (meals, hotel, vouchers).
+✅ **Expenses incurred** (receipts for meals, transport, hotel).
+✅ **Communication records** (emails, chat logs with airline).
+
+> **Pro Tip:**
+> - **Use apps like [FlightAware](https://www.flightaware.com)** to track delays and get official records.
+> - **Take screenshots** of airline communications (Twitter, email, chat).
+
+---
+4.3. FILING A CLAIM WITH THE AIRLINE
+---
+**Step-by-Step:**
+1. **Find the Airline’s Claim Form:**
+   - Most airlines have online forms (e.g., [Emirates Claim Form](https://www.emirates.com/fr/french/help/claims/)).
+   - **Example URLs:**
+     - Emirates: `https://www.emirates.com/fr/french/help/claims/`
+     - Delta: `https://www.delta.com/us/en/need-help/claims`
+     - Lufthansa: `https://www.lufthansa.com/fr/fr/claims`
+
+2. **Fill Out the Form:**
+   - Provide **flight details, reason for disruption, and evidence**.
+   - **Demand cash compensation** (not vouchers).
+
+3. **Submit Within Deadline:**
+   - **EU:** Up to **3 years** (varies by country).
+   - **US/Canada:** **1 year** (check airline policy).
+
+4. **Follow Up:**
+   - Airlines have **30–60 days** to respond.
+   - **If no response**, escalate to regulatory bodies (see Section 4.4).
+
+**Sample Claim Letter (See Section 13.1).**
+
+---
+4.4. ESCALATING TO REGULATORY BODIES
+---
+| Region       | Regulatory Body               | Website                                  | Response Time |
+|--------------|-------------------------------|------------------------------------------|---------------|
+| **EU**       | European Consumer Centre      | [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/) | 30–90 days    |
+| **US**       | DOT Aviation Consumer Protection | [https://www.transportation.gov/airconsumer](https://www.transportation.gov/airconsumer) | 60–120 days   |
+| **Canada**   | Canadian Transportation Agency | [https://otc-cta.gc.ca/](https://otc-cta.gc.ca/) | 30–60 days    |
+| **Australia**| ACCC                           | [https://www.accc.gov.au/](https://www.accc.gov.au/) | 60 days       |
+| **UAE**     | GCAA                           | [https://www.gcaa.gov.ae/](https://www.gcaa.gov.ae/) | 30–60 days    |
+
+**How to Escalate:**
+1. **File a complaint** with the regulatory body if the airline rejects your claim.
+2. **Provide all evidence** (emails, photos, receipts).
+3. **Follow up** if no response within the deadline.
+
+---
+4.5. LEGAL RECOURSE (SMALL CLAIMS COURT)
+---
+**When to Use:**
+- Airline **refuses to pay** despite clear eligibility.
+- Claim is **<€5,000 (EU)** or **<$10,000 (US/Canada)**.
+
+**Steps:**
+1. **Send a final demand letter** to the airline (see Section 13.2).
+2. **File in small claims court** in the airline’s home country (e.g., **Dublin for Ryanair**).
+3. **Use services like [AirHelp](https://www.airhelp.com/)** or **local lawyers** specializing in flight claims.
+
+> **Real-Life Scenario: Ryanair Refusal**
+> **Situation:** Ryanair refused to pay **€600 compensation** for a 6-hour delay (crew shortage).
+> **Solution:**
+> 1. Passenger filed a complaint with the **Irish Aviation Authority**.
+> 2. **Ryanair paid within 30 days** after regulatory intervention.
+> **Lesson:** **Regulatory complaints work**—use them if airlines refuse.
+
+===============================================================================
+5. COMPENSATION AMOUNTS BY REGION
+===============================================================================
+---
+5.1. EU COMPENSATION (€250–€600)
+---
+| Flight Distance       | Delay Duration | Compensation (€) | Notes                                  |
+|-----------------------|-----------------|-------------------|----------------------------------------|
+| <1,500 km             | 3+ hours        | 250               | E.g., Paris to Rome.                   |
+| 1,500–3,500 km        | 3+ hours        | 400               | E.g., London to Istanbul.              |
+| >3,500 km (EU flight) | 3+ hours        | 600               | E.g., Paris to New York.               |
+
+**Additional Assistance:**
+- **Meals/Refreshments:** For delays >2 hours.
+- **Hotel:** If overnight delay.
+- **Transport:** To/from hotel.
+
+---
+5.2. US COMPENSATION (UP TO $1,350)
+---
+| Scenario                     | Compensation ($) | Notes                                  |
+|------------------------------|------------------|----------------------------------------|
+| Denied Boarding (1–2h delay) | 200–400          | Domestic flights.                      |
+| Denied Boarding (>2h delay)  | 400–675          | Domestic flights.                      |
+| Denied Boarding (Int’l)     | 675–1,350        | Based on ticket price.                 |
+
+**No compensation for delays/cancellations** (only refunds or re-routing).
+
+---
+5.3. CANADA COMPENSATION (CAD$125–$2,400)
+---
+| Delay Duration        | Compensation (CAD) | Notes                                  |
+|-----------------------|--------------------|----------------------------------------|
+| 3–6 hours             | 125–400            | Small airlines: $125–$250.             |
+| 6–9 hours             | 250–700            | Based on airline size.                |
+| 9+ hours              | 500–1,000          | Large airlines (Air Canada, WestJet).  |
+| Denied Boarding       | 900–2,400          | Based on delay length.                |
+
+---
+5.4. AUSTRALIA COMPENSATION (AUD$250–$1,000)
+---
+- **No fixed compensation**, but airlines must provide:
+  - **Meals/refreshments** for delays >2 hours.
+  - **Hotel** for overnight delays.
+  - **Re-routing or refund** if cancellation is airline’s fault.
+
+---
+5.5. MIDDLE EAST COMPENSATION (VARIES)
+---
+| Airline              | Policy                                                                 |
+|-----------------------|-----------------------------------------------------------------------|
+| **Emirates**          | **$200–$500 vouchers** for delays >6 hours (discretionary).          |
+| **Qatar Airways**     | **$300–$600 vouchers** for delays >8 hours.                           |
+| **Etihad**            | **Hotel + meals** for overnight delays. No cash compensation.      |
+| **Saudia**            | Follows **IATA guidelines** (no fixed compensation).                |
+
+===============================================================================
+6. REAL-LIFE SCENARIOS & SOLUTIONS
+===============================================================================
+---
+6.1. DELAYED FLIGHT DUE TO STRIKE (EU)
+---
+**Situation:**
+- **Flight:** Paris (CDG) to Barcelona (BCN) on **Air France**.
+- **Reason:** Air France **crew strike**.
+- **Delay:** **5 hours**.
+
+**Solution:**
+1. **Demand written confirmation** from Air France (strike = **not an extraordinary circumstance** in EU).
+2. **Claim €400 compensation** (flight distance: 1,000 km).
+3. **Receive meal vouchers** (€20) and **hotel** (overnight stay).
+4. **File claim via [Air France’s form](https://www.airfrance.fr/)**.
+5. **Receive €400 within 30 days**.
+
+**Lesson:**
+- **Strikes by airline staff are compensable in the EU** (unlike US/Canada).
+- **Always get the reason in writing**—airlines may misclassify strikes as "extraordinary."
+
+---
+6.2. CANCELLATION DUE TO WEATHER (US)
+---
+**Situation:**
+- **Flight:** New York (JFK) to Miami (MIA) on **Delta**.
+- **Reason:** **Hurricane warning**.
+- **Notice:** **24 hours before departure**.
+
+**Solution:**
+1. **No compensation** (weather = extraordinary circumstance).
+2. **Demand a full refund** (DOT rules).
+3. **Re-book on another airline** (Delta must refund if passenger chooses not to travel).
+4. **Use travel insurance** to cover hotel/meals during delay.
+
+**Lesson:**
+- **Weather cancellations = no compensation**, but **refunds are mandatory** in the US.
+- **Travel insurance** can cover additional costs (hotel, meals).
+
+---
+6.3. DENIED BOARDING (OVERBOOKING IN CANADA)
+---
+**Situation:**
+- **Flight:** Toronto (YYZ) to Vancouver (YVR) on **Air Canada**.
+- **Reason:** **Overbooking**.
+- **Next flight:** **6 hours later**.
+
+**Solution:**
+1. **Demand cash compensation** (CAD$900–$1,800 for 6-hour delay).
+2. **Air Canada offers $600 voucher**—**reject and insist on cash**.
+3. **File claim via [CTA](https://otc-cta.gc.ca/)**.
+4. **Receive $1,200** (as per APPR rules).
+
+**Lesson:**
+- **In Canada, passengers can reject vouchers** and demand **cash compensation**.
+- **Always check the APPR rules**—they’re stricter than US/EU in some cases.
+
+---
+6.4. MISSED CONNECTION DUE TO DELAY (MIDDLE EAST)
+---
+**Situation:**
+- **Flight 1:** Dubai (DXB) to Istanbul (IST) on **Emirates** (delayed 4 hours).
+- **Flight 2:** Istanbul (IST) to Paris (CDG) on **Turkish Airlines** (missed due to delay).
+- **Reason:** **Emirates’ operational issue** (crew shortage).
+
+**Solution:**
+1. **Emirates must provide:**
+   - **Alternative flight** to Paris (even on another airline).
+   - **Hotel + meals** in Istanbul (overnight stay).
+   - **€400 compensation** (EU rules apply for IST-CDG leg).
+2. **File claim with Emirates** for the delay + missed connection.
+3. **Receive €400 + hotel/meals**.
+
+**Lesson:**
+- **If the first flight is delayed due to airline fault, they must cover all costs** (including missed connections on partner airlines).
+- **EU rules apply for the second leg** (IST-CDG), so compensation is due.
+
+---
+6.5. TECHNICAL ISSUE LEADING TO 12-HOUR DELAY (AUSTRALIA)
+---
+**Situation:**
+- **Flight:** Sydney (SYD) to Melbourne (MEL) on **Qantas**.
+- **Reason:** **"Technical issue"** (no further details).
+- **Delay:** **12 hours**.
+
+**Solution:**
+1. **Demand written explanation** of the "technical issue."
+2. **If routine maintenance**, claim **AUD$700** (as per ACCC guidelines).
+3. **Qantas offers AUD$400 voucher**—**reject and demand cash**.
+4. **File complaint with [ACCC](https://www.accc.gov.au/)**.
+5. **Receive AUD$700** after regulatory intervention.
+
+**Lesson:**
+- **Airlines often hide behind "technical issues"**—**demand specifics**.
+- **In Australia, vouchers are not mandatory**—passengers can insist on cash.
+
+===============================================================================
+7. AIRLINE-SPECIFIC POLICIES
+===============================================================================
+---
+7.1. EMIRATES
+---
+**Compensation Policy:**
+- **No fixed cash compensation** (unlike EU/US).
+- **Offers vouchers/hotel** for delays >4 hours:
+  - **4–8 hours:** $200 voucher + meals.
+  - **8+ hours:** $500 voucher + hotel.
+- **Denied Boarding:** $300–$800 voucher (case-by-case).
+
+**Claim Process:**
+1. **File via [Emirates Claim Form](https://www.emirates.com/fr/french/help/claims/)**.
+2. **Provide boarding pass, ticket, and delay confirmation**.
+3. **Response time:** 30–60 days.
+
+**Pro Tip:**
+- **Emirates rarely pays cash**—focus on **vouchers, upgrades, or hotel stays**.
+- **If connecting in Dubai**, demand **hotel + meals** even for short delays.
+
+---
+7.2. SINGAPORE AIRLINES
+---
+**Compensation Policy:**
+- **Delays >6 hours:** $200–$400 voucher + hotel.
+- **Cancellations <14 days notice:** $300–$600 voucher or cash (case-by-case).
+- **Denied Boarding:** $400–$1,000 cash (based on delay).
+
+**Claim Process:**
+1. **Submit via [Singapore Airlines Form](https://www.singaporeair.com/)**.
+2. **Include boarding pass, receipts, and delay reason**.
+3. **Response time:** 21–45 days.
+
+**Pro Tip:**
+- **Singapore Airlines is more generous than most**—**always ask for cash first**.
+- **If denied boarding**, insist on **$1,000** (their max payout).
+
+---
+7.3. DELTA/AMERICAN/UNITED (US CARRIERS)
+---
+**Compensation Policy:**
+- **Denied Boarding:** $200–$1,350 (based on delay length).
+- **Delays/Cancellations:** **No compensation**, but **refunds/re-routing** required.
+
+**Claim Process:**
+1. **File via airline’s website:**
+   - Delta: [https://www.delta.com/claims](https://www.delta.com/claims)
+   - American: [https://www.americanairlines.com/claims](https://www.americanairlines.com/claims)
+   - United: [https://www.united.com/claims](https://www.united.com/claims)
+2. **Provide ticket number, boarding pass, and delay reason**.
+3. **Response time:** 30–90 days.
+
+**Pro Tip:**
+- **US airlines only pay for denied boarding**—**focus on re-routing/refunds** for other disruptions.
+- **If denied boarding**, **negotiate cash** (airlines prefer vouchers).
+
+---
+7.4. LUFTHANSA/AIR FRANCE/KLM (EU CARRIERS)
+---
+**Compensation Policy:**
+- **Delays 3+ hours:** €250–€600 (based on distance).
+- **Cancellations <14 days notice:** €250–€600.
+- **Denied Boarding:** €250–€600.
+
+**Claim Process:**
+1. **File via airline’s form:**
+   - Lufthansa: [https://www.lufthansa.com/claims](https://www.lufthansa.com/claims)
+   - Air France: [https://www.airfrance.fr/claims](https://www.airfrance.fr/claims)
+   - KLM: [https://www.klm.com/claims](https://www.klm.com/claims)
+2. **Include boarding pass, ticket, and written delay reason**.
+3. **Response time:** 14–30 days (EU laws require quick responses).
+
+**Pro Tip:**
+- **EU airlines are legally required to pay**—**escalate to national enforcement bodies** if they refuse.
+- **Air France/KLM often pay quickly** to avoid regulatory penalties.
+
+---
+7.5. ROYAL AIR MAROC/EGYPTAIR (NORTH AFRICA)
+---
+**Compensation Policy:**
+| Airline          | Policy                                                                 |
+|-------------------|-----------------------------------------------------------------------|
+| **Royal Air Maroc** | **No cash compensation**. Offers **meals/hotel** for delays >4 hours. |
+| **EgyptAir**      | **No compensation**. May offer **discount vouchers** for future flights. |
+
+**Claim Process:**
+1. **Demand written explanation** of the disruption.
+2. **Request meals/hotel** if delay is >4 hours.
+3. **If denied assistance**, file a complaint with:
+   - **Morocco:** [ANAC](https://www.anac.ma/)
+   - **Egypt:** [Egyptian Civil Aviation Authority](https://www.caa.gov.eg/)
+
+**Pro Tip:**
+- **North African airlines rarely pay compensation**—focus on **immediate assistance** (hotel/meals).
+- **Royal Air Maroc is more responsive** than EgyptAir—**escalate to ANAC** if needed.
+
+---
+7.6. BUDGET AIRLINES (RYANAIR, EASYJET, AIRASIA)
+---
+**Compensation Policy:**
+| Airline       | Policy                                                                 |
+|----------------|-----------------------------------------------------------------------|
+| **Ryanair**    | **€250–€600** for delays/cancellations (but fights most claims).     |
+| **EasyJet**    | **€250–€600** (more cooperative than Ryanair).                      |
+| **AirAsia**    | **No compensation** in Asia. **Vouchers** for delays >4 hours.      |
+
+**Claim Process:**
+1. **File via airline’s form:**
+   - Ryanair: [https://www.ryanair.com/claims](https://www.ryanair.com/claims)
+   - EasyJet: [https://www.easyjet.com/claims](https://www.easyjet.com/claims)
+2. **Provide boarding pass, ticket, and delay reason**.
+3. **If rejected**, escalate to:
+   - **EU:** [European Consumer Centre](https://ec.europa.eu/consumers/odr/)
+   - **UK:** [Civil Aviation Authority](https://www.caa.co.uk/)
+
+**Pro Tip:**
+- **Ryanair rejects 80% of initial claims**—**always escalate to regulators**.
+- **EasyJet is more cooperative**—**demand €600 for long delays**.
+
+===============================================================================
+8. DOCUMENTATION CHECKLIST
+===============================================================================
+---
+8.1. ESSENTIAL DOCUMENTS TO COLLECT
+---
+✅ **Boarding Pass/Ticket:** Proof of booking.
+✅ **Written Reason for Disruption:** From airline staff (email or letter).
+✅ **Photos/Videos:**
+   - Departure boards showing delay/cancellation.
+   - Weather reports (if airline claims "weather").
+✅ **Receipts:**
+   - Meals, hotel, transport (if paid out-of-pocket).
+✅ **Communication Records:**
+   - Emails/chats with airline.
+   - Screenshots of airline’s social media responses.
+✅ **Witness Statements:** If other passengers confirm the reason.
+
+---
+8.2. HOW TO PROVE THE DISRUPTION
+---
+1. **Flight Status Tools:**
+   - [FlightAware](https://www.flightaware.com/) (historical delay data).
+   - [Flightradar24](https://www.flightradar24.com/) (real-time tracking).
+2. **Airline Communications:**
+   - **Emails/SMS** from the airline about the disruption.
+   - **Social media responses** (Twitter, Facebook).
+3. **Third-Party Evidence:**
+   - **News reports** (e.g., strikes, weather).
+   - **Met Office reports** (for weather claims).
+
+---
+8.3. SAMPLE CLAIM LETTERS
+---
+**Template 1: Formal Claim Letter to Airline (English)**

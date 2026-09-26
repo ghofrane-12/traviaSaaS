@@ -1,0 +1,50 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--no-cache'
+  - '-t'
+  - 'europe-west1-docker.pkg.dev/travel-saas-pfe/travel-ai-repo/backend:latest'
+  - '.'
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'push'
+  - 'europe-west1-docker.pkg.dev/travel-saas-pfe/travel-ai-repo/backend:latest'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gcloud run deploy backend \
+      --cpu-boost \
+      --image=europe-west1-docker.pkg.dev/travel-saas-pfe/travel-ai-repo/backend:latest \
+      --region=europe-west1 \
+      --project=travel-saas-pfe \
+      --cpu=8 \
+      --memory=20Gi \
+      --min-instances=1 \
+      --max-instances=1 \
+      --timeout=600 \
+      --port=8080 \
+      --no-cpu-throttling \
+      --service-account=travel-ai-sa@travel-saas-pfe.iam.gserviceaccount.com \
+      --set-env-vars=MODELS_DIR=/app/gcs_models/trained_models,GCS_MODELS_PATH=/app/gcs_models/files,FRONTEND_URL=https://travel-saas-pfe.web.app,BREVO_SMTP_USER=ghofrane.sallami6026@istic.ucar.tn \
+      --set-secrets=DATABASE_URL=DATABASE_URL:latest \
+      --set-secrets=ALLOWED_ORIGINS=ALLOWED_ORIGINS:latest \
+      --set-secrets=OPENAI_API_KEY=OPENAI_API_KEY:latest \
+      --set-secrets=FB_VERIFY_TOKEN=FB_VERIFY_TOKEN:latest \
+      --set-secrets=BREVO_SMTP_PASSWORD=BREVO_SMTP_PASSWORD:latest \
+      --set-secrets=BREVO_API_KEY=BREVO_API_KEY:latest \
+      --set-secrets=FB_APP_ID=FB_APP_ID:latest \
+      --set-secrets=FB_APP_SECRET=FB_APP_SECRET:latest \
+      --set-secrets=FB_REDIRECT_URI=FB_REDIRECT_URI:latest \
+      --allow-unauthenticated \
+      --add-volume=name=models-volume,type=cloud-storage,bucket=travel-saas-pfe-models \
+      --add-volume-mount=volume=models-volume,mount-path=/app/gcs_models \
+      --add-cloudsql-instances=travel-saas-pfe:europe-west1:travel-ai-db
+images:
+- 'europe-west1-docker.pkg.dev/travel-saas-pfe/travel-ai-repo/backend:latest'
+options:
+  machineType: 'E2_HIGHCPU_8'
+  diskSizeGb: 200
+  logging: CLOUD_LOGGING_ONLY

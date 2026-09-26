@@ -1,0 +1,28 @@
+gcloud run deploy backend ^
+  --cpu-boost ^
+  --image=europe-west1-docker.pkg.dev/travel-ai-2026/travel-ai-repo/backend:latest ^
+  --region=europe-west1 ^
+  --project=travel-ai-2026 ^
+  --gpu=1 ^
+  --gpu-type=nvidia-l4 ^
+  --cpu=8 ^
+  --memory=32Gi ^
+  --min-instances=1 ^
+  --max-instances=3 ^
+  --timeout=600 ^
+  --port=8080 ^
+  --no-cpu-throttling ^
+  --service-account=travel-ai-sa@travel-ai-2026.iam.gserviceaccount.com ^
+  --set-env-vars=MODELS_DIR=/app/trained_models ^
+  --set-secrets=DATABASE_URL=DATABASE_URL:latest ^
+  --set-secrets=GEMINI_API_KEY=GEMINI_API_KEY:latest ^
+  --set-secrets=MISTRAL_API_KEY=MISTRAL_API_KEY:latest ^
+  --set-secrets=UNSPLASH_ACCESS_KEY=UNSPLASH_ACCESS_KEY:latest ^
+  --set-secrets=ALLOWED_ORIGINS=ALLOWED_ORIGINS:latest ^
+  --allow-unauthenticated ^
+  --add-volume=name=models-volume,type=cloud-storage,bucket=travel-ai-2026-models ^
+  --add-volume-mount=volume=models-volume,mount-path=/app/trained_models,sub-path=trained_models ^
+  --startup-probe-initial-delay=10 ^
+  --startup-probe-period=10 ^
+  --startup-probe-timeout=5 ^
+  --startup-probe-failure-threshold=3

@@ -1,0 +1,2058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SpecialAccessibilityPolicies>
+    <!-- Metadata -->
+    <Metadata>
+        <Title>Global Travel Special Needs & Accessibility Policies</Title>
+        <Description>
+            Comprehensive dataset on special needs and accessibility policies for global travelers,
+            including real-life scenarios, airline/airport-specific rules, and practical tips.
+            Optimized for travel management systems, customer support, and RAG applications.
+        </Description>
+        <Language>en</Language>
+        <RelatedTopics>
+            <Topic>Travel Documentation</Topic>
+            <Topic>Airport Procedures</Topic>
+            <Topic>Disability Travel Rights</Topic>
+        </RelatedTopics>
+    </Metadata>
+
+    <!-- Table of Contents -->
+    <TableOfContents>
+        <Section id="wheelchair" title="Wheelchair & Mobility Assistance"/>
+        <Section id="visual_impairment" title="Visual Impairment Policies"/>
+        <Section id="hearing_impairment" title="Hearing Impairment Policies"/>
+        <Section id="cognitive_disabilities" title="Cognitive & Developmental Disabilities"/>
+        <Section id="medical_conditions" title="Traveling with Medical Conditions"/>
+        <Section id="pregnant_travelers" title="Pregnant Travelers"/>
+        <Section id="unaccompanied_minors" title="Unaccompanied Minors with Special Needs"/>
+        <Section id="service_animals" title="Service Animals"/>
+        <Section id="autism_spectrum" title="Autism Spectrum Travelers"/>
+        <Section id="elderly_travelers" title="Elderly Travelers"/>
+        <Section id="airport_specific" title="Airport-Specific Accessibility"/>
+        <Section id="airline_policies" title="Airline-Specific Policies"/>
+        <Section id="legal_rights" title="Legal Rights & Compensation"/>
+        <Section id="emergency_procedures" title="Emergency Procedures"/>
+        <Section id="real_life_scenarios" title="Real-Life Scenarios & Solutions"/>
+        <Section id="resources" title="Resources & Contacts"/>
+    </TableOfContents>
+
+    <!-- 1. Wheelchair & Mobility Assistance -->
+    <Section id="wheelchair">
+        <Title>Wheelchair & Mobility Assistance Policies</Title>
+        <Description>
+            Policies and procedures for travelers requiring wheelchair assistance,
+            including manual and electric wheelchairs, mobility scooters, and airport/airline services.
+        </Description>
+
+        <SubSection>
+            <Title>Wheelchair Types & Airline Policies</Title>
+            <Table>
+                <Header>
+                    <Column>Wheelchair Type</Column>
+                    <Column>Airline Policy</Column>
+                    <Column>Battery Rules</Column>
+                    <Column>Advance Notice Required</Column>
+                </Header>
+                <Row>
+                    <Cell>Manual Wheelchair</Cell>
+                    <Cell>Accepted on all airlines. Can be checked for free.</Cell>
+                    <Cell>N/A</Cell>
+                    <Cell>48 hours recommended</Cell>
+                </Row>
+                <Row>
+                    <Cell>Electric Wheelchair (Dry Cell)</Cell>
+                    <Cell>Accepted if battery is removable &lt;300Wh.</Cell>
+                    <Cell>Battery must be carried in cabin.</Cell>
+                    <Cell>48 hours required</Cell>
+                </Row>
+                <Row>
+                    <Cell>Electric Wheelchair (Wet Cell)</Cell>
+                    <Cell>Not accepted on most airlines (fire risk).</Cell>
+                    <Cell>N/A</Cell>
+                    <Cell>N/A</Cell>
+                </Row>
+                <Row>
+                    <Cell>Mobility Scooter</Cell>
+                    <Cell>Accepted if battery &lt;300Wh. Must be checked.</Cell>
+                    <Cell>Battery must be disconnected.</Cell>
+                    <Cell>72 hours required</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold> Lithium-ion batteries &gt;300Wh require airline approval.
+                    Always contact the airline <Bold>72 hours before travel</Bold> to confirm policies.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airport Wheelchair Services</Title>
+            <Description>
+                Most airports provide free wheelchair assistance from check-in to boarding.
+                Request at least 48 hours in advance for guaranteed service.
+            </Description>
+            <List type="bullet">
+                <Item>Heathrow (LHR): Dial +44 20 8745 7722 for assistance.</Item>
+                <Item>Changi (SIN): Use the Changi App to request wheelchair service.</Item>
+                <Item>Dubai (DXB): "Marhaba" service offers wheelchair assistance (free for Emirates passengers).</Item>
+                <Item>JFK (USA): Contact your airline or use the TSA Cares program for security assistance.</Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Wheelchair User Denied Boarding in Frankfurt</Title>
+                <Situation>
+                    A traveler in an electric wheelchair was denied boarding on Lufthansa because:
+                    <List type="bullet">
+                        <Item>The wheelchair battery exceeded 300Wh (350Wh).</Item>
+                        <Item>The airline was not notified 72 hours in advance.</Item>
+                    </List>
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Contacted Lufthansa's special assistance team to approve the battery.</Item>
+                        <Item>Provided a <Bold>doctor's letter</Bold> confirming medical necessity.</Item>
+                        <Item>Wheelchair was loaded as cargo with special handling (extra $200 fee).</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always confirm wheelchair specifications with the airline <Bold>at least 72 hours before travel</Bold>.
+                    Carry a doctor's letter for electric wheelchairs.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline-Specific Policies</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>Wheelchair Policy</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Emirates</Cell>
+                    <Cell>Free wheelchair assistance. Electric wheelchairs accepted if battery &lt;300Wh.</Cell>
+                    <Cell>+971 600 555 555 (Special Assistance)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Singapore Airlines</Cell>
+                    <Cell>Wheelchairs accepted up to 150kg. Battery must be removed and carried in cabin.</Cell>
+                    <Cell>+65 6223 8888</Cell>
+                </Row>
+                <Row>
+                    <Cell>Delta</Cell>
+                    <Cell>Wheelchairs accepted. Battery rules follow FAA guidelines (&lt;300Wh).</Cell>
+                    <Cell>1-800-221-1212 (Accessibility Desk)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Lufthansa</Cell>
+                    <Cell>Wheelchairs up to 140kg. Requires 48h notice for electric wheelchairs.</Cell>
+                    <Cell>+49 69 86 799 799</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+    </Section>
+
+    <!-- 2. Visual Impairment Policies -->
+    <Section id="visual_impairment">
+        <Title>Visual Impairment Policies</Title>
+        <Description>
+            Guidelines for blind and low-vision travelers, including service animal policies,
+            airport navigation assistance, and in-flight accommodations.
+        </Description>
+
+        <SubSection>
+            <Title>Airport Assistance for Visual Impairment</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Guide Dogs:</Bold> Accepted in all airports. Some countries (e.g., UAE, Australia)
+                    require <Bold>import permits</Bold> and health certificates.
+                </Item>
+                <Item>
+                    <Bold>Airport Navigation:</Bold> Most airports offer free escort services.
+                    Request at check-in or via the airport app.
+                </Item>
+                <Item>
+                    <Bold>Security Screening:</Bold> TSA (USA) and EU airports allow
+                    <Bold>private screening</Bold> if requested.
+                </Item>
+                <Item>
+                    <Bold>Braille Signage:</Bold> Available in major airports (e.g., Changi, Heathrow, Narita).
+                </Item>
+            </List>
+
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Services for Visual Impairment</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Free escort service, Braille maps, guide dog relief areas.</Cell>
+                    <Cell>+44 20 8745 7722 (Accessibility Team)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Tactile paths, Braille signage, guide dog relief areas in all terminals.</Cell>
+                    <Cell>+65 6595 6868 (Changi Cares)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Escort service, priority boarding for visually impaired travelers.</Cell>
+                    <Cell>+971 4 224 5555 (Marhaba Service)</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>TSA Cares program for private screening, escort service.</Cell>
+                    <Cell>1-855-787-2227 (TSA Cares)</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline Policies for Visual Impairment</Title>
+            <Description>
+                Airlines must accommodate visually impaired travelers under
+                <Bold>ACAA (USA), EU 1107/2006 (Europe), and local regulations</Bold>.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Bulkhead seats often reserved for guide dogs.
+                    Request at booking.
+                </Item>
+                <Item>
+                    <Bold>In-Flight Assistance:</Bold> Crew can read menus, assist with meals, and describe safety procedures.
+                </Item>
+                <Item>
+                    <Bold>Guide Dogs:</Bold> Travel free in cabin. Requires health certificate and harness.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Guide Dog Denied Entry in Australia</Title>
+                <Situation>
+                    A traveler with a guide dog was denied entry in Sydney (SYD) because:
+                    <List type="bullet">
+                        <Item>The dog's <Bold>rabies vaccination certificate</Bold> was missing.</Item>
+                        <Item>Australia requires an <Bold>import permit</Bold> for guide dogs.</Item>
+                    </List>
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Contacted the Australian Department of Agriculture to apply for an emergency import permit.</Item>
+                        <Item>Provided a <Bold>veterinary health certificate</Bold> issued within 10 days of travel.</Item>
+                        <Item>The dog was quarantined for 10 days at the traveler's expense ($1,200 AUD).</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Check <Bold>destination country's pet import rules</Bold> at least 30 days before travel.
+                    Australia and NZ have <Bold>strict biosecurity laws</Bold> for animals.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 3. Hearing Impairment Policies -->
+    <Section id="hearing_impairment">
+        <Title>Hearing Impairment Policies</Title>
+        <Description>
+            Accommodations for deaf and hard-of-hearing travelers, including hearing loops,
+            sign language interpreters, and in-flight communication tools.
+        </Description>
+
+        <SubSection>
+            <Title>Airport & Airline Accommodations</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Hearing Loops:</Bold> Available at check-in counters in major airports (e.g., Heathrow, Amsterdam, Tokyo).
+                </Item>
+                <Item>
+                    <Bold>Sign Language Interpreters:</Bold> Some airports (e.g., Changi, Incheon) offer free interpreters.
+                    Request at least 48 hours in advance.
+                </Item>
+                <Item>
+                    <Bold>Visual Alerts:</Bold> Airlines provide visual announcements for safety briefings and boarding calls.
+                </Item>
+                <Item>
+                    <Bold>TTY Phones:</Bold> Available in US airports for emergency communication.
+                </Item>
+            </List>
+
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Hearing Impairment Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Hearing loops at check-in, sign language interpreters on request.</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Visual paging system, sign language interpreters, hearing loops.</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Priority assistance, hearing loops at info desks.</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>TTY phones, visual alerts, ASL interpreters on request.</Cell>
+                    <Cell>1-855-787-2227 (TSA Cares)</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>In-Flight Accommodations</Title>
+            <Description>
+                Airlines must provide accommodations under disability laws.
+                Request services at least 48 hours before departure.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Bulkhead or aisle seats for better communication with crew.
+                </Item>
+                <Item>
+                    <Bold>Safety Briefings:</Bold> Flight attendants will provide individual briefings if requested.
+                </Item>
+                <Item>
+                    <Bold>Captioning:</Bold> Some airlines (e.g., Delta, Emirates) offer captioned in-flight entertainment.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Deaf Traveler Misses Boarding Call</Title>
+                <Situation>
+                    A deaf traveler missed their boarding call on a Lufthansa flight from Frankfurt (FRA) to New York (JFK)
+                    because the gate agent did not provide a visual alert.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Contacted the gate agent via a <Bold>written note</Bold> (carried pre-written cards).</Item>
+                        <Item>Lufthansa rebooked them on the next flight and provided a <Bold>visual paging device</Bold> for the new flight.</Item>
+                        <Item>Filed a complaint with Lufthansa's accessibility team and received a <Bold>€200 voucher</Bold>.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always inform the airline of your hearing impairment <Bold>at booking</Bold>.
+                    Carry <Bold>pre-written communication cards</Bold> in the local language.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 4. Cognitive & Developmental Disabilities -->
+    <Section id="cognitive_disabilities">
+        <Title>Cognitive & Developmental Disabilities</Title>
+        <Description>
+            Policies and support for travelers with autism, Down syndrome, dementia, and other cognitive disabilities,
+            including airport navigation, security screening, and in-flight assistance.
+        </Description>
+
+        <SubSection>
+            <Title>Airport Programs for Cognitive Disabilities</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Sunflower Lanyard:</Bold> Discreetly indicates hidden disabilities.
+                    Available at <Bold>Heathrow, Gatwick, Changi, Dubai, and most US airports</Bold>.
+                </Item>
+                <Item>
+                    <Bold>Quiet Rooms:</Bold> Some airports (e.g., Changi, Amsterdam, Manchester) offer sensory-friendly spaces.
+                </Item>
+                <Item>
+                    <Bold>Priority Security:</Bold> Many airports offer fast-track security for travelers with cognitive disabilities.
+                </Item>
+                <Item>
+                    <Bold>Pre-Visit Programs:</Bold> Some airports (e.g., Changi, Heathrow) offer familiarization tours.
+                </Item>
+            </List>
+
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Cognitive Disability Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Sunflower lanyards, quiet rooms, priority security.</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Sunflower lanyards, quiet rooms, pre-visit tours, trained staff.</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Sunflower lanyards, priority boarding, trained staff.</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>TSA Cares program, Sunflower lanyards, quiet areas.</Cell>
+                    <Cell>1-855-787-2227 (TSA Cares)</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline Policies for Cognitive Disabilities</Title>
+            <Description>
+                Airlines must accommodate travelers with cognitive disabilities under disability rights laws.
+                Request assistance at booking.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Bulkhead or window seats may be preferred for sensory needs.
+                </Item>
+                <Item>
+                    <Bold>Boarding:</Bold> Priority boarding available to reduce stress.
+                </Item>
+                <Item>
+                    <Bold>In-Flight Assistance:</Bold> Crew can provide extra explanations and reassurance.
+                </Item>
+                <Item>
+                    <Bold>Sensory Kits:</Bold> Some airlines (e.g., Emirates, Qantas) provide noise-canceling headphones and fidget toys.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Autistic Traveler Overwhelmed at Security</Title>
+                <Situation>
+                    A 12-year-old autistic traveler became overwhelmed during security screening at Atlanta (ATL),
+                    leading to a meltdown. TSA officers were unsure how to assist.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>The family had pre-registered with <Bold>TSA Cares</Bold>, allowing for a private screening.</Item>
+                        <Item>TSA provided a <Bold>quiet area</Bold> to calm down before continuing.</Item>
+                        <Item>The airline (Delta) offered <Bold>priority boarding</Bold> to avoid crowds.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    <List type="bullet">
+                        <Item>Register with <Bold>TSA Cares (USA)</Bold> or the airport's accessibility team before travel.</Item>
+                        <Item>Request a <Bold>Sunflower lanyard</Bold> to discreetly indicate needs.</Item>
+                        <Item>Carry <Bold>noise-canceling headphones</Bold> and comfort items.</Item>
+                    </List>
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 5. Traveling with Medical Conditions -->
+    <Section id="medical_conditions">
+        <Title>Traveling with Medical Conditions</Title>
+        <Description>
+            Policies for travelers with chronic illnesses, recent surgeries, or medical devices,
+            including oxygen tanks, dialysis machines, and in-flight medical support.
+        </Description>
+
+        <SubSection>
+            <Title>Medical Devices & Airline Policies</Title>
+            <Table>
+                <Header>
+                    <Column>Medical Device</Column>
+                    <Column>Airline Policy</Column>
+                    <Column>Documentation Required</Column>
+                </Header>
+                <Row>
+                    <Cell>Portable Oxygen Concentrator (POC)</Cell>
+                    <Cell>Allowed in cabin if FAA-approved. Must be used during flight.</Cell>
+                    <Cell>Doctor's letter + FAA approval list.</Cell>
+                </Row>
+                <Row>
+                    <Cell>CPAP Machine</Cell>
+                    <Cell>Allowed in cabin. Must be used during takeoff/landing if needed.</Cell>
+                    <Cell>Doctor's letter recommended.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Insulin Pump</Cell>
+                    <Cell>Allowed in cabin. Security may require additional screening.</Cell>
+                    <Cell>Doctor's letter + prescription.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dialysis Machine</Cell>
+                    <Cell>Not allowed in cabin. Must be shipped as cargo.</Cell>
+                    <Cell>Medical certificate + airline approval.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Pacemaker/Defibrillator</Cell>
+                    <Cell>Allowed. Inform crew before flight.</Cell>
+                    <Cell>Doctor's letter + device ID card.</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold> Lithium batteries for medical devices must be carried in the cabin.
+                    Spare batteries must be in original packaging.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airport Medical Assistance</Title>
+            <Description>
+                Most airports have medical clinics and trained staff to assist travelers with medical needs.
+            </Description>
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Medical Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>24/7 medical clinic, oxygen refills, defibrillators.</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>24/7 clinic, pharmacy, oxygen refills, wheelchair loans.</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Medical clinic, pharmacy, oxygen refills, ambulance service.</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>Urgent care clinic, oxygen refills, defibrillators.</Cell>
+                    <Cell>1-855-787-2227</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>In-Flight Medical Support</Title>
+            <Description>
+                Airlines are not required to provide medical care but must assist in emergencies.
+                Some offer basic medical kits and trained staff.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Medical Kits:</Bold> Most airlines carry basic first-aid kits and defibrillators.
+                </Item>
+                <Item>
+                    <Bold>Doctor on Board:</Bold> Some flights (e.g., Emirates, Singapore Airlines) have doctors among passengers.
+                </Item>
+                <Item>
+                    <Bold>Oxygen:</Bold> Only provided in emergencies. POC users must bring their own.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Diabetic Traveler Denied Boarding</Title>
+                <Situation>
+                    A traveler with Type 1 diabetes was denied boarding on a Ryanair flight from Dublin (DUB) to Barcelona (BCN)
+                    because they carried <Bold>insulin syringes</Bold> without a doctor's letter.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Provided a <Bold>prescription label</Bold> on the insulin box.</Item>
+                        <Item>Ryanair allowed boarding after a <Bold>15-minute delay</Bold> for supervisor approval.</Item>
+                        <Item>Filed a complaint with Ryanair's customer service and received a <Bold>€50 voucher</Bold>.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always carry a <Bold>doctor's letter</Bold> for medical devices/medications,
+                    even if not explicitly required. <Bold>Prescription labels</Bold> can help in emergencies.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 6. Pregnant Travelers -->
+    <Section id="pregnant_travelers">
+        <Title>Pregnant Travelers</Title>
+        <Description>
+            Policies for pregnant travelers, including airline restrictions, medical certificates,
+            and in-flight comfort tips.
+        </Description>
+
+        <SubSection>
+            <Title>Airline Policies by Trimester</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>&lt;28 Weeks</Column>
+                    <Column>28–36 Weeks</Column>
+                    <Column>&gt;36 Weeks</Column>
+                </Header>
+                <Row>
+                    <Cell>Emirates</Cell>
+                    <Cell>No restrictions.</Cell>
+                    <Cell>Doctor's letter required.</Cell>
+                    <Cell>Not allowed to fly.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Singapore Airlines</Cell>
+                    <Cell>No restrictions.</Cell>
+                    <Cell>Doctor's letter required after 28 weeks.</Cell>
+                    <Cell>Not allowed after 36 weeks.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Delta</Cell>
+                    <Cell>No restrictions.</Cell>
+                    <Cell>Doctor's letter required after 28 weeks.</Cell>
+                    <Cell>Not allowed after 36 weeks (32 weeks for international).</Cell>
+                </Row>
+                <Row>
+                    <Cell>Lufthansa</Cell>
+                    <Cell>No restrictions.</Cell>
+                    <Cell>Doctor's letter required after 28 weeks.</Cell>
+                    <Cell>Not allowed after 36 weeks.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Qatar Airways</Cell>
+                    <Cell>No restrictions.</Cell>
+                    <Cell>Doctor's letter required after 28 weeks.</Cell>
+                    <Cell>Not allowed after 36 weeks.</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Doctor's Letter Requirements:</Bold> Must include due date, confirmation of low-risk pregnancy,
+                    and approval for air travel. Some airlines require the letter to be &lt;7 days old.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airport & In-Flight Comfort Tips</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Request a bulkhead or aisle seat for extra legroom.
+                    Some airlines (e.g., Emirates) offer <Bold>pregnancy seat belts</Bold>.
+                </Item>
+                <Item>
+                    <Bold>Hydration:</Bold> Drink plenty of water to avoid dehydration (cabin air is dry).
+                </Item>
+                <Item>
+                    <Bold>Compression Socks:</Bold> Recommended to reduce swelling.
+                </Item>
+                <Item>
+                    <Bold>Medical Kit:</Bold> Carry prenatal vitamins, doctor's contact info, and a copy of your medical records.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Pregnant Traveler Denied Boarding at 34 Weeks</Title>
+                <Situation>
+                    A traveler at 34 weeks pregnant was denied boarding on a Qantas flight from Sydney (SYD) to Los Angeles (LAX)
+                    because her <Bold>doctor's letter was 10 days old</Bold> (Qantas requires &lt;7 days).
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Contacted her OB-GYN for an <Bold>emergency letter</Bold> (emailed within 2 hours).</Item>
+                        <Item>Qantas rebooked her on the next flight (6 hours later).</Item>
+                        <Item>Received a <Bold>$200 voucher</Bold> for the inconvenience.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always carry a <Bold>recent doctor's letter</Bold> (&lt;7 days old for most airlines).
+                    Confirm the airline's <Bold>pregnancy policy</Bold> before booking.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 7. Unaccompanied Minors with Special Needs -->
+    <Section id="unaccompanied_minors">
+        <Title>Unaccompanied Minors with Special Needs</Title>
+        <Description>
+            Policies and procedures for unaccompanied minors (UM) with disabilities or medical conditions,
+            including airline escort services and required documentation.
+        </Description>
+
+        <SubSection>
+            <Title>Airline UM Policies for Special Needs</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>Age Range</Column>
+                    <Column>Special Needs Accommodations</Column>
+                    <Cell>UM Fee</Cell>
+                </Header>
+                <Row>
+                    <Cell>Emirates</Cell>
+                    <Cell>5–12 years</Cell>
+                    <Cell>Accepts UM with medical conditions if pre-approved. Oxygen/medication assistance available.</Cell>
+                    <Cell>$50–$100</Cell>
+                </Row>
+                <Row>
+                    <Cell>Singapore Airlines</Cell>
+                    <Cell>5–12 years</Cell>
+                    <Cell>Accepts UM with diabetes, asthma (with doctor's letter).</Cell>
+                    <Cell>$30–$80</Cell>
+                </Row>
+                <Row>
+                    <Cell>Delta</Cell>
+                    <Cell>5–14 years</Cell>
+                    <Cell>Accepts UM with medical conditions if parent provides detailed instructions.</Cell>
+                    <Cell>$150</Cell>
+                </Row>
+                <Row>
+                    <Cell>Lufthansa</Cell>
+                    <Cell>5–11 years</Cell>
+                    <Cell>Accepts UM with cognitive disabilities if accompanied by a carer (extra fee).</Cell>
+                    <Cell>€50–€100</Cell>
+                </Row>
+                <Row>
+                    <Cell>Qatar Airways</Cell>
+                    <Cell>5–12 years</Cell>
+                    <Cell>Accepts UM with medical conditions if pre-approved. Provides extra snacks/comfort items.</Cell>
+                    <Cell>$50</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold> Airlines require <Bold>detailed medical instructions</Bold> for UM with special needs,
+                    including medication schedules, allergy info, and emergency contacts.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <SubSection>
+            <Title>Required Documentation for UM with Special Needs</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Medical Consent Form:</Bold> Signed by a doctor, detailing medications, allergies, and emergency procedures.
+                </Item>
+                <Item>
+                    <Bold>Parent/Guardian Contact Info:</Bold> Multiple emergency contacts required.
+                </Item>
+                <Item>
+                    <Bold>UM Service Request Form:</Bold> Provided by the airline, must be completed 48h before flight.
+                </Item>
+                <Item>
+                    <Bold>Special Instructions:</Bold> E.g., "Child needs assistance with meals," "Requires quiet seating."
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Autistic UM Denied Boarding Without Parent</Title>
+                <Situation>
+                    A 10-year-old autistic child was denied boarding on a United flight from Chicago (ORD) to London (LHR)
+                    because the airline required a <Bold>parent or carer to accompany</Bold> due to their condition.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Parent booked a <Bold>separate seat for a carer</Bold> (extra $800).</Item>
+                        <Item>United provided a <Bold>Sunflower lanyard</Bold> and priority boarding for the child.</Item>
+                        <Item>The carer received a <Bold>$200 discount</Bold> from United for assisting.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Some airlines <Bold>do not accept UM with cognitive disabilities</Bold> unless accompanied by a carer.
+                    Always confirm the airline's <Bold>UM policy for special needs</Bold> before booking.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 8. Service Animals -->
+    <Section id="service_animals">
+        <Title>Service Animals</Title>
+        <Description>
+            Policies for travelers with service animals, including emotional support animals (ESA),
+            guide dogs, and psychiatric service animals. Rules vary by country and airline.
+        </Description>
+
+        <SubSection>
+            <Title>Service Animal vs. Emotional Support Animal (ESA)</Title>
+            <Table>
+                <Header>
+                    <Column>Type</Column>
+                    <Column>Definition</Column>
+                    <Column>Airline Policy (2026)</Column>
+                    <Column>Documentation Required</Column>
+                </Header>
+                <Row>
+                    <Cell>Service Animal (e.g., Guide Dog)</Cell>
+                    <Cell>Trained to perform tasks for a disability (e.g., guiding blind individuals).</Cell>
+                    <Cell>Allowed in cabin for free. No breed restrictions.</Cell>
+                    <Cell>Vaccination records, health certificate, training certification.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Psychiatric Service Animal</Cell>
+                    <Cell>Trained to assist with psychiatric disabilities (e.g., PTSD, anxiety).</Cell>
+                    <Cell>Allowed in cabin for free. Some airlines require 48h notice.</Cell>
+                    <Cell>Doctor's letter, vaccination records, training certification.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Emotional Support Animal (ESA)</Cell>
+                    <Cell>Provides comfort but not trained for tasks. <Bold>No longer recognized as service animals on most airlines (2026).</Bold></Cell>
+                    <Cell>Treated as pets. Fees and carrier requirements apply.</Cell>
+                    <Cell>Veterinary health certificate (if allowed).</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold> The U.S. Department of Transportation (DOT) <Bold>no longer recognizes ESAs as service animals</Bold>
+                    (since 2021). Most airlines now treat ESAs as pets, requiring fees and carriers.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <SubSection>
+            <Title>Country-Specific Service Animal Rules</Title>
+            <Table>
+                <Header>
+                    <Column>Country</Column>
+                    <Column>Service Animal Policy</Column>
+                    <Column>Quarantine Requirements</Column>
+                    <Column>Documentation Required</Column>
+                </Header>
+                <Row>
+                    <Cell>USA</Cell>
+                    <Cell>Allowed in cabin. No breed restrictions.</Cell>
+                    <Cell>None.</Cell>
+                    <Cell>DOT form, vaccination records.</Cell>
+                </Row>
+                <Row>
+                    <Cell>UK/EU</Cell>
+                    <Cell>Allowed in cabin. Must comply with EU Pet Travel Scheme.</Cell>
+                    <Cell>None if from EU/approved countries.</Cell>
+                    <Cell>EU pet passport, microchip, rabies vaccine.</Cell>
+                </Row>
+                <Row>
+                    <Cell>UAE</Cell>
+                    <Cell>Allowed but requires import permit.</Cell>
+                    <Cell>None if documents are in order.</Cell>
+                    <Cell>Import permit, health certificate, vaccination records.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Australia</Cell>
+                    <Cell>Allowed but subject to strict quarantine.</Cell>
+                    <Cell>10 days (if from approved countries).</Cell>
+                    <Cell>Import permit, health certificate, rabies titer test.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Japan</Cell>
+                    <Cell>Allowed but requires prior approval.</Cell>
+                    <Cell>None if documents are in order.</Cell>
+                    <Cell>MAFF approval, health certificate, vaccination records.</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline-Specific Service Animal Policies</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>Service Animal Policy</Column>
+                    <Column>ESA Policy</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Emirates</Cell>
+                    <Cell>Allowed in cabin. Requires 48h notice.</Cell>
+                    <Cell>Not accepted. Treated as pet.</Cell>
+                    <Cell>+971 600 555 555</Cell>
+                </Row>
+                <Row>
+                    <Cell>Singapore Airlines</Cell>
+                    <Cell>Allowed in cabin. Requires DOT form.</Cell>
+                    <Cell>Not accepted. Treated as pet.</Cell>
+                    <Cell>+65 6223 8888</Cell>
+                </Row>
+                <Row>
+                    <Cell>Delta</Cell>
+                    <Cell>Allowed in cabin. Requires DOT form.</Cell>
+                    <Cell>Not accepted. Treated as pet.</Cell>
+                    <Cell>1-800-221-1212</Cell>
+                </Row>
+                <Row>
+                    <Cell>Lufthansa</Cell>
+                    <Cell>Allowed in cabin. Requires EU health certificate.</Cell>
+                    <Cell>Not accepted. Treated as pet.</Cell>
+                    <Cell>+49 69 86 799 799</Cell>
+                </Row>
+                <Row>
+                    <Cell>Qatar Airways</Cell>
+                    <Cell>Allowed in cabin. Requires 48h notice.</Cell>
+                    <Cell>Not accepted. Treated as pet.</Cell>
+                    <Cell>+974 4023 0000</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Real-Life Scenario: Guide Dog Quarantined in Australia</Title>
+            <Situation>
+                A traveler with a guide dog was shocked when their dog was <Bold>quarantined for 10 days</Bold>
+                upon arrival in Sydney (SYD) because they lacked the <Bold>rabies titer test</Bold>
+                (required for Australia).
+            </Situation>
+            <Solution>
+                <List type="number">
+                    <Item>Contacted the <Bold>Australian Department of Agriculture</Bold> to explain the oversight.</Item>
+                    <Item>Provided the dog's <Bold>vaccination records</Bold> and a letter from the vet.</Item>
+                    <Item>Paid for <Bold>expedited testing</Bold> ($500 AUD) to reduce quarantine to 5 days.</Item>
+                </List>
+            </Solution>
+            <Lesson>
+                Australia and New Zealand have <Bold>strict biosecurity laws</Bold> for animals.
+                Always verify <Bold>import requirements</Bold> with the destination country's agriculture department.
+            </Lesson>
+        </SubSection>
+    </Section>
+
+    <!-- 9. Autism Spectrum Travelers -->
+    <Section id="autism_spectrum">
+        <Title>Autism Spectrum Travelers</Title>
+        <Description>
+            Policies and support for travelers on the autism spectrum, including sensory-friendly
+            travel options, airport navigation assistance, and in-flight accommodations.
+        </Description>
+
+        <SubSection>
+            <Title>Airport Programs for Autism</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Sunflower Lanyard:</Bold> Available at most major airports (e.g., Heathrow, Changi, Dubai).
+                    Indicates hidden disabilities to staff.
+                </Item>
+                <Item>
+                    <Bold>Quiet Rooms:</Bold> Sensory-friendly spaces in airports like Changi, Amsterdam, and Manchester.
+                </Item>
+                <Item>
+                    <Bold>Priority Security:</Bold> Fast-track lanes to reduce stress (available at LHR, SIN, DXB).
+                </Item>
+                <Item>
+                    <Bold>Pre-Visit Programs:</Bold> Some airports (e.g., Changi, Heathrow) offer familiarization tours.
+                </Item>
+                <Item>
+                    <Bold>TSA Cares (USA):</Bold> Allows for private security screening for travelers with autism.
+                </Item>
+            </List>
+
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Autism-Specific Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Sunflower lanyards, quiet rooms, priority security, trained staff.</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Sunflower lanyards, quiet rooms, pre-visit tours, sensory maps.</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Sunflower lanyards, priority boarding, quiet areas.</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>TSA Cares, Sunflower lanyards, quiet areas, trained staff.</Cell>
+                    <Cell>1-855-787-2227</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline Policies for Autism</Title>
+            <Description>
+                Airlines must accommodate travelers with autism under disability rights laws.
+                Request assistance at booking.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Bulkhead or window seats may be preferred for sensory needs.
+                </Item>
+                <Item>
+                    <Bold>Boarding:</Bold> Priority boarding available to reduce stress.
+                </Item>
+                <Item>
+                    <Bold>In-Flight Assistance:</Bold> Crew can provide extra explanations and reassurance.
+                </Item>
+                <Item>
+                    <Bold>Sensory Kits:</Bold> Some airlines (e.g., Emirates, Qantas) provide noise-canceling headphones and fidget toys.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Autistic Teen Denied Priority Boarding</Title>
+                <Situation>
+                    A 16-year-old autistic traveler was denied priority boarding on a British Airways flight from London (LHR) to New York (JFK),
+                    despite their mother's request. The gate agent claimed it was "only for first-class passengers."
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>The mother showed the agent the <Bold>Sunflower lanyard</Bold> and explained the need for priority boarding.</Item>
+                        <Item>A supervisor intervened and allowed <Bold>early boarding</Bold>.</Item>
+                        <Item>British Airways later apologized and offered a <Bold>£100 voucher</Bold>.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always carry <Bold>documentation</Bold> (e.g., doctor's letter, Sunflower lanyard) to support requests.
+                    If denied, politely ask for a <Bold>supervisor</Bold>.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 10. Elderly Travelers -->
+    <Section id="elderly_travelers">
+        <Title>Elderly Travelers</Title>
+        <Description>
+            Policies and assistance for elderly travelers, including mobility support, medical needs,
+            and airport navigation help.
+        </Description>
+
+        <SubSection>
+            <Title>Airport Services for Elderly Travelers</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Wheelchair Assistance:</Bold> Free service from check-in to boarding.
+                    Request at booking or at the airport.
+                </Item>
+                <Item>
+                    <Bold>Priority Security:</Bold> Available at most airports for travelers over 70.
+                </Item>
+                <Item>
+                    <Bold>Rest Areas:</Bold> Many airports (e.g., Changi, Incheon, Zurich) have quiet zones with recliners.
+                </Item>
+                <Item>
+                    <Bold>Medical Clinics:</Bold> Available for emergencies (e.g., blood pressure checks, minor ailments).
+                </Item>
+            </List>
+
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Elderly Traveler Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Wheelchair assistance, priority security, rest areas, medical clinic.</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Wheelchair assistance, rest areas (including nap rooms), medical clinic, pharmacy.</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Wheelchair assistance, priority boarding, rest areas, medical clinic.</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>Wheelchair assistance, TSA Cares for private screening, rest areas.</Cell>
+                    <Cell>1-855-787-2227</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline Policies for Elderly Travelers</Title>
+            <Description>
+                Airlines offer special assistance for elderly travelers, including priority boarding,
+                extra legroom seats, and medical support.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Seat Selection:</Bold> Bulkhead or aisle seats for easier access.
+                </Item>
+                <Item>
+                    <Bold>Boarding:</Bold> Priority boarding to avoid crowds.
+                </Item>
+                <Item>
+                    <Bold>Medical Support:</Bold> Some airlines (e.g., Emirates, Singapore Airlines) carry basic medical kits.
+                </Item>
+                <Item>
+                    <Bold>Companion Discounts:</Bold> Some airlines offer discounts for companions assisting elderly travelers.
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Elderly Traveler with Dementia Denied Boarding</Title>
+                <Situation>
+                    An 82-year-old traveler with early-stage dementia was denied boarding on a Ryanair flight from Dublin (DUB) to Malta (MLA)
+                    because the gate agent deemed her "unfit to fly" without a companion.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>The traveler's daughter (who was seeing her off) volunteered to <Bold>accompany her</Bold> (last-minute ticket: €200).</Item>
+                        <Item>Ryanair provided a <Bold>wheelchair</Bold> and <Bold>priority boarding</Bold>.</Item>
+                        <Item>The daughter filed a complaint and received a <Bold>€100 voucher</Bold>.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Some budget airlines (e.g., Ryanair, EasyJet) have <Bold>strict policies</Bold> for elderly travelers with cognitive issues.
+                    Always check the airline's <Bold>elderly travel policy</Bold> before booking.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 11. Airport-Specific Accessibility -->
+    <Section id="airport_specific">
+        <Title>Airport-Specific Accessibility Features</Title>
+        <Description>
+            Detailed accessibility features for major global airports, including navigation aids,
+            restrooms, and assistance services.
+        </Description>
+
+        <SubSection>
+            <Title>Top Accessible Airports (2026)</Title>
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Accessibility Rating (1-5)</Column>
+                    <Column>Key Features</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Tactile paths and Braille signage.<br/>
+                        - Quiet rooms and sensory-friendly spaces.<br/>
+                        - Free wheelchair loans.<br/>
+                        - 24/7 medical clinic.
+                    </Cell>
+                    <Cell>+65 6595 6868</Cell>
+                </Row>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Sunflower lanyards for hidden disabilities.<br/>
+                        - Changing Places toilets (for severe disabilities).<br/>
+                        - Free escort service.<br/>
+                        - Priority security lanes.
+                    </Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>4</Cell>
+                    <Cell>
+                        - Marhaba service for wheelchair assistance.<br/>
+                        - Prayer rooms with accessible features.<br/>
+                        - Priority boarding for disabled travelers.<br/>
+                        - Free wheelchair loans.
+                    </Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                </Row>
+                <Row>
+                    <Cell>Amsterdam (AMS)</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Quiet rooms and sensory-friendly spaces.<br/>
+                        - Free wheelchair assistance.<br/>
+                        - Changing Places toilets.<br/>
+                        - Sunflower lanyards.
+                    </Cell>
+                    <Cell>+31 20 794 0800</Cell>
+                </Row>
+                <Row>
+                    <Cell>Tokyo Haneda (HND)</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Tactile paths and Braille signage.<br/>
+                        - Free wheelchair loans.<br/>
+                        - Priority security for elderly/disabled.<br/>
+                        - Quiet rooms with recliners.
+                    </Cell>
+                    <Cell>+81 3-5757-8111</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airport Navigation Aids</Title>
+            <Description>
+                Tools and services to help travelers with disabilities navigate airports.
+            </Description>
+            <List type="bullet">
+                <Item>
+                    <Bold>Mobile Apps:</Bold>
+                    - <Bold>Changi App</Bold> (Singapore): Real-time navigation with accessibility filters.
+                    - <Bold>Heathrow App</Bold> (UK): Step-by-step directions for disabled travelers.
+                    - <Bold>TSA Cares</Bold> (USA): Assistance for security screening.
+                </Item>
+                <Item>
+                    <Bold>Tactile Paths:</Bold> Raised paths for blind/low-vision travelers (e.g., Changi, Narita, Incheon).
+                </Item>
+                <Item>
+                    <Bold>Visual Paging:</Bold> Flashing lights for boarding calls (e.g., Heathrow, Dubai).
+                </Item>
+                <Item>
+                    <Bold>Hearing Loops:</Bold> Available at check-in counters (e.g., Amsterdam, London, Tokyo).
+                </Item>
+            </List>
+        </SubSection>
+    </Section>
+
+    <!-- 12. Airline-Specific Policies -->
+    <Section id="airline_policies">
+        <Title>Airline-Specific Accessibility Policies</Title>
+        <Description>
+            Detailed accessibility policies for major airlines, including seating, boarding, and in-flight assistance.
+        </Description>
+
+        <SubSection>
+            <Title>Top Accessible Airlines (2026)</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>Accessibility Rating (1-5)</Column>
+                    <Column>Key Features</Cell>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Emirates</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Priority boarding for disabled travelers.<br/>
+                        - Medical oxygen available (with 48h notice).<br/>
+                        - Sign language interpreters on request.
+                    </Cell>
+                    <Cell>+971 600 555 555</Cell>
+                </Row>
+                <Row>
+                    <Cell>Singapore Airlines</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Free wheelchair and escort service.<br/>
+                        - Priority boarding for elderly/disabled.<br/>
+                        - Medical oxygen available.<br/>
+                        - Sensory-friendly kits for autistic travelers.
+                    </Cell>
+                    <Cell>+65 6223 8888</Cell>
+                </Row>
+                <Row>
+                    <Cell>Delta</Cell>
+                    <Cell>4</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Priority boarding for disabled travelers.<br/>
+                        - Medical oxygen available (FAA-approved POCs only).<br/>
+                        - TSA Cares coordination for security.
+                    </Cell>
+                    <Cell>1-800-221-1212</Cell>
+                </Row>
+                <Row>
+                    <Cell>Lufthansa</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Free wheelchair and escort service.<br/>
+                        - Priority boarding for disabled travelers.<br/>
+                        - Medical oxygen available.<br/>
+                        - Sign language interpreters on request.
+                    </Cell>
+                    <Cell>+49 69 86 799 799</Cell>
+                </Row>
+                <Row>
+                    <Cell>Qatar Airways</Cell>
+                    <Cell>5</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Priority boarding for disabled travelers.<br/>
+                        - Medical oxygen available (with 48h notice).<br/>
+                        - Sensory-friendly kits for autistic travelers.
+                    </Cell>
+                    <Cell>+974 4023 0000</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airline Seating Policies for Disabilities</Title>
+            <Description>
+                Seating accommodations for travelers with disabilities.
+            </Description>
+            <Table>
+                <Header>
+                    <Column>Disability</Column>
+                    <Column>Recommended Seating</Column>
+                    <Column>Airline Policy</Column>
+                </Header>
+                <Row>
+                    <Cell>Wheelchair Users</Cell>
+                    <Cell>Bulkhead seat (extra legroom).</Cell>
+                    <Cell>Most airlines reserve bulkhead for wheelchair users. Request at booking.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Visual Impairment</Cell>
+                    <Cell>Aisle seat (easier access to crew).</Cell>
+                    <Cell>Airlines provide Braille safety cards and individual briefings.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Hearing Impairment</Cell>
+                    <Cell>Window or aisle seat (for lip-reading crew).</Cell>
+                    <Cell>Visual alerts provided for announcements.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Cognitive Disabilities</Cell>
+                    <Cell>Bulkhead or window seat (less stimulation).</Cell>
+                    <Cell>Some airlines offer sensory-friendly kits (e.g., Emirates, Qantas).</Cell>
+                </Row>
+                <Row>
+                    <Cell>Medical Conditions (e.g., oxygen use)</Cell>
+                    <Cell>Bulkhead seat (for POC users).</Cell>
+                    <Cell>Requires 48h notice and FAA-approved POC.</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+    </Section>
+    <!-- 13. North Africa Airports & Airlines Accessibility -->
+    <Section id="north_africa">
+        <Title>North Africa: Airports & Airlines Accessibility Policies</Title>
+        <Description>
+            Accessibility policies and services for travelers with special needs in North African airports and airlines,
+            including Algeria, Egypt, Libya, Morocco, and Tunisia. Includes real-life scenarios and practical tips.
+        </Description>
+
+        <!-- 13.1 Aéroports d'Afrique du Nord -->
+        <SubSection>
+            <Title>North African Airports: Accessibility Features</Title>
+            <Table>
+                <Header>
+                    <Column>Airport (Code)</Column>
+                    <Column>Country</Column>
+                    <Column>Accessibility Rating (1-5)</Column>
+                    <Column>Key Features</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Mohammed V International (CMN)</Cell>
+                    <Cell>Morocco</Cell>
+                    <Cell>4</Cell>
+                    <Cell>
+                        - Wheelchair assistance (free, request at check-in).<br/>
+                        - Priority lanes for disabled travelers.<br/>
+                        - Accessible restrooms in all terminals.<br/>
+                        - Sunflower lanyards available (hidden disabilities).<br/>
+                        - Dedicated staff for Arabic/French/English speakers.
+                    </Cell>
+                    <Cell>+212 522 539 040</Cell>
+                </Row>
+                <Row>
+                    <Cell>Cairo International (CAI)</Cell>
+                    <Cell>Egypt</Cell>
+                    <Cell>3</Cell>
+                    <Cell>
+                        - Wheelchair assistance (request 24h in advance).<br/>
+                        - Limited accessible restrooms (mostly in Terminal 3).<br/>
+                        - No Sunflower lanyard program (yet).<br/>
+                        - Staff may not speak English (Arabic preferred).
+                    </Cell>
+                    <Cell>+20 2 2265 5000</Cell>
+                </Row>
+                <Row>
+                    <Cell>Tunis-Carthage (TUN)</Cell>
+                    <Cell>Tunisia</Cell>
+                    <Cell>4</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Accessible restrooms in main terminal.<br/>
+                        - Priority security for disabled travelers.<br/>
+                        - French/Arabic-speaking staff (limited English).
+                    </Cell>
+                    <Cell>+216 71 754 000</Cell>
+                </Row>
+                <Row>
+                    <Cell>Algiers Houari Boumediene (ALG)</Cell>
+                    <Cell>Algeria</Cell>
+                    <Cell>3</Cell>
+                    <Cell>
+                        - Wheelchair assistance available (request at check-in).<br/>
+                        - Few accessible restrooms (mostly in departures).<br/>
+                        - No priority security lanes.<br/>
+                        - Staff primarily Arabic/French-speaking.
+                    </Cell>
+                    <Cell>+213 21 98 22 00</Cell>
+                </Row>
+                <Row>
+                    <Cell>Tripoli International (TIP)</Cell>
+                    <Cell>Libya</Cell>
+                    <Cell>2</Cell>
+                    <Cell>
+                        - Limited accessibility services.<br/>
+                        - Wheelchair assistance may not be available.<br/>
+                        - No dedicated staff for disabled travelers.<br/>
+                        - Travel not recommended for disabled travelers due to infrastructure issues.
+                    </Cell>
+                    <Cell>+218 21 335 1256</Cell>
+                </Row>
+                <Row>
+                    <Cell>Marrakech Menara (RAK)</Cell>
+                    <Cell>Morocco</Cell>
+                    <Cell>4</Cell>
+                    <Cell>
+                        - Wheelchair assistance (free).<br/>
+                        - Accessible restrooms in main terminal.<br/>
+                        - Sunflower lanyards available.<br/>
+                        - Staff fluent in Arabic/French/English.
+                    </Cell>
+                    <Cell>+212 524 447 910</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold> North African airports vary widely in accessibility.
+                    <Bold>Morocco and Tunisia</Bold> offer the best services, while <Bold>Libya and Algeria</Bold> lag behind.
+                    Always <Bold>confirm services 48h before travel</Bold>.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <!-- 13.2 Compagnies aériennes d'Afrique du Nord -->
+        <SubSection>
+            <Title>North African Airlines: Special Needs Policies</Title>
+            <Table>
+                <Header>
+                    <Column>Airline</Column>
+                    <Column>Country</Column>
+                    <Column>Wheelchair Policy</Column>
+                    <Column>Service Animals</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>Royal Air Maroc</Cell>
+                    <Cell>Morocco</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Electric wheelchairs accepted if battery &lt;300Wh.<br/>
+                        - 48h notice required for electric wheelchairs.
+                    </Cell>
+                    <Cell>
+                        - Service animals allowed in cabin (with health certificate).<br/>
+                        - No ESAs accepted.
+                    </Cell>
+                    <Cell>+212 522 489 700</Cell>
+                </Row>
+                <Row>
+                    <Cell>EgyptAir</Cell>
+                    <Cell>Egypt</Cell>
+                    <Cell>
+                        - Manual wheelchairs accepted (free).<br/>
+                        - Electric wheelchairs require 72h notice.<br/>
+                        - Battery must be &lt;300Wh.
+                    </Cell>
+                    <Cell>
+                        - Service animals allowed (with import permit).<br/>
+                        - No ESAs accepted.
+                    </Cell>
+                    <Cell>+20 2 2696 6966</Cell>
+                </Row>
+                <Row>
+                    <Cell>Tunisair</Cell>
+                    <Cell>Tunisia</Cell>
+                    <Cell>
+                        - Free wheelchair assistance.<br/>
+                        - Electric wheelchairs accepted if battery &lt;300Wh.<br/>
+                        - 48h notice required.
+                    </Cell>
+                    <Cell>
+                        - Service animals allowed (with health certificate).<br/>
+                        - No ESAs accepted.
+                    </Cell>
+                    <Cell>+216 71 754 000</Cell>
+                </Row>
+                <Row>
+                    <Cell>Air Algérie</Cell>
+                    <Cell>Algeria</Cell>
+                    <Cell>
+                        - Manual wheelchairs accepted (free).<br/>
+                        - Electric wheelchairs require 72h notice.<br/>
+                        - Battery must be &lt;300Wh.
+                    </Cell>
+                    <Cell>
+                        - Service animals allowed (with health certificate).<br/>
+                        - No ESAs accepted.
+                    </Cell>
+                    <Cell>+213 21 98 22 00</Cell>
+                </Row>
+                <Row>
+                    <Cell>Libyan Airlines</Cell>
+                    <Cell>Libya</Cell>
+                    <Cell>
+                        - Limited wheelchair assistance.<br/>
+                        - Electric wheelchairs not accepted.<br/>
+                        - No guarantee of assistance.
+                    </Cell>
+                    <Cell>
+                        - Service animals not accepted.<br/>
+                        - Travel not recommended for disabled travelers.
+                    </Cell>
+                    <Cell>+218 21 335 1256</Cell>
+                </Row>
+            </Table>
+
+            <Note>
+                <Text>
+                    <Bold>Important:</Bold>
+                    - <Bold>Royal Air Maroc and Tunisair</Bold> offer the best accessibility services in North Africa.
+                    - <Bold>EgyptAir and Air Algérie</Bold> require <Bold>longer notice periods</Bold> (72h for electric wheelchairs).
+                    - <Bold>Libyan Airlines</Bold> has <Bold>very limited services</Bold>—avoid if possible.
+                </Text>
+            </Note>
+        </SubSection>
+
+        <!-- 13.3 Scénarios réels en Afrique du Nord -->
+        <SubSection>
+            <Title>Real-Life Scenarios in North Africa</Title>
+
+            <RealLifeScenario>
+                <Title>Wheelchair User Stranded in Cairo</Title>
+                <Situation>
+                    A traveler in an electric wheelchair arrived at <Bold>Cairo International (CAI)</Bold> to find that:
+                    <List type="bullet">
+                        <Item>The airline (<Bold>EgyptAir</Bold>) had <Bold>not loaded their wheelchair</Bold> onto the plane.</Item>
+                        <Item>No spare wheelchairs were available at the airport.</Item>
+                        <Item>Staff spoke limited English, making communication difficult.</Item>
+                    </List>
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>The traveler contacted the <Bold>US Embassy in Cairo</Bold> (+20 2 2797 3300) for assistance.</Item>
+                        <Item>EgyptAir provided a <Bold>manual wheelchair loaner</Bold> and rebooked the traveler on the next flight.</Item>
+                        <Item>The traveler received a <Bold>$300 compensation</Bold> for the inconvenience.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    - Always <Bold>confirm wheelchair loading</Bold> with the airline <Bold>before boarding</Bold>.
+                    - Carry the <Bold>embassy contact</Bold> for your destination country.
+                    - In Egypt, <Bold>Arabic or French</Bold> speakers may get faster assistance.
+                </Lesson>
+            </RealLifeScenario>
+
+            <RealLifeScenario>
+                <Title>Diabetic Traveler Denied Medication in Tunisia</Title>
+                <Situation>
+                    A diabetic traveler was stopped at <Bold>Tunis-Carthage Airport (TUN)</Bold> because:
+                    <List type="bullet">
+                        <Item>Security confiscated their <Bold>insulin syringes</Bold>, claiming they were "not properly labeled."</Item>
+                        <Item>The traveler had no <Bold>doctor's letter in Arabic/French</Bold>.</Item>
+                    </List>
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>A fellow traveler helped translate and explain the situation to security.</Item>
+                        <Item>The traveler showed the <Bold>original prescription bottle</Bold> (with pharmacy label).</Item>
+                        <Item>Security released the insulin after a <Bold>30-minute delay</Bold>.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    - Always carry a <Bold>doctor's letter translated into Arabic/French</Bold> for North Africa.
+                    - Keep medications in <Bold>original, labeled containers</Bold>.
+                    - Tunisian security is <Bold>strict but reasonable</Bold>—patience and translation help.
+                </Lesson>
+            </RealLifeScenario>
+
+            <RealLifeScenario>
+                <Title>Autistic Teen Overwhelmed in Marrakech</Title>
+                <Situation>
+                    A 15-year-old autistic traveler became overwhelmed by crowds and noise at <Bold>Marrakech Menara Airport (RAK)</Bold>.
+                    The family had not requested assistance in advance.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>The family asked for help at the <Bold>information desk</Bold>, where staff provided a <Bold>quiet room</Bold>.</Item>
+                        <Item>Royal Air Maroc offered <Bold>priority boarding</Bold> to avoid crowds.</Item>
+                        <Item>The teen was given a <Bold>Sunflower lanyard</Bold> for future travel.</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    - Request <Bold>assistance in advance</Bold> (even for hidden disabilities).
+                    - <Bold>Marrakech Airport</Bold> has <Bold>good accessibility services</Bold>—use them!
+                    - Sunflower lanyards are available in <Bold>Morocco</Bold> (like in Europe).
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+
+        <!-- 13.4 Conseils pratiques pour l'Afrique du Nord -->
+        <SubSection>
+            <Title>Practical Tips for Traveling in North Africa with Special Needs</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Language:</Bold> Learn basic phrases in <Bold>Arabic or French</Bold>—English is not widely spoken.
+                    Example: "<Bold>Ana behtaj mosaaada</Bold>" (I need help) in Arabic.
+                </Item>
+                <Item>
+                    <Bold>Documentation:</Bold> Carry <Bold>translated copies</Bold> of medical letters (Arabic/French).
+                </Item>
+                <Item>
+                    <Bold>Airport Assistance:</Bold> Request wheelchair assistance <Bold>at least 48h in advance</Bold>
+                    (24h may not be enough in Cairo/Algiers).
+                </Item>
+                <Item>
+                    <Bold>Cultural Sensitivity:</Bold> Disabilities may be viewed differently—be patient and polite.
+                </Item>
+                <Item>
+                    <Bold>Cash:</Bold> Some airports (e.g., Algiers) may not accept credit cards for accessibility services.
+                </Item>
+                <Item>
+                    <Bold>Embassy Contacts:</Bold> Save your embassy's number (e.g., <Bold>US Embassy Cairo: +20 2 2797 3300</Bold>).
+                </Item>
+                <Item>
+                    <Bold>Avoid Libya:</Bold> Infrastructure is poor, and accessibility services are almost nonexistent.
+                </Item>
+                <Item>
+                    <Bold>Morocco & Tunisia:</Bold> Best accessibility in North Africa—use their services!
+                </Item>
+            </List>
+        </SubSection>
+    </Section>
+    <!-- 13. Legal Rights & Compensation -->
+    <Section id="legal_rights">
+        <Title>Legal Rights & Compensation for Disabled Travelers</Title>
+        <Description>
+            Laws protecting the rights of travelers with disabilities, including compensation for denied boarding or lost mobility aids.
+        </Description>
+
+        <SubSection>
+            <Title>Key Disability Travel Laws by Region</Title>
+            <Table>
+                <Header>
+                    <Column>Region</Column>
+                    <Column>Law</Column>
+                    <Column>Key Protections</Column>
+                    <Column>Compensation for Violations</Column>
+                </Header>
+                <Row>
+                    <Cell>USA</Cell>
+                    <Cell>Air Carrier Access Act (ACAA)</Cell>
+                    <Cell>
+                        - Airlines cannot refuse transport based on disability.<br/>
+                        - Must provide assistance (e.g., boarding, deplaning).<br/>
+                        - Service animals allowed in cabin.
+                    </Cell>
+                    <Cell>Up to $1,500 for denied boarding or lost mobility aids.</Cell>
+                </Row>
+                <Row>
+                    <Cell>EU</Cell>
+                    <Cell>EU Regulation 1107/2006</Cell>
+                    <Cell>
+                        - Airlines cannot charge extra for disability assistance.<br/>
+                        - Must provide wheelchairs and escort services.<br/>
+                        - Service animals allowed in cabin.
+                    </Cell>
+                    <Cell>€250–€600 for denied boarding; up to €3,000 for lost/damaged mobility aids.</Cell>
+                </Row>
+                <Row>
+                    <Cell>UK</Cell>
+                    <Cell>Equality Act 2010</Cell>
+                    <Cell>
+                        - Airlines must make "reasonable adjustments" for disabled travelers.<br/>
+                        - Assistance dogs allowed in cabin.<br/>
+                        - Priority boarding for disabled travelers.
+                    </Cell>
+                    <Cell>Up to £2,000 for discrimination or lost mobility aids.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Canada</Cell>
+                    <Cell>Accessible Transportation for Persons with Disabilities Regulations (ATPDR)</Cell>
+                    <Cell>
+                        - Airlines must provide assistance at no extra cost.<br/>
+                        - Service animals allowed in cabin.<br/>
+                        - Must accommodate medical oxygen users.
+                    </Cell>
+                    <Cell>Up to CAD$2,500 for denied boarding or lost mobility aids.</Cell>
+                </Row>
+                <Row>
+                    <Cell>Australia</Cell>
+                    <Cell>Disability Discrimination Act 1992</Cell>
+                    <Cell>
+                        - Airlines cannot refuse transport based on disability.<br/>
+                        - Must provide assistance (e.g., boarding, deplaning).<br/>
+                        - Service animals allowed in cabin.
+                    </Cell>
+                    <Cell>Up to AUD$5,000 for discrimination or lost mobility aids.</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>How to File a Complaint</Title>
+            <Description>
+                Steps to take if your rights as a disabled traveler are violated.
+            </Description>
+            <List type="number">
+                <Item>
+                    <Bold>Document the Incident:</Bold> Take photos, note names of staff involved, and keep boarding passes/receipts.
+                </Item>
+                <Item>
+                    <Bold>Request a Written Statement:</Bold> Ask the airline/airport for an official incident report.
+                </Item>
+                <Item>
+                    <Bold>File a Complaint:</Bold>
+                    <List type="bullet">
+                        <Item><Bold>USA:</Bold> [DOT Aviation Consumer Protection](https://www.transportation.gov/airconsumer)</Item>
+                        <Item><Bold>EU:</Bold> [European Consumer Centre](https://ec.europa.eu/consumers/odr/)</Item>
+                        <Item><Bold>UK:</Bold> [Civil Aviation Authority](https://www.caa.co.uk/)</Item>
+                        <Item><Bold>Canada:</Bold> [Canadian Transportation Agency](https://www.otc-cta.gc.ca/)</Item>
+                    </List>
+                </Item>
+                <Item>
+                    <Bold>Seek Compensation:</Bold> Airlines must respond within 30 days (EU/UK) or 60 days (USA).
+                </Item>
+            </List>
+
+            <RealLifeScenario>
+                <Title>Wheelchair Damaged by Airline</Title>
+                <Situation>
+                    A traveler's $5,000 electric wheelchair was damaged by Delta Airlines during a flight from Atlanta (ATL) to London (LHR).
+                    The airline initially offered only $500 in compensation.
+                </Situation>
+                <Solution>
+                    <List type="number">
+                        <Item>Filed a complaint with the <Bold>U.S. Department of Transportation (DOT)</Bold>.</Item>
+                        <Item>Provided <Bold>photos of the damage</Bold> and a <Bold>repair estimate</Bold> ($2,800).</Item>
+                        <Item>DOT ruled in the traveler's favor, and Delta paid <Bold>$3,500</Bold> (full repair cost + $700 for inconvenience).</Item>
+                    </List>
+                </Solution>
+                <Lesson>
+                    Always <Bold>document damage</Bold> with photos and repair estimates.
+                    File complaints with <Bold>government agencies</Bold> (e.g., DOT, CTA) if the airline is uncooperative.
+                </Lesson>
+            </RealLifeScenario>
+        </SubSection>
+    </Section>
+
+    <!-- 14. Emergency Procedures -->
+    <Section id="emergency_procedures">
+        <Title>Emergency Procedures for Disabled Travelers</Title>
+        <Description>
+            What to do in case of emergencies (e.g., lost mobility aids, denied boarding, medical issues).
+        </Description>
+
+        <SubSection>
+            <Title>Lost/Damaged Mobility Aids</Title>
+            <Description>
+                Steps to take if your wheelchair or mobility aid is lost or damaged.
+            </Description>
+            <List type="number">
+                <Item>
+                    <Bold>Report Immediately:</Bold> File a report with the airline before leaving the airport.
+                </Item>
+                <Item>
+                    <Bold>Request a Loaner:</Bold> Some airports (e.g., Changi, Heathrow) provide temporary wheelchairs.
+                </Item>
+                <Item>
+                    <Bold>Document the Damage:</Bold> Take photos and get a repair estimate.
+                </Item>
+                <Item>
+                    <Bold>File a Claim:</Bold> Airlines must compensate for lost/damaged aids under disability laws.
+                </Item>
+            </List>
+        </SubSection>
+
+        <SubSection>
+            <Title>Denied Boarding Due to Disability</Title>
+            <Description>
+                Steps to take if you're denied boarding because of a disability.
+            </Description>
+            <List type="number">
+                <Item>
+                    <Bold>Ask for a Supervisor:</Bold> Airlines must provide a written explanation for denial.
+                </Item>
+                <Item>
+                    <Bold>Request Alternative Transport:</Bold> The airline must rebook you at no extra cost.
+                </Item>
+                <Item>
+                    <Bold>File a Complaint:</Bold> Contact the relevant disability rights organization (e.g., DOT, CTA).
+                </Item>
+                <Item>
+                    <Bold>Seek Compensation:</Bold> You may be entitled to compensation under disability laws.
+                </Item>
+            </List>
+        </SubSection>
+
+        <SubSection>
+            <Title>Medical Emergencies During Travel</Title>
+            <Description>
+                What to do if you or a traveling companion experience a medical emergency.
+            </Description>
+            <List type="number">
+                <Item>
+                    <Bold>Notify the Crew:</Bold> Flight attendants are trained in first aid and can contact medical professionals on the ground.
+                </Item>
+                <Item>
+                    <Bold>Use In-Flight Medical Kits:</Bold> Most airlines carry defibrillators and basic medical supplies.
+                </Item>
+                <Item>
+                    <Bold>Request a Diversion (if serious):</Bold> The pilot can divert to the nearest airport for medical care.
+                </Item>
+                <Item>
+                    <Bold>Contact Your Embassy:</Bold> If hospitalized abroad, your embassy can assist with medical referrals and repatriation.
+                </Item>
+            </List>
+        </SubSection>
+    </Section>
+
+    <!-- 15. Real-Life Scenarios & Solutions -->
+    <Section id="real_life_scenarios">
+        <Title>Real-Life Scenarios & Solutions</Title>
+        <Description>
+            Collection of real-life travel scenarios involving special needs and accessibility issues,
+            along with practical solutions.
+        </Description>
+
+        <RealLifeScenario>
+            <Title>Deaf Traveler Stranded Due to Miscommunication</Title>
+            <Situation>
+                A deaf traveler missed their connecting flight in Istanbul (IST) because the gate agent
+                announced a gate change only verbally (no visual alert). Turkish Airlines refused to rebook them.
+            </Situation>
+            <Solution>
+                <List type="number">
+                    <Item>The traveler used the <Bold>Turkish Airlines app</Bold> to message customer service.</Item>
+                    <Item>A supervisor approved a <Bold>free rebooking</Bold> on the next flight.</Item>
+                    <Item>The traveler received a <Bold>$200 voucher</Bold> for the inconvenience.</Item>
+                </List>
+            </Solution>
+            <Lesson>
+                Always <Bold>enable app notifications</Bold> for gate changes.
+                Carry a <Bold>written card</Bold> explaining your disability in the local language.
+            </Lesson>
+        </RealLifeScenario>
+
+        <RealLifeScenario>
+            <Title>Wheelchair User's Battery Confiscated</Title>
+            <Situation>
+                A traveler's electric wheelchair battery (350Wh) was confiscated at Los Angeles (LAX)
+                because it exceeded the FAA's 300Wh limit. The airline (American Airlines) refused to transport the wheelchair.
+            </Situation>
+            <Solution>
+                <List type="number">
+                    <Item>The traveler contacted the <Bold>airline's disability desk</Bold> and provided a <Bold>doctor's letter</Bold>.</Item>
+                    <Item>American Airlines approved the battery as an <Bold>exception</Bold> (with extra packaging).</Item>
+                    <Item>The wheelchair was transported as <Bold>special cargo</Bold> (no extra fee).</Item>
+                </List>
+            </Solution>
+            <Lesson>
+                Always check the <Bold>FAA's battery rules</Bold> before traveling with electric wheelchairs.
+                A <Bold>doctor's letter</Bold> can help in exceptions.
+            </Lesson>
+        </RealLifeScenario>
+
+        <RealLifeScenario>
+            <Title>Autistic Child Denied Priority Boarding</Title>
+            <Situation>
+                A family with an autistic child was denied priority boarding on a Ryanair flight from Dublin (DUB) to Malaga (AGP).
+                The gate agent claimed it was "only for first-class passengers."
+            </Situation>
+            <Solution>
+                <List type="number">
+                    <Item>The mother showed the agent the child's <Bold>Sunflower lanyard</Bold> and a <Bold>doctor's letter</Bold>.</Item>
+                    <Item>A supervisor intervened and allowed <Bold>early boarding</Bold>.</Item>
+                    <Item>Ryanair later apologized and offered a <Bold>€100 voucher</Bold>.</Item>
+                </List>
+            </Solution>
+            <Lesson>
+                Always carry <Bold>documentation</Bold> (e.g., Sunflower lanyard, doctor's letter) to support requests.
+                If denied, politely ask for a <Bold>supervisor</Bold>.
+            </Lesson>
+        </RealLifeScenario>
+
+        <RealLifeScenario>
+            <Title>Elderly Traveler with Dementia Lost in Airport</Title>
+            <Situation>
+                An 80-year-old traveler with early-stage dementia became disoriented and lost in Amsterdam Schiphol (AMS).
+                Airport staff initially dismissed her as "just confused."
+            </Situation>
+            <Solution>
+                <List type="number">
+                    <Item>A fellow traveler alerted <Bold>airport staff</Bold>, who activated the <Bold>lost traveler protocol</Bold>.</Item>
+                    <Item>The traveler was found within 30 minutes and escorted to her gate.</Item>
+                    <Item>Schiphol provided a <Bold>wheelchair</Bold> and <Bold>priority boarding</Bold> for her next flight.</Item>
+                </List>
+            </Solution>
+            <Lesson>
+                Airports like Schiphol have <Bold>special protocols</Bold> for lost elderly/disabled travelers.
+                Consider requesting a <Bold>wheelchair escort</Bold> if traveling alone with cognitive issues.
+            </Lesson>
+        </RealLifeScenario>
+    </Section>
+
+    <!-- 16. Resources & Contacts -->
+    <Section id="resources">
+        <Title>Resources & Contacts</Title>
+        <Description>
+            Useful resources and contacts for travelers with special needs and disabilities.
+        </Description>
+
+        <SubSection>
+            <Title>Global Accessibility Organizations</Title>
+            <Table>
+                <Header>
+                    <Column>Organization</Column>
+                    <Column>Region</Column>
+                    <Column>Services</Column>
+                    <Column>Contact</Column>
+                </Header>
+                <Row>
+                    <Cell>International Air Transport Association (IATA)</Cell>
+                    <Cell>Global</Cell>
+                    <Cell>Standards for accessible air travel.</Cell>
+                    <Cell>[IATA Accessibility](https://www.iata.org/en/programs/customer/accessibility/)</Cell>
+                </Row>
+                <Row>
+                    <Cell>European Disability Forum (EDF)</Cell>
+                    <Cell>Europe</Cell>
+                    <Cell>Advocacy for disabled travelers' rights.</Cell>
+                    <Cell>[EDF Website](https://www.edf-europe.org/)</Cell>
+                </Row>
+                <Row>
+                    <Cell>U.S. Department of Transportation (DOT)</Cell>
+                    <Cell>USA</Cell>
+                    <Cell>Enforces the Air Carrier Access Act (ACAA).</Cell>
+                    <Cell>[DOT Aviation Consumer Protection](https://www.transportation.gov/airconsumer)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Canadian Transportation Agency (CTA)</Cell>
+                    <Cell>Canada</Cell>
+                    <Cell>Enforces accessible transportation laws.</Cell>
+                    <Cell>[CTA Website](https://www.otc-cta.gc.ca/)</Cell>
+                </Row>
+                <Row>
+                    <Cell>Disability Discrimination Act (DDA)</Cell>
+                    <Cell>Australia</Cell>
+                    <Cell>Protects disabled travelers from discrimination.</Cell>
+                    <Cell>[Australian Human Rights Commission](https://www.humanrights.gov.au/)</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Airport Accessibility Contacts</Title>
+            <Table>
+                <Header>
+                    <Column>Airport</Column>
+                    <Column>Accessibility Contact</Column>
+                    <Column>Phone</Column>
+                    <Column>Email</Column>
+                </Header>
+                <Row>
+                    <Cell>Heathrow (LHR)</Cell>
+                    <Cell>Accessibility Team</Cell>
+                    <Cell>+44 20 8745 7722</Cell>
+                    <Cell>accessibility@heathrow.com</Cell>
+                </Row>
+                <Row>
+                    <Cell>Changi (SIN)</Cell>
+                    <Cell>Changi Cares</Cell>
+                    <Cell>+65 6595 6868</Cell>
+                    <Cell>feedback@changiairport.com</Cell>
+                </Row>
+                <Row>
+                    <Cell>Dubai (DXB)</Cell>
+                    <Cell>Marhaba Service</Cell>
+                    <Cell>+971 4 224 5555</Cell>
+                    <Cell>marhaba@dubaiairports.ae</Cell>
+                </Row>
+                <Row>
+                    <Cell>Amsterdam (AMS)</Cell>
+                    <Cell>Accessibility Desk</Cell>
+                    <Cell>+31 20 794 0800</Cell>
+                    <Cell>accessibility@schiphol.nl</Cell>
+                </Row>
+                <Row>
+                    <Cell>JFK (USA)</Cell>
+                    <Cell>TSA Cares</Cell>
+                    <Cell>1-855-787-2227</Cell>
+                    <Cell>TSA-ContactCenter@tsa.dhs.gov</Cell>
+                </Row>
+            </Table>
+        </SubSection>
+
+        <SubSection>
+            <Title>Useful Apps for Accessible Travel</Title>
+            <List type="bullet">
+                <Item>
+                    <Bold>Wheelmap:</Bold> Finds wheelchair-accessible places worldwide.
+                    [Wheelmap.org](https://wheelmap.org/)
+                </Item>
+                <Item>
+                    <Bold>Aira:</Bold> Visual interpreter for blind/low-vision travelers.
+                    [Aira.io](https://aira.io/)
+                </Item>
+                <Item>
+                    <Bold>Google Maps Accessibility:</Bold> Filters for accessible routes/venues.
+                </Item>
+                <Item>
+                    <Bold>Air4All:</Bold> Airport accessibility info and navigation.
+                    [Air4All App](https://www.air4all.app/)
+                </Item>
+                <Item>
+                    <Bold>TSA Cares (USA):</Bold> Assistance for security screening.
+                    [TSA Cares](https://www.tsa.gov/travel/special-procedures)
+                </Item>
+            </List>
+        </SubSection>
+    </Section>
+
+    <!-- 17. Pro Tips for Smooth Travel -->
+    <Section id="pro_tips">
+        <Title>Pro Tips for Smooth Travel with Special Needs</Title>
+        <Description>
+            Practical tips to ensure a stress-free travel experience for travelers with disabilities or special needs.
+        </Description>
+
+        <List type="bullet">
+            <Item>
+                <Bold>Book Early:</Bold> Request special assistance <Bold>at least 48 hours before travel</Bold>.
+            </Item>
+            <Item>
+                <Bold>Carry Documentation:</Bold>
+                - Doctor's letters for medical conditions.
+                - Prescription labels for medications.
+                - Vaccination records for service animals.
+            </Item>
+            <Item>
+                <Bold>Use Airport Apps:</Bold> Many airports (e.g., Changi, Heathrow) have apps with accessibility features.
+            </Item>
+            <Item>
+                <Bold>Pack a Comfort Kit:</Bold>
+                - Noise-canceling headphones (for autistic travelers).
+                - Extra medications (in case of delays).
+                - Snacks (in case of long waits).
+            </Item>
+            <Item>
+                <Bold>Request a Sunflower Lanyard:</Bold> Available at most major airports to discreetly indicate hidden disabilities.
+            </Item>
+            <Item>
+                <Bold>Know Your Rights:</Bold> Familiarize yourself with disability laws in your departure/destination countries.
+            </Item>
+            <Item>
+                <Bold>Arrive Early:</Bold> Allow extra time for security, boarding, and unexpected delays.
+            </Item>
+            <Item>
+                <Bold>Use a Travel Agent Specializing in Accessibility:</Bold> Agencies like <Bold>Flying Disabled</Bold> (UK) or <Bold>Accessible Travel Solutions</Bold> (USA) can help plan complex trips.
+            </Item>
+        </List>
+    </Section>
+
+</SpecialAccessibilityPolicies>

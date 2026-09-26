@@ -1,0 +1,70 @@
+# ── Environnements virtuels ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Fichiers secrets (NE JAMAIS inclure dans l'image) ─────────────────────────
+.env
+.env.*
+*.env
+firebase-service-account.json
+*serviceAccount*.json
+*credentials*.json
+*.pem
+*.key
+
+# ── Modèles ML (trop lourds — à monter via GCS ou volume séparé) ──────────────
+# ⚠️  Commente ces lignes si tu veux inclure les modèles dans l'image
+trained_models/
+faiss_index/  
+# *.bin
+# *.safetensors
+*.pt
+*.pth
+*.onnx
+
+# ── Logs et fichiers temporaires ───────────────────────────────────────────────
+*.log
+logs/
+chat_flow.log
+firestore.log
+*.tmp
+
+# ── Tests ──────────────────────────────────────────────────────────────────────
+tests/
+test_*/
+*_test.py
+
+# ── IDE / OS ───────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# ── Git ────────────────────────────────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+
+# ── Docker ─────────────────────────────────────────────────────────────────────
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+
+# ── Données uploadées (montées comme volume en prod) ──────────────────────────
+# files/
+# uploads/
+
+# ── Frontend (déployé séparément sur Firebase Hosting) ────────────────────────
+frontend/
+*.ts
+*.html
+*.scss
+*.css
+node_modules/
+dist/

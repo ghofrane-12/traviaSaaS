@@ -1,0 +1,601 @@
+{
+  "pet_policy": {
+    "applicable_for": ["dogs", "cats", "ferrets", "rabbits", "small_birds", "hamsters", "guinea_pigs"],
+    "restricted_breeds": {
+      "dogs": ["pit_bull", "rottweiler", "doberman", "tosa", "boerboel", "akita", "wolf_dog_hybrid"],
+      "cats": ["savannah_f1_f2", "bengal_f1_f2", "chausie", "serval"],
+      "note": "Restrictions vary by airline and destination. Always check with specific carrier."
+    }
+  },
+
+  "general_requirements": {
+    "microchip": {
+      "required": true,
+      "standard": "ISO 11784/11785 compliant (15-digit)",
+      "implantation_before_rabies": true,
+      "accepted_alternatives": "Must bring own microchip reader if not ISO standard"
+    },
+    "rabies_vaccination": {
+      "required": true,
+      "minimum_age_months": 3,
+      "validity_days": 365,
+      "waiting_period_after_vaccination_days": 21,
+      "booster_required": true,
+      "accepted_vaccines": ["Nobivac", "Defensor", "Rabisin", "Imrab", "Rabdomun"],
+      "certificate_required": true,
+      "certificate_format": "Official veterinary certificate or European Pet Passport"
+    },
+    "health_certificate": {
+      "required": true,
+      "issued_by": "Official veterinarian or USDA accredited",
+      "validity_hours": 120,
+      "issued_within_days_before_travel": 10,
+      "required_for": ["EU", "UK", "USA", "Canada", "Japan", "Australia", "UAE", "Tunisia", "Morocco"]
+    }
+  },
+
+  "european_union_rules": {
+    "applicable": true,
+    "pet_passport_required": true,
+    "accepted_countries": ["all_EU_member_states", "Switzerland", "Norway", "Iceland", "Liechtenstein"],
+    "non_EU_countries_with_equivalent_status": ["Andorra", "Monaco", "San Marino", "Vatican", "Faroe Islands", "Greenland"],
+    "tapeworm_treatment": {
+      "required": true,
+      "countries": ["Finland", "Ireland", "Malta", "Norway", "United Kingdom"],
+      "timing_hours_before_arrival": "24-120",
+      "medication": "Praziquantel",
+      "certificate_required": true
+    },
+    "entry_points": ["Any EU border crossing (air, sea, land)"],
+    "maximum_pets_per_person": 5
+  },
+
+  "united_kingdom_rules": {
+    "applicable": true,
+    "pet_passport_required": false,
+    "animal_health_certificate_required": true,
+    "validity_days": 120,
+    "accepted_countries": ["EU_countries", "listed_third_countries"],
+    "tapeworm_treatment": {
+      "required": true,
+      "timing_hours_before_arrival": "24-120",
+      "medication": "Praziquantel",
+      "certificate_required": true
+    },
+    "blood_test": {
+      "required": true,
+      "for": ["dogs", "cats", "ferrets"],
+      "test": "Rabies antibody titration",
+      "waiting_period_days": 30,
+      "validity_days": 365,
+      "approved_labs": ["AFSSA_Nancy", "OIE_reference_labs"]
+    },
+    "entry_points": ["Heathrow", "Gatwick", "Manchester", "Edinburgh", "Glasgow", "Eurotunnel", "Port_of_Hull", "Port_of_Harwich"],
+    "transport_companies": ["Eurotunnel", "DFDS", "P&O_Ferries", "Irish_Ferries"]
+  },
+
+  "usa_canada_rules": {
+    "usa": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": false,
+        "recommended": true
+      },
+      "entry_points": ["All_airports", "land_borders", "sea_ports"],
+      "restricted_breeds": "Check airline policies, no federal ban",
+      "maximum_pets_per_person": "No limit (airline may restrict)"
+    },
+    "canada": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": false,
+        "recommended": true
+      },
+      "entry_points": ["All_airports", "land_borders", "sea_ports"],
+      "restricted_breeds": "Pit Bull Terriers restricted in Ontario"
+    }
+  },
+
+  "north_africa_rules": {
+    "tunisia": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": true,
+        "issued_within_days": 10,
+        "validity_hours": 120
+      },
+      "microchip": {
+        "required": true,
+        "standard": "ISO_11784"
+      },
+      "import_permit": {
+        "required": false,
+        "for": ["dogs", "cats"],
+        "note": "Not required for personal pets"
+      },
+      "quarantine": {
+        "required": false
+      },
+      "entry_points": ["Tunis_Carthage_Airport", "Monastir_Airport", "Djerba_Airport", "Enfidha_Airport", "Tabarka_Airport", "Sfax_Airport", "Tozeur_Airport", "Land_borders_with_Algeria_Libya"],
+      "maximum_pets_per_passenger": 2,
+      "airlines_operating": ["Tunisair", "Nouvelair", "Air_France", "Lufthansa", "Turkish_Airlines", "Emirates", "Qatar_Airways"]
+    },
+    "morocco": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": true,
+        "issued_within_days": 10
+      },
+      "microchip": {
+        "required": true
+      },
+      "import_permit": {
+        "required": false,
+        "note": "Not required for personal pets"
+      },
+      "quarantine": {
+        "required": false
+      },
+      "entry_points": ["Casablanca_Airport", "Marrakech_Airport", "Rabat_Airport", "Tangier_Airport", "Fez_Airport", "Agadir_Airport"],
+      "maximum_pets_per_passenger": 2
+    },
+    "algeria": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": true,
+        "issued_within_days": 5,
+        "validity_hours": 96
+      },
+      "microchip": {
+        "required": true
+      },
+      "import_permit": {
+        "required": true,
+        "processing_days": 15,
+        "issued_by": "Ministry_of_Agriculture",
+        "fee_usd": 50
+      },
+      "quarantine": {
+        "required": false,
+        "note": "May be required if documents not in order"
+      },
+      "entry_points": ["Algiers_Airport", "Oran_Airport", "Constantine_Airport", "Annaba_Airport"],
+      "maximum_pets_per_passenger": 1,
+      "note": "Algeria has strict pet import regulations. Contact embassy before travel."
+    },
+    "egypt": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true,
+        "validity_days": 365
+      },
+      "health_certificate": {
+        "required": true,
+        "issued_within_days": 10
+      },
+      "microchip": {
+        "required": true
+      },
+      "import_permit": {
+        "required": false
+      },
+      "quarantine": {
+        "required": false,
+        "note": "May be required at owner's expense if documents missing"
+      },
+      "entry_points": ["Cairo_Airport", "Hurghada_Airport", "Sharm_el_Sheikh_Airport", "Luxor_Airport", "Marsa_Alam_Airport", "Alexandria_Airport"],
+      "maximum_pets_per_passenger": 2
+    },
+    "libya": {
+      "applicable": true,
+      "note": "Extremely difficult to import pets. Most airlines do not accept. Contact embassy for current regulations.",
+      "entry_points": ["Tripoli_Airport", "Misrata_Airport", "Benghazi_Airport"],
+      "recommendation": "Avoid traveling to Libya with pets unless absolutely necessary"
+    },
+    "mauritania": {
+      "applicable": true,
+      "rabies_vaccination": {
+        "required": true,
+        "certificate_required": true
+      },
+      "health_certificate": {
+        "required": true
+      },
+      "microchip": {
+        "required": false,
+        "recommended": true
+      },
+      "entry_points": ["Nouakchott_Airport", "Nouadhibou_Airport"],
+      "note": "Limited veterinary services available"
+    }
+  },
+
+  "airlines_policies": {
+    "international_carriers": {
+      "emirates": {
+        "in_cabin": {
+          "allowed": false,
+          "note": "Not permitted except falcons on Dubai routes"
+        },
+        "in_hold": {
+          "allowed": true,
+          "max_weight_kg": 75,
+          "price_usd": 500,
+          "price_eur": 450
+        }
+      },
+      "qatar_airways": {
+        "in_cabin": {
+          "allowed": false
+        },
+        "in_hold": {
+          "allowed": true,
+          "max_weight_kg": 75,
+          "price_usd": 450
+        }
+      },
+      "turkish_airlines": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "23x30x40",
+          "price_eur": 60
+        },
+        "in_hold": {
+          "allowed": true,
+          "max_weight_kg": 75,
+          "price_eur": 150
+        }
+      },
+      "air_france": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "46x28x24",
+          "price_eur": 30,
+          "max_pets_per_flight": 4
+        },
+        "in_hold": {
+          "allowed": true,
+          "max_weight_kg": 75,
+          "price_eur": 120
+        }
+      },
+      "lufthansa": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "55x40x23",
+          "price_eur": 70
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_eur": 200
+        }
+      },
+      "british_airways": {
+        "in_cabin": {
+          "allowed": false
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_gbp": 250
+        }
+      },
+      "ryanair": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "40x25x20",
+          "price_eur": 50
+        },
+        "in_hold": {
+          "allowed": false,
+          "note": "Not offered"
+        }
+      },
+      "easyjet": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "45x36x20",
+          "price_eur": 45
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_eur": 75
+        }
+      },
+      "transavia": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 6,
+          "cage_dimensions_cm": "46x28x24",
+          "price_eur": 35
+        }
+      },
+      "tunisair": {
+        "in_cabin": {
+          "allowed": false,
+          "note": "Not permitted"
+        },
+        "in_hold": {
+          "allowed": true,
+          "max_weight_kg": 50,
+          "price_tnd": 150,
+          "price_eur": 45
+        },
+        "restricted_breeds": ["All_brachycephalic_breeds"]
+      },
+      "nouvelair": {
+        "in_cabin": {
+          "allowed": false
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_tnd": 120,
+          "price_eur": 35
+        }
+      },
+      "air_algerie": {
+        "in_cabin": {
+          "allowed": false
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_eur": 100
+        },
+        "note": "Import permit required before booking"
+      },
+      "egyptair": {
+        "in_cabin": {
+          "allowed": false
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_usd": 150
+        }
+      },
+      "royal_air_maroc": {
+        "in_cabin": {
+          "allowed": true,
+          "max_weight_kg": 8,
+          "cage_dimensions_cm": "46x28x24",
+          "price_eur": 50
+        },
+        "in_hold": {
+          "allowed": true,
+          "price_eur": 120
+        }
+      }
+    }
+  },
+
+  "cage_requirements": {
+    "material": "rigid_plastic_or_metal",
+    "ventilation": "Required on at least three sides",
+    "door": "Secure locking mechanism with two-way opening",
+    "floor": "Solid with absorbent material (no wire floors)",
+    "water_food": "Attachable bowls required for flights over 4 hours",
+    "labeling": "LIVE ANIMALS sticker + directional arrows + owner contact information",
+    "dimensions_minimum": "Pet must be able to stand, turn around, and lie down comfortably",
+    "dimensions_maximum": "Varies by airline (typically 40x40x50 cm for cabin, larger for hold)",
+    "construction": "No wheels, must be leak-proof, escape-proof"
+  },
+
+  "required_documents_checklist": [
+    {
+      "document": "Microchip certificate",
+      "required": true,
+      "notes": "ISO 11784/11785 compliant"
+    },
+    {
+      "document": "Rabies vaccination certificate",
+      "required": true,
+      "notes": "Administered after microchip, valid 21+ days before travel"
+    },
+    {
+      "document": "Health certificate",
+      "required": true,
+      "notes": "Issued within 10 days of travel by official vet"
+    },
+    {
+      "document": "European Pet Passport",
+      "required": false,
+      "notes": "For EU travel only"
+    },
+    {
+      "document": "Rabies antibody test results",
+      "required": false,
+      "notes": "Required for UK, Ireland, Japan, Australia, New Zealand"
+    },
+    {
+      "document": "Tapeworm treatment certificate",
+      "required": false,
+      "notes": "Required for UK, Ireland, Finland, Malta, Norway"
+    },
+    {
+      "document": "Import permit",
+      "required": false,
+      "notes": "Required for Algeria, Australia, New Zealand, South Africa"
+    },
+    {
+      "document": "Veterinary certificate of health",
+      "required": true,
+      "notes": "USDA or CFIA endorsed for USA/Canada"
+    }
+  ],
+
+  "fees_by_route": {
+    "europe_domestic_short_haul": {
+      "in_cabin_eur": 30,
+      "in_hold_eur": 70,
+      "examples": ["Paris_to_Nice", "London_to_Edinburgh", "Berlin_to_Munich"]
+    },
+    "europe_international": {
+      "in_cabin_eur": 50,
+      "in_hold_eur": 120,
+      "examples": ["Paris_to_Rome", "London_to_Barcelona", "Frankfurt_to_Madrid"]
+    },
+    "europe_to_north_africa": {
+      "in_cabin_eur": 70,
+      "in_hold_eur": 150,
+      "examples": ["Paris_to_Tunis", "London_to_Marrakech", "Rome_to_Cairo"]
+    },
+    "europe_to_middle_east": {
+      "in_cabin_eur": 100,
+      "in_hold_eur": 250,
+      "examples": ["Paris_to_Dubai", "London_to_Doha", "Frankfurt_to_Istanbul"]
+    },
+    "international_long_haul": {
+      "in_cabin_eur": 150,
+      "in_hold_eur": 400,
+      "examples": ["Paris_to_New_York", "London_to_Tokyo", "Frankfurt_to_Singapore"]
+    },
+    "transatlantic": {
+      "in_cabin_eur": 125,
+      "in_hold_eur": 350,
+      "examples": ["Paris_to_Montreal", "London_to_Chicago"]
+    },
+    "asia_pacific": {
+      "in_cabin_eur": 175,
+      "in_hold_eur": 500,
+      "examples": ["Paris_to_Shanghai", "London_to_Sydney"]
+    }
+  },
+
+  "seasonal_restrictions": {
+    "summer_months_june_august": {
+      "embargo": "Many airlines ban pet travel in cargo hold during extreme heat",
+      "temperature_limit_celsius": 29,
+      "temperature_limit_fahrenheit": 85,
+      "affected_airlines": ["Emirates", "Qatar_Airways", "Etihad", "Turkish_Airlines"],
+      "alternatives": "Travel in cabin (if allowed) or choose night flights"
+    },
+    "winter_months_december_february": {
+      "embargo": "Some northern airports ban pet travel in cargo due to extreme cold",
+      "temperature_limit_celsius": -7,
+      "temperature_limit_fahrenheit": 20,
+      "affected_airlines": ["Air_Canada", "WestJet", "Delta", "United"],
+      "alternatives": "Heated cargo holds available on some carriers"
+    }
+  },
+
+  "travel_tips": [
+    "Book pet reservation immediately after booking your ticket (limited spots)",
+    "Acclimate your pet to the travel cage 2-3 weeks before departure",
+    "Place familiar blanket or toy in the cage for comfort",
+    "Freeze water in bowl before flight to prevent spills",
+    "Attach a recent photo of your pet to the cage for identification",
+    "Carry a travel health kit including: sedatives (if prescribed), water bowl, small amount of food, leash, waste bags",
+    "Avoid feeding 4-6 hours before flight to prevent motion sickness",
+    "Provide water up to 2 hours before departure",
+    "Exercise your pet before heading to the airport",
+    "Inform airline staff if your pet requires special assistance",
+    "Carry a copy of all documents in your hand luggage (originals with pet)",
+    "Label cage with: your name, destination address, phone number, pet's name",
+    "Check destination country quarantine requirements before booking",
+    "Never sedate brachycephalic breeds (pugs, bulldogs, boxers) - breathing risks",
+    "Avoid connecting flights when possible (reduce stress and handling)"
+  ],
+
+  "brachycephalic_breeds_restrictions": {
+    "dogs": [
+      "English Bulldog", "French Bulldog", "Pug", "Boston Terrier",
+      "Boxer", "Shih Tzu", "Brussels Griffon", "Chow Chow",
+      "Cavalier King Charles Spaniel", "Japanese Chin", "Lhasa Apso",
+      "Pekingese", "Shar Pei", "Affenpinscher", "Dogue de Bordeaux"
+    ],
+    "cats": [
+      "Persian", "Himalayan", "Burmese", "Exotic Shorthair",
+      "British Shorthair", "Scottish Fold"
+    ],
+    "airline_restrictions": "Many airlines refuse brachycephalic breeds in cargo due to breathing difficulties. Some allow in cabin if weight permits.",
+    "alternative": "Use pet transport services or choose pet-friendly airlines (Air France, Lufthansa, Turkish Airlines - with restrictions)"
+  },
+
+  "emergency_contacts": {
+    "international_veterinary_hotline": "+1 800 555 0123",
+    "airport_pet_relief_areas": "Ask at check-in or information desk",
+    "pet_ambulance_usa": "+1 888 555 0123",
+    "pet_ambulance_europe": "+44 20 1234 5678",
+    "animal_poison_control_usa": "+1 888 426 4435",
+    "animal_poison_control_uk": "+44 300 123 4567",
+    "ipata_international": "+1 800 555 0199",
+    "world_pet_travel_association": "+44 20 5555 1234"
+  },
+
+  "useful_websites": {
+    "official": {
+      "eu_pet_travel": "https://ec.europa.eu/food/animals/pet-movement_en",
+      "uk_pet_travel": "https://www.gov.uk/bring-pet-to-great-britain",
+      "usda_aphis": "https://www.aphis.usda.gov/aphis/pet-travel",
+      "cfia_canada": "https://inspection.canada.ca/animal-health/terrestrial-animals/pets/eng"
+    },
+    "north_africa": {
+      "tunisia_agriculture": "http://www.agriculture.tn",
+      "morocco_agriculture": "http://www.agriculture.gov.ma",
+      "algeria_agriculture": "http://www.minagri.dz",
+      "egypt_agriculture": "http://www.agriculture.gov.eg"
+    },
+    "airlines": {
+      "air_france": "https://wwws.airfrance.fr/pets",
+      "lufthansa": "https://www.lufthansa.com/pets",
+      "british_airways": "https://www.britishairways.com/pets",
+      "emirates": "https://www.emirates.com/pets",
+      "tunisair": "https://www.tunisair.com/pets",
+      "royal_air_maroc": "https://www.royalairmaroc.com/pets"
+    },
+    "pet_transport": {
+      "ipata": "https://www.ipata.org",
+      "wpta": "https://www.wpta.info",
+      "pet_movers": "https://www.petmovers.com",
+      "animal_airways": "https://www.animalairways.com"
+    }
+  },
+
+  "glossary": {
+    "AHC": "Animal Health Certificate",
+    "BIP": "Border Inspection Post",
+    "CFIA": "Canadian Food Inspection Agency",
+    "CITES": "Convention on International Trade in Endangered Species",
+    "DAPP": "Distemper, Adenovirus, Parvovirus, Parainfluenza vaccine",
+    "EU": "European Union",
+    "FAVN": "Fluorescent Antibody Virus Neutralization test (rabies)",
+    "ICVS": "International Certificate of Veterinary Science",
+    "ISO": "International Organization for Standardization",
+    "OIE": "World Organisation for Animal Health",
+    "PET": "Pet Travel Scheme (UK)",
+    "RNATT": "Rabies Neutralizing Antibody Titre Test",
+    "TRACES": "Trade Control and Expert System (EU)",
+    "USDA": "United States Department of Agriculture"
+  },
+
+  "disclaimer": "This document is for informational purposes only. Pet travel regulations change frequently. Always verify current requirements with the official government websites of your destination country and your chosen airline before making travel arrangements. This guide was last updated in April 2025. Users are responsible for checking current regulations."
+}

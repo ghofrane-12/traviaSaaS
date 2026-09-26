@@ -1,0 +1,501 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-22",
+  "total_hotels": 30,
+  "supported_cities": ["paris", "london", "barcelona", "rome", "dubai", "newyork"],
+  "documents": [
+    {
+      "content": "Hôtel Plaza Athénée - Hôtel de luxe 5 étoiles situé au 25 Avenue Montaigne, 75008 Paris. Prix moyen: 450€ par nuit. Note: 4.8/5. Équipements: piscine intérieure chauffée, spa de luxe avec hammam et sauna, salle de fitness, WiFi haut débit gratuit, restaurant gastronomique étoilé, room service 24h/24, parking privé. Petit-déjeuner buffet à 35€. Idéal pour séjours romantiques et d'affaires.",
+      "metadata": {
+        "hotel_id": "paris_001",
+        "name": "Hôtel Plaza Athénée",
+        "stars": 5,
+        "city": "paris",
+        "country": "france",
+        "price_per_night": 450,
+        "currency": "EUR",
+        "rating": 4.8,
+        "rating_count": 1250,
+        "address": "25 Avenue Montaigne, 75008 Paris",
+        "amenities": ["piscine", "spa", "wifi", "restaurant", "parking", "gym", "room_service"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Le Meurice - Hôtel palace 5 étoiles au 228 Rue de Rivoli, 75001 Paris. Prix moyen: 580€ par nuit. Note: 4.7/5. Vue sur le jardin des Tuileries. Restaurant 3 étoiles Michelin, spa Valmont, service personnalisé.",
+      "metadata": {
+        "hotel_id": "paris_002",
+        "name": "Le Meurice",
+        "stars": 5,
+        "city": "paris",
+        "country": "france",
+        "price_per_night": 580,
+        "currency": "EUR",
+        "rating": 4.7,
+        "rating_count": 980,
+        "address": "228 Rue de Rivoli, 75001 Paris",
+        "amenities": ["spa", "restaurant", "wifi", "room_service", "concierge"],
+        "category": "palace"
+      }
+    },
+    {
+      "content": "Novotel Paris Centre Tour Eiffel - Hôtel 4 étoiles moderne au 8 Place Marguerite de Navarre, 75001 Paris. Prix moyen: 180€ par nuit. Note: 4.2/5. Piscine extérieure, salle de fitness, restaurant buffet, bar lounge, WiFi gratuit, parking. Parfait pour les familles avec enfants. À 10 minutes de la Tour Eiffel.",
+      "metadata": {
+        "hotel_id": "paris_003",
+        "name": "Novotel Paris Centre Tour Eiffel",
+        "stars": 4,
+        "city": "paris",
+        "country": "france",
+        "price_per_night": 180,
+        "currency": "EUR",
+        "rating": 4.2,
+        "rating_count": 850,
+        "address": "8 Place Marguerite de Navarre, 75001 Paris",
+        "amenities": ["piscine", "wifi", "restaurant", "parking", "gym", "bar"],
+        "category": "affaires"
+      }
+    },
+    {
+      "content": "Mercure Paris Centre Tour Eiffel - Hôtel 4 étoiles au 20 Rue Jean Rey, 75015 Paris. Prix moyen: 195€ par nuit. Note: 4.1/5. Vue sur la Tour Eiffel, bar lounge, salle de réunion, WiFi inclus.",
+      "metadata": {
+        "hotel_id": "paris_004",
+        "name": "Mercure Paris Centre Tour Eiffel",
+        "stars": 4,
+        "city": "paris",
+        "country": "france",
+        "price_per_night": 195,
+        "currency": "EUR",
+        "rating": 4.1,
+        "rating_count": 720,
+        "address": "20 Rue Jean Rey, 75015 Paris",
+        "amenities": ["wifi", "bar", "room_service", "vue"],
+        "category": "affaires"
+      }
+    },
+    {
+      "content": "Ibis Budget Paris Gare du Nord - Hôtel économique 2 étoiles au 6 Rue de Dunkerque, 75010 Paris. Prix moyen: 80€ par nuit. Note: 3.8/5. WiFi gratuit, petit-déjeuner buffet à 9€, parking payant, climatisation. Idéal pour les voyageurs avec petit budget. Proche de la gare et du métro.",
+      "metadata": {
+        "hotel_id": "paris_005",
+        "name": "Ibis Budget Paris Gare du Nord",
+        "stars": 2,
+        "city": "paris",
+        "country": "france",
+        "price_per_night": 80,
+        "currency": "EUR",
+        "rating": 3.8,
+        "rating_count": 620,
+        "address": "6 Rue de Dunkerque, 75010 Paris",
+        "amenities": ["wifi", "breakfast", "air_conditioning"],
+        "category": "economique"
+      }
+    },
+    {
+      "content": "The Ritz London - Hôtel de luxe 5 étoiles emblématique au 150 Piccadilly, Londres. Prix moyen: 750€ par nuit. Note: 4.9/5. Spa, salons de thé, restaurant gastronomique, service d'étage 24h, WiFi gratuit. Réputé pour son service exceptionnel.",
+      "metadata": {
+        "hotel_id": "london_001",
+        "name": "The Ritz London",
+        "stars": 5,
+        "city": "london",
+        "country": "uk",
+        "price_per_night": 750,
+        "currency": "GBP",
+        "rating": 4.9,
+        "rating_count": 2100,
+        "address": "150 Piccadilly, London W1J 9BR",
+        "amenities": ["spa", "restaurant", "wifi", "room_service", "bar"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "The Savoy - Hôtel légendaire 5 étoiles au Strand, Londres. Prix moyen: 680€ par nuit. Note: 4.8/5. Vue sur la Tamise, spa, piscine, plusieurs restaurants dont le célèbre Savoy Grill.",
+      "metadata": {
+        "hotel_id": "london_002",
+        "name": "The Savoy",
+        "stars": 5,
+        "city": "london",
+        "country": "uk",
+        "price_per_night": 680,
+        "currency": "GBP",
+        "rating": 4.8,
+        "rating_count": 1850,
+        "address": "Strand, London WC2R 0EZ",
+        "amenities": ["spa", "piscine", "restaurant", "wifi", "theatre"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Hilton London Bankside - Hôtel 4 étoiles moderne au 2-8 Great Suffolk St, Londres. Prix moyen: 220€ par nuit. Note: 4.4/5. Piscine, restaurant, WiFi, salle de sport, bar. Design contemporain, quartier branché.",
+      "metadata": {
+        "hotel_id": "london_003",
+        "name": "Hilton London Bankside",
+        "stars": 4,
+        "city": "london",
+        "country": "uk",
+        "price_per_night": 220,
+        "currency": "GBP",
+        "rating": 4.4,
+        "rating_count": 1450,
+        "address": "2-8 Great Suffolk St, London SE1 0UG",
+        "amenities": ["piscine", "restaurant", "wifi", "gym", "bar"],
+        "category": "affaires"
+      }
+    },
+    {
+      "content": "CitizenM London Tower - Hôtel 4 étoiles moderne au 40 Trinity Square, Londres. Prix moyen: 180€ par nuit. Note: 4.3/5. Design innovant, chambres confortables, vue sur la Tour de Londres, bar sur le toit.",
+      "metadata": {
+        "hotel_id": "london_004",
+        "name": "CitizenM London Tower",
+        "stars": 4,
+        "city": "london",
+        "country": "uk",
+        "price_per_night": 180,
+        "currency": "GBP",
+        "rating": 4.3,
+        "rating_count": 980,
+        "address": "40 Trinity Square, London EC3N 4DJ",
+        "amenities": ["wifi", "bar", "rooftop", "design"],
+        "category": "design"
+      }
+    },
+    {
+      "content": "Travelodge London Central - Hôtel 3 étoiles au 42-44 Drury Lane, Londres. Prix moyen: 120€ par nuit. Note: 3.9/5. WiFi, petit-déjeuner, réception 24h. Central et abordable, idéal pour explorer Londres.",
+      "metadata": {
+        "hotel_id": "london_005",
+        "name": "Travelodge London Central",
+        "stars": 3,
+        "city": "london",
+        "country": "uk",
+        "price_per_night": 120,
+        "currency": "GBP",
+        "rating": 3.9,
+        "rating_count": 890,
+        "address": "42-44 Drury Lane, London WC2B 5AJ",
+        "amenities": ["wifi", "breakfast", "24h_front_desk"],
+        "category": "economique"
+      }
+    },
+    {
+      "content": "Hotel Arts Barcelona - Hôtel 5 étoiles de luxe au Carrer de la Marina, 19, Barcelone. Prix moyen: 520€ par nuit. Note: 4.7/5. Vue sur la mer, piscine, spa, restaurant gastronomique, plage privée.",
+      "metadata": {
+        "hotel_id": "barcelona_001",
+        "name": "Hotel Arts Barcelona",
+        "stars": 5,
+        "city": "barcelona",
+        "country": "spain",
+        "price_per_night": 520,
+        "currency": "EUR",
+        "rating": 4.7,
+        "rating_count": 1650,
+        "address": "Carrer de la Marina, 19, 08005 Barcelona",
+        "amenities": ["piscine", "spa", "restaurant", "wifi", "plage"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Majestic Hotel & Spa - Hôtel 5 étoiles au Passeig de Gràcia, 68, Barcelone. Prix moyen: 420€ par nuit. Note: 4.6/5. Spa, restaurant, rooftop bar, wifi, salle de sport. Vue sur le Passeig de Gràcia.",
+      "metadata": {
+        "hotel_id": "barcelona_002",
+        "name": "Majestic Hotel & Spa",
+        "stars": 5,
+        "city": "barcelona",
+        "country": "spain",
+        "price_per_night": 420,
+        "currency": "EUR",
+        "rating": 4.6,
+        "rating_count": 1420,
+        "address": "Passeig de Gràcia, 68, 08007 Barcelona",
+        "amenities": ["spa", "restaurant", "wifi", "gym", "rooftop_bar"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Hotel Catalonia Barcelona 505 - Hôtel 4 étoiles moderne au C/ de Muntaner, 505, Barcelone. Prix moyen: 160€ par nuit. Note: 4.3/5. Piscine, wifi, restaurant, parking, salle de sport. Proche du centre.",
+      "metadata": {
+        "hotel_id": "barcelona_003",
+        "name": "Hotel Catalonia Barcelona 505",
+        "stars": 4,
+        "city": "barcelona",
+        "country": "spain",
+        "price_per_night": 160,
+        "currency": "EUR",
+        "rating": 4.3,
+        "rating_count": 780,
+        "address": "C/ de Muntaner, 505, 08021 Barcelona",
+        "amenities": ["piscine", "wifi", "restaurant", "parking", "gym"],
+        "category": "affaires"
+      }
+    },
+    {
+      "content": "Ibis Barcelona Centro - Hôtel 2 étoiles économique au Carrer de la Ciutat de Granada, 99, Barcelone. Prix moyen: 90€ par nuit. Note: 4.0/5. WiFi, petit-déjeuner, réception 24h. Au cœur de Barcelone.",
+      "metadata": {
+        "hotel_id": "barcelona_004",
+        "name": "Ibis Barcelona Centro",
+        "stars": 2,
+        "city": "barcelona",
+        "country": "spain",
+        "price_per_night": 90,
+        "currency": "EUR",
+        "rating": 4.0,
+        "rating_count": 540,
+        "address": "Carrer de la Ciutat de Granada, 99, 08005 Barcelona",
+        "amenities": ["wifi", "breakfast", "24h_front_desk"],
+        "category": "economique"
+      }
+    },
+    {
+      "content": "Hotel Eden - Hôtel 5 étoiles prestigieux à Via Ludovisi, 49, Rome. Prix moyen: 480€ par nuit. Note: 4.7/5. Vue sur Rome, spa, restaurant étoilé, service d'étage, wifi.",
+      "metadata": {
+        "hotel_id": "rome_001",
+        "name": "Hotel Eden",
+        "stars": 5,
+        "city": "rome",
+        "country": "italy",
+        "price_per_night": 480,
+        "currency": "EUR",
+        "rating": 4.7,
+        "rating_count": 1120,
+        "address": "Via Ludovisi, 49, 00187 Roma",
+        "amenities": ["spa", "restaurant", "wifi", "room_service", "vue"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Rome Cavalieri - Hôtel palace 5 étoiles à Via Alberto Cadlolo, 101, Rome. Prix moyen: 520€ par nuit. Note: 4.6/5. Piscine, spa, plusieurs restaurants, parc privé de 15 hectares.",
+      "metadata": {
+        "hotel_id": "rome_002",
+        "name": "Rome Cavalieri",
+        "stars": 5,
+        "city": "rome",
+        "country": "italy",
+        "price_per_night": 520,
+        "currency": "EUR",
+        "rating": 4.6,
+        "rating_count": 980,
+        "address": "Via Alberto Cadlolo, 101, 00136 Roma",
+        "amenities": ["piscine", "spa", "restaurant", "wifi", "parking"],
+        "category": "palace"
+      }
+    },
+    {
+      "content": "Hotel Artemide - Hôtel 4 étoiles de luxe à Via Nazionale, 22, Rome. Prix moyen: 210€ par nuit. Note: 4.5/5. Rooftop bar, spa, restaurant, wifi gratuit, sauna.",
+      "metadata": {
+        "hotel_id": "rome_003",
+        "name": "Hotel Artemide",
+        "stars": 4,
+        "city": "rome",
+        "country": "italy",
+        "price_per_night": 210,
+        "currency": "EUR",
+        "rating": 4.5,
+        "rating_count": 890,
+        "address": "Via Nazionale, 22, 00184 Roma",
+        "amenities": ["spa", "restaurant", "wifi", "rooftop_bar", "sauna"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Hotel Indigo Rome - Hôtel 4 étoiles boutique à Via Milano, 63, Rome. Prix moyen: 170€ par nuit. Note: 4.2/5. Design moderne, rooftop, wifi, restaurant italien.",
+      "metadata": {
+        "hotel_id": "rome_004",
+        "name": "Hotel Indigo Rome",
+        "stars": 4,
+        "city": "rome",
+        "country": "italy",
+        "price_per_night": 170,
+        "currency": "EUR",
+        "rating": 4.2,
+        "rating_count": 650,
+        "address": "Via Milano, 63, 00184 Roma",
+        "amenities": ["wifi", "restaurant", "rooftop", "design"],
+        "category": "boutique"
+      }
+    },
+    {
+      "content": "Hotel des Artistes - Hôtel 3 étoiles économique à Via Villafranca, 20, Rome. Prix moyen: 110€ par nuit. Note: 3.9/5. WiFi, petit-déjeuner, proche de la gare Termini.",
+      "metadata": {
+        "hotel_id": "rome_005",
+        "name": "Hotel des Artistes",
+        "stars": 3,
+        "city": "rome",
+        "country": "italy",
+        "price_per_night": 110,
+        "currency": "EUR",
+        "rating": 3.9,
+        "rating_count": 520,
+        "address": "Via Villafranca, 20, 00185 Roma",
+        "amenities": ["wifi", "breakfast", "24h_front_desk"],
+        "category": "economique"
+      }
+    },
+    {
+      "content": "Burj Al Arab - Hôtel 7 étoiles iconique à Jumeirah Beach Road, Dubaï. Prix moyen: 1500€ par nuit. Note: 4.9/5. Piscine, spa, restaurants gastronomiques, héliport, service majordome.",
+      "metadata": {
+        "hotel_id": "dubai_001",
+        "name": "Burj Al Arab",
+        "stars": 7,
+        "city": "dubai",
+        "country": "uae",
+        "price_per_night": 1500,
+        "currency": "AED",
+        "rating": 4.9,
+        "rating_count": 2500,
+        "address": "Jumeirah Beach Road, Dubai",
+        "amenities": ["piscine", "spa", "restaurant", "wifi", "butler_service"],
+        "category": "luxe_ultra"
+      }
+    },
+    {
+      "content": "Atlantis The Palm - Hôtel 5 étoiles sur Palm Jumeirah, Dubaï. Prix moyen: 450€ par nuit. Note: 4.6/5. Aquarium, parc aquatique, piscines, spa, nombreux restaurants.",
+      "metadata": {
+        "hotel_id": "dubai_002",
+        "name": "Atlantis The Palm",
+        "stars": 5,
+        "city": "dubai",
+        "country": "uae",
+        "price_per_night": 450,
+        "currency": "AED",
+        "rating": 4.6,
+        "rating_count": 3200,
+        "address": "Palm Jumeirah, Dubai",
+        "amenities": ["piscine", "spa", "restaurant", "wifi", "aquarium", "water_park"],
+        "category": "resort"
+      }
+    },
+    {
+      "content": "Armani Hotel Dubai - Hôtel 5 étoiles design dans Burj Khalifa, Dubaï. Prix moyen: 600€ par nuit. Note: 4.7/5. Design Armani, spa, restaurants signature, vue panoramique.",
+      "metadata": {
+        "hotel_id": "dubai_003",
+        "name": "Armani Hotel Dubai",
+        "stars": 5,
+        "city": "dubai",
+        "country": "uae",
+        "price_per_night": 600,
+        "currency": "AED",
+        "rating": 4.7,
+        "rating_count": 1450,
+        "address": "Burj Khalifa, Dubai",
+        "amenities": ["spa", "restaurant", "wifi", "design", "vue"],
+        "category": "luxe_design"
+      }
+    },
+    {
+      "content": "Jumeirah Beach Hotel - Hôtel 5 étoiles familial à Jumeirah Beach Road, Dubaï. Prix moyen: 350€ par nuit. Note: 4.5/5. Plage privée, piscines, spa, clubs enfants.",
+      "metadata": {
+        "hotel_id": "dubai_004",
+        "name": "Jumeirah Beach Hotel",
+        "stars": 5,
+        "city": "dubai",
+        "country": "uae",
+        "price_per_night": 350,
+        "currency": "AED",
+        "rating": 4.5,
+        "rating_count": 2100,
+        "address": "Jumeirah Beach Road, Dubai",
+        "amenities": ["piscine", "spa", "restaurant", "wifi", "plage", "kids_club"],
+        "category": "familial"
+      }
+    },
+    {
+      "content": "Premier Inn Dubai - Hôtel 3 étoiles économique à Al Jaddaf, Dubaï. Prix moyen: 120€ par nuit. Note: 4.1/5. WiFi, petit-déjeuner, parking, navette aéroport.",
+      "metadata": {
+        "hotel_id": "dubai_005",
+        "name": "Premier Inn Dubai",
+        "stars": 3,
+        "city": "dubai",
+        "country": "uae",
+        "price_per_night": 120,
+        "currency": "AED",
+        "rating": 4.1,
+        "rating_count": 1800,
+        "address": "Al Jaddaf, Dubai",
+        "amenities": ["wifi", "breakfast", "parking", "shuttle"],
+        "category": "economique"
+      }
+    },
+    {
+      "content": "The Plaza Hotel - Hôtel 5 étoiles légendaire à 5th Avenue, New York. Prix moyen: 650€ par nuit. Note: 4.8/5. Spa, restaurant, service d'étage, vue sur Central Park.",
+      "metadata": {
+        "hotel_id": "ny_001",
+        "name": "The Plaza Hotel",
+        "stars": 5,
+        "city": "newyork",
+        "country": "usa",
+        "price_per_night": 650,
+        "currency": "USD",
+        "rating": 4.8,
+        "rating_count": 1950,
+        "address": "768 5th Avenue, New York, NY 10019",
+        "amenities": ["spa", "restaurant", "wifi", "room_service", "vue_central_park"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "The Ritz-Carlton New York - Hôtel 5 étoiles de luxe à Central Park South, New York. Prix moyen: 580€ par nuit. Note: 4.7/5. Spa, restaurant, vue sur Central Park, service personnalisé.",
+      "metadata": {
+        "hotel_id": "ny_002",
+        "name": "The Ritz-Carlton New York",
+        "stars": 5,
+        "city": "newyork",
+        "country": "usa",
+        "price_per_night": 580,
+        "currency": "USD",
+        "rating": 4.7,
+        "rating_count": 1680,
+        "address": "50 Central Park S, New York, NY 10019",
+        "amenities": ["spa", "restaurant", "wifi", "gym", "vue_central_park"],
+        "category": "luxe"
+      }
+    },
+    {
+      "content": "Marriott Marquis New York - Hôtel 4 étoiles à Times Square, New York. Prix moyen: 280€ par nuit. Note: 4.3/5. Piscine, restaurant, bar sur le toit, wifi, centre d'affaires.",
+      "metadata": {
+        "hotel_id": "ny_003",
+        "name": "Marriott Marquis New York",
+        "stars": 4,
+        "city": "newyork",
+        "country": "usa",
+        "price_per_night": 280,
+        "currency": "USD",
+        "rating": 4.3,
+        "rating_count": 3200,
+        "address": "1535 Broadway, New York, NY 10036",
+        "amenities": ["piscine", "restaurant", "wifi", "bar", "business_center"],
+        "category": "affaires"
+      }
+    },
+    {
+      "content": "The Standard High Line - Hôtel 4 étoiles design à 848 Washington Street, New York. Prix moyen: 250€ par nuit. Note: 4.4/5. Rooftop bar, vue sur l'Hudson, design contemporain.",
+      "metadata": {
+        "hotel_id": "ny_004",
+        "name": "The Standard High Line",
+        "stars": 4,
+        "city": "newyork",
+        "country": "usa",
+        "price_per_night": 250,
+        "currency": "USD",
+        "rating": 4.4,
+        "rating_count": 1450,
+        "address": "848 Washington Street, New York, NY 10014",
+        "amenities": ["wifi", "bar", "rooftop", "design", "vue"],
+        "category": "design"
+      }
+    },
+    {
+      "content": "Pod 51 Hotel - Hôtel 3 étoiles économique à 230 E 51st Street, New York. Prix moyen: 130€ par nuit. Note: 4.0/5. WiFi, rooftop, chambres compactes, proche de Central Park.",
+      "metadata": {
+        "hotel_id": "ny_005",
+        "name": "Pod 51 Hotel",
+        "stars": 3,
+        "city": "newyork",
+        "country": "usa",
+        "price_per_night": 130,
+        "currency": "USD",
+        "rating": 4.0,
+        "rating_count": 2100,
+        "address": "230 E 51st Street, New York, NY 10022",
+        "amenities": ["wifi", "rooftop", "24h_front_desk"],
+        "category": "economique"
+      }
+    }
+  ]
+}

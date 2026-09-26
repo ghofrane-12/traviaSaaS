@@ -1,0 +1,910 @@
+[
+  {
+    "id": "OMRA-001",
+    "titre": "Omra Ramadan Prestige",
+    "sous_titre": "Le voyage spirituel par excellence durant le mois sacré",
+    "description": "Vivez une expérience spirituelle inoubliable durant le mois de Ramadan avec un hébergement 5 étoiles à quelques pas des Lieux Saints.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Prestige",
+    "devise": "TND",
+    "prix": 8500,
+    "prix_eur": 2550,
+    "duree": "14j/13n",
+    "dates_disponibles": "01/03/2025|15/03/2025|22/03/2025",
+    "disponibilite": "Disponible|Limité|Disponible",
+    "places_restantes": 12,
+    "image": "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80",
+      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "23kg inclus + bagage cabine 7kg"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Swissôtel Makkah",
+        "etoiles": 5,
+        "distance_haram": "50m",
+        "type_chambre": "Chambre Supérieure vue Kaaba",
+        "nuits": 7
+      },
+      "medine": {
+        "hotel": "Pullman Zamzam Madina",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "100m",
+        "type_chambre": "Chambre Deluxe",
+        "nuits": 6
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Pension complète",
+      "details": ["Petit-déjeuner buffet", "Déjeuner", "Iftar & Sohour durant Ramadan", "Eau minérale illimitée"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse — toutes les 30 min",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus — bus climatisé VIP"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Cheikh diplômé université islamique",
+      "accompagnement": "24h/24"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-7 : Médine — Visites Masjid Nabawi, Quba, Uhud, cours religieux",
+      "JOUR 8 : Transfert La Mecque, Ihram et entrée en état de sacralisation",
+      "JOUR 9-13 : La Mecque — Tawaf, Sa'i, Visites Arafat, Mina, Muzdalifah",
+      "JOUR 14 : Tawaf d'adieu, transfert Jeddah, vol retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra", "Hébergement 5*", "Pension complète", "Transferts", "Guide francophone", "Assurance voyage", "Kit Omra (ihram, tapis, chapelet)"],
+    "non_inclus": ["Dépenses personnelles", "Excursions optionnelles", "Pourboires"],
+    "assurance": "Tous risques incluse — rapatriement médical",
+    "note_agence": 4.9,
+    "avis_clients": 284
+  },
+  {
+    "id": "OMRA-002",
+    "titre": "Omra Économique Hiver",
+    "sous_titre": "Le voyage spirituel accessible à tous",
+    "description": "Une formule complète et abordable pour accomplir votre Omra dans les meilleures conditions avec un hébergement confortable 4 étoiles.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Économique",
+    "devise": "TND",
+    "prix": 3900,
+    "prix_eur": 1170,
+    "duree": "10j/9n",
+    "dates_disponibles": "05/01/2025|19/01/2025|02/02/2025",
+    "disponibilite": "Disponible|Disponible|Limité",
+    "places_restantes": 25,
+    "image": "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Saudia Airlines",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "1 escale — 6h total",
+      "retour": "1 escale — 6h total",
+      "bagages": "20kg inclus + bagage cabine 7kg"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Hilton Suites Makkah",
+        "etoiles": 4,
+        "distance_haram": "200m",
+        "type_chambre": "Chambre Standard",
+        "nuits": 5
+      },
+      "medine": {
+        "hotel": "Movenpick Hotel Madina",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "300m",
+        "type_chambre": "Chambre Standard",
+        "nuits": 4
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Demi-pension",
+      "details": ["Petit-déjeuner buffet", "Dîner", "Eau minérale — 1 bouteille/jour"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse — toutes les heures",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide certifié ministère du tourisme saoudien",
+      "accompagnement": "Disponible sur demande"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-5 : Médine — Visites spirituelles et prières",
+      "JOUR 6 : Transfert La Mecque, Ihram",
+      "JOUR 7-9 : La Mecque — Tawaf, Sa'i, Lieux Saints",
+      "JOUR 10 : Tawaf d'adieu, retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra", "Hébergement 4*", "Demi-pension", "Transferts", "Guide", "Assurance voyage"],
+    "non_inclus": ["Déjeuners", "Dépenses personnelles", "Pourboires", "Kit Omra"],
+    "assurance": "Assistance voyage de base",
+    "note_agence": 4.6,
+    "avis_clients": 512
+  },
+  {
+    "id": "OMRA-003",
+    "titre": "Omra Famille Tout Inclus",
+    "sous_titre": "Un voyage béni en famille dans les meilleures conditions",
+    "description": "Formule spéciale famille avec chambres familiales spacieuses, programme adapté aux enfants et accompagnement personnalisé.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Famille",
+    "devise": "TND",
+    "prix": 5800,
+    "prix_eur": 1740,
+    "duree": "12j/11n",
+    "dates_disponibles": "10/02/2025|24/02/2025|10/03/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 18,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Médine (MED)",
+      "aller": "Direct — 3h45",
+      "retour": "Direct depuis Jeddah — 3h30",
+      "bagages": "23kg/personne + bagage cabine"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Marriott Makkah",
+        "etoiles": 5,
+        "distance_haram": "150m",
+        "type_chambre": "Suite Familiale (2 chambres)",
+        "nuits": 6
+      },
+      "medine": {
+        "hotel": "Anwar Al Madinah Mövenpick",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "200m",
+        "type_chambre": "Suite Familiale",
+        "nuits": 5
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Livret de famille", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Pension complète",
+      "details": ["Petit-déjeuner buffet", "Déjeuner", "Dîner", "Snacks pour enfants", "Eau minérale illimitée"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse — bus famille climatisé",
+      "transferts_aeroport": "Inclus — véhicule familial",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide spécialisé groupes familiaux",
+      "accompagnement": "24h/24 — programme adapté enfants"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Médine directe",
+      "JOUR 2-6 : Médine — Visites familiales, cours éducatifs pour enfants",
+      "JOUR 7 : Transfert La Mecque",
+      "JOUR 8-11 : La Mecque — Rituels Omra, visites adaptées famille",
+      "JOUR 12 : Tawaf d'adieu, retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra toute la famille", "Hébergement 5* suites familiales", "Pension complète", "Transferts VIP", "Guide spécialisé famille", "Assurance famille", "Kit Omra famille", "Activités éducatives enfants"],
+    "non_inclus": ["Dépenses personnelles", "Excursions optionnelles"],
+    "assurance": "Assurance famille complète — tous risques",
+    "note_agence": 4.8,
+    "avis_clients": 196
+  },
+  {
+    "id": "OMRA-004",
+    "titre": "Omra VIP Gold",
+    "sous_titre": "L'excellence au service du pèlerin",
+    "description": "Notre formule la plus exclusive avec suites royales, transferts en limousine et service concierge personnel 24h/24.",
+    "destination": "La Mecque & Médine",
+    "categorie": "VIP",
+    "devise": "TND",
+    "prix": 15000,
+    "prix_eur": 4500,
+    "duree": "15j/14n",
+    "dates_disponibles": "15/01/2025|01/02/2025|15/02/2025",
+    "disponibilite": "Limité|Disponible|Disponible",
+    "places_restantes": 6,
+    "image": "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Saudia Business Class",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — Classe Affaires",
+      "retour": "Direct — Classe Affaires",
+      "bagages": "32kg + bagage cabine 15kg"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Abraj Al-Bait Towers Clock Tower",
+        "etoiles": 5,
+        "distance_haram": "0m — vue directe Kaaba",
+        "type_chambre": "Suite Royale",
+        "nuits": 8
+      },
+      "medine": {
+        "hotel": "The Oberoi Madinah",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "50m",
+        "type_chambre": "Suite Présidentielle",
+        "nuits": 6
+      }
+    },
+    "visa": {
+      "type": "Visa Omra Premium",
+      "inclus": true,
+      "delai_traitement": "48h — traitement prioritaire",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "All Inclusive Premium",
+      "details": ["Petit-déjeuner gastronomique", "Déjeuner gastronomique", "Dîner gastronomique", "Room service 24h/24", "Minibar premium", "Eau & jus illimités"]
+    },
+    "transport_local": {
+      "navette_haram": "Limousine privée — disponible 24h/24",
+      "transferts_aeroport": "Limousine VIP",
+      "bus_la_mecque_medine": "Véhicule privé climatisé"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français", "Anglais"],
+      "qualification": "Cheikh universitaire — Guide personnel exclusif",
+      "accompagnement": "Guide dédié exclusivement au groupe — 24h/24"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis Business Class, accueil VIP Jeddah, limousine Médine",
+      "JOUR 2-7 : Médine — Programme spirituel personnalisé, visites privées",
+      "JOUR 8 : Transfert La Mecque en limousine privée",
+      "JOUR 9-14 : La Mecque — Rituels Omra, accès zones privilégiées",
+      "JOUR 15 : Tawaf d'adieu, retour Business Class"
+    ],
+    "inclus": ["Vol A/R Classe Affaires", "Visa prioritaire 48h", "Suites Royales 5*", "All Inclusive Premium", "Limousine privée", "Guide personnel exclusif", "Assurance tous risques premium", "Kit Omra luxe", "Conciergerie personnelle", "Accès lounge aéroport"],
+    "non_inclus": ["Dépenses personnelles"],
+    "assurance": "Assurance premium tous risques — évacuation médicale hélicoptère",
+    "note_agence": 5.0,
+    "avis_clients": 89
+  },
+  {
+    "id": "OMRA-005",
+    "titre": "Omra Printemps Découverte",
+    "sous_titre": "Combinez spiritualité et découverte culturelle",
+    "description": "Un programme enrichi qui allie les rituels de l'Omra à la découverte du patrimoine islamique de La Mecque et Médine.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Découverte",
+    "devise": "TND",
+    "prix": 4800,
+    "prix_eur": 1440,
+    "duree": "11j/10n",
+    "dates_disponibles": "20/03/2025|05/04/2025|20/04/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 30,
+    "image": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "flydubai via Dubai",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "1 escale Dubai — 7h total",
+      "retour": "1 escale Dubai — 7h total",
+      "bagages": "20kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Radisson Blu Makkah",
+        "etoiles": 4,
+        "distance_haram": "300m",
+        "type_chambre": "Chambre Supérieure",
+        "nuits": 5
+      },
+      "medine": {
+        "hotel": "Sheraton Medina",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "400m",
+        "type_chambre": "Chambre Supérieure",
+        "nuits": 5
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Demi-pension",
+      "details": ["Petit-déjeuner buffet", "Dîner", "Eau — 1.5L/jour"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide historien spécialisé patrimoine islamique",
+      "accompagnement": "Présent lors des visites culturelles"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis via Dubai, arrivée Jeddah",
+      "JOUR 2-6 : Médine — Masjid Nabawi, Musée islamique, Uhud, Quba",
+      "JOUR 7 : Transfert La Mecque",
+      "JOUR 8-10 : La Mecque — Omra, Musée du Coran, Mont Hira, Arafat",
+      "JOUR 11 : Retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra", "Hébergement 4*", "Demi-pension", "Transferts", "Guide historien", "Visites culturelles incluses", "Assurance voyage"],
+    "non_inclus": ["Déjeuners", "Entrées musées optionnels", "Dépenses personnelles"],
+    "assurance": "Assistance voyage standard",
+    "note_agence": 4.7,
+    "avis_clients": 341
+  },
+  {
+    "id": "OMRA-006",
+    "titre": "Omra Été Confort",
+    "sous_titre": "Voyagez confortablement malgré la chaleur estivale",
+    "description": "Formule spécialement conçue pour l'été avec hôtels ultra-climatisés, navettes fréquentes et programme adapté aux horaires frais.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Confort",
+    "devise": "EUR",
+    "prix": 1850,
+    "prix_eur": 1850,
+    "duree": "10j/9n",
+    "dates_disponibles": "15/06/2025|01/07/2025|15/07/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 22,
+    "image": "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "23kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "InterContinental Dar Al Tawhid",
+        "etoiles": 5,
+        "distance_haram": "100m",
+        "type_chambre": "Chambre Deluxe climatisée",
+        "nuits": 5
+      },
+      "medine": {
+        "hotel": "Hilton Medina",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "150m",
+        "type_chambre": "Chambre Deluxe",
+        "nuits": 4
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Pension complète",
+      "details": ["Petit-déjeuner", "Déjeuner léger", "Dîner", "Eau fraîche illimitée", "Jus de fruits frais"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse — toutes les 20 min, bus climatisé",
+      "transferts_aeroport": "Inclus — véhicule climatisé",
+      "bus_la_mecque_medine": "Inclus — bus VIP climatisé"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide certifié — spécialiste voyages été",
+      "accompagnement": "Disponible 24h/24 — conseils chaleur"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-5 : Médine — Prières aux heures fraîches, visites tôt le matin",
+      "JOUR 6 : Transfert La Mecque en bus climatisé",
+      "JOUR 7-9 : La Mecque — Tawaf nocturne, programme adapté chaleur",
+      "JOUR 10 : Tawaf d'adieu, retour Tunis"
+    ],
+    "inclus": ["Vol A/R direct", "Visa Omra", "Hébergement 5*", "Pension complète", "Eau illimitée", "Transferts climatisés", "Guide", "Assurance", "Kit anti-chaleur (éventail, brumisateur, crème solaire)"],
+    "non_inclus": ["Dépenses personnelles", "Pourboires"],
+    "assurance": "Assurance médicale été — coup de chaleur inclus",
+    "note_agence": 4.7,
+    "avis_clients": 178
+  },
+  {
+    "id": "OMRA-007",
+    "titre": "Omra Jeunes & Étudiants",
+    "sous_titre": "Le voyage spirituel spécialement conçu pour les 18-30 ans",
+    "description": "Une formule dynamique et abordable pour les jeunes qui souhaitent accomplir leur Omra avec un groupe de leur génération.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Jeunes",
+    "devise": "TND",
+    "prix": 2900,
+    "prix_eur": 870,
+    "duree": "9j/8n",
+    "dates_disponibles": "20/06/2025|10/07/2025|25/07/2025",
+    "disponibilite": "Disponible|Disponible|Limité",
+    "places_restantes": 35,
+    "image": "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Saudia Airlines",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "1 escale — 5h30 total",
+      "retour": "1 escale — 5h30 total",
+      "bagages": "20kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Al Shohada Hotel Makkah",
+        "etoiles": 4,
+        "distance_haram": "500m",
+        "type_chambre": "Chambre quadruple",
+        "nuits": 4
+      },
+      "medine": {
+        "hotel": "Al Madinah Harmony Hotel",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "600m",
+        "type_chambre": "Chambre quadruple",
+        "nuits": 4
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite", "Carte étudiant (optionnel)"]
+    },
+    "repas": {
+      "formule": "Demi-pension",
+      "details": ["Petit-déjeuner buffet", "Dîner", "Eau — 1L/jour"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Jeune guide dynamique — connexion avec les jeunes pèlerins",
+      "accompagnement": "Disponible — ambiance conviviale"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-5 : Médine — Programme interactif, rencontres avec pèlerins internationaux",
+      "JOUR 6 : Transfert La Mecque",
+      "JOUR 7-8 : La Mecque — Rituels Omra en groupe jeunes",
+      "JOUR 9 : Retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra", "Hébergement 4*", "Demi-pension", "Transferts", "Guide jeune", "Assurance", "Carnet de voyage spirituel"],
+    "non_inclus": ["Déjeuners", "Dépenses personnelles", "Pourboires"],
+    "assurance": "Assurance jeunes voyageurs",
+    "note_agence": 4.5,
+    "avis_clients": 423
+  },
+  {
+    "id": "OMRA-008",
+    "titre": "Omra Seniors Sérénité",
+    "sous_titre": "Un voyage adapté et confortable pour les personnes âgées",
+    "description": "Formule spécialement conçue pour les seniors avec assistance médicale, rythme adapté, fauteuils roulants disponibles et chambres accessibles.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Seniors",
+    "devise": "TND",
+    "prix": 6200,
+    "prix_eur": 1860,
+    "duree": "13j/12n",
+    "dates_disponibles": "10/01/2025|07/02/2025|07/03/2025",
+    "disponibilite": "Disponible|Disponible|Limité",
+    "places_restantes": 15,
+    "image": "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Médine (MED)",
+      "aller": "Direct — 3h45",
+      "retour": "Direct depuis Jeddah",
+      "bagages": "23kg inclus + bagage cabine"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Fairmont Makkah Clock Royal Tower",
+        "etoiles": 5,
+        "distance_haram": "50m",
+        "type_chambre": "Chambre Accessible — vue Kaaba",
+        "nuits": 6
+      },
+      "medine": {
+        "hotel": "Pullman Zamzam Madina",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "100m",
+        "type_chambre": "Chambre Accessible",
+        "nuits": 6
+      }
+    },
+    "visa": {
+      "type": "Visa Omra Senior",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat médical", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Pension complète adaptée",
+      "details": ["Petit-déjeuner riche", "Déjeuner équilibré", "Dîner léger", "Régimes spéciaux sur demande", "Eau illimitée"]
+    },
+    "transport_local": {
+      "navette_haram": "Fauteuil roulant électrique disponible — navette accessible",
+      "transferts_aeroport": "Véhicule accessible PMR",
+      "bus_la_mecque_medine": "Bus accessible — places prioritaires"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide senior — patient et attentionné",
+      "accompagnement": "24h/24 — rythme adapté seniors"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Médine directe — accueil prioritaire",
+      "JOUR 2-7 : Médine — Programme au rythme adapté, repos suffisant",
+      "JOUR 8 : Transfert La Mecque — véhicule confortable",
+      "JOUR 9-12 : La Mecque — Rituels à rythme adapté, assistance permanente",
+      "JOUR 13 : Retour Tunis — assistance aéroport prioritaire"
+    ],
+    "inclus": ["Vol A/R direct", "Visa Omra", "Hébergement 5* accessible", "Pension complète adaptée", "Fauteuil roulant si besoin", "Transferts PMR", "Guide attentionné", "Médecin de groupe", "Assurance médicale senior", "Kit médicaments de base"],
+    "non_inclus": ["Médicaments personnels", "Dépenses personnelles"],
+    "assurance": "Assurance senior tous risques — rapatriement médical prioritaire",
+    "note_agence": 4.9,
+    "avis_clients": 156
+  },
+  {
+    "id": "OMRA-009",
+    "titre": "Omra & Hajj Préparation",
+    "sous_titre": "Préparez votre Hajj en accomplissant l'Omra",
+    "description": "Programme combiné idéal pour ceux qui souhaitent se préparer au Hajj en accomplissant l'Omra et en découvrant tous les lieux saints.",
+    "destination": "La Mecque, Médine, Arafat & Mina",
+    "categorie": "Préparation Hajj",
+    "devise": "TND",
+    "prix": 7200,
+    "prix_eur": 2160,
+    "duree": "16j/15n",
+    "dates_disponibles": "15/02/2025|01/03/2025|15/03/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 20,
+    "image": "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Saudia Airlines",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "23kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Millennium Makkah Al Naseem",
+        "etoiles": 5,
+        "distance_haram": "200m",
+        "type_chambre": "Chambre Deluxe",
+        "nuits": 8
+      },
+      "medine": {
+        "hotel": "Le Meridien Madinah",
+        "etoiles": 5,
+        "distance_masjid_nabawi": "250m",
+        "type_chambre": "Chambre Deluxe",
+        "nuits": 5
+      },
+      "arafat_mina": {
+        "type": "Camps officiels Hajj",
+        "nuits": 2
+      }
+    },
+    "visa": {
+      "type": "Visa Omra + autorisation Hajj",
+      "inclus": true,
+      "delai_traitement": "7-10 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite + polio"]
+    },
+    "repas": {
+      "formule": "Pension complète",
+      "details": ["Tous repas inclus", "Repas dans les camps Hajj", "Eau illimitée"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus",
+      "visite_arafat_mina": "Transport officiel Hajj inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Cheikh spécialisé Hajj & Omra — Cours préparatoires inclus",
+      "accompagnement": "24h/24 — enseignement des rituels Hajj"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-6 : Médine — Cours préparatoires Hajj, visites complètes",
+      "JOUR 7 : Transfert La Mecque",
+      "JOUR 8-10 : La Mecque — Omra + apprentissage rituels Hajj sur terrain",
+      "JOUR 11-12 : Visite Arafat, Mina, Muzdalifah — simulation Hajj",
+      "JOUR 13-15 : La Mecque — Approfondissement, questions/réponses",
+      "JOUR 16 : Retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa + autorisation Hajj", "Hébergement 5*", "Camps Hajj", "Pension complète", "Cours préparatoires Hajj", "Guide Cheikh spécialisé", "Assurance complète", "Livre préparation Hajj"],
+    "non_inclus": ["Hajj lui-même (quota séparé)", "Dépenses personnelles"],
+    "assurance": "Assurance voyage complète",
+    "note_agence": 4.8,
+    "avis_clients": 134
+  },
+  {
+    "id": "OMRA-010",
+    "titre": "Omra Décembre Hiver Doux",
+    "sous_titre": "Profitez du climat idéal de décembre pour votre Omra",
+    "description": "Décembre est la période la plus agréable pour l'Omra avec des températures douces. Notre formule profite de cette saison pour vous offrir le meilleur.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Saisonnier",
+    "devise": "TND",
+    "prix": 1650,
+    "prix_eur": 1650,
+    "duree": "10j/9n",
+    "dates_disponibles": "01/12/2025|10/12/2025|20/12/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 28,
+    "image": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "23kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Wyndham Grand Mecca",
+        "etoiles": 4,
+        "distance_haram": "300m",
+        "type_chambre": "Chambre Supérieure",
+        "nuits": 5
+      },
+      "medine": {
+        "hotel": "Crowne Plaza Medina",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "350m",
+        "type_chambre": "Chambre Supérieure",
+        "nuits": 4
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Demi-pension",
+      "details": ["Petit-déjeuner buffet", "Dîner", "Eau — 1.5L/jour"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide expérimenté",
+      "accompagnement": "Disponible aux heures de visites"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, transfert Médine",
+      "JOUR 2-5 : Médine — Visites spirituelles, climat doux et agréable",
+      "JOUR 6 : Transfert La Mecque",
+      "JOUR 7-9 : La Mecque — Rituels Omra dans conditions climatiques idéales",
+      "JOUR 10 : Retour Tunis"
+    ],
+    "inclus": ["Vol A/R direct", "Visa Omra", "Hébergement 4*", "Demi-pension", "Transferts", "Guide", "Assurance"],
+    "non_inclus": ["Déjeuners", "Dépenses personnelles", "Pourboires"],
+    "assurance": "Assistance voyage standard",
+    "note_agence": 4.6,
+    "avis_clients": 267
+  },
+  {
+    "id": "OMRA-011",
+    "titre": "Omra Femmes Entre Elles",
+    "sous_titre": "Groupe exclusif féminin — sécurité et sérénité garanties",
+    "description": "Un voyage Omra organisé exclusivement pour les femmes avec guides féminines, accompagnatrices et programme adapté.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Femmes",
+    "devise": "TND",
+    "prix": 4500,
+    "prix_eur": 1350,
+    "duree": "11j/10n",
+    "dates_disponibles": "15/02/2025|15/03/2025|15/04/2025",
+    "disponibilite": "Disponible|Limité|Disponible",
+    "places_restantes": 20,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Tunisair",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "23kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Oberoi Makkah",
+        "etoiles": 5,
+        "distance_haram": "150m",
+        "type_chambre": "Chambre double confort",
+        "nuits": 5
+      },
+      "medine": {
+        "hotel": "Al Madinah Harmony Hotel",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "300m",
+        "type_chambre": "Chambre double",
+        "nuits": 5
+      }
+    },
+    "visa": {
+      "type": "Visa Omra",
+      "inclus": true,
+      "delai_traitement": "5-7 jours ouvrables",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite", "Attestation mahram si nécessaire"]
+    },
+    "repas": {
+      "formule": "Pension complète",
+      "details": ["Petit-déjeuner", "Déjeuner", "Dîner", "Eau illimitée"]
+    },
+    "transport_local": {
+      "navette_haram": "Bus exclusif femmes",
+      "transferts_aeroport": "Véhicule exclusif femmes",
+      "bus_la_mecque_medine": "Transport exclusif groupe féminin"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Accompagnatrice islamique diplômée",
+      "accompagnement": "24h/24 — encadrement féminin exclusif"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis, arrivée Jeddah, accueil par équipe féminine",
+      "JOUR 2-6 : Médine — Programme spirituel féminin, ateliers entre femmes",
+      "JOUR 7 : Transfert La Mecque",
+      "JOUR 8-10 : La Mecque — Rituels Omra, moments de partage féminin",
+      "JOUR 11 : Retour Tunis"
+    ],
+    "inclus": ["Vol A/R", "Visa Omra", "Hébergement 4-5*", "Pension complète", "Transport exclusif femmes", "Accompagnatrice féminine", "Assurance", "Kit Omra femme", "Ateliers spirituels féminins"],
+    "non_inclus": ["Dépenses personnelles", "Pourboires"],
+    "assurance": "Assurance voyage femmes",
+    "note_agence": 4.9,
+    "avis_clients": 198
+  },
+  {
+    "id": "OMRA-012",
+    "titre": "Omra Express Week-End",
+    "sous_titre": "Pour ceux qui ont peu de temps — Omra en 5 jours",
+    "description": "Formule courte et intensive pour accomplir l'Omra en un minimum de temps, idéale pour les professionnels et actifs.",
+    "destination": "La Mecque & Médine",
+    "categorie": "Express",
+    "devise": "TND",
+    "prix": 2200,
+    "prix_eur": 660,
+    "duree": "5j/4n",
+    "dates_disponibles": "07/02/2025|21/02/2025|07/03/2025",
+    "disponibilite": "Disponible|Disponible|Disponible",
+    "places_restantes": 40,
+    "image": "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=600&q=80"
+    ],
+    "vol": {
+      "compagnie": "Saudia Airlines",
+      "depart": "Tunis-Carthage (TUN)",
+      "arrivee": "Jeddah (JED)",
+      "aller": "Direct — 3h30",
+      "retour": "Direct — 3h30",
+      "bagages": "20kg inclus"
+    },
+    "hebergement": {
+      "la_mecque": {
+        "hotel": "Al Kiswah Tower",
+        "etoiles": 4,
+        "distance_haram": "400m",
+        "type_chambre": "Chambre Standard",
+        "nuits": 2
+      },
+      "medine": {
+        "hotel": "Al Eiman Royal Hotel",
+        "etoiles": 4,
+        "distance_masjid_nabawi": "500m",
+        "type_chambre": "Chambre Standard",
+        "nuits": 2
+      }
+    },
+    "visa": {
+      "type": "Visa Omra Express",
+      "inclus": true,
+      "delai_traitement": "48h — traitement accéléré",
+      "documents_requis": ["Passeport valide 6 mois", "Photo biométrique", "Certificat vaccinal méningite"]
+    },
+    "repas": {
+      "formule": "Petit-déjeuner inclus",
+      "details": ["Petit-déjeuner buffet", "Eau — 1L/jour"]
+    },
+    "transport_local": {
+      "navette_haram": "Incluse",
+      "transferts_aeroport": "Inclus",
+      "bus_la_mecque_medine": "Inclus"
+    },
+    "guide": {
+      "langue": ["Arabe", "Français"],
+      "qualification": "Guide efficace — programme optimisé",
+      "accompagnement": "Disponible aux moments clés"
+    },
+    "programme": [
+      "JOUR 1 : Départ Tunis tôt le matin, arrivée Jeddah, transfert La Mecque",
+      "JOUR 2 : La Mecque — Tawaf, Sa'i, Omra complet",
+      "JOUR 3 : Transfert Médine — Masjid Nabawi, prières",
+      "JOUR 4 : Médine — Visites essentielles, retour Jeddah le soir",
+      "JOUR 5 : Vol retour Tunis"
+    ],
+    "inclus": ["Vol A/R direct", "Visa Express 48h", "Hébergement 4*", "Petit-déjeuner", "Transferts", "Guide", "Assurance"],
+    "non_inclus": ["Déjeuners", "Dîners", "Dépenses personnelles"],
+    "assurance": "Assistance voyage de base",
+    "note_agence": 4.4,
+    "avis_clients": 589
+  }
+]

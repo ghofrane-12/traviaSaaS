@@ -1,0 +1,844 @@
+{
+  "vols": [
+    {
+      "id": "AF001",
+      "compagnie": "Air France",
+      "code_compagnie": "AF",
+      "aeroport_depart": {
+        "code": "CDG",
+        "nom": "Charles de Gaulle",
+        "ville": "Paris",
+        "pays": "France",
+        "fuseau_horaire": "Europe/Paris"
+      },
+      "aeroport_arrivee": {
+        "code": "JFK",
+        "nom": "John F. Kennedy",
+        "ville": "New York",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/New_York"
+      },
+      "date_depart": "2026-06-15",
+      "heure_depart": "10:30",
+      "date_arrivee": "2026-06-15",
+      "heure_arrivee": "13:00",
+      "duree_minutes": 510,
+      "prix": {"economie": 650.00, "affaires": 1850.00, "premiere": 3200.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "BA204",
+      "compagnie": "British Airways",
+      "code_compagnie": "BA",
+      "aeroport_depart": {
+        "code": "LHR",
+        "nom": "Heathrow",
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "fuseau_horaire": "Europe/London"
+      },
+      "aeroport_arrivee": {
+        "code": "DXB",
+        "nom": "Dubai International",
+        "ville": "Dubaï",
+        "pays": "Émirats Arabes Unis",
+        "fuseau_horaire": "Asia/Dubai"
+      },
+      "date_depart": "2026-07-20",
+      "heure_depart": "21:45",
+      "date_arrivee": "2026-07-21",
+      "heure_arrivee": "07:30",
+      "duree_minutes": 405,
+      "prix": {"economie": 720.00, "affaires": 2100.00},
+      "devise": "GBP",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "DL105",
+      "compagnie": "Delta Airlines",
+      "code_compagnie": "DL",
+      "aeroport_depart": {
+        "code": "ATL",
+        "nom": "Hartsfield-Jackson",
+        "ville": "Atlanta",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/New_York"
+      },
+      "aeroport_arrivee": {
+        "code": "LAX",
+        "nom": "Los Angeles International",
+        "ville": "Los Angeles",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Los_Angeles"
+      },
+      "date_depart": "2026-06-10",
+      "heure_depart": "08:00",
+      "date_arrivee": "2026-06-10",
+      "heure_arrivee": "10:30",
+      "duree_minutes": 270,
+      "prix": {"economie": 350.00, "premiere": 1200.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "EY55",
+      "compagnie": "Etihad Airways",
+      "code_compagnie": "EY",
+      "aeroport_depart": {
+        "code": "AUH",
+        "nom": "Abu Dhabi International",
+        "ville": "Abu Dhabi",
+        "pays": "Émirats Arabes Unis",
+        "fuseau_horaire": "Asia/Dubai"
+      },
+      "aeroport_arrivee": {
+        "code": "CDG",
+        "nom": "Charles de Gaulle",
+        "ville": "Paris",
+        "pays": "France",
+        "fuseau_horaire": "Europe/Paris"
+      },
+      "date_depart": "2026-08-05",
+      "heure_depart": "02:15",
+      "date_arrivee": "2026-08-05",
+      "heure_arrivee": "07:45",
+      "duree_minutes": 450,
+      "prix": {"economie": 590.00, "affaires": 1650.00},
+      "devise": "AED",
+      "escales": 0,
+      "statut": "annulé"
+    },
+    {
+      "id": "TK789",
+      "compagnie": "Turkish Airlines",
+      "code_compagnie": "TK",
+      "aeroport_depart": {
+        "code": "IST",
+        "nom": "Istanbul Airport",
+        "ville": "Istanbul",
+        "pays": "Turquie",
+        "fuseau_horaire": "Europe/Istanbul"
+      },
+      "aeroport_arrivee": {
+        "code": "NRT",
+        "nom": "Narita International",
+        "ville": "Tokyo",
+        "pays": "Japon",
+        "fuseau_horaire": "Asia/Tokyo"
+      },
+      "date_depart": "2026-09-12",
+      "heure_depart": "16:20",
+      "date_arrivee": "2026-09-13",
+      "heure_arrivee": "09:45",
+      "duree_minutes": 685,
+      "prix": {"economie": 890.00, "affaires": 2500.00, "premiere": 4500.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "retardé"
+    },
+    {
+      "id": "QR123",
+      "compagnie": "Qatar Airways",
+      "code_compagnie": "QR",
+      "aeroport_depart": {
+        "code": "DOH",
+        "nom": "Hamad International",
+        "ville": "Doha",
+        "pays": "Qatar",
+        "fuseau_horaire": "Asia/Qatar"
+      },
+      "aeroport_arrivee": {
+        "code": "SYD",
+        "nom": "Kingsford Smith",
+        "ville": "Sydney",
+        "pays": "Australie",
+        "fuseau_horaire": "Australia/Sydney"
+      },
+      "date_depart": "2026-10-18",
+      "heure_depart": "20:10",
+      "date_arrivee": "2026-10-20",
+      "heure_arrivee": "18:30",
+      "duree_minutes": 1020,
+      "prix": {"economie": 1250.00, "affaires": 3800.00, "premiere": 6200.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "KL1701",
+      "compagnie": "KLM",
+      "code_compagnie": "KL",
+      "aeroport_depart": {
+        "code": "AMS",
+        "nom": "Schiphol",
+        "ville": "Amsterdam",
+        "pays": "Pays-Bas",
+        "fuseau_horaire": "Europe/Amsterdam"
+      },
+      "aeroport_arrivee": {
+        "code": "GRU",
+        "nom": "Guarulhos",
+        "ville": "São Paulo",
+        "pays": "Brésil",
+        "fuseau_horaire": "America/Sao_Paulo"
+      },
+      "date_depart": "2026-11-25",
+      "heure_depart": "12:15",
+      "date_arrivee": "2026-11-25",
+      "heure_arrivee": "19:45",
+      "duree_minutes": 690,
+      "prix": {"economie": 780.00, "affaires": 2200.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "EK246",
+      "compagnie": "Emirates",
+      "code_compagnie": "EK",
+      "aeroport_depart": {
+        "code": "DXB",
+        "nom": "Dubai International",
+        "ville": "Dubaï",
+        "pays": "Émirats Arabes Unis",
+        "fuseau_horaire": "Asia/Dubai"
+      },
+      "aeroport_arrivee": {
+        "code": "JNB",
+        "nom": "O.R. Tambo",
+        "ville": "Johannesburg",
+        "pays": "Afrique du Sud",
+        "fuseau_horaire": "Africa/Johannesburg"
+      },
+      "date_depart": "2026-12-03",
+      "heure_depart": "09:45",
+      "date_arrivee": "2026-12-03",
+      "heure_arrivee": "16:30",
+      "duree_minutes": 525,
+      "prix": {"economie": 710.00, "affaires": 2150.00, "premiere": 4100.00},
+      "devise": "AED",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "AC875",
+      "compagnie": "Air Canada",
+      "code_compagnie": "AC",
+      "aeroport_depart": {
+        "code": "YVR",
+        "nom": "Vancouver International",
+        "ville": "Vancouver",
+        "pays": "Canada",
+        "fuseau_horaire": "America/Vancouver"
+      },
+      "aeroport_arrivee": {
+        "code": "HKG",
+        "nom": "Hong Kong International",
+        "ville": "Hong Kong",
+        "pays": "Chine",
+        "fuseau_horaire": "Asia/Hong_Kong"
+      },
+      "date_depart": "2026-01-14",
+      "heure_depart": "11:50",
+      "date_arrivee": "2026-01-15",
+      "heure_arrivee": "17:25",
+      "duree_minutes": 755,
+      "prix": {"economie": 980.00, "affaires": 2950.00},
+      "devise": "CAD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "IB617",
+      "compagnie": "Iberia",
+      "code_compagnie": "IB",
+      "aeroport_depart": {
+        "code": "MAD",
+        "nom": "Adolfo Suárez Madrid-Barajas",
+        "ville": "Madrid",
+        "pays": "Espagne",
+        "fuseau_horaire": "Europe/Madrid"
+      },
+      "aeroport_arrivee": {
+        "code": "MEX",
+        "nom": "Mexico City International",
+        "ville": "Mexico",
+        "pays": "Mexique",
+        "fuseau_horaire": "America/Mexico_City"
+      },
+      "date_depart": "2026-02-22",
+      "heure_depart": "15:20",
+      "date_arrivee": "2026-02-22",
+      "heure_arrivee": "20:45",
+      "duree_minutes": 665,
+      "prix": {"economie": 610.00, "affaires": 1720.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "retardé"
+    },
+    {
+      "id": "LH431",
+      "compagnie": "Lufthansa",
+      "code_compagnie": "LH",
+      "aeroport_depart": {
+        "code": "FRA",
+        "nom": "Francfort",
+        "ville": "Francfort",
+        "pays": "Allemagne",
+        "fuseau_horaire": "Europe/Berlin"
+      },
+      "aeroport_arrivee": {
+        "code": "BOM",
+        "nom": "Chhatrapati Shivaji",
+        "ville": "Mumbai",
+        "pays": "Inde",
+        "fuseau_horaire": "Asia/Kolkata"
+      },
+      "date_depart": "2026-07-05",
+      "heure_depart": "13:30",
+      "date_arrivee": "2026-07-06",
+      "heure_arrivee": "01:15",
+      "duree_minutes": 525,
+      "prix": {"economie": 680.00, "affaires": 1950.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "SQ321",
+      "compagnie": "Singapore Airlines",
+      "code_compagnie": "SQ",
+      "aeroport_depart": {
+        "code": "SIN",
+        "nom": "Changi",
+        "ville": "Singapour",
+        "pays": "Singapour",
+        "fuseau_horaire": "Asia/Singapore"
+      },
+      "aeroport_arrivee": {
+        "code": "LHR",
+        "nom": "Heathrow",
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "fuseau_horaire": "Europe/London"
+      },
+      "date_depart": "2026-08-30",
+      "heure_depart": "23:55",
+      "date_arrivee": "2026-08-31",
+      "heure_arrivee": "06:20",
+      "duree_minutes": 845,
+      "prix": {"economie": 1100.00, "affaires": 3200.00, "premiere": 5600.00},
+      "devise": "SGD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "UA872",
+      "compagnie": "United Airlines",
+      "code_compagnie": "UA",
+      "aeroport_depart": {
+        "code": "SFO",
+        "nom": "San Francisco International",
+        "ville": "San Francisco",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Los_Angeles"
+      },
+      "aeroport_arrivee": {
+        "code": "TPE",
+        "nom": "Taoyuan International",
+        "ville": "Taipei",
+        "pays": "Taïwan",
+        "fuseau_horaire": "Asia/Taipei"
+      },
+      "date_depart": "2026-09-25",
+      "heure_depart": "13:45",
+      "date_arrivee": "2026-09-26",
+      "heure_arrivee": "18:15",
+      "duree_minutes": 810,
+      "prix": {"economie": 950.00, "affaires": 2850.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "AZ608",
+      "compagnie": "ITA Airways",
+      "code_compagnie": "AZ",
+      "aeroport_depart": {
+        "code": "FCO",
+        "nom": "Leonardo da Vinci",
+        "ville": "Rome",
+        "pays": "Italie",
+        "fuseau_horaire": "Europe/Rome"
+      },
+      "aeroport_arrivee": {
+        "code": "EZE",
+        "nom": "Ministro Pistarini",
+        "ville": "Buenos Aires",
+        "pays": "Argentine",
+        "fuseau_horaire": "America/Argentina/Buenos_Aires"
+      },
+      "date_depart": "2026-10-10",
+      "heure_depart": "19:20",
+      "date_arrivee": "2026-10-11",
+      "heure_arrivee": "05:10",
+      "duree_minutes": 730,
+      "prix": {"economie": 850.00, "affaires": 2400.00},
+      "devise": "EUR",
+      "escales": 1,
+      "statut": "confirmé"
+    },
+    {
+      "id": "CX251",
+      "compagnie": "Cathay Pacific",
+      "code_compagnie": "CX",
+      "aeroport_depart": {
+        "code": "HKG",
+        "nom": "Hong Kong International",
+        "ville": "Hong Kong",
+        "pays": "Chine",
+        "fuseau_horaire": "Asia/Hong_Kong"
+      },
+      "aeroport_arrivee": {
+        "code": "LHR",
+        "nom": "Heathrow",
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "fuseau_horaire": "Europe/London"
+      },
+      "date_depart": "2026-11-18",
+      "heure_depart": "23:45",
+      "date_arrivee": "2026-11-19",
+      "heure_arrivee": "06:30",
+      "duree_minutes": 825,
+      "prix": {"economie": 1050.00, "affaires": 3100.00, "premiere": 5400.00},
+      "devise": "HKD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "AA245",
+      "compagnie": "American Airlines",
+      "code_compagnie": "AA",
+      "aeroport_depart": {
+        "code": "DFW",
+        "nom": "Dallas/Fort Worth",
+        "ville": "Dallas",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Chicago"
+      },
+      "aeroport_arrivee": {
+        "code": "LHR",
+        "nom": "Heathrow",
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "fuseau_horaire": "Europe/London"
+      },
+      "date_depart": "2026-12-15",
+      "heure_depart": "17:00",
+      "date_arrivee": "2026-12-16",
+      "heure_arrivee": "08:15",
+      "duree_minutes": 555,
+      "prix": {"economie": 630.00, "affaires": 1900.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "AY002",
+      "compagnie": "Finnair",
+      "code_compagnie": "AY",
+      "aeroport_depart": {
+        "code": "HEL",
+        "nom": "Helsinki-Vantaa",
+        "ville": "Helsinki",
+        "pays": "Finlande",
+        "fuseau_horaire": "Europe/Helsinki"
+      },
+      "aeroport_arrivee": {
+        "code": "PVG",
+        "nom": "Pudong International",
+        "ville": "Shanghai",
+        "pays": "Chine",
+        "fuseau_horaire": "Asia/Shanghai"
+      },
+      "date_depart": "2026-01-20",
+      "heure_depart": "17:30",
+      "date_arrivee": "2026-01-21",
+      "heure_arrivee": "08:45",
+      "duree_minutes": 555,
+      "prix": {"economie": 790.00, "affaires": 2300.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "LA715",
+      "compagnie": "LATAM Airlines",
+      "code_compagnie": "LA",
+      "aeroport_depart": {
+        "code": "SCL",
+        "nom": "Arturo Merino Benítez",
+        "ville": "Santiago",
+        "pays": "Chili",
+        "fuseau_horaire": "America/Santiago"
+      },
+      "aeroport_arrivee": {
+        "code": "MIA",
+        "nom": "Miami International",
+        "ville": "Miami",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/New_York"
+      },
+      "date_depart": "2026-02-10",
+      "heure_depart": "23:30",
+      "date_arrivee": "2026-02-11",
+      "heure_arrivee": "07:15",
+      "duree_minutes": 525,
+      "prix": {"economie": 580.00, "affaires": 1650.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "KE926",
+      "compagnie": "Korean Air",
+      "code_compagnie": "KE",
+      "aeroport_depart": {
+        "code": "ICN",
+        "nom": "Incheon International",
+        "ville": "Séoul",
+        "pays": "Corée du Sud",
+        "fuseau_horaire": "Asia/Seoul"
+      },
+      "aeroport_arrivee": {
+        "code": "CDG",
+        "nom": "Charles de Gaulle",
+        "ville": "Paris",
+        "pays": "France",
+        "fuseau_horaire": "Europe/Paris"
+      },
+      "date_depart": "2026-03-05",
+      "heure_depart": "11:20",
+      "date_arrivee": "2026-03-05",
+      "heure_arrivee": "17:45",
+      "duree_minutes": 745,
+      "prix": {"economie": 920.00, "affaires": 2700.00, "premiere": 4800.00},
+      "devise": "KRW",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "VS008",
+      "compagnie": "Virgin Atlantic",
+      "code_compagnie": "VS",
+      "aeroport_depart": {
+        "code": "LHR",
+        "nom": "Heathrow",
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "fuseau_horaire": "Europe/London"
+      },
+      "aeroport_arrivee": {
+        "code": "LAX",
+        "nom": "Los Angeles International",
+        "ville": "Los Angeles",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Los_Angeles"
+      },
+      "date_depart": "2026-03-20",
+      "heure_depart": "13:15",
+      "date_arrivee": "2026-03-20",
+      "heure_arrivee": "16:45",
+      "duree_minutes": 630,
+      "prix": {"economie": 540.00, "affaires": 1750.00, "premiere": 3100.00},
+      "devise": "GBP",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "NH116",
+      "compagnie": "ANA",
+      "code_compagnie": "NH",
+      "aeroport_depart": {
+        "code": "HND",
+        "nom": "Haneda",
+        "ville": "Tokyo",
+        "pays": "Japon",
+        "fuseau_horaire": "Asia/Tokyo"
+      },
+      "aeroport_arrivee": {
+        "code": "SEA",
+        "nom": "Seattle-Tacoma",
+        "ville": "Seattle",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Los_Angeles"
+      },
+      "date_depart": "2026-04-10",
+      "heure_depart": "16:25",
+      "date_arrivee": "2026-04-10",
+      "heure_arrivee": "09:45",
+      "duree_minutes": 560,
+      "prix": {"economie": 1050.00, "affaires": 3100.00},
+      "devise": "JPY",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "AR124",
+      "compagnie": "Aerolineas Argentinas",
+      "code_compagnie": "AR",
+      "aeroport_depart": {
+        "code": "EZE",
+        "nom": "Ministro Pistarini",
+        "ville": "Buenos Aires",
+        "pays": "Argentine",
+        "fuseau_horaire": "America/Argentina/Buenos_Aires"
+      },
+      "aeroport_arrivee": {
+        "code": "MAD",
+        "nom": "Madrid-Barajas",
+        "ville": "Madrid",
+        "pays": "Espagne",
+        "fuseau_horaire": "Europe/Madrid"
+      },
+      "date_depart": "2026-05-02",
+      "heure_depart": "22:00",
+      "date_arrivee": "2026-05-03",
+      "heure_arrivee": "14:05",
+      "duree_minutes": 725,
+      "prix": {"economie": 730.00, "affaires": 2050.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "SK928",
+      "compagnie": "SAS",
+      "code_compagnie": "SK",
+      "aeroport_depart": {
+        "code": "CPH",
+        "nom": "Copenhague Kastrup",
+        "ville": "Copenhague",
+        "pays": "Danemark",
+        "fuseau_horaire": "Europe/Copenhagen"
+      },
+      "aeroport_arrivee": {
+        "code": "BKK",
+        "nom": "Suvarnabhumi",
+        "ville": "Bangkok",
+        "pays": "Thaïlande",
+        "fuseau_horaire": "Asia/Bangkok"
+      },
+      "date_depart": "2026-05-25",
+      "heure_depart": "14:50",
+      "date_arrivee": "2026-05-26",
+      "heure_arrivee": "08:00",
+      "duree_minutes": 670,
+      "prix": {"economie": 890.00, "affaires": 2580.00},
+      "devise": "DKK",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "MU785",
+      "compagnie": "China Eastern",
+      "code_compagnie": "MU",
+      "aeroport_depart": {
+        "code": "PVG",
+        "nom": "Pudong International",
+        "ville": "Shanghai",
+        "pays": "Chine",
+        "fuseau_horaire": "Asia/Shanghai"
+      },
+      "aeroport_arrivee": {
+        "code": "FCO",
+        "nom": "Leonardo da Vinci",
+        "ville": "Rome",
+        "pays": "Italie",
+        "fuseau_horaire": "Europe/Rome"
+      },
+      "date_depart": "2026-06-08",
+      "heure_depart": "12:30",
+      "date_arrivee": "2026-06-08",
+      "heure_arrivee": "19:15",
+      "duree_minutes": 765,
+      "prix": {"economie": 720.00, "affaires": 2100.00},
+      "devise": "CNY",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "TP223",
+      "compagnie": "TAP Air Portugal",
+      "code_compagnie": "TP",
+      "aeroport_depart": {
+        "code": "LIS",
+        "nom": "Humberto Delgado",
+        "ville": "Lisbonne",
+        "pays": "Portugal",
+        "fuseau_horaire": "Europe/Lisbon"
+      },
+      "aeroport_arrivee": {
+        "code": "GRU",
+        "nom": "Guarulhos",
+        "ville": "São Paulo",
+        "pays": "Brésil",
+        "fuseau_horaire": "America/Sao_Paulo"
+      },
+      "date_depart": "2026-06-18",
+      "heure_depart": "15:10",
+      "date_arrivee": "2026-06-18",
+      "heure_arrivee": "21:40",
+      "duree_minutes": 570,
+      "prix": {"economie": 740.00, "affaires": 2150.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "OS075",
+      "compagnie": "Austrian Airlines",
+      "code_compagnie": "OS",
+      "aeroport_depart": {
+        "code": "VIE",
+        "nom": "Vienne International",
+        "ville": "Vienne",
+        "pays": "Autriche",
+        "fuseau_horaire": "Europe/Vienna"
+      },
+      "aeroport_arrivee": {
+        "code": "JFK",
+        "nom": "John F. Kennedy",
+        "ville": "New York",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/New_York"
+      },
+      "date_depart": "2026-07-14",
+      "heure_depart": "10:45",
+      "date_arrivee": "2026-07-14",
+      "heure_arrivee": "13:50",
+      "duree_minutes": 545,
+      "prix": {"economie": 680.00, "affaires": 1980.00, "premiere": 3500.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "retardé"
+    },
+    {
+      "id": "VA001",
+      "compagnie": "Virgin Australia",
+      "code_compagnie": "VA",
+      "aeroport_depart": {
+        "code": "SYD",
+        "nom": "Kingsford Smith",
+        "ville": "Sydney",
+        "pays": "Australie",
+        "fuseau_horaire": "Australia/Sydney"
+      },
+      "aeroport_arrivee": {
+        "code": "LAX",
+        "nom": "Los Angeles International",
+        "ville": "Los Angeles",
+        "pays": "États-Unis",
+        "fuseau_horaire": "America/Los_Angeles"
+      },
+      "date_depart": "2026-08-02",
+      "heure_depart": "09:15",
+      "date_arrivee": "2026-08-02",
+      "heure_arrivee": "06:45",
+      "duree_minutes": 870,
+      "prix": {"economie": 980.00, "affaires": 2950.00},
+      "devise": "AUD",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "UL605",
+      "compagnie": "SriLankan Airlines",
+      "code_compagnie": "UL",
+      "aeroport_depart": {
+        "code": "CMB",
+        "nom": "Bandaranaike",
+        "ville": "Colombo",
+        "pays": "Sri Lanka",
+        "fuseau_horaire": "Asia/Colombo"
+      },
+      "aeroport_arrivee": {
+        "code": "CDG",
+        "nom": "Charles de Gaulle",
+        "ville": "Paris",
+        "pays": "France",
+        "fuseau_horaire": "Europe/Paris"
+      },
+      "date_depart": "2026-08-20",
+      "heure_depart": "02:30",
+      "date_arrivee": "2026-08-20",
+      "heure_arrivee": "09:45",
+      "duree_minutes": 615,
+      "prix": {"economie": 660.00, "affaires": 1880.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "programmé"
+    },
+    {
+      "id": "SN491",
+      "compagnie": "Brussels Airlines",
+      "code_compagnie": "SN",
+      "aeroport_depart": {
+        "code": "BRU",
+        "nom": "Zaventem",
+        "ville": "Bruxelles",
+        "pays": "Belgique",
+        "fuseau_horaire": "Europe/Brussels"
+      },
+      "aeroport_arrivee": {
+        "code": "DSS",
+        "nom": "Blaise Diagne",
+        "ville": "Dakar",
+        "pays": "Sénégal",
+        "fuseau_horaire": "Africa/Dakar"
+      },
+      "date_depart": "2026-09-05",
+      "heure_depart": "11:25",
+      "date_arrivee": "2026-09-05",
+      "heure_arrivee": "16:50",
+      "duree_minutes": 385,
+      "prix": {"economie": 490.00, "affaires": 1420.00},
+      "devise": "EUR",
+      "escales": 0,
+      "statut": "confirmé"
+    },
+    {
+      "id": "ET603",
+      "compagnie": "Ethiopian Airlines",
+      "code_compagnie": "ET",
+      "aeroport_depart": {
+        "code": "ADD",
+        "nom": "Bole International",
+        "ville": "Addis-Abeba",
+        "pays": "Éthiopie",
+        "fuseau_horaire": "Africa/Addis_Ababa"
+      },
+      "aeroport_arrivee": {
+        "code": "FCO",
+        "nom": "Leonardo da Vinci",
+        "ville": "Rome",
+        "pays": "Italie",
+        "fuseau_horaire": "Europe/Rome"
+      },
+      "date_depart": "2026-09-18",
+      "heure_depart": "23:50",
+      "date_arrivee": "2026-09-19",
+      "heure_arrivee": "05:25",
+      "duree_minutes": 395,
+      "prix": {"economie": 530.00, "affaires": 1520.00},
+      "devise": "USD",
+      "escales": 0,
+      "statut": "programmé"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Atlas Voyages",
+  "currency": "EUR",
+  "margin_percentage": 12.50,
+  "address": {
+    "street": "10 Rue de la République",
+    "city": "Paris",
+    "postal_code": "75001",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522
+  },
+  "contact": {
+    "phone": "+33 1 42 96 12 34",
+    "email": "contact@atlasvoyages.fr",
+    "website": "https://www.atlasvoyages.fr"
+  },
+  "opening_hours": {
+    "monday": "09:00 - 18:00",
+    "tuesday": "09:00 - 18:00",
+    "wednesday": "09:00 - 18:00",
+    "thursday": "09:00 - 18:00",
+    "friday": "09:00 - 17:00",
+    "saturday": "10:00 - 13:00",
+    "sunday": "closed"
+  },
+  "timezone": "Europe/Paris",
+  "languages": ["fr", "en", "ar"],
+  "social_media": {
+    "facebook": "https://facebook.com/atlasvoyages",
+    "instagram": "https://instagram.com/atlasvoyages",
+    "linkedin": "https://linkedin.com/company/atlas-voyages"
+  },
+  "legal_info": {
+    "siret": "123 456 789 00012",
+    "vat_number": "FR12345678901",
+    "licence_number": "IM075120001",
+    "insurance": "AXA - Garantie financière",
+    "rcs": "Paris B 123 456 789"
+  },
+  "banking": {
+    "iban": "FR76 3000 4001 2300 0001 2345 678",
+    "bic": "BNPAFRPP"
+  },
+  "staff": {
+    "manager": "Sophie Martin",
+    "support_email": "support@atlasvoyages.fr",
+    "emergency_phone": "+33 6 12 34 56 78"
+  }
+}

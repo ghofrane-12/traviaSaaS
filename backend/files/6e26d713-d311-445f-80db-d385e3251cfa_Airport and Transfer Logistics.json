@@ -1,0 +1,707 @@
+{
+  "version": "LOGISTICS_AIRPORT_TRANSFER_V2.1",
+  "description": "Dataset complet et enrichi pour la logistique aéroportuaire et les transferts, optimisé pour les systèmes RAG, les applications de voyage et l'assistance client. Inclut des réglementations locales, des exemples pratiques et des conseils détaillés mis à jour pour 2026.",
+  "last_updated": "2026-03-30",
+  "entries": [
+    {
+      "id": "GLOBAL_LOGISTICS_001",
+      "title": "How to Navigate Airport Transfers Efficiently",
+      "search_keywords": [
+        "airport transfer tips", "comment organiser transfert aéroport", "kaifa antaqil bayn almatarhat bifawidah",
+        "best way to get from airport to city", "airport shuttle vs taxi comparison", "how to book airport transfer in advance",
+        "airport transfer options for families", "how to avoid airport transfer scams 2026", "how to find official airport transfer desk",
+        "airport transfer for large groups with luggage", "eco-friendly airport transfer options", "airport transfer apps recommendations"
+      ],
+      "content": {
+        "introduction": "Navigating airport transfers efficiently requires careful planning, especially in unfamiliar cities or during peak travel seasons. This 2026 guide provides detailed steps, local regulations, and practical tips to ensure smooth transitions from airports to your final destination.",
+        "steps": [
+          {
+            "title": "Plan Ahead Before Your Trip",
+            "details": [
+              "Research transfer options from your arrival airport to your destination at least 2 weeks before travel.",
+              "Compare options using tools like Rome2rio, Google Maps, or local transport apps (e.g., Citymapper, Moovit).",
+              "Check peak season availability (e.g., Christmas markets in Europe, summer festivals) that may affect transfer services.",
+              "Book in advance for better rates, especially for private transfers or during major events.",
+              "For international transfers, check visa requirements if leaving the airport (e.g., Schengen visa for EU transfers)."
+            ],
+            "tools": [
+              {"name": "Rome2rio", "description": "Compares all transport options with price estimates and travel times.", "link": "https://www.rome2rio.com"},
+              {"name": "Google Maps", "description": "Real-time transit options and walking directions within airports.", "link": "https://maps.google.com"},
+              {"name": "Citymapper", "description": "Best for public transport options in major cities.", "link": "https://citymapper.com"}
+            ]
+          },
+          {
+            "title": "Transportation Options Comparison",
+            "options": [
+              {
+                "type": "Taxis",
+                "pros": ["Door-to-door service", "Available 24/7", "No waiting for shared rides"],
+                "cons": ["Can be expensive", "Risk of scams in some countries", "Traffic delays possible"],
+                "cost": "$25-$100",
+                "time": "30-90 minutes to city center",
+                "tips": [
+                  "Use official taxi stands marked at airport exits.",
+                  "In some countries (e.g., Egypt, Morocco), agree on price before entering taxi.",
+                  "Ask for receipt - required for expense reports and complaints.",
+                  "Use taxi apps (e.g., Free Now in Europe, Grab in Asia) for fixed prices."
+                ]
+              },
+              {
+                "type": "Ride-Sharing",
+                "pros": ["Often cheaper than taxis", "Upfront pricing", "Driver ratings available", "Cashless payment"],
+                "cons": ["May not be available at all airports", "Surge pricing during peak times"],
+                "cost": "$15-$70",
+                "time": "30-90 minutes to city center",
+                "tips": [
+                  "Check the airport's website for designated ride-sharing pickup points.",
+                  "Confirm the driver's name, car model, and license plate before entering.",
+                  "Use the app's 'Share Trip Status' feature to send your route to friends/family."
+                ]
+              },
+              {
+                "type": "Airport Shuttles",
+                "pros": ["Cost-effective for solo travelers", "Fixed routes to major hotels"],
+                "cons": ["Multiple stops increase travel time", "Limited schedules"],
+                "cost": "$10-$30 per person",
+                "time": "60-120 minutes",
+                "tips": [
+                  "Book in advance online for discounts (e.g., SuperShuttle, GoOpti).",
+                  "Confirm the shuttle's schedule matches your flight arrival time."
+                ]
+              },
+              {
+                "type": "Public Transport",
+                "pros": ["Usually the cheapest option", "No traffic delays", "Good for eco-conscious travelers"],
+                "cons": ["Can be complex with luggage", "Limited hours"],
+                "cost": "$2-$15 per person",
+                "time": "45-120 minutes",
+                "tips": [
+                  "Purchase tickets in advance if possible.",
+                  "Use apps like Citymapper for step-by-step directions."
+                ]
+              },
+              {
+                "type": "Private Transfers",
+                "pros": ["Door-to-door service", "Meet-and-greet with name sign", "Comfortable vehicles"],
+                "cons": ["Most expensive option"],
+                "cost": "$50-$150",
+                "time": "30-60 minutes",
+                "tips": [
+                  "Book through reputable companies with good reviews (e.g., Welcome Pickups, Blacklane).",
+                  "Provide flight details so driver can track delays."
+                ]
+              },
+              {
+                "type": "Hotel Shuttles",
+                "pros": ["Often free or discounted for guests", "Direct to your hotel"],
+                "cons": ["Limited to specific hotels", "Fixed schedules"],
+                "cost": "Free-$20",
+                "time": "30-90 minutes",
+                "tips": [
+                  "Confirm shuttle availability when booking your hotel.",
+                  "Ask about shuttle schedules (some run only during specific hours)."
+                ]
+              },
+              {
+                "type": "Eco-Friendly Options",
+                "pros": ["Lower carbon footprint", "Often cheaper"],
+                "examples": [
+                  {"city": "Amsterdam", "options": ["Train to Central Station", "Bike Rental"]},
+                  {"city": "Copenhagen", "options": ["Metro to City Center", "Electric City Bikes"]}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Booking and Safety Tips",
+            "booking_tips": [
+              "For taxis and ride-sharing, use official apps or designated airport stands to avoid scams.",
+              "Always confirm your booking details (pickup location, time, vehicle type, driver contact).",
+              "Save the booking confirmation and the company's 24/7 contact number."
+            ],
+            "safety_tips": [
+              "Only use official taxi stands or pre-booked services from reputable companies.",
+              "Verify the driver's identification and vehicle details match your booking confirmation.",
+              "Avoid drivers who approach you offering 'cheap rides' - these are often unlicensed."
+            ],
+            "scam_prevention": [
+              {"scam": "Unofficial Taxi Touts", "how_to_avoid": "Only use official taxi stands outside the terminal."},
+              {"scam": "Meter Tampering", "how_to_avoid": "Check the meter starts at 0 and watch for sudden jumps."},
+              {"scam": "Long Route", "how_to_avoid": "Use GPS on your phone to track the route."}
+            ]
+          },
+          {
+            "title": "Special Needs and Large Groups",
+            "tips": [
+              "Book larger vehicles in advance (minivans for 6-8 people, buses for 15+).",
+              "For wheelchair users, confirm the vehicle has a ramp or lift.",
+              "If traveling with children, request child seats in advance."
+            ],
+            "vehicle_types": [
+              {"type": "Sedan", "capacity": "3-4 passengers + 2-3 suitcases"},
+              {"type": "Minivan", "capacity": "6-8 passengers + 5-6 suitcases"},
+              {"type": "Wheelchair Accessible", "capacity": "Varies (typically 1-4 passengers + 1 wheelchair)"}
+            ]
+          }
+        ],
+        "pro_tip": {
+          "text": "Before your trip, take screenshots of: 1) Your transfer booking confirmation, 2) The company's 24/7 contact number, 3) A map showing the official pickup location at your arrival airport, 4) Your hotel's address in the local language. Save these in an easily accessible folder on your phone.",
+          "example": "At Tokyo Narita Airport, the official taxi stand is on the 1st floor of each terminal, clearly marked with yellow signs."
+        },
+        "local_examples": [
+          {
+            "airport": "Heathrow Airport (LHR), London",
+            "options": [
+              {"type": "Heathrow Express", "details": "Non-stop train to Paddington Station (15 min), £25 one-way"},
+              {"type": "Elizabeth Line", "details": "£12.80 to central London (30 min)"},
+              {"type": "Black Cabs", "details": "Official London taxis, ~£50-70 to central London"}
+            ]
+          },
+          {
+            "airport": "Changi Airport (SIN), Singapore",
+            "options": [
+              {"type": "MRT", "details": "SGD 2.50 to city center (30 min)"},
+              {"type": "Grab/Gojek", "details": "Official ride-hailing pickup zones at each terminal"},
+              {"type": "Taxi", "details": "Official taxi stands, ~SGD 25-40 to city center"}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "GLOBAL_LOGISTICS_002",
+      "title": "Understanding Airport Layout and Facilities",
+      "search_keywords": [
+        "airport layout guide", "comment trouver services aéroport", "kaifa taarif marafiq almatar",
+        "airport terminal map", "airport facilities for families", "airport lounges access 2026",
+        "how to navigate large airports", "airport services for disabled passengers"
+      ],
+      "content": {
+        "introduction": "Modern airports are complex facilities with multiple terminals and services. Understanding the layout and available facilities can significantly reduce travel stress and save time.",
+        "terminal_areas": [
+          {
+            "area": "Departures",
+            "sub_areas": [
+              {"name": "Check-in Hall", "description": "Airline counters for baggage drop and ticketing"},
+              {"name": "Security Checkpoints", "description": "Screening area for passengers and carry-on luggage"},
+              {"name": "Departure Gates", "description": "Waiting areas near aircraft boarding points"},
+              {"name": "Lounges", "description": "Comfortable waiting areas with amenities"}
+            ]
+          },
+          {
+            "area": "Arrivals",
+            "sub_areas": [
+              {"name": "Baggage Claim", "description": "Area where checked luggage is returned"},
+              {"name": "Customs/Immigration", "description": "Passport control and customs clearance"},
+              {"name": "Ground Transportation", "description": "Area for taxis, shuttles, public transport"}
+            ]
+          },
+          {
+            "area": "Transit Areas",
+            "sub_areas": [
+              {"name": "Transfer Desks", "description": "Assistance for connecting flights"},
+              {"name": "Duty-Free Shops", "description": "Tax-free shopping for international travelers"},
+              {"name": "Transit Hotels", "description": "Hotels inside the airport for long layovers"}
+            ]
+          }
+        ],
+        "key_facilities": [
+          {
+            "name": "Information Desks",
+            "description": "Staffed counters for directions, maps, and assistance",
+            "services": ["Airport maps", "Flight information", "Lost and found", "Language interpretation"]
+          },
+          {
+            "name": "Baggage Services",
+            "description": "Assistance with lost, delayed, or damaged luggage",
+            "services": ["Report lost baggage", "Baggage wrapping", "Oversize luggage handling"]
+          },
+          {
+            "name": "Lounges",
+            "description": "Comfortable waiting areas with amenities",
+            "access": ["Business/First class tickets", "Frequent flyer status", "Paid access"]
+          },
+          {
+            "name": "Family Services",
+            "description": "Facilities for travelers with children",
+            "services": ["Nursing rooms", "Baby changing facilities", "Play areas"]
+          },
+          {
+            "name": "Accessibility Services",
+            "description": "Facilities for travelers with disabilities",
+            "services": ["Wheelchair assistance", "Accessible restrooms", "Priority security lanes"]
+          }
+        ],
+        "navigation_tips": [
+          "Use airport apps for real-time maps and directions (e.g., Changi App, Heathrow App).",
+          "Follow color-coded signs and floor markings.",
+          "Allow extra time for large airports with long walking distances.",
+          "Ask airport staff for assistance if you're lost or need help."
+        ],
+        "pro_tip": {
+          "text": "Many airports have hidden amenities that can make long layovers enjoyable:",
+          "examples": [
+            {"airport": "Singapore Changi", "features": ["Butterfly garden", "Rooftop pool", "Free movie theaters"]},
+            {"airport": "Incheon, Seoul", "features": ["Free transit tours", "Korean Culture Museum", "Spa facilities"]}
+          ]
+        }
+      }
+    },
+    {
+      "id": "GLOBAL_LOGISTICS_003",
+      "title": "Managing Luggage and Baggage Services at Airports",
+      "search_keywords": [
+        "airport baggage tips 2026", "how to check in luggage efficiently", "what to do if baggage is lost or delayed",
+        "airport baggage allowances by airline", "how to pack luggage for air travel 2026", "baggage security rules 2026"
+      ],
+      "content": {
+        "introduction": "Managing your luggage efficiently can prevent delays, lost items, and unexpected fees. This guide covers packing strategies, security regulations, and handling lost or damaged baggage.",
+        "packing_tips": {
+          "before_you_pack": [
+            "Check your airline's baggage policy for weight limits, size restrictions, and fees.",
+            "Pack essentials in your carry-on in case your checked luggage is delayed.",
+            "Use TSA-approved locks for checked luggage.",
+            "Consider luggage with built-in GPS trackers for easy location tracking."
+          ],
+          "prohibited_items": {
+            "global": ["Explosives", "Weapons", "Sharp objects >6cm", "Liquids over 100ml in carry-on"],
+            "country_specific": [
+              {"country": "USA", "items": ["No sporting goods in carry-on", "Special rules for powders over 12oz"]},
+              {"country": "UK", "items": ["No knives of any size in carry-on", "Strict rules on musical instruments"]}
+            ]
+          }
+        },
+        "check_in_process": {
+          "options": [
+            {"method": "Online Check-in", "details": "Available 24-48 hours before flight, allows seat selection"},
+            {"method": "Self-Service Kiosks", "details": "Available at most airports, faster than counter check-in"},
+            {"method": "Counter Check-in", "details": "Required for special baggage, best for complex itineraries"}
+          ],
+          "baggage_tag_tips": [
+            "Remove old tags to avoid routing errors.",
+            "Check that the tag matches your final destination.",
+            "Take a photo of your baggage tag number."
+          ]
+        },
+        "security_rules": {
+          "liquids": {
+            "standard": "Containers ≤100ml in a single 1L clear, resealable bag",
+            "exceptions": ["Medications", "Baby food", "Duty-free liquids in secure bags"]
+          },
+          "electronics": {
+            "rules": [
+              "Laptops and large electronics must be removed and placed in separate bins.",
+              "E-cigarettes must be in carry-on (never in checked luggage).",
+              "Power banks over 100Wh require airline approval."
+            ]
+          }
+        },
+        "special_baggage": {
+          "sports_equipment": {
+            "examples": [
+              {"item": "Skis/Snowboards", "fees": "$30-$100", "packing": "Requires protective case"},
+              {"item": "Golf Clubs", "fees": "$50-$150", "packing": "Hard case recommended"}
+            ]
+          },
+          "fragile_items": {
+            "tips": [
+              "Use 'Fragile' stickers on all sides of the package.",
+              "Pack with plenty of cushioning material.",
+              "Take photos before checking in as proof of condition."
+            ]
+          }
+        },
+        "baggage_issues": {
+          "delayed_baggage": {
+            "steps": [
+              "File a Property Irregularity Report (PIR) at the baggage service desk.",
+              "Get a reference number and keep your baggage receipt.",
+              "Ask about compensation for essential items if delayed >24 hours."
+            ]
+          },
+          "damaged_baggage": {
+            "steps": [
+              "Report damage before leaving the baggage claim area.",
+              "Take photos of the damage with your phone.",
+              "Get a damage report from airline staff."
+            ]
+          },
+          "lost_baggage": {
+            "steps": [
+              "File a report within 24 hours for most airlines.",
+              "Provide detailed description and photos of your bag and contents.",
+              "Follow up regularly using your reference number."
+            ]
+          }
+        },
+        "pro_tip": {
+          "text": "Create a 'baggage emergency kit' in your carry-on with:",
+          "items": [
+            "Copy of your itinerary and baggage receipts",
+            "Small toiletries (toothbrush, deodorant, face wipes)",
+            "Change of underwear and socks",
+            "Basic medications",
+            "List of contents in your checked bag (with photos)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "GLOBAL_LOGISTICS_004",
+      "title": "Airport Security and Customs Clearance Guide 2026",
+      "search_keywords": [
+        "airport security tips 2026", "how to prepare for airport security", "customs declaration tips 2026",
+        "prohibited items in carry-on 2026", "TSA PreCheck vs Global Entry", "airport security for families 2026"
+      ],
+      "content": {
+        "introduction": "Airport security and customs procedures evolve frequently. This 2026 guide provides the latest information on how to navigate these processes efficiently.",
+        "preparation": {
+          "packing_tips": {
+            "liquids": {
+              "rules": ["Containers ≤100ml", "Single 1L clear bag", "One bag per passenger"],
+              "exceptions": ["Medications", "Baby food", "Duty-free liquids"]
+            },
+            "electronics": {
+              "rules": [
+                "Laptops must be removed and placed in separate bins.",
+                "E-cigarettes must be in carry-on.",
+                "Power banks over 100Wh require approval."
+              ]
+            }
+          },
+          "checklist": [
+            "Check TSA/airport security rules for your departure and arrival countries.",
+            "Pack liquids in compliant containers in a clear 1L bag.",
+            "Have ID and boarding pass readily available.",
+            "Download airline app for real-time updates."
+          ]
+        },
+        "security_process": {
+          "steps": [
+            {"step": "Document Check", "details": "Present boarding pass and ID."},
+            {"step": "Baggage Screening", "details": "Remove laptops and liquids for separate screening."},
+            {"step": "Body Screening", "details": "Walk through metal detector or millimeter wave scanner."},
+            {"step": "Additional Screening", "details": "Random checks may be required."}
+          ],
+          "new_technologies": [
+            {"name": "AI-Powered CT Scanners", "benefits": "Allows electronics to stay in bags"},
+            {"name": "Biometric Screening", "benefits": "Facial recognition reduces document checks"},
+            {"name": "Automated Security Lanes", "benefits": "Self-service bins reduce queuing time"}
+          ]
+        },
+        "customs_clearance": {
+          "process": [
+            {"step": "Disembarkation", "details": "Follow signs to immigration/customs."},
+            {"step": "Passport Control", "details": "Present passport and visa if required."},
+            {"step": "Baggage Claim", "details": "Collect checked luggage."},
+            {"step": "Customs Declaration", "details": "Declare all restricted items."}
+          ],
+          "common_restrictions": [
+            {
+              "category": "Food and Agriculture",
+              "examples": [
+                {"country": "USA", "restrictions": ["No fresh fruits/vegetables without declaration"]},
+                {"country": "Australia", "restrictions": ["Strict biosecurity laws with heavy fines"]}
+              ]
+            },
+            {
+              "category": "Currency",
+              "examples": [
+                {"country": "USA", "limit": "$10,000+ must be declared"},
+                {"country": "EU", "limit": "€10,000+ must be declared"}
+              ]
+            }
+          ]
+        },
+        "special_cases": {
+          "families": {
+            "tips": [
+              "Baby food/formula allowed over 100ml with inspection.",
+              "Strollers can be gate-checked for free.",
+              "Family security lanes available at many airports."
+            ]
+          },
+          "medical_needs": {
+            "tips": [
+              "Carry doctor's notes for all medications.",
+              "Inform security about medical devices before screening.",
+              "Medical liquids over 100ml allowed with documentation."
+            ]
+          }
+        },
+        "pro_tip": {
+          "text": "Create a 'security survival kit' in your carry-on with:",
+          "items": [
+            "Clear 1L bag with travel-sized liquids",
+            "Small pack of tissues",
+            "Pen for customs forms",
+            "Snacks for delays",
+            "Copy of boarding pass"
+          ]
+        }
+      }
+    },
+    {
+      "id": "GLOBAL_LOGISTICS_005",
+      "title": "Airport Transportation Options Guide 2026",
+      "search_keywords": [
+        "airport transportation guide 2026", "best airport transfer options 2026", "eco-friendly airport transport 2026",
+        "how to book airport taxi 2026", "airport car rental tips 2026", "airport transfer for business travelers 2026"
+      ],
+      "content": {
+        "introduction": "Choosing the right transportation from the airport can significantly impact your travel experience. This 2026 guide provides updated information on all major transportation options.",
+        "comparison_table": {
+          "factors": ["Cost", "Travel Time", "Comfort", "Reliability", "Sustainability", "Best For"],
+          "options": [
+            {
+              "type": "Taxis",
+              "cost": "3-5",
+              "time": "4",
+              "comfort": "4",
+              "reliability": "5",
+              "sustainability": "2",
+              "best_for": ["Families", "Business travelers", "Late-night arrivals"]
+            },
+            {
+              "type": "Ride-Sharing",
+              "cost": "4",
+              "time": "4",
+              "comfort": "4",
+              "reliability": "4",
+              "sustainability": "3",
+              "best_for": ["Tech-savvy travelers", "Solo travelers"]
+            },
+            {
+              "type": "Public Transport",
+              "cost": "5",
+              "time": "3",
+              "comfort": "3",
+              "reliability": "4",
+              "sustainability": "5",
+              "best_for": ["Budget travelers", "Eco-conscious travelers"]
+            }
+          ]
+        },
+        "detailed_options": [
+          {
+            "type": "Taxis",
+            "global_overview": "Available at all major airports, regulated fares in most countries.",
+            "how_to_use": [
+              "Follow signs to official taxi stands.",
+              "Confirm meter is running or agree on fixed price.",
+              "Ask for receipt for expense reports."
+            ],
+            "safety_tips": [
+              "Only use official taxi stands marked at airport exits.",
+              "Avoid unlicensed taxis offering 'cheap rides'."
+            ]
+          },
+          {
+            "type": "Ride-Sharing",
+            "global_overview": "Available at most major airports, requires smartphone app.",
+            "popular_apps": [
+              {"region": "North America", "apps": ["Uber", "Lyft"]},
+              {"region": "Europe", "apps": ["Bolt", "Free Now"]},
+              {"region": "Asia", "apps": ["Grab", "Didi"]}
+            ],
+            "how_to_use": [
+              "Check airport website for designated pickup zones.",
+              "Verify driver's details match the app before entering."
+            ]
+          },
+          {
+            "type": "Public Transport",
+            "global_overview": "Usually the cheapest and most eco-friendly option.",
+            "tips": [
+              "Purchase tickets in advance for discounts.",
+              "Check luggage restrictions and size limits.",
+              "Use contactless payment if available."
+            ],
+            "examples": [
+              {"city": "London", "service": "Heathrow Express", "cost": "£25", "time": "15 min"},
+              {"city": "Paris", "service": "RER B", "cost": "€11.45", "time": "35 min"}
+            ]
+          },
+          {
+            "type": "Private Transfers",
+            "global_overview": "Door-to-door service with professional drivers, requires advance booking.",
+            "booking_platforms": [
+              {"name": "Welcome Pickups", "features": ["English-speaking drivers", "Flight monitoring"]},
+              {"name": "Blacklane", "features": ["Luxury vehicles", "Fixed pricing"]}
+            ],
+            "vehicle_options": [
+              {"type": "Sedan", "capacity": "1-3 passengers"},
+              {"type": "Minivan", "capacity": "4-6 passengers"},
+              {"type": "Luxury", "capacity": "1-4 passengers"}
+            ]
+          },
+          {
+            "type": "Eco-Friendly Options",
+            "examples": [
+              {"city": "Amsterdam", "options": ["Electric taxis", "Bike rentals"]},
+              {"city": "Copenhagen", "options": ["Metro (100% wind-powered)", "City bikes"]}
+            ],
+            "tips": [
+              "Look for 'green' transport options marked on airport signage.",
+              "Some airports offer carbon offset programs for public transport tickets."
+            ]
+          }
+        ],
+        "choosing_the_right_option": {
+          "decision_factors": [
+            {"factor": "Budget", "options": ["Public Transport (cheapest)", "Private Transfer (most expensive)"]},
+            {"factor": "Group Size", "recommendations": [
+              {"group": "1-2 people", "options": ["Taxi", "Ride-sharing"]},
+              {"group": "5+ people", "options": ["Minibus", "Multiple taxis"]}
+            ]},
+            {"factor": "Special Needs", "options": [
+              {"need": "Wheelchair accessibility", "options": ["Private transfer with WAV", "Taxi with ramp"]},
+              {"need": "Child seats", "options": ["Private transfer", "Rental car"]}
+            ]}
+          ]
+        },
+        "pro_tip": {
+          "text": "Create a transportation decision matrix before your trip, scoring each option based on your priorities (cost, time, comfort, etc.)."
+        }
+      }
+    },
+    {
+      "id": "GLOBAL_LOGISTICS_006",
+      "title": "Managing Flight Connections and Layovers 2026",
+      "search_keywords": [
+        "flight connection tips 2026", "how to handle layovers 2026", "minimum connection time at airports 2026",
+        "what to do during long layover 2026", "airport transit visa requirements 2026", "best airports for long layovers 2026"
+      ],
+      "content": {
+        "introduction": "Managing flight connections efficiently can make your journey smoother. This 2026 guide provides up-to-date information on connection times, airport facilities, and strategies for both short and long layovers.",
+        "connection_types": [
+          {
+            "type": "Domestic to Domestic",
+            "time": "30-60 minutes",
+            "considerations": ["No customs/immigration", "Baggage usually checked through"]
+          },
+          {
+            "type": "International to International",
+            "time": "60-120 minutes",
+            "considerations": ["May need to change terminals", "Customs/immigration may be required"]
+          }
+        ],
+        "minimum_connection_times": {
+          "examples": [
+            {"airport": "Amsterdam Schiphol", "domestic": "30 min", "international": "90 min"},
+            {"airport": "Dubai International", "international": "60-90 min"},
+            {"airport": "Los Angeles", "domestic": "45 min", "international": "2 hours"}
+          ]
+        },
+        "short_layovers": {
+          "strategies": [
+            "Go directly to your connecting gate after arriving.",
+            "Check monitors for gate changes.",
+            "Use airport apps for real-time walking directions."
+          ],
+          "time_management": [
+            "Use airport apps for gate information and security wait times.",
+            "Follow 'Flight Connections' signs for faster routes.",
+            "Inform airline staff if you're running late."
+          ]
+        },
+        "long_layovers": {
+          "strategies": [
+            "Explore airport amenities and facilities.",
+            "Consider leaving the airport if you have enough time and proper visa.",
+            "Use airport lounges for comfort and amenities."
+          ],
+          "airport_amenities": [
+            {
+              "category": "Relaxation",
+              "examples": [
+                {"airport": "Singapore Changi", "features": ["Butterfly garden", "Rooftop pool"]},
+                {"airport": "Munich", "features": ["Napcabs", "Beer garden"]}
+              ]
+            },
+            {
+              "category": "Entertainment",
+              "examples": [
+                {"airport": "Amsterdam Schiphol", "features": ["Rijksmuseum exhibit", "Library"]},
+                {"airport": "Hong Kong", "features": ["Movie theaters", "Aviation discovery center"]}
+              ]
+            }
+          ],
+          "leaving_the_airport": {
+            "considerations": [
+              "Check visa requirements for leaving the airport.",
+              "Ensure you have enough time to return (minimum 2-3 hours before next flight).",
+              "Some airports offer free city tours for transit passengers."
+            ],
+            "examples": [
+              {"airport": "Singapore Changi", "tour": "Free Singapore City Tour (5.5+ hour layover)"},
+              {"airport": "Incheon", "tour": "Transit Tour of Seoul (4+ hour layover)"}
+            ]
+          },
+          "sleeping_options": [
+            {
+              "airport": "Singapore Changi",
+              "options": [
+                {"name": "Aerotel Transit Hotel", "cost": "SGD 40-80 for 6 hours"},
+                {"name": "Free rest areas", "features": "Recliners in all terminals"}
+              ]
+            },
+            {
+              "airport": "Tokyo Haneda",
+              "options": [
+                {"name": "Nine Hours Capsule Hotel", "cost": "¥4,000-6,000 for 2-3 hours"},
+                {"name": "Sleeping rooms", "features": "Tatami mats in quiet areas"}
+              ]
+            }
+          ]
+        },
+        "missed_connections": {
+          "immediate_steps": [
+            "Go to your airline's transfer desk or customer service counter.",
+            "If on the same ticket, the airline will rebook you at no cost.",
+            "Ask about compensation for meals/accommodation if the delay is significant."
+          ],
+          "rights": {
+            "EU": ["Right to rebooking", "Right to care (meals, accommodation)", "Compensation of €250-600"],
+            "USA": ["No federal compensation requirements", "Airlines must provide refund if they cancel your flight"]
+          }
+        },
+        "pro_tip": {
+          "text": "Create a 'connection survival kit' in your carry-on with essentials for any scenario.",
+          "items": [
+            "Copy of itinerary and contact numbers",
+            "Portable charger/power bank",
+            "Change of clothes",
+            "Basic toiletries",
+            "Snacks and empty water bottle"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "version": "2.1",
+    "last_updated": "2026-03-30",
+    "author": "Le Chat by Mistral AI",
+    "purpose": "Comprehensive guide for airport and transfer logistics, optimized for RAG systems, travel apps, and customer support",
+    "usage": [
+      "Travel planning applications",
+      "Airport information systems",
+      "Customer support chatbots",
+      "Mobile travel apps"
+    ],
+    "license": "CC BY-SA 4.0",
+    "sources": [
+      {
+        "name": "International Air Transport Association (IATA)",
+        "link": "https://www.iata.org",
+        "description": "Global standards for airport operations and passenger services"
+      },
+      {
+        "name": "Airports Council International (ACI)",
+        "link": "https://aci.aero",
+        "description": "Airport industry standards and best practices"
+      }
+    ]
+  }
+}

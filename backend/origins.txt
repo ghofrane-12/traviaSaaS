@@ -1,0 +1,1 @@
+["http://localhost:4200","https://travel-ai-2026.web.app","https://travel-ai-2026.firebaseapp.com"] 

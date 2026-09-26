@@ -1,0 +1,2203 @@
+{
+    "flights": [
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Paris",
+        "villeDestination": "Londres",
+        "dateDepart": "2025-05-01",
+        "dateRetour": "2025-05-05",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL001",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Paris",
+              "iataCode": "CDG",
+              "airportName": "Aéroport Paris Charles de Gaulle"
+            },
+            "destinationAirport": {
+              "city": "Londres",
+              "iataCode": "LHR",
+              "airportName": "London Heathrow Airport"
+            },
+            "flightNumber": "FL001",
+            "departureDate": "2025-05-01",
+            "arrivalDate": "2025-05-05",
+            "departureTime": "08:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:1h20m, retour:1h30m)",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Wifi disponible",
+              "Snack inclus"
+            ],
+            "priceTND": 700,
+            "priceInfo": {
+              "pricePerPerson": 700,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Barcelone",
+        "villeDestination": "Berlin",
+        "dateDepart": "2025-05-01",
+        "dateRetour": "2025-05-06",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL002",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Barcelone",
+              "iataCode": "BCN",
+              "airportName": "Barcelona-El Prat"
+            },
+            "destinationAirport": {
+              "city": "Berlin",
+              "iataCode": "BER",
+              "airportName": "Berlin Brandenburg"
+            },
+            "flightNumber": "FL002",
+            "departureDate": "2025-05-01",
+            "arrivalDate": "2025-05-06",
+            "departureTime": "10:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:2h45m, retour:2h30m)",
+            "airplaneModel": "Airbus A330",
+            "class": "Premium Économique",
+            "services": [
+              "Wifi disponible",
+              "Repas premium",
+              "Espace supplémentaire"
+            ],
+            "priceTND": 1001,
+            "priceInfo": {
+              "pricePerPerson": 1001,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Madrid",
+        "villeDestination": "Dortmund",
+        "dateDepart": "2025-05-01",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL003",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Madrid",
+              "iataCode": "MAD",
+              "airportName": "Adolfo Suárez Madrid-Barajas"
+            },
+            "destinationAirport": {
+              "city": "Dortmund",
+              "iataCode": "DTM",
+              "airportName": "Dortmund Airport"
+            },
+            "flightNumber": "FL003",
+            "departureDate": "2025-05-01",
+            "arrivalDate": "2025-05-01",
+            "departureTime": "12:00",
+            "arrivalTime": "14:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 737",
+            "class": "Affaires",
+            "services": [
+              "Salon d'attente",
+              "Repas gastronomique",
+              "Accès prioritaire"
+            ],
+            "priceTND": 1752,
+            "priceInfo": {
+              "pricePerPerson": 1752,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Ibiza",
+        "villeDestination": "Cairo",
+        "dateDepart": "2025-05-01",
+        "classe": "Première",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL004",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Ibiza",
+              "iataCode": "IBZ",
+              "airportName": "Ibiza Airport"
+            },
+            "destinationAirport": {
+              "city": "Cairo",
+              "iataCode": "CAI",
+              "airportName": "Cairo International Airport"
+            },
+            "flightNumber": "FL004",
+            "departureDate": "2025-05-01",
+            "arrivalDate": "2025-05-01",
+            "departureTime": "14:00",
+            "arrivalTime": "16:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 777",
+            "class": "Première",
+            "services": [
+              "Service VIP",
+              "Accès lounge exclusif",
+              "Transfert gratuit"
+            ],
+            "priceTND": 2503,
+            "priceInfo": {
+              "pricePerPerson": 2503,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Ibiza",
+        "dateDepart": "2025-05-02",
+        "dateRetour": "2025-05-06",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL005",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Ibiza",
+              "iataCode": "IBZ",
+              "airportName": "Ibiza Airport"
+            },
+            "flightNumber": "FL005",
+            "departureDate": "2025-05-02",
+            "arrivalDate": "2025-05-06",
+            "departureTime": "08:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:2h, retour:2h15m)",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Wifi disponible",
+              "Snack inclus"
+            ],
+            "priceTND": 700,
+            "priceInfo": {
+              "pricePerPerson": 700,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Barcelone",
+        "villeDestination": "Berlin",
+        "dateDepart": "2025-05-02",
+        "dateRetour": "2025-05-07",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL006",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Barcelone",
+              "iataCode": "BCN",
+              "airportName": "Barcelona-El Prat"
+            },
+            "destinationAirport": {
+              "city": "Berlin",
+              "iataCode": "BER",
+              "airportName": "Berlin Brandenburg"
+            },
+            "flightNumber": "FL006",
+            "departureDate": "2025-05-02",
+            "arrivalDate": "2025-05-07",
+            "departureTime": "10:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:2h, retour:2h15m)",
+            "airplaneModel": "Airbus A330",
+            "class": "Premium Économique",
+            "services": [
+              "Wifi disponible",
+              "Repas premium",
+              "Espace supplémentaire"
+            ],
+            "priceTND": 1001,
+            "priceInfo": {
+              "pricePerPerson": 1001,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Madrid",
+        "villeDestination": "Dortmund",
+        "dateDepart": "2025-05-02",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL007",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Madrid",
+              "iataCode": "MAD",
+              "airportName": "Adolfo Suárez Madrid-Barajas"
+            },
+            "destinationAirport": {
+              "city": "Dortmund",
+              "iataCode": "DTM",
+              "airportName": "Dortmund Airport"
+            },
+            "flightNumber": "FL007",
+            "departureDate": "2025-05-02",
+            "arrivalDate": "2025-05-02",
+            "departureTime": "12:00",
+            "arrivalTime": "14:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 737",
+            "class": "Affaires",
+            "services": [
+              "Salon d'attente",
+              "Repas gastronomique",
+              "Accès prioritaire"
+            ],
+            "priceTND": 1752,
+            "priceInfo": {
+              "pricePerPerson": 1752,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Ibiza",
+        "villeDestination": "Cairo",
+        "dateDepart": "2025-05-02",
+        "classe": "Première",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL008",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Ibiza",
+              "iataCode": "IBZ",
+              "airportName": "Ibiza Airport"
+            },
+            "destinationAirport": {
+              "city": "Cairo",
+              "iataCode": "CAI",
+              "airportName": "Cairo International Airport"
+            },
+            "flightNumber": "FL008",
+            "departureDate": "2025-05-02",
+            "arrivalDate": "2025-05-02",
+            "departureTime": "14:00",
+            "arrivalTime": "16:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 777",
+            "class": "Première",
+            "services": [
+              "Service VIP",
+              "Accès lounge exclusif",
+              "Transfert gratuit"
+            ],
+            "priceTND": 2503,
+            "priceInfo": {
+              "pricePerPerson": 2503,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Ibiza",
+        "dateDepart": "2025-05-03",
+        "dateRetour": "2025-05-07",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL009",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Ibiza",
+              "iataCode": "IBZ",
+              "airportName": "Ibiza Airport"
+            },
+            "flightNumber": "FL009",
+            "departureDate": "2025-05-03",
+            "arrivalDate": "2025-05-07",
+            "departureTime": "08:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:2h, retour:2h15m)",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Wifi disponible",
+              "Snack inclus"
+            ],
+            "priceTND": 700,
+            "priceInfo": {
+              "pricePerPerson": 700,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Barcelone",
+        "villeDestination": "Berlin",
+        "dateDepart": "2025-05-03",
+        "dateRetour": "2025-05-08",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL010",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Barcelone",
+              "iataCode": "BCN",
+              "airportName": "Barcelona-El Prat"
+            },
+            "destinationAirport": {
+              "city": "Berlin",
+              "iataCode": "BER",
+              "airportName": "Berlin Brandenburg"
+            },
+            "flightNumber": "FL010",
+            "departureDate": "2025-05-03",
+            "arrivalDate": "2025-05-08",
+            "departureTime": "10:00",
+            "arrivalTime": "18:00",
+            "duration": "Aller-retour (aller:2h, retour:2h15m)",
+            "airplaneModel": "Airbus A330",
+            "class": "Premium Économique",
+            "services": [
+              "Wifi disponible",
+              "Repas premium",
+              "Espace supplémentaire"
+            ],
+            "priceTND": 1001,
+            "priceInfo": {
+              "pricePerPerson": 1001,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Madrid",
+        "villeDestination": "Dortmund",
+        "dateDepart": "2025-05-03",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL011",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Madrid",
+              "iataCode": "MAD",
+              "airportName": "Adolfo Suárez Madrid-Barajas"
+            },
+            "destinationAirport": {
+              "city": "Dortmund",
+              "iataCode": "DTM",
+              "airportName": "Dortmund Airport"
+            },
+            "flightNumber": "FL011",
+            "departureDate": "2025-05-03",
+            "arrivalDate": "2025-05-03",
+            "departureTime": "12:00",
+            "arrivalTime": "14:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 737",
+            "class": "Affaires",
+            "services": [
+              "Salon d'attente",
+              "Repas gastronomique",
+              "Accès prioritaire"
+            ],
+            "priceTND": 1752,
+            "priceInfo": {
+              "pricePerPerson": 1752,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Ibiza",
+        "villeDestination": "Cairo",
+        "dateDepart": "2025-05-03",
+        "classe": "Première",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL012",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Ibiza",
+              "iataCode": "IBZ",
+              "airportName": "Ibiza Airport"
+            },
+            "destinationAirport": {
+              "city": "Cairo",
+              "iataCode": "CAI",
+              "airportName": "Cairo International Airport"
+            },
+            "flightNumber": "FL012",
+            "departureDate": "2025-05-03",
+            "arrivalDate": "2025-05-03",
+            "departureTime": "14:00",
+            "arrivalTime": "16:00",
+            "duration": "2h 00m",
+            "airplaneModel": "Boeing 777",
+            "class": "Première",
+            "services": [
+              "Service VIP",
+              "Accès lounge exclusif",
+              "Transfert gratuit"
+            ],
+            "priceTND": 2503,
+            "priceInfo": {
+              "pricePerPerson": 2503,
+              "includes": [
+                "Billet aller simple",
+                "Bagages enregistrés (1 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-simple",
+        "villeDepart": "Rome",
+        "villeDestination": "Amsterdam",
+        "dateDepart": "2025-09-15",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 1,
+          "bebes": 1
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL113",
+            "flightType": "multi-destinations",
+            "originAirport": {
+              "city": "Rome",
+              "iataCode": "FCO",
+              "airportName": "Rome Fiumicino Airport"
+            },
+            "destinationAirport": {
+              "city": "Amsterdam",
+              "iataCode": "AMS",
+              "airportName": "Amsterdam Schiphol Airport"
+            },
+            "departureDate": "2025-09-15",
+            "arrivalDate": "2025-09-15",
+            "departureTime": "10:45",
+            "arrivalTime": "13:15",
+            "duration": "2h 30m",
+            "airplaneModel": "Airbus A320",
+            "class": "Affaires",
+            "services": [
+              "Repas gourmet",
+              "Salon VIP",
+              "Sièges spacieux"
+            ],
+            "priceTND": 1500,
+            "priceInfo": {
+              "pricePerPerson": 1500,
+              "includes": [
+                "Accès lounge VIP",
+                "Bagages (2 x 32kg)",
+                "Transfert privé"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Paris",
+        "villeDestination": "Londres",
+        "dateDepart": "2025-05-01",
+        "dateRetour": "2025-05-05",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "FL013",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Paris",
+              "iataCode": "CDG",
+              "airportName": "Charles de Gaulle"
+            },
+            "destinationAirport": {
+              "city": "Londres",
+              "iataCode": "LHR",
+              "airportName": "London Heathrow"
+            },
+            "flightNumber": "AF100",
+            "departureDate": "2025-05-01",
+            "arrivalDate": "2025-05-05",
+            "departureTime": "10:30",
+            "arrivalTime": "11:45",
+            "duration": "1h 15m (par trajet)",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Wifi payant",
+              "Repas standard",
+              "Choix de sièges"
+            ],
+            "priceTND": 1850,
+            "priceInfo": {
+              "pricePerPerson": 1850,
+              "includes": [
+                "Billet aller-retour",
+                "1 bagage cabine (8kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Paris",
+        "dateDepart": "2025-06-01",
+        "dateRetour": "2025-06-08",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN101",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Paris",
+              "iataCode": "CDG",
+              "airportName": "Aéroport Paris Charles de Gaulle"
+            },
+            "flightNumber": "TU720",
+            "departureDate": "2025-06-01",
+            "arrivalDate": "2025-06-08",
+            "departureTime": "09:30",
+            "arrivalTime": "12:15",
+            "duration": "2h 45m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Repas à bord",
+              "Divertissement en vol",
+              "Wi-Fi payant"
+            ],
+            "priceTND": 950,
+            "priceInfo": {
+              "pricePerPerson": 950,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Marseille",
+        "dateDepart": "2025-06-02",
+        "dateRetour": "2025-06-09",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN102",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Marseille",
+              "iataCode": "MRS",
+              "airportName": "Aéroport Marseille Provence"
+            },
+            "flightNumber": "TU608",
+            "departureDate": "2025-06-02",
+            "arrivalDate": "2025-06-09",
+            "departureTime": "14:20",
+            "arrivalTime": "16:30",
+            "duration": "2h 10m",
+            "airplaneModel": "Boeing 737-600",
+            "class": "Economique",
+            "services": [
+              "Snack",
+              "Boisson gratuite",
+              "Presse internationale"
+            ],
+            "priceTND": 850,
+            "priceInfo": {
+              "pricePerPerson": 850,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Monastir",
+        "villeDestination": "Lyon",
+        "dateDepart": "2025-06-03",
+        "dateRetour": "2025-06-17",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN103",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Monastir",
+              "iataCode": "MIR",
+              "airportName": "Aéroport International de Monastir-Habib Bourguiba"
+            },
+            "destinationAirport": {
+              "city": "Lyon",
+              "iataCode": "LYS",
+              "airportName": "Aéroport Lyon-Saint Exupéry"
+            },
+            "flightNumber": "TU410",
+            "departureDate": "2025-06-03",
+            "arrivalDate": "2025-06-17",
+            "departureTime": "10:45",
+            "arrivalTime": "13:20",
+            "duration": "2h 35m",
+            "airplaneModel": "Airbus A320neo",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Divertissement à bord",
+              "Premier bagage gratuit"
+            ],
+            "priceTND": 920,
+            "priceInfo": {
+              "pricePerPerson": 920,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Djerba",
+        "villeDestination": "Nice",
+        "dateDepart": "2025-06-05",
+        "dateRetour": "2025-06-19",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN104",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Djerba",
+              "iataCode": "DJE",
+              "airportName": "Aéroport International de Djerba-Zarzis"
+            },
+            "destinationAirport": {
+              "city": "Nice",
+              "iataCode": "NCE",
+              "airportName": "Aéroport Nice Côte d'Azur"
+            },
+            "flightNumber": "TU452",
+            "departureDate": "2025-06-05",
+            "arrivalDate": "2025-06-19",
+            "departureTime": "08:15",
+            "arrivalTime": "10:45",
+            "duration": "2h 30m",
+            "airplaneModel": "Airbus A320",
+            "class": "Premium Économique",
+            "services": [
+              "Repas méditerranéen",
+              "Écran individuel",
+              "Sièges plus spacieux"
+            ],
+            "priceTND": 1200,
+            "priceInfo": {
+              "pricePerPerson": 1200,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Rome",
+        "dateDepart": "2025-06-06",
+        "dateRetour": "2025-06-13",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN105",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Rome",
+              "iataCode": "FCO",
+              "airportName": "Aéroport de Rome Fiumicino"
+            },
+            "flightNumber": "TU832",
+            "departureDate": "2025-06-06",
+            "arrivalDate": "2025-06-13",
+            "departureTime": "11:30",
+            "arrivalTime": "13:25",
+            "duration": "1h 55m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Snack léger",
+              "Boissons non-alcoolisées",
+              "Magazine de bord"
+            ],
+            "priceTND": 820,
+            "priceInfo": {
+              "pricePerPerson": 820,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Tunis",
+        "villeDestination": "Barcelone",
+        "dateDepart": "2025-06-08",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN106",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Barcelone",
+              "iataCode": "BCN",
+              "airportName": "Aéroport de Barcelone-El Prat"
+            },
+            "flightNumber": "TU514",
+            "departureDate": "2025-06-08",
+            "arrivalDate": "2025-06-08",
+            "departureTime": "15:40",
+            "arrivalTime": "18:00",
+            "duration": "2h 20m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Collation",
+              "Sélection de boissons",
+              "WiFi payant"
+            ],
+            "priceTND": 540,
+            "priceInfo": {
+              "pricePerPerson": 540,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Enfidha",
+        "villeDestination": "Londres",
+        "dateDepart": "2025-06-10",
+        "dateRetour": "2025-06-24",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN107",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Enfidha",
+              "iataCode": "NBE",
+              "airportName": "Aéroport International d'Enfidha-Hammamet"
+            },
+            "destinationAirport": {
+              "city": "Londres",
+              "iataCode": "LGW",
+              "airportName": "Aéroport de Londres Gatwick"
+            },
+            "flightNumber": "TU634",
+            "departureDate": "2025-06-10",
+            "arrivalDate": "2025-06-24",
+            "departureTime": "07:30",
+            "arrivalTime": "10:45",
+            "duration": "3h 15m",
+            "airplaneModel": "Boeing 737-800",
+            "class": "Premium Économique",
+            "services": [
+              "Repas amélioré",
+              "Écran individuel",
+              "Priorité d'embarquement"
+            ],
+            "priceTND": 1350,
+            "priceInfo": {
+              "pricePerPerson": 1350,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)",
+                "Choix de siège"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Madrid",
+        "dateDepart": "2025-06-12",
+        "dateRetour": "2025-06-19",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN108",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Madrid",
+              "iataCode": "MAD",
+              "airportName": "Aéroport Adolfo Suárez Madrid-Barajas"
+            },
+            "flightNumber": "TU656",
+            "departureDate": "2025-06-12",
+            "arrivalDate": "2025-06-19",
+            "departureTime": "14:15",
+            "arrivalTime": "16:45",
+            "duration": "2h 30m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Boissons gratuites",
+              "Journal international"
+            ],
+            "priceTND": 880,
+            "priceInfo": {
+              "pricePerPerson": 880,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Djerba",
+        "villeDestination": "Milan",
+        "dateDepart": "2025-06-15",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 3,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN109",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Djerba",
+              "iataCode": "DJE",
+              "airportName": "Aéroport International de Djerba-Zarzis"
+            },
+            "destinationAirport": {
+              "city": "Milan",
+              "iataCode": "MXP",
+              "airportName": "Aéroport de Milan Malpensa"
+            },
+            "flightNumber": "TU846",
+            "departureDate": "2025-06-15",
+            "arrivalDate": "2025-06-15",
+            "departureTime": "09:20",
+            "arrivalTime": "11:35",
+            "duration": "2h 15m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Boisson gratuite",
+              "Snack léger",
+              "Sélection de musique"
+            ],
+            "priceTND": 520,
+            "priceInfo": {
+              "pricePerPerson": 520,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Berlin",
+        "dateDepart": "2025-06-18",
+        "dateRetour": "2025-06-25",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN110",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Berlin",
+              "iataCode": "BER",
+              "airportName": "Aéroport de Berlin Brandenburg"
+            },
+            "flightNumber": "TU940",
+            "departureDate": "2025-06-18",
+            "arrivalDate": "2025-06-25",
+            "departureTime": "08:50",
+            "arrivalTime": "12:00",
+            "duration": "3h 10m",
+            "airplaneModel": "Airbus A320",
+            "class": "Affaires",
+            "services": [
+              "Salon privé",
+              "Repas gastronomique",
+              "WiFi gratuit",
+              "Siège-lit inclinable"
+            ],
+            "priceTND": 2450,
+            "priceInfo": {
+              "pricePerPerson": 2450,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 32kg)",
+                "Accès salon VIP"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Amsterdam",
+        "dateDepart": "2025-06-20",
+        "dateRetour": "2025-06-27",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN111",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Amsterdam",
+              "iataCode": "AMS",
+              "airportName": "Aéroport d'Amsterdam Schiphol"
+            },
+            "flightNumber": "TU780",
+            "departureDate": "2025-06-20",
+            "arrivalDate": "2025-06-27",
+            "departureTime": "13:40",
+            "arrivalTime": "16:50",
+            "duration": "3h 10m",
+            "airplaneModel": "Boeing 737-600",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Boissons gratuites",
+              "Écouteurs gratuits"
+            ],
+            "priceTND": 950,
+            "priceInfo": {
+              "pricePerPerson": 950,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Monastir",
+        "villeDestination": "Bruxelles",
+        "dateDepart": "2025-06-22",
+        "dateRetour": "2025-07-06",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN112",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Monastir",
+              "iataCode": "MIR",
+              "airportName": "Aéroport International de Monastir-Habib Bourguiba"
+            },
+            "destinationAirport": {
+              "city": "Bruxelles",
+              "iataCode": "BRU",
+              "airportName": "Aéroport de Bruxelles"
+            },
+            "flightNumber": "TU804",
+            "departureDate": "2025-06-22",
+            "arrivalDate": "2025-07-06",
+            "departureTime": "10:15",
+            "arrivalTime": "13:35",
+            "duration": "3h 20m",
+            "airplaneModel": "Airbus A320neo",
+            "class": "Premium Économique",
+            "services": [
+              "Menu amélioré",
+              "Sélection de vins",
+              "Plus d'espace pour les jambes"
+            ],
+            "priceTND": 1250,
+            "priceInfo": {
+              "pricePerPerson": 1250,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)",
+                "Enregistrement prioritaire"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Genève",
+        "dateDepart": "2025-06-25",
+        "dateRetour": "2025-07-02",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN113",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Genève",
+              "iataCode": "GVA",
+              "airportName": "Aéroport International de Genève"
+            },
+            "flightNumber": "TU938",
+            "departureDate": "2025-06-25",
+            "arrivalDate": "2025-07-02",
+            "departureTime": "09:20",
+            "arrivalTime": "11:55",
+            "duration": "2h 35m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Petit-déjeuner",
+              "Boisson chaude",
+              "Journaux internationaux"
+            ],
+            "priceTND": 970,
+            "priceInfo": {
+              "pricePerPerson": 970,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Tunis",
+        "villeDestination": "Istanbul",
+        "dateDepart": "2025-06-28",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN114",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Istanbul",
+              "iataCode": "IST",
+              "airportName": "Aéroport d'Istanbul"
+            },
+            "flightNumber": "TU212",
+            "departureDate": "2025-06-28",
+            "arrivalDate": "2025-06-28",
+            "departureTime": "15:30",
+            "arrivalTime": "19:15",
+            "duration": "2h 45m",
+            "airplaneModel": "Boeing 737-800",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Boissons gratuites",
+              "Divertissement à bord"
+            ],
+            "priceTND": 580,
+            "priceInfo": {
+              "pricePerPerson": 580,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Djerba",
+        "villeDestination": "Munich",
+        "dateDepart": "2025-06-30",
+        "dateRetour": "2025-07-14",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN115",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Djerba",
+              "iataCode": "DJE",
+              "airportName": "Aéroport International de Djerba-Zarzis"
+            },
+            "destinationAirport": {
+              "city": "Munich",
+              "iataCode": "MUC",
+              "airportName": "Aéroport de Munich"
+            },
+            "flightNumber": "TU168",
+            "departureDate": "2025-06-30",
+            "arrivalDate": "2025-07-14",
+            "departureTime": "08:25",
+            "arrivalTime": "11:10",
+            "duration": "2h 45m",
+            "airplaneModel": "Airbus A320",
+            "class": "Affaires",
+            "services": [
+              "Salon VIP",
+              "Menu gastronomique",
+              "Sièges spacieux",
+              "WiFi gratuit"
+            ],
+            "priceTND": 2680,
+            "priceInfo": {
+              "pricePerPerson": 2680,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 32kg)",
+                "Service de limousine"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Casablanca",
+        "dateDepart": "2025-07-01",
+        "dateRetour": "2025-07-08",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN116",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Casablanca",
+              "iataCode": "CMN",
+              "airportName": "Aéroport Mohammed V de Casablanca"
+            },
+            "flightNumber": "TU712",
+            "departureDate": "2025-07-01",
+            "arrivalDate": "2025-07-08",
+            "departureTime": "14:20",
+            "arrivalTime": "16:05",
+            "duration": "1h 45m",
+            "airplaneModel": "Boeing 737-600",
+            "class": "Economique",
+            "services": [
+              "Collation légère",
+              "Boissons gratuites",
+              "Magazine de bord"
+            ],
+            "priceTND": 750,
+            "priceInfo": {
+              "pricePerPerson": 750,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Le Caire",
+        "dateDepart": "2025-07-03",
+        "dateRetour": "2025-07-10",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN117",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Le Caire",
+              "iataCode": "CAI",
+              "airportName": "Aéroport International du Caire"
+            },
+            "flightNumber": "TU814",
+            "departureDate": "2025-07-03",
+            "arrivalDate": "2025-07-10",
+            "departureTime": "10:45",
+            "arrivalTime": "14:00",
+            "duration": "3h 15m",
+            "airplaneModel": "Airbus A320",
+            "class": "Premium Économique",
+            "services": [
+              "Repas amélioré",
+              "Sélection de boissons",
+              "Écrans personnels"
+            ],
+            "priceTND": 1180,
+            "priceInfo": {
+              "pricePerPerson": 1180,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Enfidha",
+        "villeDestination": "Francfort",
+        "dateDepart": "2025-07-05",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN118",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Enfidha",
+              "iataCode": "NBE",
+              "airportName": "Aéroport International d'Enfidha-Hammamet"
+            },
+            "destinationAirport": {
+              "city": "Francfort",
+              "iataCode": "FRA",
+              "airportName": "Aéroport de Francfort"
+            },
+            "flightNumber": "TU924",
+            "departureDate": "2025-07-05",
+            "arrivalDate": "2025-07-05",
+            "departureTime": "09:35",
+            "arrivalTime": "12:25",
+            "duration": "2h 50m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Petit-déjeuner",
+              "Boissons gratuites",
+              "Presse"
+            ],
+            "priceTND": 560,
+            "priceInfo": {
+              "pricePerPerson": 560,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Dubaï",
+        "dateDepart": "2025-07-08",
+        "dateRetour": "2025-07-15",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN119",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Dubaï",
+              "iataCode": "DXB",
+              "airportName": "Aéroport International de Dubaï"
+            },
+            "flightNumber": "TU216",
+            "departureDate": "2025-07-08",
+            "arrivalDate": "2025-07-15",
+            "departureTime": "23:50",
+            "arrivalTime": "07:30+1",
+            "duration": "5h 40m",
+            "airplaneModel": "Airbus A330",
+            "class": "Affaires",
+            "services": [
+              "Suite privée",
+              "Menu gastronomique",
+              "Bar à bord",
+              "Trousse de toilette luxe"
+            ],
+            "priceTND": 3890,
+            "priceInfo": {
+              "pricePerPerson": 3890,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 32kg)",
+                "Accès salon VIP",
+                "Fast track"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Monastir",
+        "villeDestination": "Vienne",
+        "dateDepart": "2025-07-10",
+        "dateRetour": "2025-07-17",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 4,
+          "enfants": 2,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN120",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Monastir",
+              "iataCode": "MIR",
+              "airportName": "Aéroport International de Monastir-Habib Bourguiba"
+            },
+            "destinationAirport": {
+              "city": "Vienne",
+              "iataCode": "VIE",
+              "airportName": "Aéroport International de Vienne"
+            },
+            "flightNumber": "TU962",
+            "departureDate": "2025-07-10",
+            "arrivalDate": "2025-07-17",
+            "departureTime": "11:15",
+            "arrivalTime": "14:00",
+            "duration": "2h 45m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Boissons gratuites",
+              "Divertissement"
+            ],
+            "priceTND": 920,
+            "priceInfo": {
+              "pricePerPerson": 920,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Tunis",
+        "villeDestination": "Athènes",
+        "dateDepart": "2025-07-12",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN121",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Athènes",
+              "iataCode": "ATH",
+              "airportName": "Aéroport International d'Athènes"
+            },
+            "flightNumber": "TU886",
+            "departureDate": "2025-07-12",
+            "arrivalDate": "2025-07-12",
+            "departureTime": "08:20",
+            "arrivalTime": "11:05",
+            "duration": "2h 45m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Collation méditerranéenne",
+              "Boisson de bienvenue",
+              "Magazine de bord"
+            ],
+            "priceTND": 510,
+            "priceInfo": {
+              "pricePerPerson": 510,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Alger",
+        "dateDepart": "2025-07-15",
+        "dateRetour": "2025-07-22",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN122",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Alger",
+              "iataCode": "ALG",
+              "airportName": "Aéroport d'Alger-Houari Boumédiène"
+            },
+            "flightNumber": "TU302",
+            "departureDate": "2025-07-15",
+            "arrivalDate": "2025-07-22",
+            "departureTime": "10:25",
+            "arrivalTime": "11:35",
+            "duration": "1h 10m",
+            "airplaneModel": "ATR 72-600",
+            "class": "Economique",
+            "services": [
+              "Boissons rafraîchissantes",
+              "Snack léger",
+              "Presse locale"
+            ],
+            "priceTND": 590,
+            "priceInfo": {
+              "pricePerPerson": 590,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Djerba",
+        "villeDestination": "Zurich",
+        "dateDepart": "2025-07-18",
+        "dateRetour": "2025-07-25",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN123",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Djerba",
+              "iataCode": "DJE",
+              "airportName": "Aéroport International de Djerba-Zarzis"
+            },
+            "destinationAirport": {
+              "city": "Zurich",
+              "iataCode": "ZRH",
+              "airportName": "Aéroport de Zurich"
+            },
+            "flightNumber": "TU954",
+            "departureDate": "2025-07-18",
+            "arrivalDate": "2025-07-25",
+            "departureTime": "09:30",
+            "arrivalTime": "12:20",
+            "duration": "2h 50m",
+            "airplaneModel": "Airbus A320",
+            "class": "Premium Économique",
+            "services": [
+              "Menu amélioré",
+              "Sièges confort",
+              "Priorité d'embarquement",
+              "Écouteurs premium"
+            ],
+            "priceTND": 1280,
+            "priceInfo": {
+              "pricePerPerson": 1280,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Tunis",
+        "villeDestination": "Doha",
+        "dateDepart": "2025-07-20",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN124",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Doha",
+              "iataCode": "DOH",
+              "airportName": "Aéroport International Hamad"
+            },
+            "flightNumber": "TU264",
+            "departureDate": "2025-07-20",
+            "arrivalDate": "2025-07-20",
+            "departureTime": "22:15",
+            "arrivalTime": "05:40+1",
+            "duration": "5h 25m",
+            "airplaneModel": "Airbus A330",
+            "class": "Affaires",
+            "services": [
+              "Suite privée",
+              "Menu gastronomique",
+              "Bar exclusif",
+              "Kit de toilette de luxe"
+            ],
+            "priceTND": 2950,
+            "priceInfo": {
+              "pricePerPerson": 2950,
+              "includes": [
+                "Billet aller simple",
+                "Bagages (2 x 32kg)",
+                "Accès salon VIP"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Lisbonne",
+        "dateDepart": "2025-07-22",
+        "dateRetour": "2025-07-29",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN125",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Lisbonne",
+              "iataCode": "LIS",
+              "airportName": "Aéroport de Lisbonne Humberto Delgado"
+            },
+            "flightNumber": "TU862",
+            "departureDate": "2025-07-22",
+            "arrivalDate": "2025-07-29",
+            "departureTime": "14:20",
+            "arrivalTime": "16:45",
+            "duration": "2h 25m",
+            "airplaneModel": "Boeing 737-600",
+            "class": "Economique",
+            "services": [
+              "Repas méditerranéen",
+              "Boissons gratuites",
+              "Film à bord"
+            ],
+            "priceTND": 890,
+            "priceInfo": {
+              "pricePerPerson": 890,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Monastir",
+        "villeDestination": "Manchester",
+        "dateDepart": "2025-07-25",
+        "dateRetour": "2025-08-01",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 3,
+          "enfants": 1,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN126",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Monastir",
+              "iataCode": "MIR",
+              "airportName": "Aéroport International de Monastir-Habib Bourguiba"
+            },
+            "destinationAirport": {
+              "city": "Manchester",
+              "iataCode": "MAN",
+              "airportName": "Aéroport de Manchester"
+            },
+            "flightNumber": "TU622",
+            "departureDate": "2025-07-25",
+            "arrivalDate": "2025-08-01",
+            "departureTime": "08:35",
+            "arrivalTime": "12:00",
+            "duration": "3h 25m",
+            "airplaneModel": "Boeing 737-800",
+            "class": "Economique",
+            "services": [
+              "Repas chaud",
+              "Boissons gratuites",
+              "Divertissement à bord"
+            ],
+            "priceTND": 1050,
+            "priceInfo": {
+              "pricePerPerson": 1050,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller simple",
+        "villeDepart": "Tunis",
+        "villeDestination": "Prague",
+        "dateDepart": "2025-07-28",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN127",
+            "flightType": "aller simple",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Prague",
+              "iataCode": "PRG",
+              "airportName": "Aéroport de Prague-Václav Havel"
+            },
+            "flightNumber": "TU974",
+            "departureDate": "2025-07-28",
+            "arrivalDate": "2025-07-28",
+            "departureTime": "10:10",
+            "arrivalTime": "13:25",
+            "duration": "3h 15m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Collation légère",
+              "Boisson de bienvenue",
+              "Presse internationale"
+            ],
+            "priceTND": 530,
+            "priceInfo": {
+              "pricePerPerson": 530,
+              "includes": [
+                "Billet aller simple",
+                "Bagage à main (10kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Stockholm",
+        "dateDepart": "2025-07-30",
+        "dateRetour": "2025-08-06",
+        "classe": "Affaires",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN128",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Stockholm",
+              "iataCode": "ARN",
+              "airportName": "Aéroport de Stockholm-Arlanda"
+            },
+            "flightNumber": "TU788",
+            "departureDate": "2025-07-30",
+            "arrivalDate": "2025-08-06",
+            "departureTime": "09:30",
+            "arrivalTime": "13:45",
+            "duration": "4h 15m",
+            "airplaneModel": "Airbus A320",
+            "class": "Affaires",
+            "services": [
+              "Salon VIP",
+              "Repas gastronomique scandinave",
+              "Sièges-lits",
+              "Champagne à bord"
+            ],
+            "priceTND": 2790,
+            "priceInfo": {
+              "pricePerPerson": 2790,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 32kg)",
+                "Fast track",
+                "Service de conciergerie"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Paris",
+        "dateDepart": "2025-06-04",
+        "dateRetour": "2025-06-11",
+        "classe": "Economique",
+        "passagers": {
+          "adultes": 1,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN129",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Paris",
+              "iataCode": "ORY",
+              "airportName": "Aéroport Paris-Orly"
+            },
+            "flightNumber": "TU722",
+            "departureDate": "2025-06-04",
+            "arrivalDate": "2025-06-11",
+            "departureTime": "15:30",
+            "arrivalTime": "18:15",
+            "duration": "2h 45m",
+            "airplaneModel": "Airbus A320",
+            "class": "Economique",
+            "services": [
+              "Repas léger",
+              "Boissons gratuites",
+              "Presse quotidienne"
+            ],
+            "priceTND": 910,
+            "priceInfo": {
+              "pricePerPerson": 910,
+              "includes": [
+                "Billet aller-retour",
+                "Bagage en soute (23kg)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "typeVoyage": "aller-retour",
+        "villeDepart": "Tunis",
+        "villeDestination": "Barcelone",
+        "dateDepart": "2025-06-07",
+        "dateRetour": "2025-06-14",
+        "classe": "Premium Économique",
+        "passagers": {
+          "adultes": 2,
+          "enfants": 0,
+          "bebes": 0
+        },
+        "moreDetails": [
+          {
+            "idFlight": "TN130",
+            "flightType": "aller-retour",
+            "originAirport": {
+              "city": "Tunis",
+              "iataCode": "TUN",
+              "airportName": "Aéroport International de Tunis-Carthage"
+            },
+            "destinationAirport": {
+              "city": "Barcelone",
+              "iataCode": "BCN",
+              "airportName": "Aéroport de Barcelone-El Prat"
+            },
+            "flightNumber": "TU516",
+            "departureDate": "2025-06-07",
+            "arrivalDate": "2025-06-14",
+            "departureTime": "08:15",
+            "arrivalTime": "10:35",
+            "duration": "2h 20m",
+            "airplaneModel": "Boeing 737-600",
+            "class": "Premium Économique",
+            "services": [
+              "Menu amélioré",
+              "Plus d'espace pour les jambes",
+              "Écrans personnels",
+              "Priorité d'embarquement"
+            ],
+            "priceTND": 1180,
+            "priceInfo": {
+              "pricePerPerson": 1180,
+              "includes": [
+                "Billet aller-retour",
+                "Bagages (2 x 23kg)"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,486 @@
+==============================
+CHECK-IN & BOARDING PROCEDURES
+RAG OPTIMIZED DATASET V2 - GLOBAL AIRPORT EDITION
+==============================
+
+---
+
+**[CHECKIN_001]**
+**TITLE:** Online Check-in vs Airport Check-in: Global Comparison
+**SEARCH:**
+online check in vs airport check in difference
+enregistrement en ligne ou aéroport différence
+تسجيل الوصول عبر الإنترنت أو في المطار
+when should I check in for a flight
+how to check in at [Airport Name]
+online check-in [Airline] [Airport]
+
+**CONTENT:**
+Online check-in allows seat selection and boarding pass retrieval before arriving at the airport, typically opening **24–48 hours** before departure. Airport check-in is required for:
+- Baggage drop (except for airlines with bag drop kiosks)
+- Visa/document verification
+- Special assistance requests
+- Last-minute flight changes
+
+**AIRPORT-SPECIFIC RULES:**
+   Airport          | Online Check-in Opens | Bag Drop Deadline | Kiosk Availability |
+ |------------------|----------------------|------------------|-------------------|
+ | **Heathrow (LHR)** | 24h before           | 60 min before    | Yes (all terminals) |
+ | **Changi (SIN)**  | 48h before           | 45 min before    | Yes + mobile app   |
+ | **Dubai (DXB)**   | 24h before           | 90 min before    | Yes (T1/T3)       |
+ | **JFK (New York)**| 24h before           | 45 min before    | Yes (all terminals)|
+ | **CDG (Paris)**   | 30h before           | 60 min before    | Yes (T2E/F)       |
+
+**PRO TIP:**
+- **Singapore/Changi:** Use the Changi App for mobile boarding passes with real-time gate updates.
+- **USA (TSA PreCheck):** Online check-in + mobile boarding pass allows direct access to security.
+- **Schengen Flights:** Some airlines (Lufthansa, Air France) require passport scan at bag drop even with online check-in.
+
+**RISK:**
+- Missing seat selection (especially for families/groups)
+- Long queues at airport during peak hours (7–9 AM, 4–6 PM)
+- **Dubai/Etihad:** Some flights require visa document verification at check-in counter
+
+---
+
+**[CHECKIN_002]**
+**TITLE:** Check-in Deadlines for International Flights by Region
+**SEARCH:**
+check in deadline international flight [Airport]
+heure limite enregistrement vol international [Ville]
+متى يغلق تسجيل الوصول للرحلات الدولية [مطار]
+how early should I arrive airport international [City]
+last call check-in [Airline]
+
+**CONTENT:**
+**Standard Deadlines (2026):**
+- **Check-in closes:** 60–90 minutes before departure (varies by airline/airport)
+- **Boarding gates close:** 15–30 minutes before departure
+- **Recommended arrival:**
+  - **USA/EU:** 3 hours
+  - **Middle East/Asia:** 3–4 hours (extra security)
+  - **Australia/NZ:** 2–3 hours (strict biosecurity)
+
+**REGIONAL VARIATIONS:**
+ | Region               | Check-in Closes | Boarding Closes | Recommended Arrival | Notes                                  |
+ |----------------------|-----------------|-----------------|---------------------|----------------------------------------|
+ | **North America**    | 60 min           | 15 min          | 3 hours             | TSA PreCheck reduces time              |
+ | **EU/Schengen**      | 45–60 min        | 20 min          | 2.5 hours           | Schengen flights: 45 min                |
+ | **Middle East**      | 90 min           | 30 min          | 3–4 hours           | Extra document checks                  |
+ | **Asia (SIN/HKG)**   | 60 min           | 20 min          | 2 hours             | Efficient biometric screening         |
+ | **Australia**        | 60 min           | 30 min          | 3 hours             | Strict customs/biosecurity            |
+
+**AIRPORT-SPECIFIC EXCEPTIONS:**
+- **Dubai (DXB):** Emirates/Air Arabia require check-in **90 min** before for all international flights.
+- **London (LHR):** Terminal 5 closes check-in **75 min** before for long-haul flights.
+- **Tokyo (NRT/HND):** Check-in closes **75 min** before for US-bound flights (extra security).
+- **USA Pre-Clearance:** At **Dubai (DXB), Abu Dhabi (AUH), Dublin (DUB)**, US-bound passengers must complete US customs at departure → arrive **4 hours early**.
+
+**PRO TIP:**
+- **Heathrow (LHR):** Use **Fast Track Security** if flying business class (saves 30+ mins).
+- **Changi (SIN):** Self-service bag drop available 24/7 for Singapore Airlines.
+- **Istanbul (IST):** Free **hotel shuttle** for Turkish Airlines passengers with long layovers (ask at check-in).
+
+**RISK:**
+- **Denied boarding** if arriving even 1 minute late (strict at **DXB, FRA, JFK**).
+- **Extra fees** for last-minute check-in at **Ryanair, EasyJet, AirAsia** (up to €50).
+
+---
+
+**[CHECKIN_003]**
+**TITLE:** Boarding Pass Issues and Solutions by Airport
+**SEARCH:**
+boarding pass not received [Airline] [Airport]
+carte embarquement non reçue [Ville] que faire
+لم أحصل على بطاقة الصعود للطائرة [مطار]
+how to get boarding pass again [Airport]
+lost boarding pass [Airline] help
+
+**CONTENT:**
+If you don’t receive your boarding pass:
+1. **Check spam/junk email** (especially for **Emirates, Qatar, Delta**).
+2. **Airline app:** Most airlines (Singapore, Lufthansa, American) allow mobile boarding passes.
+3. **Airport solutions:**
+   - **Self-service kiosks** (available at **LHR, SIN, DXB, JFK**).
+   - **Check-in counters** (required for **Etihad, Saudi, EgyptAir** if no e-ticket).
+   - **Baggage drop desks** (can reprint at **CDG, AMS, FRA**).
+
+**AIRPORT-SPECIFIC HELP:**
+ | Airport       | Solution                          | Location               | Notes                                  |
+ |---------------|-----------------------------------|------------------------|----------------------------------------|
+ | **Heathrow**  | Kiosks near entrance              | All terminals          | BA/Virgin apps work offline            |
+ | **Changi**    | Changi App e-boarding pass        | Anywhere in airport    | QR code updates in real-time           |
+ | **Dubai**     | Emirates app + kiosk             | T3, near info desks   | Requires passport scan                 |
+ | **JFK**       | Airline app + TSA PreCheck kiosk  | After security        | Delta/United have dedicated kiosks   |
+ | **CDG**       | "Paris Aéroport" app              | T2E/F                 | Works for Air France/KLM               |
+
+**PRO TIP:**
+- **Screenshots:** Save boarding pass + passport photo on phone (required for **India, China, Russia**).
+- **Offline access:** Download boarding pass to **Apple Wallet/Google Pay** (works at **SIN, HKG, NRT**).
+- **Group travel:** Some airlines (**Qatar, Emirates**) require **all passengers present** to reprint boarding passes.
+
+**RISK:**
+- **Delayed security clearance** if boarding pass not ready (strict at **USA, Israel, Australia**).
+- **Extra fees** for counter reprints with **low-cost airlines** (e.g., Ryanair: €20).
+
+---
+
+**[CHECKIN_004]**
+**TITLE:** Baggage Drop Process: Step-by-Step by Airport
+**SEARCH:**
+baggage drop [Airport] how it works
+déposer bagage aéroport [Ville] procédure
+إجراءات تسليم الأمتعة في [مطار]
+do I need to check in luggage separately [Airline]
+self-service bag drop [Airport]
+
+**CONTENT:**
+After online check-in:
+1. **Find baggage drop area** (follow signs for "Bag Drop" or "Baggage Reclaim").
+2. **Show documents:** Passport + boarding pass (some airports require visa).
+3. **Bag tagging:** Airline staff attaches tag to your final destination.
+4. **Security check:** Some airports (USA, Israel) scan bags again.
+
+**AIRPORT-SPECIFIC PROCESSES:**
+ | Airport       | Bag Drop Deadline | Self-Service | Special Notes                          |
+ |---------------|-------------------|--------------|----------------------------------------|
+ | **Heathrow**  | 60 min before     | Yes (T5)     | BA offers **fast track** for premium   |
+ | **Changi**    | 45 min before     | Yes (all)    | 24/7 self-service for SQ passengers     |
+ | **Dubai**     | 90 min before     | No           | Emirates requires **passport check**   |
+ | **JFK**       | 45 min before     | Yes (T4)     | TSA may re-inspect bags                 |
+ | **CDG**       | 60 min before     | Yes (T2E)    | Air France **priority bag drop**       |
+
+**PRO TIP:**
+- **Weigh baggage at home** to avoid fees (strict at **USA, Australia, Emirates**).
+  - **USA:** 50lb (23kg) limit for most airlines.
+  - **EU:** 20–23kg limit (varies by airline).
+  - **Asia:** 30–32kg for business class (Singapore, Cathay).
+- **Fragile items:** Request "Fragile" sticker at **Changi, Incheon, Zurich**.
+- **Oversized bags:** Declare at **Dubai, JFK, LHR** to avoid last-minute fees.
+
+**RISK:**
+- **Extra charges** for overweight (up to **$200 at DXB, $150 at JFK**).
+- **Delayed baggage** if dropped late (common at **CDG, LAX**).
+
+---
+
+**[BOARDING_005]**
+**TITLE:** Boarding Process Steps by Airline and Airport
+**SEARCH:**
+boarding process [Airport] steps [Airline]
+processus embarquement [Ville] étapes
+كيف يتم الصعود إلى الطائرة [مطار] [طيران]
+what happens during boarding [Airline] [Airport]
+
+**CONTENT:**
+Standard boarding process:
+1. **Gate announcement** (listen for your flight number).
+2. **Boarding by groups/zones** (check boarding pass).
+3. **Document check:** Passport + boarding pass (some airlines scan both).
+4. **Security re-check** (random at **USA, UK, Israel**).
+5. **Enter aircraft** (sometimes via bus at **CDG, IST, BOM**).
+
+**AIRLINE/AIRPORT VARIATIONS:**
+ | Airline/Airport | Boarding Order                     | Special Notes                          |
+ |------------------|-----------------------------------|----------------------------------------|
+ | **Emirates (DXB)** | First → Business → Economy (1–4) | **Bus boarding** for some gates        |
+ | **Singapore (SIN)**| Suites → Business → Premium Eco → Eco | **Automated gates** for boarding       |
+ | **Delta (JFK)**   | Delta One → Sky Priority → Main 1–3 | **TSA PreCheck** speeds up process     |
+ | **Lufthansa (FRA)**| Business → Premium Eco → Eco      | **Separate bus** for remote stands     |
+ | **Qatar (DOH)**  | First → Business → Economy (1–5) | **Biometric boarding** at Hamad Airport|
+
+**PRO TIP:**
+- **Group boarding:** Check your **boarding pass** for group number (e.g., "Group 3").
+- **Priority boarding:** Available for:
+  - Business/first class (**Emirates, Singapore, Lufthansa**).
+  - Frequent flyers (**Star Alliance Gold, Oneworld Emerald**).
+  - Families with young kids (**most EU/US airlines**).
+- **Gate changes:** Common at **LAX, LHR, IST** – check screens every 15 mins.
+
+**RISK:**
+- **Missing boarding call** (especially at **large hubs like ATL, PEK, DXB**).
+- **Delayed boarding** due to:
+  - **Weather** (common at **JFK, LHR, SFO**).
+  - **Security alerts** (common at **Tel Aviv, Istanbul, US airports**).
+
+---
+
+**[BOARDING_006]**
+**TITLE:** Boarding Groups and Zones Explained by Airline
+**SEARCH:**
+boarding groups zones meaning [Airline]
+zones embarquement avion [Compagnie] signification
+مجموعات الصعود إلى الطائرة [طيران]
+why boarding groups exist [Airline] [Airport]
+
+**CONTENT:**
+Airlines board by groups to:
+- Reduce congestion at the gate.
+- Prioritize premium passengers.
+- Ensure families board together.
+
+**AIRLINE-SPECIFIC GROUPS:**
+ | Airline         | Group 1               | Group 2                     | Group 3–5                |
+ |-----------------|-----------------------|-----------------------------|--------------------------|
+ | **Emirates**    | First Class           | Business Class             | Economy (1–4)           |
+ | **Singapore**   | Suites/First          | Business/Premium Eco      | Economy (1–5)           |
+ | **Delta**       | Delta One             | Sky Priority               | Main Cabin (1–3)        |
+ | **Lufthansa**   | First/Business        | Premium Economy            | Economy (1–4)           |
+ | **Qatar**       | First/Business        | Privilege Club Gold        | Economy (1–5)           |
+ | **Ryanair**     | Priority Boarding     | General Boarding           | N/A                      |
+
+**AIRPORT-SPECIFIC NOTES:**
+- **Dubai (DXB):** Emirates uses **dedicated buses** for Groups 1–2 to aircraft.
+- **Changi (SIN):** Automated gates scan boarding passes **without staff**.
+- **USA (all airports):** TSA may **re-check IDs** at boarding for random passengers.
+- **Europe (Schengen):** No ID check for **intra-Schengen flights** after security.
+
+**PRO TIP:**
+- **Families:** Most airlines (**Emirates, Singapore, Delta**) let families with young kids board **before their group**.
+- **Disabilities:** Request **priority boarding** at check-in (available at **all major airports**).
+- **Group travel:** Coordinate with your group to **board together** (ask gate agent if needed).
+
+**RISK:**
+- **Confusion** if in wrong group (e.g., **Ryanair Priority vs. General**).
+- **Delayed boarding** if gate agent checks documents for **visa requirements** (common at **DXB, IST, JFK**).
+
+---
+
+**[BOARDING_007]**
+**TITLE:** Gate Changes at Airports: What to Do
+**SEARCH:**
+gate changed [Airport] what to do
+porte embarquement changée [Ville] aéroport
+تغيير بوابة الطائرة [مطار] ماذا أفعل
+flight gate change last minute [Airline]
+
+**CONTENT:**
+Gate changes are common due to:
+- Aircraft scheduling.
+- Weather delays.
+- Operational adjustments.
+
+**WHAT TO DO:**
+1. **Check airport screens** (updated every 5–10 mins at **LHR, SIN, DXB**).
+2. **Enable airline notifications** (app/email/SMS).
+3. **Move quickly** if gate changes to a **different terminal** (e.g., **JFK T4 → T8**).
+4. **Ask staff** if unsure (wear **high-vis vests** at most airports).
+
+**AIRPORT-SPECIFIC RISKS:**
+ | Airport       | Common Gate Change Reasons       | Time to Move | Tips                                  |
+ |---------------|----------------------------------|--------------|---------------------------------------|
+ | **Heathrow**  | Terminal changes (T2 ↔ T5)       | 15–20 min    | Use **free transfer bus**             |
+ | **Changi**    | Last-minute aircraft swaps      | 5–10 min     | Follow **purple "Gate Change" signs**|
+ | **Dubai**     | Remote stand boarding (bus)      | 10–15 min    | Listen for **Arabic/English announcements** |
+ | **JFK**       | Terminal congestion (T4 ↔ T8)   | 20–30 min    | Use **AirTrain** (free)              |
+ | **CDG**       | Schengen/non-Schengen changes    | 10–15 min    | Check **both departure + arrival screens** |
+
+**PRO TIP:**
+- **Heathrow (LHR):** Download the **Heathrow App** for real-time gate updates.
+- **Dubai (DXB):** Gates **A, B, C** are in different terminals – allow **20 mins** to move.
+- **USA airports:** Gates can change **after security** (check screens post-TSA).
+- **Tokyo (NRT/HND):** Some gates require **shuttle bus** (5–10 min ride).
+
+**RISK:**
+- **Missing flight** if gate change not noticed (common at **IST, ATL, PEK**).
+- **Long walks** at **Dallas (DFW), Denver (DEN), Changi (SIN)** – wear comfortable shoes.
+
+---
+
+**[BOARDING_008]**
+**TITLE:** Final Call Boarding: What Happens If You Miss It
+**SEARCH:**
+final call boarding meaning [Airline]
+dernier appel embarquement [Compagnie] avion
+نداء أخير الصعود للطائرة [طيران] ماذا يحدث
+what happens if final call missed [Airport]
+
+**CONTENT:**
+"Final call" means:
+- Boarding is **about to close** (typically **10–15 mins before departure**).
+- Gate agents will **deny boarding** after this point.
+- **No refund** if you miss due to late arrival.
+
+**AIRLINE POLICIES:**
+ | Airline         | Final Call Timing | Rebooking Policy                     | Compensation       |
+ |-----------------|-------------------|--------------------------------------|--------------------|
+ | **Emirates**    | 10 min before     | Next available flight (free)         | None               |
+ | **Singapore**   | 15 min before     | $50–$200 rebooking fee               | Vouchers sometimes |
+ | **Delta**       | 10 min before     | Standby on next flight                | None               |
+ | **Lufthansa**   | 12 min before     | €100–€400 fee                        | EU261 applies      |
+ | **Ryanair**     | 20 min before     | Must buy new ticket                  | None               |
+
+**AIRPORT-SPECIFIC RULES:**
+- **Dubai (DXB):** **No exceptions** for late arrival (Emirates/FlyDubai).
+- **USA airports:** TSA **won’t expedite** for late passengers.
+- **EU airports:** **EU261 compensation** (€250–€600) if denied boarding due to overbooking.
+- **Australia (SYD/MEL):** **Biosecurity checks** can delay boarding – arrive early.
+
+**PRO TIP:**
+- **Always be at gate 30 mins before departure** (45 mins at **DXB, JFK, LHR**).
+- **Flight delays?** Check **FlightAware** or airline app for real-time updates.
+- **Missed due to security?** At **USA/UK airports**, ask for a **supervisor** – sometimes exceptions are made.
+
+**RISK:**
+- **Denied boarding** = **no refund** (strict at **Emirates, Qatar, Singapore**).
+- **Next flight may be next day** (common with **Ryanair, EasyJet**).
+
+---
+
+**[CHECKIN_009]**
+**TITLE:** Passport and Visa Checks at Boarding by Country
+**SEARCH:**
+passport check airport boarding [Country]
+contrôle passeport visa embarquement [Pays]
+فحص الجواز والتأشيرة في المطار [بلد]
+why airline checks visa before boarding [Airline]
+
+**CONTENT:**
+Airlines verify:
+1. **Passport validity** (6+ months for most countries).
+2. **Visa/entry authorization** (e.g., **ESTA for USA, eTA for Canada**).
+3. **Return/onward ticket** (required for **UK, Schengen, Australia**).
+
+**COUNTRY-SPECIFIC RULES:**
+ | Country/Region      | Passport Validity | Visa Check at Boarding | Special Notes                          |
+ |----------------------|--------------------|------------------------|----------------------------------------|
+ | **USA**              | 6+ months          | **ESTA/visa**          | **Pre-clearance** at DXB, AUH, DUB     |
+ | **Schengen Zone**    | 3+ months          | **Schengen visa**      | **ETIAS required from 2025**           |
+ | **UAE (Dubai)**      | 6+ months          | **Visa on arrival**    | **Free transit visa** for some nationalities |
+ | **Australia**        | 6+ months          | **eVisitor/ETA**      | **Strict biosecurity questions**       |
+ | **China**            | 6+ months          | **Visa/144-hour transit** | **Fingerprinting** at PEK, PVG        |
+ | **India**            | 6+ months          | **e-Visa**             | **Port of exit** may be checked       |
+
+**AIRLINE-SPECIFIC PROCESSES:**
+- **Emirates (DXB):** Scans passport at **bag drop** for US/UK-bound flights.
+- **Singapore Airlines (SIN):** Automated **biometric boarding** for Changi departures.
+- **Lufthansa (FRA):** **Extra document check** for non-EU passengers.
+- **Delta (USA):** **TSA PreCheck** passengers skip secondary passport check.
+
+**PRO TIP:**
+- **USA-bound flights:** **ESTA must be approved before check-in** (or risk denied boarding).
+- **Schengen flights:** **Passport stamped** at boarding for non-EU passengers.
+- **Transit visas:** Some countries (**China, UAE, Turkey**) offer **free transit visas** – check before flying.
+
+**RISK:**
+- **Denied boarding** if visa issues (common at **DXB, LHR, JFK**).
+- **Deportation** if entry requirements not met (strict at **Australia, USA, UK**).
+
+---
+
+**[CHECKIN_010]**
+**TITLE:** Overbooked Flights: Compensation and Rights by Region
+**SEARCH:**
+overbooked flight [Airline] compensation
+surbooking avion [Compagnie] que faire
+حجز زائد الطائرة [طيران] تعويض
+denied boarding compensation rules [Country]
+
+**CONTENT:**
+If flight is overbooked:
+1. Airline asks for **volunteers** (compensation offered).
+2. If no volunteers, **denied boarding** for last passengers.
+3. **Compensation varies by region**.
+
+**REGIONAL COMPENSATION RULES:**
+ | Region               | Compensation Rules                          | Amount (2026)               | Notes                                  |
+ |-----------------------|--------------------------------------------|-----------------------------|----------------------------------------|
+ | **EU (EU261)**        | €250–€600 based on distance                | €250 (short), €600 (long)   | + Meals/hotel if overnight             |
+ | **USA (DOT)**         | No fixed compensation                      | Varies by airline          | **Vouchers common** (Delta, United)   |
+ | **Canada (APPR)**     | CAD$900–$2,400                             | Based on delay length      | **Cash or voucher**                   |
+ | **UAE**               | AED 1,000–3,000 or rebooking              | Varies by airline          | **Emirates offers hotel**             |
+ | **Australia**         | AUD$250–$1,000                             | Based on delay             | **Qantas/Virgin most generous**      |
+ | **India**             | ₹5,000–₹20,000                             | Negotiable                 | **Cash rare, vouchers common**        |
+
+**AIRLINE POLICIES:**
+ | Airline         | Volunteer Compensation       | Denied Boarding Policy               |
+ |-----------------|-----------------------------|--------------------------------------|
+ | **Emirates**    | $400–$800 voucher + hotel   | Next flight + $200 voucher           |
+ | **Singapore**   | $300–$600 cash/voucher      | Next flight + $400 compensation      |
+ | **Delta**       | $200–$500 voucher           | Rebooking only (no cash)             |
+ | **Lufthansa**   | €200–€400 voucher            | EU261 applies (€250–€600)            |
+ | **Ryanair**     | None                        | Must buy new ticket                  |
+
+**PRO TIP:**
+- **EU flights:** **EU261 compensation** is **mandatory** – claim via airline website.
+- **USA flights:** **No legal compensation**, but **politely ask** for vouchers.
+- **Middle East:** **Emirates/Qatar** often offer **free hotel** for overnight delays.
+- **Asia:** **Singapore Airlines, Cathay Pacific** offer **cash compensation**.
+
+**RISK:**
+- **Forced rebooking** on less convenient flights (common with **Ryanair, EasyJet**).
+- **No compensation** if you **volunteer** (read terms carefully).
+
+---
+
+**[BOARDING_011]**
+**TITLE:** Security Delays and Boarding: What to Do by Airport
+**SEARCH:**
+security delay miss boarding [Airport]
+retard sécurité aéroport rater avion [Ville]
+تأخير التفتيش الأمني وفوات الرحلة [مطار]
+can I board late if security delay [Airline]
+
+**CONTENT:**
+Security delays can cause missed flights. **Airport-specific solutions:**
+ | Airport          | Common Delay Causes          | What to Do If Late                     | Risk Level          |
+ |------------------|-----------------------------|----------------------------------------|---------------------|
+ | **Heathrow (LHR)**| Long security queues        | Ask staff for **fast-track**           | High (peak hours)   |
+ | **Dubai (DXB)**  | Extra document checks        | **Emirates desk** can help             | Medium              |
+ | **JFK (USA)**    | TSA random checks           | **TSA supervisor** may expedite       | Very High           |
+ | **Changi (SIN)** | Rare delays                 | **Automated gates** speed process      | Low                 |
+ | **CDG (Paris)**  | Strike action               | **Airline lounge** can assist          | High                |
+ | **IST (Istanbul)| Multiple security layers    | **Priority lane** for business class   | Medium              |
+
+**PRO TIP:**
+- **USA airports:** **TSA PreCheck** reduces delay risk (5 min vs. 30+ min).
+- **EU airports:** **Schengen flights** have **faster security** (no passport check).
+- **Middle East:** **Dubai/Abu Dhabi** have **biometric screening** (faster than manual).
+- **Asia:** **Singapore/Changi** and **Tokyo/Haneda** rarely have delays (efficient systems).
+
+**RISK:**
+- **Missed flight** if security takes >60 mins (common at **LHR, JFK, CDG**).
+- **No compensation** if delay is due to **security rules** (not airline fault).
+
+---
+
+**[CHECKIN_012]**
+**TITLE:** Traveling with Cabin Baggage Only: Airport-Specific Rules
+**SEARCH:**
+travel cabin only check in process [Airport]
+voyage bagage cabine seulement [Ville]
+السفر بدون حقيبة شحن [مطار]
+do I need check in without luggage [Airline]
+
+**CONTENT:**
+If traveling with **cabin baggage only**:
+1. **Online check-in** is sufficient (no need for desk check-in).
+2. Go **directly to security** (skip baggage drop).
+3. **Cabin bag rules vary by airline/airport.**
+
+**AIRLINE/AIRPORT CABIN BAG RULES:**
+ | Airline/Airport | Max Size (LxWxH) | Weight Limit | Special Notes                          |
+ |------------------|------------------|--------------|----------------------------------------|
+ | **Emirates**     | 55x38x20 cm       | 7 kg         | **Laptop bag extra** allowed           |
+ | **Singapore**    | 40x30x20 cm       | 7 kg         | **Strict size checks** at Changi      |
+ | **Delta (USA)**  | 56x35x23 cm       | 10 kg        | **TSA liquid rules** apply             |
+ | **Lufthansa**    | 55x40x23 cm       | 8 kg         | **Priority boarding** for large bags   |
+ | **Ryanair**      | 40x20x25 cm       | 10 kg        | **Strict!** Fees if oversized         |
+ | **Qatar**        | 50x37x25 cm       | 7 kg         | **Free cabin bag** for Qmiles members   |
+
+**AIRPORT-SPECIFIC TIPS:**
+- **Changi (SIN):** **Free plastic wraps** for cabin bags at security.
+- **Dubai (DXB):** **No extra cabin bag** allowed for Economy (Emirates).
+- **USA airports:** **TSA may measure** your cabin bag – use **approved sizes**.
+- **EU airports:** **Ryanair/Wizz Air** charge **€50** for oversized cabin bags.
+
+**PRO TIP:**
+- **Weigh your bag at home** (scales cost <$10).
+- **Use a soft bag** that can squish if needed (helps at **Ryanair, EasyJet**).
+- **Wear your heaviest items** (jacket, boots) to save cabin weight.
+
+**RISK:**
+- **Forced gate-check** if bag doesn’t fit (common at **Ryanair, AirAsia**).
+- **Fees up to $100** for oversized cabin bags (**USA, Australia, Emirates**).
+
+---
